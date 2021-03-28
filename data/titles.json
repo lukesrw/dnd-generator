@@ -1,0 +1,128 @@
+[
+    {
+        "value": "Mr",
+        "gender": ["Male"]
+    },
+    {
+        "value": "Miss",
+        "gender": ["Female"]
+    },
+    {
+        "value": "Ms",
+        "gender": ["Female"]
+    },
+    {
+        "value": "Mrs",
+        "gender": ["Female"]
+    },
+    {
+        "value": "Mx",
+        "gender": ["Female"]
+    },
+    {
+        "value": "Sir",
+        "gender": ["Male"],
+        "nobility": ["Knighted", "Noble"]
+    },
+    {
+        "value": "Baron",
+        "gender": ["Male"],
+        "nobility": ["Noble"]
+    },
+    {
+        "value": "Baroness",
+        "gender": ["Female"],
+        "nobility": ["Noble"]
+    },
+    {
+        "value": "Madam",
+        "gender": ["Female"]
+    },
+    {
+        "value": "Dame",
+        "gender": ["Female"],
+        "nobility": ["Knighted", "Noble"]
+    },
+    {
+        "value": "Lord",
+        "gender": ["Male"],
+        "nobility": ["Yeoman", "Gentle", "Esquire", "Knighted", "Noble"]
+    },
+    {
+        "value": "Lady",
+        "gender": ["Female"],
+        "nobility": ["Yeoman", "Gentle", "Esquire", "Knighted", "Noble"]
+    },
+    {
+        "value": "Queen",
+        "gender": ["Female"],
+        "nobility": ["Royal"]
+    },
+    {
+        "value": "King",
+        "gender": ["Male"],
+        "nobility": ["Royal"]
+    },
+    {
+        "value": "Emperor",
+        "gender": ["Male"],
+        "nobility": ["Royal"]
+    },
+    {
+        "value": "Empress",
+        "gender": ["Female"],
+        "nobility": ["Royal"]
+    },
+    {
+        "value": "Archduke",
+        "gender": ["Male"],
+        "nobility": ["Royal"]
+    },
+    {
+        "value": "Archduchess",
+        "gender": ["Female"],
+        "nobility": ["Royal"]
+    },
+    {
+        "value": "Dr",
+        "nobility": ["Scholar"]
+    },
+    {
+        "value": "Professor",
+        "nobility": ["Scholar"]
+    },
+    {
+        "value": "Chancellor",
+        "nobility": ["Scholar", "Noble"]
+    },
+    {
+        "value": "Prince",
+        "nobility": ["Royal"],
+        "gender": ["Male"]
+    },
+    {
+        "value": "Princess",
+        "nobility": ["Royal"],
+        "gender": ["Female"]
+    },
+    {
+        "value": "Duke",
+        "nobility": ["Royal"],
+        "gender": ["Male"]
+    },
+    {
+        "value": "Duchess",
+        "nobility": ["Royal"],
+        "gender": ["Female"]
+    },
+    {
+        "value": "Count",
+        "nobility": ["Royal", "Noble"],
+        "gender": ["Male"]
+    },
+    {
+        "value": "Countess",
+        "nobility": ["Royal"],
+        "gender": ["Female", "Noble"]
+    }
+]

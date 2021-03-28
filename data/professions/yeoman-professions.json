@@ -1,0 +1,14 @@
+[
+    {
+        "nobility": ["Yeoman"],
+        "value": "Entrepreneur"
+    },
+    {
+        "nobility": ["Yeoman", "Gentle"],
+        "value": "Plantation Owner"
+    },
+    {
+        "nobility": ["Yeoman"],
+        "value": "Farmer"
+    }
+]

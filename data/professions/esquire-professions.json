@@ -1,0 +1,15 @@
+[
+    {
+        "nobility": ["Esquire"],
+        "value": "Banker"
+    },
+    {
+        "nobility": ["Esquire", "Noble, Royal"],
+        "value": "Judge",
+        "alignment": ["Lawful Good", "Neutral Good", "Lawful Neutral", "True Neutral", "Lawful Evil", "Neutral Evil"]
+    },
+    {
+        "nobility": ["Esquire", "Noble", "Royal"],
+        "value": "Diplomat"
+    }
+]

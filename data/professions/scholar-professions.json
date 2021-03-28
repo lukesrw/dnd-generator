@@ -1,0 +1,94 @@
+[
+    {
+        "nobility": ["Scholar"],
+        "value": "Seer"
+    },
+    {
+        "nobility": ["Scholar", "Gentle"],
+        "value": "High Priest"
+    },
+    {
+        "nobility": ["Scholar"],
+        "value": "Anthropologist"
+    },
+    {
+        "nobility": ["Scholar"],
+        "value": "Apprentice"
+    },
+    {
+        "nobility": ["Scholar"],
+        "value": "Archaeologist"
+    },
+    {
+        "nobility": ["Scholar"],
+        "value": "Archivist"
+    },
+    {
+        "nobility": ["Scholar"],
+        "value": "Astrologer"
+    },
+    {
+        "nobility": ["Scholar"],
+        "value": "Botanist"
+    },
+    {
+        "nobility": ["Scholar"],
+        "value": "Cartographer"
+    },
+    {
+        "nobility": ["Scholar"],
+        "value": "Chemist"
+    },
+    {
+        "nobility": ["Scholar"],
+        "value": "Dean"
+    },
+    {
+        "nobility": ["Scholar"],
+        "value": "Engineer"
+    },
+    {
+        "nobility": ["Scholar"],
+        "value": "Historian"
+    },
+    {
+        "nobility": ["Scholar"],
+        "value": "Horologist"
+    },
+    {
+        "nobility": ["Scholar"],
+        "value": "Librarian"
+    },
+    {
+        "nobility": ["Scholar"],
+        "value": "Mathematician"
+    },
+    {
+        "nobility": ["Scholar"],
+        "value": "Philosopher"
+    },
+    {
+        "nobility": ["Scholar"],
+        "value": "Professor"
+    },
+    {
+        "nobility": ["Scholar"],
+        "value": "Researcher"
+    },
+    {
+        "nobility": ["Scholar"],
+        "value": "Teacher"
+    },
+    {
+        "nobility": ["Scholar"],
+        "value": "Theologian"
+    },
+    {
+        "nobility": ["Scholar"],
+        "value": "Tutor"
+    },
+    {
+        "nobility": ["Scholar"],
+        "value": "Constable"
+    }
+]

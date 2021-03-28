@@ -1,0 +1,627 @@
+[
+    {
+        "nobility": ["Common", "Scholar", "Yeoman", "Gentle", "Esquire", "Noble", "Knighted", "Royal"],
+        "value": "Elder"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Boatman"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Gambler"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Folk Hero"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Ex-Criminal"
+    },
+    {
+        "nobility": ["Common", "Scholar", "Yeoman", "Gentle", "Esquire", "Noble", "Knighted", "Royal"],
+        "value": "Traveler"
+    },
+    {
+        "nobility": ["Common", "Scholar", "Yeoman", "Gentle", "Esquire", "Noble", "Knighted", "Royal"],
+        "value": "Explorer"
+    },
+    {
+        "nobility": ["Common", "Scholar", "Yeoman", "Knighted"],
+        "value": "Dungeoneer"
+    },
+    {
+        "nobility": ["Common", "Scholar", "Yeoman", "Gentle", "Esquire", "Noble", "Knighted", "Royal"],
+        "value": "Adventurer"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Charioteer"
+    },
+    {
+        "nobility": ["Common", "Knighted"],
+        "value": "Mercenary"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Sergeant"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Scout"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Soldier"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Torturer",
+        "alignment": [
+            "Lawful Neutral",
+            "True Neutral",
+            "Chaotic Neutral",
+            "Lawful Evil",
+            "Neutral Evil",
+            "Chaotic Evil"
+        ]
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Guard",
+        "alignment": ["Lawful Good", "Lawful Neutral", "Lawful Evil"]
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Jailer",
+        "alignment": ["Lawful Good", "Lawful Neutral", "Lawful Evil"]
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Warden",
+        "alignment": ["Lawful Good", "Lawful Neutral", "Lawful Evil"]
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Wordsmith"
+    },
+    {
+        "nobility": ["Common", "Knighted"],
+        "value": "Admiral",
+        "alignment": ["Lawful Good", "Lawful Neutral", "Lawful Evil"]
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Archer"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Bailiff"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Bodyguard"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Bouncer"
+    },
+    {
+        "nobility": ["Common", "Knighted"],
+        "value": "Captain"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Castellan"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Cavalier"
+    },
+    {
+        "nobility": ["Common", "Knighted"],
+        "value": "City Watch"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Investigator"
+    },
+    {
+        "nobility": ["Common", "Knighted"],
+        "value": "Duelist"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Executioner"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Fireman"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Tavern Worker"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Exterminator"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Illusionist"
+    },
+    {
+        "nobility": ["Common", "Scholar", "Yeoman", "Gentle", "Esquire", "Noble", "Knighted", "Royal"],
+        "value": "Necromancer"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Ritualist"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Runecaster"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Laborer"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Lamplighter"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Landscaper"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Longshoreman"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Miner"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Orphanage Caretaker"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Plumer"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Clerk"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Cook"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Copyist"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Croupier"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Distiller"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Florist"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Gardener"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Housemaid"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Kitchen Drudge"
+    },
+    {
+        "nobility": ["Common", "Scholar"],
+        "value": "Alchemist"
+    },
+    {
+        "nobility": ["Common", "Scholar"],
+        "value": "Apothecary"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Bloodletter"
+    },
+    {
+        "nobility": ["Common", "Scholar", "Yeoman", "Gentle", "Esquire", "Noble", "Royal"],
+        "value": "Doctor"
+    },
+    {
+        "nobility": ["Common", "Scholar"],
+        "value": "Herbalist"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Midwife"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Mortician"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Nurse"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Physician"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Surgeon"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Veterinarian"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Barkeep"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Animal Handler"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Arborist"
+    },
+    {
+        "nobility": ["Common", "Yeoman", "Royal"],
+        "value": "Beekeeper"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Birdcatcher"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Cowherd"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Dairyhand"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Falconer"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Fisher"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Forager"
+    },
+    {
+        "nobility": ["Common", "Yeoman", "Gentle"],
+        "value": "Gamekeeper"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Herder"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Horse Trainer"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Hunter"
+    },
+    {
+        "nobility": ["Common", "Yeoman", "Gentle"],
+        "value": "Master-of-Hounds"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Miller"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Prospector"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Renderer"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Shepherd"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Stablehand"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Thresher"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Trapper"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Vintner"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Woodcutter"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Zookeeper"
+    },
+    {
+        "nobility": ["Common", "Scholar", "Yeoman"],
+        "value": "Architect"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Brickmaker"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Brickmason"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Claymason"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Plasterer"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Roofer"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Stonemason"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Streetlayer"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Acrobat"
+    },
+    {
+        "nobility": ["Common", "Scholar", "Yeoman", "Gentle", "Esquire", "Noble", "Knighted", "Royal"],
+        "value": "Actor"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Chef"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Dancer"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Gladiator"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Glasspainter"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Musician"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Painter"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Piper"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Playwright"
+    },
+    {
+        "nobility": ["Common", "Scholar"],
+        "value": "Poet"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Sculptor"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Singer"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Tattooist"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Brawler"
+    },
+    {
+        "nobility": ["Common", "Scholar"],
+        "value": "Writer"
+    },
+    {
+        "nobility": ["Common", "Scholar"],
+        "value": "Accountant"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Pimp",
+        "alignment": ["True Neutral", "Chaotic Neutral", "Neutral Evil", "Chaotic Evil"]
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Chandler"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Collector"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Contractor"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Grocer"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Peddler"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Speculator"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Tradesman"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Courier"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Herald"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Interpreter"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Linguist"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Translator"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Cartwright"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Furniture Artisan"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Taxidermist"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Whittler"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Woodcarver"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Wheelwright"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Assassin"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Bandit"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Burglar"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Conman"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Cockfighter"
+    },
+    {
+        "nobility": ["Common", "Yeoman", "Gentle"],
+        "value": "Crime Boss"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Cutpurse"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Drug Lord",
+        "alignment": [
+            "Lawful Neutral",
+            "True Neutral",
+            "Chaotic Neutral",
+            "Lawful Evil",
+            "Neutral Evil",
+            "Chaotic Evil"
+        ]
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Fence",
+        "alignment": ["Neutral Good", "Chaotic Good", "True Neutral", "Chaotic Neutral", "Neutral Evil", "Chaotic Evil"]
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Loan Shark",
+        "alignment": ["True Neutral", "Chaotic Neutral", "Neutral Evil", "Chaotic Evil"]
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Outlaw",
+        "alignment": ["Neutral Good", "Chaotic Good", "True Neutral", "Chaotic Neutral", "Neutral Evil", "Chaotic Evil"]
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Poacher"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Smuggler"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Thief",
+        "alignment": ["Neutral Good", "Chaotic Good", "True Neutral", "Chaotic Neutral", "Neutral Evil", "Chaotic Evil"]
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Scribe"
+    },
+    {
+        "nobility": ["Common"],
+        "value": "Student"
+    }
+]

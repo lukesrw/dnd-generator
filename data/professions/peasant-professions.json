@@ -1,0 +1,42 @@
+[
+    {
+        "nobility": ["Peasant"],
+        "value": "Deserter"
+    },
+    {
+        "nobility": ["Peasant"],
+        "value": "Cult Leader"
+    },
+    {
+        "nobility": ["Peasant"],
+        "value": "Friar"
+    },
+    {
+        "nobility": ["Peasant"],
+        "value": "Beggar"
+    },
+    {
+        "nobility": ["Peasant"],
+        "value": "Rag-and-Bone Man"
+    },
+    {
+        "nobility": ["Peasant"],
+        "value": "Rebel"
+    },
+    {
+        "nobility": ["Peasant"],
+        "value": "Runaway Slave"
+    },
+    {
+        "nobility": ["Peasant"],
+        "value": "Chimney Sweeper"
+    },
+    {
+        "nobility": ["Peasant"],
+        "value": "Kidnapper"
+    },
+    {
+        "nobility": ["Peasant"],
+        "value": "Jester"
+    }
+]

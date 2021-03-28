@@ -1,0 +1,222 @@
+[
+    {
+        "nobility": ["Merchant"],
+        "value": "Sea Captain"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Wagoner"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Caravaneer"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Pirate"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Armorer"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Blacksmith"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Bladesmith"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Monster Hunter"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Street Vendor"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Bounty Hunter"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Summoner"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Transmuter"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Enchanter"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Healer"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Baker"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Barber"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Charcoal Maker"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Butcher"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Carpenter"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Fishmonger"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Guild Master"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Innkeeper"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Ironmonger"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Bookbinder"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Bowyer"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Brewer"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Broom Maker"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Candlemaker"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Cobbler"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Cooper"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Cutler"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Embroiderer"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Engraver"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "FletcherFurrier"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Glassmaker"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Glovemaker"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Metalsmith"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Hatter"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Jeweler"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Leatherworker"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Locksmith"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Mercer"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Potter"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Printer"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Rope-maker"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Saddler"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Tailor"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Soaper"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Tanner"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Thatcher"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Tinker"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Toymaker"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Watchmaker"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Weaponsmith"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Weaver"
+    }
+]

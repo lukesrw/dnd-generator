@@ -1,0 +1,90 @@
+[
+    {
+        "nobility": ["Servant"],
+        "value": "Shipwright"
+    },
+    {
+        "nobility": ["Servant"],
+        "value": "Ferryman"
+    },
+    {
+        "nobility": ["Servant"],
+        "value": "First Mate"
+    },
+    {
+        "nobility": ["Servant"],
+        "value": "Helmsman"
+    },
+    {
+        "nobility": ["Servant"],
+        "value": "Navigator"
+    },
+    {
+        "nobility": ["Servant"],
+        "value": "Sailor"
+    },
+    {
+        "nobility": ["Servant"],
+        "value": "Purser"
+    },
+    {
+        "nobility": ["Servant"],
+        "value": "Caravan Guard"
+    },
+    {
+        "nobility": ["Servant"],
+        "value": "Maid"
+    },
+    {
+        "nobility": ["Servant"],
+        "value": "Butler"
+    },
+    {
+        "nobility": ["Servant"],
+        "value": "Ward"
+    },
+    {
+        "nobility": ["Servant"],
+        "value": "Squire"
+    },
+    {
+        "nobility": ["Servant"],
+        "value": "Steward"
+    },
+    {
+        "nobility": ["Servant"],
+        "value": "Porter"
+    },
+    {
+        "nobility": ["Servant"],
+        "value": "Page"
+    },
+    {
+        "nobility": ["Servant"],
+        "value": "Spokesman"
+    },
+    {
+        "nobility": ["Servant"],
+        "value": "Master of Coin"
+    },
+    {
+        "nobility": ["Servant"],
+        "value": "Master of the Revels"
+    },
+    {
+        "nobility": ["Servant"],
+        "value": "Tax Collector"
+    },
+    {
+        "nobility": ["Servant"],
+        "value": "Courtier"
+    },
+    {
+        "nobility": ["Servant"],
+        "value": "Spy"
+    },
+    {
+        "nobility": ["Servant"],
+        "value": "Messenger"
+    }
+]

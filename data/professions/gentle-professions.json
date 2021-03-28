@@ -1,0 +1,10 @@
+[
+    {
+        "nobility": ["Gentle", "Esquire", "Noble", "Royal"],
+        "value": "Lawyer"
+    },
+    {
+        "nobility": ["Gentle"],
+        "value": "Town Crier"
+    }
+]

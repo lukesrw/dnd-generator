@@ -1,0 +1,49 @@
+[
+    {
+        "value": "Royal"
+    },
+    {
+        "value": "Noble",
+        "weight": 5
+    },
+    {
+        "value": "Knighted",
+        "weight": 350
+    },
+    {
+        "value": "Esquire",
+        "weight": 1000
+    },
+    {
+        "value": "Gentle",
+        "weight": 1500
+    },
+    {
+        "value": "Yeoman",
+        "weight": 2500
+    },
+    {
+        "value": "Scholar",
+        "weight": 3000
+    },
+    {
+        "value": "Merchant",
+        "weight": 7500
+    },
+    {
+        "value": "Servant",
+        "weight": 7500
+    },
+    {
+        "value": "Common",
+        "weight": 20500
+    },
+    {
+        "value": "Peasant",
+        "weight": 6000
+    },
+    {
+        "value": "Underclass",
+        "weight": 3145
+    }
+]
