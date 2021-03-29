@@ -9,6 +9,9 @@ let ignored;
  * @returns {boolean} is compiled or not
  */
 function isCompiledFile(file, files) {
+    file = file.toLowerCase();
+    files = files.map(item => item.toLowerCase());
+
     let file_sub1 = file.substr(0, file.lastIndexOf("."));
     let file_sub2 = file.substr(0, file_sub1.lastIndexOf("."));
     let file_sub3 = file.substr(0, file_sub2.lastIndexOf("."));
@@ -36,7 +39,10 @@ async function clean(source = []) {
     if (typeof ignored === "undefined") {
         try {
             // eslint-disable-next-line require-atomic-updates
-            ignored = await fs.promises.readFile(path.join(...source, ".gitignore"), "utf-8");
+            ignored = await fs.promises.readFile(
+                path.join(...source, ".gitignore"),
+                "utf-8"
+            );
 
             ignored = ignored.split("\n").map(ignore => ignore.trim());
         } catch (_1) {
