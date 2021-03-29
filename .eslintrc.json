@@ -210,13 +210,24 @@
         "max-depth": ["error", { "max": 6 }],
         "max-len": [
             "error",
-            { "code": 120, "ignoreComments": true, "ignoreStrings": true, "ignoreTemplateLiterals": true }
+            {
+                "code": 120,
+                "ignoreComments": true,
+                "ignoreStrings": true,
+                "ignoreTemplateLiterals": true
+            }
         ],
         "quotes": ["error", "double", { "avoidEscape": true }],
         "quote-props": ["error", "as-needed"],
         "multiline-ternary": ["error", "never"],
         "arrow-parens": ["error", "as-needed"],
-        "no-magic-numbers": ["error", { "ignoreArrayIndexes": true, "ignore": [-2, -1, 0, 1, 2, 4, 10, 100] }],
+        "no-magic-numbers": [
+            "error",
+            {
+                "ignoreArrayIndexes": true,
+                "ignore": [-2, -1, 0, 1, 2, 4, 10, 100]
+            }
+        ],
         "id-length": ["error", { "min": 2, "exceptions": ["e", "i"] }]
     },
     "env": {
@@ -263,7 +274,7 @@
                 "keyword-spacing": 2,
                 "lines-around-directive": 2,
                 "lines-between-class-members": 0,
-                "max-classes-per-file": 2,
+                "max-classes-per-file": 0,
                 "max-nested-callbacks": 2,
                 "max-statements-per-line": 2,
                 "new-cap": 2,
@@ -434,18 +445,34 @@
                 "max-depth": ["error", { "max": 6 }],
                 "max-len": [
                     "error",
-                    { "code": 120, "ignoreComments": true, "ignoreStrings": true, "ignoreTemplateLiterals": true }
+                    {
+                        "code": 120,
+                        "ignoreComments": true,
+                        "ignoreStrings": true,
+                        "ignoreTemplateLiterals": true
+                    }
                 ],
                 "quotes": ["error", "double", { "avoidEscape": true }],
                 "quote-props": ["error", "as-needed"],
                 "multiline-ternary": ["error", "never"],
                 "arrow-parens": ["error", "as-needed"],
-                "no-magic-numbers": ["error", { "ignoreArrayIndexes": true, "ignore": [-2, -1, 0, 1, 2, 4, 10, 100] }],
+                "no-magic-numbers": [
+                    "error",
+                    {
+                        "ignoreArrayIndexes": true,
+                        "ignore": [-2, -1, 0, 1, 2, 4, 10, 100]
+                    }
+                ],
                 "id-length": ["error", { "min": 2, "exceptions": ["e", "i"] }]
             }
         },
         {
-            "files": ["**/lib/src/*.js", "**/lib/src/**/*.js", "**/dist/*.js", "**/dist/**/*.js"],
+            "files": [
+                "**/lib/src/*.js",
+                "**/lib/src/**/*.js",
+                "**/dist/*.js",
+                "**/dist/**/*.js"
+            ],
             "rules": {
                 "require-jsdoc": 0,
                 "no-multi-assign": 0,
