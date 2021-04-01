@@ -49,7 +49,7 @@ export class List {
         return this;
     }
 
-    getFiltered(filter: Generic.Object) {
+    getFiltered(filter?: Generic.Object) {
         let list = this.items;
 
         if (filter && Object.values(filter).length > 0) {
@@ -79,7 +79,7 @@ export class List {
         return list;
     }
 
-    pickRandom(filter: Generic.Object) {
+    pickRandom(filter?: Generic.Object) {
         let item = List.pickRandom(this.getFiltered(filter));
 
         return item ? List.pickRandom(item.value) : false;
