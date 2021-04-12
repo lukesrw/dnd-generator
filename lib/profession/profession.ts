@@ -62,11 +62,7 @@ export class YeomanProfessionList extends List {
 }
 
 export class ProfessionList extends List {
-    constructor() {
-        super("");
-    }
-
-    async load() {
+    getItems() {
         let professions = [
             new CommonProfessionList(),
             new EsquireProfessionList(),
@@ -80,13 +76,13 @@ export class ProfessionList extends List {
             new YeomanProfessionList()
         ];
 
-        await Promise.all(professions.map(profession => profession.load()));
-
-        this.list = [];
+        this.items = [];
         professions.forEach(profession => {
-            this.list = this.list.concat(profession.list);
+            if (this.items) {
+                this.items = this.items.concat(profession.getItems());
+            }
         });
 
-        return this;
+        return this.items;
     }
 }
