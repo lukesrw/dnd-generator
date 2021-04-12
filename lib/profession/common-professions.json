@@ -1,6 +1,15 @@
 [
     {
-        "nobility": ["Common", "Scholar", "Yeoman", "Gentle", "Esquire", "Noble", "Knighted", "Royal"],
+        "nobility": [
+            "Common",
+            "Scholar",
+            "Yeoman",
+            "Gentle",
+            "Esquire",
+            "Noble",
+            "Knighted",
+            "Royal"
+        ],
         "value": "Elder"
     },
     {
@@ -20,11 +29,29 @@
         "value": "Ex-Criminal"
     },
     {
-        "nobility": ["Common", "Scholar", "Yeoman", "Gentle", "Esquire", "Noble", "Knighted", "Royal"],
+        "nobility": [
+            "Common",
+            "Scholar",
+            "Yeoman",
+            "Gentle",
+            "Esquire",
+            "Noble",
+            "Knighted",
+            "Royal"
+        ],
         "value": "Traveler"
     },
     {
-        "nobility": ["Common", "Scholar", "Yeoman", "Gentle", "Esquire", "Noble", "Knighted", "Royal"],
+        "nobility": [
+            "Common",
+            "Scholar",
+            "Yeoman",
+            "Gentle",
+            "Esquire",
+            "Noble",
+            "Knighted",
+            "Royal"
+        ],
         "value": "Explorer"
     },
     {
@@ -32,7 +59,16 @@
         "value": "Dungeoneer"
     },
     {
-        "nobility": ["Common", "Scholar", "Yeoman", "Gentle", "Esquire", "Noble", "Knighted", "Royal"],
+        "nobility": [
+            "Common",
+            "Scholar",
+            "Yeoman",
+            "Gentle",
+            "Esquire",
+            "Noble",
+            "Knighted",
+            "Royal"
+        ],
         "value": "Adventurer"
     },
     {
@@ -92,6 +128,7 @@
         "alignment": ["Lawful Good", "Lawful Neutral", "Lawful Evil"]
     },
     {
+        "class": ["Ranger"],
         "nobility": ["Common"],
         "value": "Archer"
     },
@@ -152,7 +189,17 @@
         "value": "Illusionist"
     },
     {
-        "nobility": ["Common", "Scholar", "Yeoman", "Gentle", "Esquire", "Noble", "Knighted", "Royal"],
+        "class": ["Wizard", "Sorcerer", "Warlock", "Cleric"],
+        "nobility": [
+            "Common",
+            "Scholar",
+            "Yeoman",
+            "Gentle",
+            "Esquire",
+            "Noble",
+            "Knighted",
+            "Royal"
+        ],
         "value": "Necromancer"
     },
     {
@@ -228,6 +275,7 @@
         "value": "Kitchen Drudge"
     },
     {
+        "class": ["Wizard", "Sorcerer", "Warlock", "Cleric"],
         "nobility": ["Common", "Scholar"],
         "value": "Alchemist"
     },
@@ -240,7 +288,16 @@
         "value": "Bloodletter"
     },
     {
-        "nobility": ["Common", "Scholar", "Yeoman", "Gentle", "Esquire", "Noble", "Royal"],
+        "class": ["Wizard", "Sorcerer", "Warlock", "Cleric", "Druid"],
+        "nobility": [
+            "Common",
+            "Scholar",
+            "Yeoman",
+            "Gentle",
+            "Esquire",
+            "Noble",
+            "Royal"
+        ],
         "value": "Doctor"
     },
     {
@@ -408,7 +465,16 @@
         "value": "Acrobat"
     },
     {
-        "nobility": ["Common", "Scholar", "Yeoman", "Gentle", "Esquire", "Noble", "Knighted", "Royal"],
+        "nobility": [
+            "Common",
+            "Scholar",
+            "Yeoman",
+            "Gentle",
+            "Esquire",
+            "Noble",
+            "Knighted",
+            "Royal"
+        ],
         "value": "Actor"
     },
     {
@@ -474,7 +540,12 @@
     {
         "nobility": ["Common"],
         "value": "Pimp",
-        "alignment": ["True Neutral", "Chaotic Neutral", "Neutral Evil", "Chaotic Evil"]
+        "alignment": [
+            "True Neutral",
+            "Chaotic Neutral",
+            "Neutral Evil",
+            "Chaotic Evil"
+        ]
     },
     {
         "nobility": ["Common"],
@@ -591,17 +662,36 @@
     {
         "nobility": ["Common"],
         "value": "Fence",
-        "alignment": ["Neutral Good", "Chaotic Good", "True Neutral", "Chaotic Neutral", "Neutral Evil", "Chaotic Evil"]
+        "alignment": [
+            "Neutral Good",
+            "Chaotic Good",
+            "True Neutral",
+            "Chaotic Neutral",
+            "Neutral Evil",
+            "Chaotic Evil"
+        ]
     },
     {
         "nobility": ["Common"],
         "value": "Loan Shark",
-        "alignment": ["True Neutral", "Chaotic Neutral", "Neutral Evil", "Chaotic Evil"]
+        "alignment": [
+            "True Neutral",
+            "Chaotic Neutral",
+            "Neutral Evil",
+            "Chaotic Evil"
+        ]
     },
     {
         "nobility": ["Common"],
         "value": "Outlaw",
-        "alignment": ["Neutral Good", "Chaotic Good", "True Neutral", "Chaotic Neutral", "Neutral Evil", "Chaotic Evil"]
+        "alignment": [
+            "Neutral Good",
+            "Chaotic Good",
+            "True Neutral",
+            "Chaotic Neutral",
+            "Neutral Evil",
+            "Chaotic Evil"
+        ]
     },
     {
         "nobility": ["Common"],
@@ -614,7 +704,14 @@
     {
         "nobility": ["Common"],
         "value": "Thief",
-        "alignment": ["Neutral Good", "Chaotic Good", "True Neutral", "Chaotic Neutral", "Neutral Evil", "Chaotic Evil"]
+        "alignment": [
+            "Neutral Good",
+            "Chaotic Good",
+            "True Neutral",
+            "Chaotic Neutral",
+            "Neutral Evil",
+            "Chaotic Evil"
+        ]
     },
     {
         "nobility": ["Common"],
