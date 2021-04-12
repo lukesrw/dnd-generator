@@ -1,5 +1,6 @@
 // import { promises as fs } from "fs";
 import * as Generic from "../interfaces/generic";
+import { NPC } from "./NPC";
 
 export interface ListItem {
     [property: string]: any;
@@ -12,53 +13,55 @@ export interface ListItemRaw extends ListItem {
 
 export class List {
     file: string;
-    items: ListItem[];
+    items: false | ListItem[];
 
-    constructor(file: string) {
-        this.file = file;
-        this.items = [];
+    constructor(file?: string, items?: ListItem[]) {
+        this.file = file || "";
+        this.items = items || false;
     }
 
-    static pickRandom(list: any): ListItem {
-        if (Array.isArray(list)) {
-            return list[Math.floor(Math.random() * list.length)];
-        }
-
-        return list;
+    static pickRandom(list: any[]) {
+        return list[Math.floor(Math.random() * list.length)];
     }
 
     getItems() {
+        if (this.items) return this.items;
+
         let data = JSON.parse(JSON.stringify(require(this.file)));
 
         this.items = [];
 
         try {
-            JSON.parse(data).forEach((item: ListItemRaw) => {
+            data.forEach((item: ListItemRaw) => {
                 if (!Object.prototype.hasOwnProperty.call(item, "weight")) {
                     item.weight = 1;
                 }
 
                 item.weight = parseInt(String(item.weight), 10);
 
-                this.items = this.items.concat(
-                    new Array(item.weight).fill(item)
-                );
+                if (this.items) {
+                    this.items = this.items.concat(
+                        new Array(item.weight).fill(item)
+                    );
+                }
             });
-        } catch (e) {}
+        } catch (e) {
+            console.error(e);
+        }
 
-        return this;
+        return this.items;
     }
 
     getFiltered(filter?: Generic.Object) {
-        let list = this.items;
+        let list = this.getItems();
 
         if (filter && Object.values(filter).length > 0) {
-            filter = JSON.parse(JSON.stringify(filter));
+            let filter_json = JSON.parse(JSON.stringify(filter));
 
             return list.filter(item => {
-                return !Object.keys(filter).some(property => {
-                    if (!Array.isArray(filter[property])) {
-                        filter[property] = [filter[property]];
+                return !Object.keys(filter_json).some(property => {
+                    if (!Array.isArray(filter_json[property])) {
+                        filter_json[property] = [filter_json[property]];
                     }
 
                     if (Object.prototype.hasOwnProperty.call(item, property)) {
@@ -67,7 +70,7 @@ export class List {
                         }
 
                         return item[property].every((option: any) => {
-                            return filter[property].indexOf(option) === -1;
+                            return filter_json[property].indexOf(option) === -1;
                         });
                     }
 
@@ -79,9 +82,11 @@ export class List {
         return list;
     }
 
-    pickRandom(filter?: Generic.Object) {
+    pickRandom(filter?: Partial<NPC>): string {
         let item = List.pickRandom(this.getFiltered(filter));
 
-        return item ? List.pickRandom(item.value) : false;
+        while (Array.isArray(item)) item = List.pickRandom(item);
+
+        return item.value;
     }
 }
