@@ -1,0 +1,33 @@
+[
+    {
+        "value": "light blonde",
+        "weight": 4
+    },
+    {
+        "value": ["blonde", "golden"],
+        "weight": 4
+    },
+    {
+        "value": "dark blonde",
+        "weight": 4
+    },
+    {
+        "value": "light brown",
+        "weight": 26
+    },
+    {
+        "value": "brown",
+        "weight": 26
+    },
+    {
+        "value": "dark brown",
+        "weight": 26
+    },
+    {
+        "value": ["black"],
+        "weight": 9
+    },
+    {
+        "value": ["red", "ginger"]
+    }
+]
