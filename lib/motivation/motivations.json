@@ -1,50 +1,47 @@
 [
     {
-        "value": "Acceptance"
+        "value": "acceptance"
     },
     {
-        "value": "Curiosity"
+        "value": "curiosity"
     },
     {
-        "value": "Eating"
+        "value": "family"
     },
     {
-        "value": "Family"
+        "value": "honor"
     },
     {
-        "value": "Honor"
+        "value": "idealism"
     },
     {
-        "value": "Idealism"
+        "value": "independence"
     },
     {
-        "value": "Independence"
+        "value": "order"
     },
     {
-        "value": "Order"
+        "value": "physical activity"
     },
     {
-        "value": "Physical Activity"
+        "value": "power"
     },
     {
-        "value": "Power"
+        "value": "romance"
     },
     {
-        "value": "Romance"
+        "value": "wealth"
     },
     {
-        "value": "Saving"
+        "value": "social status"
     },
     {
-        "value": "Social"
+        "value": "tranquility"
     },
     {
-        "value": "Status"
+        "value": "vengence"
     },
     {
-        "value": "Tranquility"
-    },
-    {
-        "value": "Vengence"
+        "value": "shelter"
     }
 ]
