@@ -1,0 +1,56 @@
+[
+    {
+        "value": "plump"
+    },
+    {
+        "value": "stocky"
+    },
+    {
+        "value": "overweight"
+    },
+    {
+        "value": "fat"
+    },
+    {
+        "value": "pudgy"
+    },
+    {
+        "value": "medium build"
+    },
+    {
+        "value": "athletic"
+    },
+    {
+        "value": "slender"
+    },
+    {
+        "value": "lanky"
+    },
+    {
+        "value": "fit"
+    },
+    {
+        "value": "slim"
+    },
+    {
+        "value": "trim"
+    },
+    {
+        "value": "skinny"
+    },
+    {
+        "value": "buff"
+    },
+    {
+        "value": "muscular"
+    },
+    {
+        "value": "ripped"
+    },
+    {
+        "value": "well built"
+    },
+    {
+        "value": ["towering", "gigantic", "tall", "short", "petite", "tiny"]
+    }
+]
