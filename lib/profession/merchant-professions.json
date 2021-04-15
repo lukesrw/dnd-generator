@@ -133,7 +133,11 @@
     },
     {
         "nobility": ["Merchant"],
-        "value": "FletcherFurrier"
+        "value": "Fletcher"
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Furrier"
     },
     {
         "nobility": ["Merchant"],
