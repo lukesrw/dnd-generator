@@ -20,15 +20,18 @@ export class NPC {
 
     age: string;
     alignment: string;
+    armor: string;
     class: string;
     motivation: string;
     nobility: string;
     profession: string;
     race: string;
     title: string;
+    weapons: string[];
 
     // physical
     hair: string;
+    eye: string;
 
     constructor(place?: Place, properties: Partial<NPC> = {}) {
         this.place = place instanceof Place ? place : new Place();
@@ -147,6 +150,40 @@ export class NPC {
                 Object.assign({}, properties || {}, this)
             );
         }
+
+        if (properties && properties.eye) {
+            this.eye = properties.eye;
+        } else {
+            do {
+                this.eye = this.place.lists.eye.pickRandom(
+                    Object.assign({}, properties || {}, this)
+                );
+            } while (this.eye === this.hair);
+        }
+
+        if (properties && properties.armor) {
+            this.armor = properties.armor;
+        } else {
+            this.armor = this.place.lists.armor.pickRandom(
+                Object.assign({}, properties || {}, this)
+            );
+        }
+
+        if (properties && properties.weapons) {
+            this.weapons = properties.weapons;
+        } else {
+            this.weapons = new Array(Math.floor(Math.random() * 2) + 1)
+                .fill(null)
+                .map(() => {
+                    return this.place.lists.weapon.pickRandom(
+                        Object.assign({}, properties || {}, this)
+                    );
+                });
+
+            if (this.weapons[1] && this.weapons[1] === this.weapons[0]) {
+                this.weapons.splice(1, 1);
+            }
+        }
     }
 
     getName() {
@@ -154,14 +191,16 @@ export class NPC {
     }
 
     getDescription() {
-        return `${this.getName()} (${this.profession}): ${this.race} ${
-            this.class
-        }, ${this.alignment}. ${this.forename} is {physical detail} with ${
-            this.hair
-        } hair and {eye color} eyes. ${ucfirst(
-            getPronoun("third", this.gender, "subject")
-        )} wears {armour} and wields {weapon} (and {weapon 2}). ${
+        return `${this.getName()} (${this.profession}): ${ucfirst(this.age)} ${
+            this.race
+        } ${this.class}, ${this.alignment}. ${
             this.forename
-        } seeks ${this.motivation} (age: ${this.age}%).`;
+        } is {physical detail} with ${this.hair} hair and ${
+            this.eye
+        } eyes. ${ucfirst(getPronoun("third", this.gender, "subject"))} wears ${
+            this.armor
+        } and wields a ${this.weapons.join(" and a ")}. ${
+            this.forename
+        } seeks ${this.motivation}.`;
     }
 }
