@@ -1,0 +1,90 @@
+[
+    {
+        "value": "club"
+    },
+    {
+        "value": "dagger"
+    },
+    {
+        "value": "greatclub"
+    },
+    {
+        "value": "handaxe"
+    },
+    {
+        "value": "light hammer"
+    },
+    {
+        "value": "mace"
+    },
+    {
+        "value": "quarterstaff"
+    },
+    {
+        "value": "sickle"
+    },
+    {
+        "value": "spear"
+    },
+    {
+        "class": ["Ranger", "Rogue"],
+        "value": ["blowgun", "longbow", "shortbow", "crossbow"]
+    },
+    {
+        "value": "battleaxe"
+    },
+    {
+        "value": "flail"
+    },
+    {
+        "value": "glaive"
+    },
+    {
+        "value": "greataxe"
+    },
+    {
+        "value": "greatsword"
+    },
+    {
+        "value": "halberd"
+    },
+    {
+        "value": "lance"
+    },
+    {
+        "value": "longsword"
+    },
+    {
+        "value": "maul"
+    },
+    {
+        "value": "morningstar"
+    },
+    {
+        "value": "pike"
+    },
+    {
+        "value": "rapier"
+    },
+    {
+        "value": "scimitar"
+    },
+    {
+        "value": "shortsword"
+    },
+    {
+        "value": "trident"
+    },
+    {
+        "value": "war pick"
+    },
+    {
+        "value": "warhammer"
+    },
+    {
+        "value": "whip"
+    },
+    {
+        "value": "net"
+    }
+]
