@@ -85,7 +85,7 @@ export class List {
     pickRandom(filter?: Partial<NPC>): string {
         let item = List.pickRandom(this.getFiltered(filter));
 
-        while (Array.isArray(item)) item = List.pickRandom(item);
+        if (Array.isArray(item.value)) return List.pickRandom(item.value);
 
         return item.value;
     }
