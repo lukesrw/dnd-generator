@@ -1,7 +1,9 @@
 import { AgeList } from "./age/age";
 import { AlignmentList } from "./alignment/alignment";
+import { ArmorList } from "./armor/armor";
 import { CharacteristicList } from "./characteristics/characteristics";
 import { ClassList } from "./class/class";
+import { EyeList } from "./eye/eye";
 import { HairList } from "./hair/hair";
 import { List } from "./List";
 import { MotivationList } from "./motivation/motivation";
@@ -10,12 +12,15 @@ import { ProfessionList } from "./profession/profession";
 import { RaceList } from "./race/race";
 import { SexList } from "./sex/sex";
 import { TitleList } from "./title/title";
+import { WeaponList } from "./weapon/weapon";
 
 interface Lists {
     age: AgeList | List;
     alignment: AlignmentList | List;
+    armor: ArmorList | List;
     characteristic: CharacteristicList | List;
     class: ClassList | List;
+    eye: EyeList | List;
     hair: HairList | List;
     motivation: MotivationList | List;
     nobility: NobilityList | List;
@@ -23,6 +28,7 @@ interface Lists {
     race: RaceList | List;
     sex: SexList | List;
     title: TitleList | List;
+    weapon: WeaponList | List;
 }
 
 export class Place {
@@ -33,15 +39,18 @@ export class Place {
             {
                 age: new AgeList(),
                 alignment: new AlignmentList(),
+                armor: new ArmorList(),
                 characteristic: new CharacteristicList(),
                 class: new ClassList(),
+                eye: new EyeList(),
                 hair: new HairList(),
                 motivation: new MotivationList(),
                 nobility: new NobilityList(),
                 profession: new ProfessionList(),
                 race: new RaceList(),
                 sex: new SexList(),
-                title: new TitleList()
+                title: new TitleList(),
+                weapon: new WeaponList()
             },
             lists || {}
         );
