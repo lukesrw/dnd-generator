@@ -30,8 +30,8 @@ export class NPC {
     // physical
     hair: string;
 
-    constructor(place: Place, properties?: Partial<NPC>) {
-        this.place = place;
+    constructor(place?: Place, properties: Partial<NPC> = {}) {
+        this.place = place instanceof Place ? place : new Place();
 
         /**
          * born as...
