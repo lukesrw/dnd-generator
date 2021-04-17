@@ -1,6 +1,7 @@
 // import { promises as fs } from "fs";
 import * as Generic from "../interfaces/generic";
 import { NPC } from "./NPC";
+import { ucfirst } from "./utils";
 
 export interface ListItem {
     [property: string]: any;
@@ -85,7 +86,17 @@ export class List {
     pickRandom(filter?: Partial<NPC>): string {
         let item = List.pickRandom(this.getFiltered(filter));
 
-        if (Array.isArray(item.value)) return List.pickRandom(item.value);
+        if (item) {
+            if (Array.isArray(item.value)) return List.pickRandom(item.value);
+        } else {
+            if (filter && filter.place) delete filter.place;
+
+            throw new Error(
+                `Unable to find ${ucfirst(
+                    this.file.split("/").pop()?.split(".")[0] || ""
+                )} for: ${JSON.stringify(filter)}`
+            );
+        }
 
         return item.value;
     }
