@@ -3,10 +3,29 @@
         "value": [
             "padded armor",
             "leather armor",
-            "studded leather armor",
             "hide armor",
+            "scale mail armor"
+        ]
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cleric",
+            "Fighter",
+            "Monk",
+            "Paladin",
+            "Ranger",
+            "Rogue",
+            "Sorcerer",
+            "Warlock",
+            "Wizard",
+            "Artificer",
+            "Blood Hunter"
+        ],
+        "value": [
+            "studded leather armor",
             "chain shirt armor",
-            "scale mail armor",
             "breastplate armor",
             "half plate armor",
             "ring mail armor",
