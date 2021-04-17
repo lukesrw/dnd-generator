@@ -121,9 +121,10 @@ export class NPC {
             );
         }
 
+        this.profession = "";
         if (properties && typeof properties.profession === "string") {
             this.profession = properties.profession;
-        } else {
+        } else if (this.isAdult()) {
             this.profession = this.place.lists.profession.pickRandom(
                 Object.assign({}, properties, this)
             );
@@ -162,17 +163,19 @@ export class NPC {
             } while (this.eyes === this.hair);
         }
 
+        this.armor = "";
         if (properties && typeof properties.armor === "string") {
             this.armor = properties.armor;
-        } else {
+        } else if (this.isCombatant()) {
             this.armor = this.place.lists.armor.pickRandom(
                 Object.assign({}, properties, this)
             );
         }
 
-        if (properties && typeof properties.weapons === "string") {
+        this.weapons = [];
+        if (properties && Array.isArray(properties.weapons)) {
             this.weapons = properties.weapons;
-        } else {
+        } else if (this.isCombatant()) {
             this.weapons = new Array(Math.floor(Math.random() * 2) + 1)
                 .fill(null)
                 .map(() => {
@@ -187,28 +190,48 @@ export class NPC {
         }
     }
 
+    isAdult() {
+        return this.age === "adult" || this.age === "elder";
+    }
+
+    isCombatant() {
+        return this.isAdult();
+    }
+
     getName() {
-        return [this.forename, this.surname].filter(name => name).join(" ");
+        return [this.title, this.forename, this.surname]
+            .filter(name => name)
+            .join(" ");
     }
 
     getDescription() {
+        let profession = this.profession ? ` (${this.profession})` : "";
+
         let hair_eyes: string[] | string = [
             this.hair ? `${this.hair} hair` : "",
             this.eyes ? `${this.eyes} eyes` : ""
         ].filter(value => value);
-        hair_eyes = hair_eyes.length ? `with ${hair_eyes.join(" and ")}` : "";
+        hair_eyes = hair_eyes.length ? ` with ${hair_eyes.join(" and ")}` : "";
 
-        let pronoun = getPronoun("third", this.gender, "subject");
-        pronoun = hair_eyes ? `. ${ucfirst(pronoun)}` : `, ${pronoun}`;
+        let items: string = [
+            this.armor ? ` wears ${this.armor}` : "",
+            this.weapons.length ? ` wields a ${this.weapons.join(" and ")}` : ""
+        ]
+            .filter(value => value)
+            .join(" and ");
 
-        return `${this.getName()} (${this.profession}): ${ucfirst(this.age)} ${
+        let pronoun = "";
+        if (items) {
+            pronoun = getPronoun("third", this.gender, "subject");
+            pronoun = hair_eyes ? `. ${ucfirst(pronoun)}` : `, ${pronoun}`;
+        }
+
+        return `${this.getName() + profession}: ${ucfirst(this.age)} ${
             this.race
         } ${this.class}, ${this.alignment}. ${
             this.forename
-        } is {physical detail}${hair_eyes + pronoun} wears ${
-            this.armor
-        } and wields a ${this.weapons.join(" and ")}. ${this.forename} seeks ${
-            this.motivation
-        }.`;
+        } is {physical detail}${hair_eyes + pronoun + items}. ${
+            this.forename
+        } seeks ${this.motivation}.`;
     }
 }
