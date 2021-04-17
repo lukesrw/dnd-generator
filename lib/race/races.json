@@ -1,125 +1,956 @@
 [
     {
-        "value": "Dragonborn"
-    },
-    {
-        "value": "Dwarf"
-    },
-    {
-        "value": "Elf"
-    },
-    {
-        "value": "Gnome"
-    },
-    {
-        "value": "Half-Elf"
-    },
-    {
-        "value": "Halfling"
-    },
-    {
-        "value": "Half-Orc"
-    },
-    {
-        "value": "Human"
-    },
-    {
-        "value": "Tiefling"
-    },
-    {
-        "value": "Orc of Exandria"
-    },
-    {
-        "value": "Aarakocra"
-    },
-    {
-        "value": "Genasi"
-    },
-    {
-        "value": "Goliath"
-    },
-    {
-        "value": "Aasimar"
-    },
-    {
-        "value": "Bugbear"
-    },
-    {
-        "value": "Firbolg"
-    },
-    {
-        "value": "Goblin"
-    },
-    {
-        "value": "Hobgoblin"
-    },
-    {
-        "value": "Kenku"
-    },
-    {
-        "value": "Kobold"
-    },
-    {
-        "value": "Lizardfolk"
-    },
-    {
-        "value": "Orc"
-    },
-    {
-        "value": "Tabaxi"
-    },
-    {
-        "value": "Triton"
-    },
-    {
-        "value": "Yuan-ti Pureblood"
-    },
-    {
-        "value": "Feral Tiefling"
-    },
-    {
-        "value": "Tortle"
-    },
-    {
-        "value": "Changeling"
-    },
-    {
-        "value": "Kalashtar"
-    },
-    {
-        "value": "Orc of Eberron"
-    },
-    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cavalier",
+            "Cleric",
+            "Druid",
+            "Fighter",
+            "Knight",
+            "Monk",
+            "Mystic",
+            "Paladin",
+            "Ranger",
+            "Rogue",
+            "Sorcerer",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Warlock",
+            "Wizard",
+            "Artificer",
+            "Blood Hunter"
+        ],
         "value": "Shifter"
     },
     {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cavalier",
+            "Cleric",
+            "Druid",
+            "Fighter",
+            "Knight",
+            "Monk",
+            "Mystic",
+            "Paladin",
+            "Ranger",
+            "Rogue",
+            "Sorcerer",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Warlock",
+            "Wizard",
+            "Artificer",
+            "Blood Hunter"
+        ],
         "value": "Warforged"
     },
     {
-        "value": "Gith"
-    },
-    {
-        "value": "Centaur"
-    },
-    {
-        "value": "Loxodon"
-    },
-    {
-        "value": "Minotaur"
-    },
-    {
-        "value": "Simic Hybrid"
-    },
-    {
-        "value": "Vedalken"
-    },
-    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cavalier",
+            "Cleric",
+            "Druid",
+            "Fighter",
+            "Knight",
+            "Monk",
+            "Mystic",
+            "Paladin",
+            "Ranger",
+            "Rogue",
+            "Sorcerer",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Warlock",
+            "Wizard",
+            "Artificer",
+            "Blood Hunter"
+        ],
         "value": "Verdan"
     },
     {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cavalier",
+            "Cleric",
+            "Druid",
+            "Fighter",
+            "Knight",
+            "Monk",
+            "Mystic",
+            "Paladin",
+            "Ranger",
+            "Rogue",
+            "Sorcerer",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Warlock",
+            "Wizard",
+            "Artificer",
+            "Blood Hunter"
+        ],
+        "value": "Gith"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cavalier",
+            "Cleric",
+            "Druid",
+            "Fighter",
+            "Knight",
+            "Monk",
+            "Mystic",
+            "Paladin",
+            "Ranger",
+            "Rogue",
+            "Sorcerer",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Warlock",
+            "Wizard",
+            "Artificer",
+            "Blood Hunter"
+        ],
         "value": "Locathah"
     },
     {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cavalier",
+            "Cleric",
+            "Druid",
+            "Fighter",
+            "Knight",
+            "Monk",
+            "Mystic",
+            "Paladin",
+            "Ranger",
+            "Rogue",
+            "Sorcerer",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Warlock",
+            "Wizard",
+            "Artificer",
+            "Blood Hunter"
+        ],
+        "value": "Simic Hybrid"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cavalier",
+            "Cleric",
+            "Druid",
+            "Fighter",
+            "Knight",
+            "Monk",
+            "Mystic",
+            "Paladin",
+            "Ranger",
+            "Rogue",
+            "Sorcerer",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Warlock",
+            "Wizard",
+            "Artificer",
+            "Blood Hunter"
+        ],
+        "value": "Changeling"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cavalier",
+            "Cleric",
+            "Druid",
+            "Fighter",
+            "Knight",
+            "Monk",
+            "Mystic",
+            "Paladin",
+            "Ranger",
+            "Rogue",
+            "Sorcerer",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Warlock",
+            "Wizard",
+            "Artificer",
+            "Blood Hunter"
+        ],
+        "value": "Minotaur"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cavalier",
+            "Cleric",
+            "Druid",
+            "Fighter",
+            "Knight",
+            "Monk",
+            "Mystic",
+            "Paladin",
+            "Ranger",
+            "Rogue",
+            "Sorcerer",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Warlock",
+            "Wizard",
+            "Artificer",
+            "Blood Hunter"
+        ],
+        "value": "Loxodon"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cavalier",
+            "Cleric",
+            "Druid",
+            "Fighter",
+            "Knight",
+            "Monk",
+            "Mystic",
+            "Paladin",
+            "Ranger",
+            "Rogue",
+            "Sorcerer",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Warlock",
+            "Wizard",
+            "Artificer",
+            "Blood Hunter"
+        ],
+        "value": "Vedalken"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cavalier",
+            "Cleric",
+            "Druid",
+            "Fighter",
+            "Knight",
+            "Monk",
+            "Mystic",
+            "Paladin",
+            "Ranger",
+            "Rogue",
+            "Sorcerer",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Warlock",
+            "Wizard",
+            "Artificer",
+            "Blood Hunter"
+        ],
+        "value": "Centaur"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cleric",
+            "Druid",
+            "Sorcerer",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Warlock",
+            "Wizard",
+            "Artificer",
+            "Blood Hunter"
+        ],
+        "value": "Aarakocra"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cleric",
+            "Sorcerer",
+            "Swashbuckler",
+            "Warlock"
+        ],
+        "value": "Aasimar"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cavalier",
+            "Fighter",
+            "Knight",
+            "Monk",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Blood Hunter"
+        ],
+        "value": "Bugbear"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cavalier",
+            "Cleric",
+            "Fighter",
+            "Knight",
+            "Sorcerer",
+            "Trickster",
+            "Swashbuckler",
+            "Warlock"
+        ],
+        "value": "Dragonborn"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Cavalier",
+            "Knight",
+            "Mystic",
+            "Paladin",
+            "Trickster",
+            "Wizard"
+        ],
+        "value": "Duergar Dwarf"
+    },
+    { "class": ["Barbarian", "Paladin", "Artificer"], "value": "Dwarf" },
+    {
+        "class": [
+            "Barbarian",
+            "Cavalier",
+            "Cleric",
+            "Druid",
+            "Knight",
+            "Paladin"
+        ],
+        "value": "Hill Dwarf"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Cavalier",
+            "Cleric",
+            "Druid",
+            "Knight",
+            "Paladin"
+        ],
+        "value": "Mountain Dwarf"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Cavalier",
+            "Cleric",
+            "Druid",
+            "Monk",
+            "Paladin",
+            "Ranger",
+            "Inquisitor"
+        ],
+        "value": "Firbolg"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cleric",
+            "Druid",
+            "Monk",
+            "Rogue",
+            "Sorcerer",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Warlock",
+            "Wizard",
+            "Artificer"
+        ],
+        "value": "Air Genasi"
+    },
+    {
+        "class": ["Barbarian", "Cavalier", "Knight", "Paladin"],
+        "value": "Earth Genasi"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Cavalier",
+            "Cleric",
+            "Druid",
+            "Fighter",
+            "Knight",
+            "Monk",
+            "Ranger",
+            "Trickster",
+            "Inquisitor",
+            "Blood Hunter"
+        ],
+        "value": "Water Genasi"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cleric",
+            "Druid",
+            "Monk",
+            "Rogue",
+            "Inquisitor",
+            "Swashbuckler",
+            "Artificer"
+        ],
+        "value": "Goblin"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cavalier",
+            "Cleric",
+            "Druid",
+            "Knight",
+            "Paladin",
+            "Rogue",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler"
+        ],
+        "value": "Goliath"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cleric",
+            "Druid",
+            "Monk",
+            "Mystic",
+            "Paladin",
+            "Rogue",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Artificer"
+        ],
         "value": "Grung"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cavalier",
+            "Cleric",
+            "Druid",
+            "Fighter",
+            "Knight",
+            "Monk",
+            "Mystic",
+            "Paladin",
+            "Ranger",
+            "Rogue",
+            "Sorcerer",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Warlock",
+            "Wizard",
+            "Artificer",
+            "Blood Hunter"
+        ],
+        "value": "Half-Elf"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cavalier",
+            "Cleric",
+            "Druid",
+            "Monk",
+            "Rogue",
+            "Sorcerer",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Warlock"
+        ],
+        "value": "Lightfoot Halfling"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cavalier",
+            "Cleric",
+            "Druid",
+            "Knight",
+            "Monk",
+            "Mystic",
+            "Paladin",
+            "Rogue",
+            "Sorcerer",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Warlock",
+            "Wizard"
+        ],
+        "value": "Stout Halfling"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cavalier",
+            "Cleric",
+            "Druid",
+            "Monk",
+            "Rogue",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Artificer"
+        ],
+        "value": "Halfling"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Cavalier",
+            "Druid",
+            "Fighter",
+            "Knight",
+            "Paladin",
+            "Ranger",
+            "Rogue",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Warlock",
+            "Blood Hunter"
+        ],
+        "value": "Half-Orc"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Fighter",
+            "Knight",
+            "Mystic",
+            "Trickster",
+            "Wizard",
+            "Artificer",
+            "Blood Hunter"
+        ],
+        "value": "Hobgoblin"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cavalier",
+            "Cleric",
+            "Druid",
+            "Fighter",
+            "Knight",
+            "Monk",
+            "Mystic",
+            "Paladin",
+            "Ranger",
+            "Rogue",
+            "Sorcerer",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Warlock",
+            "Wizard",
+            "Artificer",
+            "Blood Hunter"
+        ],
+        "value": "Human"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cleric",
+            "Druid",
+            "Knight",
+            "Monk",
+            "Rogue",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler"
+        ],
+        "value": "Kenku"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Cavalier",
+            "Cleric",
+            "Druid",
+            "Fighter",
+            "Knight",
+            "Ranger",
+            "Trickster",
+            "Inquisitor",
+            "Blood Hunter"
+        ],
+        "value": "Lizardfolk"
+    },
+    {
+        "class": ["Barbarian", "Cavalier", "Druid", "Paladin"],
+        "value": "Orc"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cavalier",
+            "Cleric",
+            "Druid",
+            "Knight",
+            "Monk",
+            "Paladin"
+        ],
+        "value": "Tortle"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cavalier",
+            "Knight",
+            "Paladin",
+            "Rogue",
+            "Sorcerer",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Warlock"
+        ],
+        "value": "Triton"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cavalier",
+            "Cleric",
+            "Druid",
+            "Fighter",
+            "Knight",
+            "Monk",
+            "Mystic",
+            "Paladin",
+            "Ranger",
+            "Rogue",
+            "Sorcerer",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Warlock",
+            "Wizard",
+            "Artificer",
+            "Blood Hunter"
+        ],
+        "value": "Yuan-ti Pureblood"
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cavalier",
+            "Cleric",
+            "Druid",
+            "Fighter",
+            "Knight",
+            "Monk",
+            "Mystic",
+            "Paladin",
+            "Ranger",
+            "Rogue",
+            "Sorcerer",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Warlock",
+            "Wizard",
+            "Artificer"
+        ],
+        "value": "Kalashtar"
+    },
+    {
+        "class": [
+            "Bard",
+            "Cleric",
+            "Sorcerer",
+            "Swashbuckler",
+            "Warlock",
+            "Blood Hunter"
+        ],
+        "value": "Fallen Aasimar"
+    },
+    {
+        "class": [
+            "Bard",
+            "Cleric",
+            "Druid",
+            "Sorcerer",
+            "Swashbuckler",
+            "Warlock",
+            "Blood Hunter"
+        ],
+        "value": "Protector Aasimar"
+    },
+    {
+        "class": ["Bard", "Sorcerer", "Swashbuckler", "Warlock"],
+        "value": "Scourge Aasimar"
+    },
+    {
+        "class": [
+            "Bard",
+            "Cavalier",
+            "Knight",
+            "Monk",
+            "Paladin",
+            "Sorcerer",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Warlock"
+        ],
+        "value": "Drow Elf"
+    },
+    {
+        "class": [
+            "Bard",
+            "Cavalier",
+            "Knight",
+            "Monk",
+            "Mystic",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Wizard"
+        ],
+        "value": "Eladrin Elf"
+    },
+    {
+        "class": [
+            "Bard",
+            "Cavalier",
+            "Knight",
+            "Monk",
+            "Mystic",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Wizard"
+        ],
+        "value": "High Elf"
+    },
+    {
+        "class": [
+            "Bard",
+            "Cavalier",
+            "Cleric",
+            "Druid",
+            "Knight",
+            "Monk",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Blood Hunter"
+        ],
+        "value": "Wood Elf"
+    },
+    { "class": ["Bard", "Trickster", "Artificer"], "value": "Elf" },
+    {
+        "class": [
+            "Bard",
+            "Cavalier",
+            "Cleric",
+            "Druid",
+            "Monk",
+            "Rogue",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler"
+        ],
+        "value": "Ghostwise Halfling"
+    },
+    {
+        "class": [
+            "Bard",
+            "Monk",
+            "Rogue",
+            "Sorcerer",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Warlock"
+        ],
+        "value": "Tabaxi"
+    },
+    {
+        "class": [
+            "Bard",
+            "Mystic",
+            "Paladin",
+            "Rogue",
+            "Sorcerer",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Warlock",
+            "Wizard",
+            "Artificer"
+        ],
+        "value": "Tiefling"
+    },
+    {
+        "class": [
+            "Bard",
+            "Mystic",
+            "Paladin",
+            "Rogue",
+            "Sorcerer",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Warlock",
+            "Wizard",
+            "Artificer"
+        ],
+        "value": "Devil's Tongue Tiefling"
+    },
+    {
+        "class": [
+            "Bard",
+            "Mystic",
+            "Paladin",
+            "Rogue",
+            "Sorcerer",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Warlock",
+            "Wizard",
+            "Artificer"
+        ],
+        "value": "Hellfire Tiefling"
+    },
+    {
+        "class": [
+            "Bard",
+            "Knight",
+            "Mystic",
+            "Paladin",
+            "Rogue",
+            "Sorcerer",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Warlock",
+            "Wizard",
+            "Artificer"
+        ],
+        "value": "Winged Tiefling"
+    },
+    {
+        "class": [
+            "Cavalier",
+            "Fighter",
+            "Knight",
+            "Mystic",
+            "Rogue",
+            "Sorcerer",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Warlock",
+            "Wizard",
+            "Artificer",
+            "Blood Hunter"
+        ],
+        "value": "Fire Genasi"
+    },
+    {
+        "class": [
+            "Cavalier",
+            "Monk",
+            "Rogue",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler"
+        ],
+        "value": "Kobold"
+    },
+    {
+        "class": [
+            "Knight",
+            "Mystic",
+            "Rogue",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Wizard",
+            "Artificer"
+        ],
+        "value": "Deep Gnome"
+    },
+    {
+        "class": [
+            "Knight",
+            "Mystic",
+            "Rogue",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Wizard",
+            "Artificer"
+        ],
+        "value": "Forest Gnome"
+    },
+    {
+        "class": ["Knight", "Mystic", "Trickster", "Wizard", "Artificer"],
+        "value": "Rock Gnome"
+    },
+    {
+        "class": ["Knight", "Mystic", "Trickster", "Artificer"],
+        "value": "Gnome"
     }
 ]
