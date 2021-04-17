@@ -1,226 +1,282 @@
 [
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Sea Captain"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Wagoner"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Caravaneer"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["child", "adult", "elder"],
         "value": "Pirate"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Armorer"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Blacksmith"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Bladesmith"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Monster Hunter"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Street Vendor"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Bounty Hunter"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Summoner"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Transmuter"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Enchanter"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Healer"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Baker"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Barber"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Charcoal Maker"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Butcher"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Carpenter"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Fishmonger"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Guild Master"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Innkeeper"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Ironmonger"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Bookbinder"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Bowyer"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Brewer"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Broom Maker"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Candlemaker"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Cobbler"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Cooper"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Cutler"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Embroiderer"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Engraver"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Fletcher"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Furrier"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Glassmaker"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Glovemaker"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Metalsmith"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Hatter"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Jeweler"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Leatherworker"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Locksmith"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Mercer"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Potter"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Printer"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Rope-maker"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Saddler"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Tailor"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Soaper"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Tanner"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Thatcher"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Tinker"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Toymaker"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Watchmaker"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Weaponsmith"
     },
     {
         "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
         "value": "Weaver"
     }
 ]

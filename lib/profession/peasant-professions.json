@@ -1,14 +1,17 @@
 [
     {
         "nobility": ["Peasant"],
+        "age": ["adult", "elder"],
         "value": "Deserter"
     },
     {
         "nobility": ["Peasant"],
+        "age": ["adult", "elder"],
         "value": "Cult Leader"
     },
     {
         "nobility": ["Peasant"],
+        "age": ["adult", "elder"],
         "value": "Friar"
     },
     {
@@ -17,10 +20,12 @@
     },
     {
         "nobility": ["Peasant"],
+        "age": ["adult", "elder"],
         "value": "Rag-and-Bone Man"
     },
     {
         "nobility": ["Peasant"],
+        "age": ["child", "adult", "elder"],
         "value": "Rebel"
     },
     {
@@ -29,14 +34,17 @@
     },
     {
         "nobility": ["Peasant"],
+        "age": ["child", "adult", "elder"],
         "value": "Chimney Sweeper"
     },
     {
         "nobility": ["Peasant"],
+        "age": ["adult", "elder"],
         "value": "Kidnapper"
     },
     {
         "nobility": ["Peasant"],
+        "age": ["adult", "elder"],
         "value": "Jester"
     }
 ]

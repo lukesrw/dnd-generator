@@ -1,22 +1,27 @@
 [
     {
         "nobility": ["Underclass"],
+        "age": ["child", "adult", "elder"],
         "value": "Grave Robber"
     },
     {
         "nobility": ["Underclass"],
+        "age": ["child", "adult", "elder"],
         "value": "Heckler"
     },
     {
         "nobility": ["Underclass"],
+        "age": ["child", "adult", "elder"],
         "value": "Heretic"
     },
     {
         "nobility": ["Underclass", "Peasant"],
+        "age": ["adult", "elder"],
         "value": "Hermit"
     },
     {
         "nobility": ["Underclass"],
+        "age": ["child", "adult", "elder"],
         "value": "Pilgrim"
     },
     {
@@ -33,6 +38,7 @@
     },
     {
         "nobility": ["Underclass"],
+        "age": ["adult", "elder"],
         "value": "Vagabond"
     },
     {
@@ -53,10 +59,12 @@
     },
     {
         "nobility": ["Underclass"],
+        "age": ["child", "adult", "elder"],
         "value": "Gravedigger"
     },
     {
         "nobility": ["Underclass", "Peasant"],
+        "age": ["adult", "elder"],
         "value": "Prostitute"
     }
 ]

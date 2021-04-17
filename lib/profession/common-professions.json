@@ -10,22 +10,27 @@
             "Knighted",
             "Royal"
         ],
+        "age": ["elder"],
         "value": "Elder"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Boatman"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Gambler"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Folk Hero"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Ex-Criminal"
     },
     {
@@ -39,6 +44,7 @@
             "Knighted",
             "Royal"
         ],
+        "age": ["adult", "elder"],
         "value": "Traveler"
     },
     {
@@ -52,10 +58,12 @@
             "Knighted",
             "Royal"
         ],
+        "age": ["adult", "elder"],
         "value": "Explorer"
     },
     {
         "nobility": ["Common", "Scholar", "Yeoman", "Knighted"],
+        "age": ["adult", "elder"],
         "value": "Dungeoneer"
     },
     {
@@ -69,30 +77,37 @@
             "Knighted",
             "Royal"
         ],
+        "age": ["adult", "elder"],
         "value": "Adventurer"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult"],
         "value": "Charioteer"
     },
     {
         "nobility": ["Common", "Knighted"],
+        "age": ["adult", "elder"],
         "value": "Mercenary"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Sergeant"
     },
     {
         "nobility": ["Common"],
+        "age": ["child", "adult"],
         "value": "Scout"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult"],
         "value": "Soldier"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Torturer",
         "alignment": [
             "Lawful Neutral",
@@ -105,87 +120,107 @@
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Guard",
         "alignment": ["Lawful Good", "Lawful Neutral", "Lawful Evil"]
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Jailer",
         "alignment": ["Lawful Good", "Lawful Neutral", "Lawful Evil"]
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Warden",
         "alignment": ["Lawful Good", "Lawful Neutral", "Lawful Evil"]
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Wordsmith"
     },
     {
         "nobility": ["Common", "Knighted"],
+        "age": ["adult", "elder"],
         "value": "Admiral",
         "alignment": ["Lawful Good", "Lawful Neutral", "Lawful Evil"]
     },
     {
         "class": ["Ranger"],
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Archer"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Bailiff"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Bodyguard"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Bouncer"
     },
     {
         "nobility": ["Common", "Knighted"],
+        "age": ["adult", "elder"],
         "value": "Captain"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Castellan"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Cavalier"
     },
     {
         "nobility": ["Common", "Knighted"],
+        "age": ["adult", "elder"],
         "value": "City Watch"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Investigator"
     },
     {
         "nobility": ["Common", "Knighted"],
+        "age": ["adult", "elder"],
         "value": "Duelist"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Executioner"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Fireman"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Tavern Worker"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Exterminator"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Illusionist"
     },
     {
@@ -200,91 +235,113 @@
             "Knighted",
             "Royal"
         ],
+        "age": ["adult", "elder"],
         "value": "Necromancer"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Ritualist"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Runecaster"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Laborer"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult"],
         "value": "Lamplighter"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Landscaper"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Longshoreman"
     },
     {
         "nobility": ["Common"],
+        "age": ["child", "adult", "elder"],
         "value": "Miner"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Orphanage Caretaker"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Plumer"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Clerk"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Cook"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Copyist"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Croupier"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Distiller"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Florist"
     },
     {
         "nobility": ["Common"],
+        "age": ["child", "adult", "elder"],
         "value": "Gardener"
     },
     {
         "nobility": ["Common"],
+        "age": ["child", "adult"],
         "value": "Housemaid"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Kitchen Drudge"
     },
     {
         "class": ["Wizard", "Sorcerer", "Warlock", "Cleric"],
         "nobility": ["Common", "Scholar"],
+        "age": ["adult", "elder"],
         "value": "Alchemist"
     },
     {
         "nobility": ["Common", "Scholar"],
+        "age": ["adult", "elder"],
         "value": "Apothecary"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Bloodletter"
     },
     {
@@ -298,170 +355,212 @@
             "Noble",
             "Royal"
         ],
+        "age": ["adult", "elder"],
         "value": "Doctor"
     },
     {
         "nobility": ["Common", "Scholar"],
+        "age": ["adult", "elder"],
         "value": "Herbalist"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Midwife"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Mortician"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Nurse"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Physician"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Surgeon"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Veterinarian"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Barkeep"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Animal Handler"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Arborist"
     },
     {
         "nobility": ["Common", "Yeoman", "Royal"],
+        "age": ["adult", "elder"],
         "value": "Beekeeper"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Birdcatcher"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Cowherd"
     },
     {
         "nobility": ["Common"],
+        "age": ["child", "adult"],
         "value": "Dairyhand"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Falconer"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Fisher"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Forager"
     },
     {
         "nobility": ["Common", "Yeoman", "Gentle"],
+        "age": ["adult", "elder"],
         "value": "Gamekeeper"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Herder"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Horse Trainer"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Hunter"
     },
     {
         "nobility": ["Common", "Yeoman", "Gentle"],
+        "age": ["adult", "elder"],
         "value": "Master-of-Hounds"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Miller"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Prospector"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Renderer"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Shepherd"
     },
     {
         "nobility": ["Common"],
+        "age": ["child", "adult", "elder"],
         "value": "Stablehand"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Thresher"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Trapper"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Vintner"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Woodcutter"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Zookeeper"
     },
     {
         "nobility": ["Common", "Scholar", "Yeoman"],
+        "age": ["adult", "elder"],
         "value": "Architect"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Brickmaker"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Brickmason"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Claymason"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Plasterer"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Roofer"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Stonemason"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Streetlayer"
     },
     {
         "nobility": ["Common"],
+        "age": ["child", "adult"],
         "value": "Acrobat"
     },
     {
@@ -475,70 +574,87 @@
             "Knighted",
             "Royal"
         ],
+        "age": ["child", "adult", "elder"],
         "value": "Actor"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Chef"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Dancer"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult"],
         "value": "Gladiator"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Glasspainter"
     },
     {
         "nobility": ["Common"],
+        "age": ["child", "adult", "elder"],
         "value": "Musician"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Painter"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Piper"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Playwright"
     },
     {
         "nobility": ["Common", "Scholar"],
+        "age": ["adult", "elder"],
         "value": "Poet"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Sculptor"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Singer"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Tattooist"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Brawler"
     },
     {
         "nobility": ["Common", "Scholar"],
+        "age": ["adult", "elder"],
         "value": "Writer"
     },
     {
         "nobility": ["Common", "Scholar"],
+        "age": ["adult", "elder"],
         "value": "Accountant"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Pimp",
         "alignment": [
             "True Neutral",
@@ -549,106 +665,132 @@
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Chandler"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Collector"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Contractor"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Grocer"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Peddler"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Speculator"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Tradesman"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Courier"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Herald"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Interpreter"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Linguist"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Translator"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Cartwright"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Furniture Artisan"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Taxidermist"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Whittler"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Woodcarver"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Wheelwright"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Assassin"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Bandit"
     },
     {
         "nobility": ["Common"],
+        "age": ["child", "adult", "elder"],
         "value": "Burglar"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Conman"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Cockfighter"
     },
     {
         "nobility": ["Common", "Yeoman", "Gentle"],
+        "age": ["adult", "elder"],
         "value": "Crime Boss"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Cutpurse"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Drug Lord",
         "alignment": [
             "Lawful Neutral",
@@ -661,6 +803,7 @@
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Fence",
         "alignment": [
             "Neutral Good",
@@ -673,6 +816,7 @@
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Loan Shark",
         "alignment": [
             "True Neutral",
@@ -683,6 +827,7 @@
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Outlaw",
         "alignment": [
             "Neutral Good",
@@ -695,14 +840,17 @@
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Poacher"
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Smuggler"
     },
     {
         "nobility": ["Common"],
+        "age": ["child", "adult", "elder"],
         "value": "Thief",
         "alignment": [
             "Neutral Good",
@@ -715,10 +863,12 @@
     },
     {
         "nobility": ["Common"],
+        "age": ["adult", "elder"],
         "value": "Scribe"
     },
     {
         "nobility": ["Common"],
+        "age": ["child", "adult"],
         "value": "Student"
     }
 ]

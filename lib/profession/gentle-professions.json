@@ -1,10 +1,12 @@
 [
     {
         "nobility": ["Gentle", "Esquire", "Noble", "Royal"],
+        "age": ["adult", "elder"],
         "value": "Lawyer"
     },
     {
         "nobility": ["Gentle"],
+        "age": ["adult", "elder"],
         "value": "Town Crier"
     }
 ]

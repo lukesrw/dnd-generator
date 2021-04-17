@@ -1,14 +1,17 @@
 [
     {
         "nobility": ["Yeoman"],
+        "age": ["adult", "elder"],
         "value": "Entrepreneur"
     },
     {
         "nobility": ["Yeoman", "Gentle"],
+        "age": ["adult", "elder"],
         "value": "Plantation Owner"
     },
     {
         "nobility": ["Yeoman"],
+        "age": ["adult", "elder"],
         "value": "Farmer"
     }
 ]
