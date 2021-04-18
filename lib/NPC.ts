@@ -9,8 +9,6 @@ const TRANSGENDER_CHANCE = 50;
 const NON_BINARY_CHANCE = 50;
 
 export class NPC {
-    place: Place;
-
     // name
     forename: string;
     surname: string;
@@ -34,7 +32,7 @@ export class NPC {
     eyes: string;
 
     constructor(place?: Place, properties: Partial<NPC> = {}) {
-        this.place = place instanceof Place ? place : new Place();
+        place = place instanceof Place ? place : new Place();
 
         /**
          * born as...
@@ -42,7 +40,7 @@ export class NPC {
         if (properties && typeof properties.sex === "string") {
             this.sex = properties.sex;
         } else {
-            this.sex = this.place.lists.sex.pickRandom(
+            this.sex = place.lists.sex.pickRandom(
                 Object.assign({}, properties, this)
             ) as Sex;
         }
@@ -55,7 +53,7 @@ export class NPC {
         } else {
             this.gender = this.sex;
             if (Math.floor(Math.random() * TRANSGENDER_CHANCE) === 1) {
-                this.gender = this.place.lists.sex.pickRandom(
+                this.gender = place.lists.sex.pickRandom(
                     Object.assign({}, properties, this)
                 ) as Gender;
             } else if (Math.floor(Math.random() * NON_BINARY_CHANCE) === 1) {
@@ -66,7 +64,15 @@ export class NPC {
         if (properties && typeof properties.age === "string") {
             this.age = properties.age;
         } else {
-            this.age = this.place.lists.age.pickRandom(
+            this.age = place.lists.age.pickRandom(
+                Object.assign({}, properties, this)
+            );
+        }
+
+        if (properties && typeof properties.alignment === "string") {
+            this.alignment = properties.alignment;
+        } else {
+            this.alignment = place.lists.alignment.pickRandom(
                 Object.assign({}, properties, this)
             );
         }
@@ -74,7 +80,7 @@ export class NPC {
         if (properties && typeof properties.race === "string") {
             this.race = properties.race;
         } else {
-            this.race = this.place.lists.race.pickRandom(
+            this.race = place.lists.race.pickRandom(
                 Object.assign({}, properties, this)
             );
         }
@@ -82,7 +88,7 @@ export class NPC {
         if (properties && typeof properties.class === "string") {
             this.class = properties.class;
         } else {
-            this.class = this.place.lists.class.pickRandom(
+            this.class = place.lists.class.pickRandom(
                 Object.assign({}, properties, this)
             );
         }
@@ -90,7 +96,7 @@ export class NPC {
         if (properties && typeof properties.nobility === "string") {
             this.nobility = properties.nobility;
         } else {
-            this.nobility = this.place.lists.nobility.pickRandom(
+            this.nobility = place.lists.nobility.pickRandom(
                 Object.assign({}, properties, this)
             );
         }
@@ -100,15 +106,7 @@ export class NPC {
         } else if (this.nobility === "Knighted") {
             this.title = this.gender === "Male" ? "Sir" : "Dame";
         } else {
-            this.title = this.place.lists.title.pickRandom(
-                Object.assign({}, properties, this)
-            );
-        }
-
-        if (properties && typeof properties.alignment === "string") {
-            this.alignment = properties.alignment;
-        } else {
-            this.alignment = this.place.lists.alignment.pickRandom(
+            this.title = place.lists.title.pickRandom(
                 Object.assign({}, properties, this)
             );
         }
@@ -116,7 +114,7 @@ export class NPC {
         if (properties && typeof properties.motivation === "string") {
             this.motivation = properties.motivation;
         } else {
-            this.motivation = this.place.lists.motivation.pickRandom(
+            this.motivation = place.lists.motivation.pickRandom(
                 Object.assign({}, properties, this)
             );
         }
@@ -125,7 +123,7 @@ export class NPC {
         if (properties && typeof properties.profession === "string") {
             this.profession = properties.profession;
         } else if (this.isAdult()) {
-            this.profession = this.place.lists.profession.pickRandom(
+            this.profession = place.lists.profession.pickRandom(
                 Object.assign({}, properties, this)
             );
         }
@@ -136,7 +134,9 @@ export class NPC {
 
             if (properties.surname) this.surname = properties.surname;
         } else {
-            let [forename, surname] = new NameList().pickRandom().split(" ");
+            let [forename, surname] = new NameList()
+                .pickRandom(Object.assign({}, properties, this))
+                .split(" ");
             if (properties && typeof properties.surname === "string") {
                 surname = properties.surname;
             }
@@ -148,7 +148,7 @@ export class NPC {
         if (properties && typeof properties.hair === "string") {
             this.hair = properties.hair;
         } else {
-            this.hair = this.place.lists.hair.pickRandom(
+            this.hair = place.lists.hair.pickRandom(
                 Object.assign({}, properties, this)
             );
         }
@@ -156,18 +156,16 @@ export class NPC {
         if (properties && typeof properties.eyes === "string") {
             this.eyes = properties.eyes;
         } else {
-            do {
-                this.eyes = this.place.lists.eye.pickRandom(
-                    Object.assign({}, properties, this)
-                );
-            } while (this.eyes === this.hair);
+            this.eyes = place.lists.eye.pickRandom(
+                Object.assign({}, properties, this)
+            );
         }
 
         this.armor = "";
         if (properties && typeof properties.armor === "string") {
             this.armor = properties.armor;
         } else if (this.isCombatant()) {
-            this.armor = this.place.lists.armor.pickRandom(
+            this.armor = place.lists.armor.pickRandom(
                 Object.assign({}, properties, this)
             );
         }
@@ -179,9 +177,13 @@ export class NPC {
             this.weapons = new Array(Math.floor(Math.random() * 2) + 1)
                 .fill(null)
                 .map(() => {
-                    return this.place.lists.weapon.pickRandom(
-                        Object.assign({}, properties, this)
-                    );
+                    if (place) {
+                        return place.lists.weapon.pickRandom(
+                            Object.assign({}, properties, this)
+                        );
+                    }
+
+                    return "";
                 });
 
             if (this.weapons[1] && this.weapons[1] === this.weapons[0]) {
@@ -207,15 +209,22 @@ export class NPC {
     getDescription() {
         let profession = this.profession ? ` (${this.profession})` : "";
 
-        let hair_eyes: string[] | string = [
+        let detail: string[] | string = [
             this.hair ? `${this.hair} hair` : "",
             this.eyes ? `${this.eyes} eyes` : ""
         ].filter(value => value);
-        hair_eyes = hair_eyes.length ? ` with ${hair_eyes.join(" and ")}` : "";
+
+        if (detail.length) {
+            if (this.hair === this.eyes) detail = [`${this.hair} hair`, "eyes"];
+
+            detail = ` with ${detail.join(" and ")}`;
+        } else {
+            detail = "";
+        }
 
         let items: string = [
-            this.armor ? ` wears ${this.armor}` : "",
-            this.weapons.length ? ` wields a ${this.weapons.join(" and ")}` : ""
+            this.armor ? `wears ${this.armor}` : "",
+            this.weapons.length ? `wields a ${this.weapons.join(" and ")}` : ""
         ]
             .filter(value => value)
             .join(" and ");
@@ -223,14 +232,14 @@ export class NPC {
         let pronoun = "";
         if (items) {
             pronoun = getPronoun("third", this.gender, "subject");
-            pronoun = hair_eyes ? `. ${ucfirst(pronoun)}` : `, ${pronoun}`;
+            pronoun = detail ? `. ${ucfirst(pronoun)} ` : `, ${pronoun} `;
         }
 
         return `${this.getName() + profession}: ${ucfirst(this.age)} ${
             this.race
         } ${this.class}, ${this.alignment}. ${
             this.forename
-        } is {physical detail}${hair_eyes + pronoun + items}. ${
+        } is {physical detail}${detail + pronoun + items}. ${
             this.forename
         } seeks ${this.motivation}.`;
     }
