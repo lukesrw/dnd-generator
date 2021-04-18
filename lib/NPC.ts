@@ -119,10 +119,9 @@ export class NPC {
             );
         }
 
-        this.profession = "";
         if (properties && typeof properties.profession === "string") {
             this.profession = properties.profession;
-        } else if (this.isAdult()) {
+        } else {
             this.profession = place.lists.profession.pickRandom(
                 Object.assign({}, properties, this)
             );
@@ -141,7 +140,7 @@ export class NPC {
                 surname = properties.surname;
             }
 
-            this.forename = (forename || "").trim();
+            this.forename = forename.trim();
             this.surname = (surname || "").trim();
         }
 
@@ -192,12 +191,8 @@ export class NPC {
         }
     }
 
-    isAdult() {
-        return this.age === "adult" || this.age === "elder";
-    }
-
     isCombatant() {
-        return this.isAdult();
+        return this.age === "adult" || this.age === "elder";
     }
 
     getName() {
