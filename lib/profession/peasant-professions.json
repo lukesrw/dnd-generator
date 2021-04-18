@@ -34,8 +34,8 @@
     },
     {
         "nobility": ["Peasant"],
-        "age": ["child", "adult", "elder"],
-        "value": "Chimney Sweeper"
+        "age": ["child", "adult"],
+        "value": "Chimney Sweep"
     },
     {
         "nobility": ["Peasant"],
