@@ -1,4 +1,3 @@
-// import { promises as fs } from "fs";
 import * as Generic from "../interfaces/generic";
 import { NPC } from "./NPC";
 import { ucfirst } from "./utils";
