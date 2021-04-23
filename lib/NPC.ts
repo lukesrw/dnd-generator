@@ -202,8 +202,6 @@ export class NPC {
     }
 
     getDescription() {
-        let profession = this.profession ? ` (${this.profession})` : "";
-
         let detail: string[] | string = [
             this.hair ? `${this.hair} hair` : "",
             this.eyes ? `${this.eyes} eyes` : ""
@@ -230,11 +228,11 @@ export class NPC {
             pronoun = detail ? `. ${ucfirst(pronoun)} ` : `, ${pronoun} `;
         }
 
-        return `${this.getName() + profession}: ${ucfirst(this.age)} ${
-            this.race
-        } ${this.class}, ${this.alignment}. ${
-            this.forename
-        } is {physical detail}${detail + pronoun + items}. ${
+        return `${
+            this.getName() + (this.profession ? ` (${this.profession})` : "")
+        }: ${ucfirst(this.age)} ${this.race} ${this.class}, ${
+            this.alignment
+        }. ${this.forename} is {physical detail}${detail + pronoun + items}. ${
             this.forename
         } seeks ${this.motivation}.`;
     }
