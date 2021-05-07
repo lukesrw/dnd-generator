@@ -1,10 +1,15 @@
 [
     {
-        "value": "",
-        "gender": ["Non-Binary"]
+        "value": ""
     },
     {
         "value": "Mr",
+        "age": ["adult", "elder"],
+        "gender": ["Male"]
+    },
+    {
+        "value": "Master",
+        "age": ["infant", "child"],
         "gender": ["Male"]
     },
     {
@@ -13,119 +18,144 @@
     },
     {
         "value": "Ms",
+        "age": ["adult", "elder"],
         "gender": ["Female"]
     },
     {
         "value": "Mrs",
+        "age": ["adult", "elder"],
         "gender": ["Female"]
     },
     {
         "value": "Mx",
+        "age": ["adult", "elder"],
         "gender": ["Female", "Non-Binary"]
     },
     {
         "value": "Sir",
         "gender": ["Male"],
+        "age": ["adult", "elder"],
         "nobility": ["Knighted", "Noble"]
     },
     {
         "value": "Baron",
         "gender": ["Male"],
+        "age": ["adult", "elder"],
         "nobility": ["Noble"]
     },
     {
         "value": "Baroness",
         "gender": ["Female"],
+        "age": ["adult", "elder"],
         "nobility": ["Noble"]
     },
     {
         "value": "Madam",
+        "age": ["adult", "elder"],
         "gender": ["Female"]
     },
     {
         "value": "Dame",
         "gender": ["Female"],
+        "age": ["adult", "elder"],
         "nobility": ["Knighted", "Noble"]
     },
     {
         "value": "Lord",
         "gender": ["Male"],
+        "age": ["adult", "elder"],
         "nobility": ["Yeoman", "Gentle", "Esquire", "Knighted", "Noble"]
     },
     {
         "value": "Lady",
         "gender": ["Female"],
+        "age": ["adult", "elder"],
         "nobility": ["Yeoman", "Gentle", "Esquire", "Knighted", "Noble"]
     },
     {
         "value": "Queen",
         "gender": ["Female"],
+        "age": ["adult", "elder"],
         "nobility": ["Royal"]
     },
     {
         "value": "King",
         "gender": ["Male"],
+        "age": ["adult", "elder"],
         "nobility": ["Royal"]
     },
     {
         "value": "Emperor",
         "gender": ["Male"],
+        "age": ["adult", "elder"],
         "nobility": ["Royal"]
     },
     {
         "value": "Empress",
         "gender": ["Female"],
+        "age": ["adult", "elder"],
         "nobility": ["Royal"]
     },
     {
         "value": "Archduke",
         "gender": ["Male"],
+        "age": ["adult", "elder"],
         "nobility": ["Royal"]
     },
     {
         "value": "Archduchess",
         "gender": ["Female"],
+        "age": ["adult", "elder"],
         "nobility": ["Royal"]
     },
     {
         "value": "Dr",
+        "age": ["adult", "elder"],
         "nobility": ["Scholar"]
     },
     {
         "value": "Professor",
+        "age": ["adult", "elder"],
         "nobility": ["Scholar"]
     },
     {
         "value": "Chancellor",
+        "age": ["adult", "elder"],
         "nobility": ["Scholar", "Noble"]
     },
     {
         "value": "Prince",
+        "age": ["adult", "elder"],
         "nobility": ["Royal"],
         "gender": ["Male"]
     },
     {
         "value": "Princess",
+        "age": ["adult", "elder"],
         "nobility": ["Royal"],
         "gender": ["Female"]
     },
     {
         "value": "Duke",
+        "age": ["adult", "elder"],
         "nobility": ["Royal"],
         "gender": ["Male"]
     },
     {
         "value": "Duchess",
+        "age": ["adult", "elder"],
         "nobility": ["Royal"],
         "gender": ["Female"]
     },
     {
         "value": "Count",
+        "age": ["adult", "elder"],
         "nobility": ["Royal", "Noble"],
         "gender": ["Male"]
     },
     {
         "value": "Countess",
+        "age": ["adult", "elder"],
         "nobility": ["Royal"],
         "gender": ["Female", "Noble"]
     }
