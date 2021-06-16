@@ -134,6 +134,12 @@ export class NameList extends List {
             case "grung":
                 race = ["fairy", "goblin"];
                 break;
+
+            default:
+                race = race.toLowerCase().split(" ");
+
+                if (race.length > 1) race.shift();
+                break;
         }
 
         if (Array.isArray(race)) race = List.pickRandom(race);
