@@ -27,6 +27,7 @@ export class NPC {
     nobility: string;
     profession: string;
     race: string;
+    skin: string;
     title: string;
     weapons: string[];
 
@@ -84,6 +85,14 @@ export class NPC {
             this.race = properties.race;
         } else {
             this.race = this.place.lists.race.pickRandom(
+                Object.assign({}, properties, this)
+            );
+        }
+
+        if (properties && typeof properties.skin === "string") {
+            this.skin = properties.skin;
+        } else {
+            this.skin = this.place.lists.skin.pickRandom(
                 Object.assign({}, properties, this)
             );
         }
@@ -231,15 +240,17 @@ export class NPC {
     getDescription() {
         let detail: string[] | string = [
             this.hair ? `${this.hair} hair` : "",
+            this.skin ? `${this.skin} skin` : "",
             this.eyes ? `${this.eyes} eyes` : ""
         ].filter(value => value);
 
-        if (detail.length) {
-            if (this.hair === this.eyes) detail = [`${this.hair} hair`, "eyes"];
-
+        if (detail.length > 2) {
+            detail[detail.length - 1] = `and ${detail[detail.length - 1]}`;
+            detail = ` with ${detail.join(", ")}`;
+        } else if (detail.length > 1) {
             detail = ` with ${detail.join(" and ")}`;
-        } else {
-            detail = "";
+        } else if (detail.length) {
+            detail = detail[0];
         }
 
         let items: string = [

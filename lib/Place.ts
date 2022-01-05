@@ -11,6 +11,7 @@ import { NobilityList } from "./nobility/nobility";
 import { ProfessionList } from "./profession/profession";
 import { RaceList } from "./race/race";
 import { SexList } from "./sex/sex";
+import { SkinList } from "./skin/skin";
 import { TitleList } from "./title/title";
 import { WeaponList } from "./weapon/weapon";
 
@@ -27,6 +28,7 @@ interface Lists {
     profession: ProfessionList | List;
     race: RaceList | List;
     sex: SexList | List;
+    skin: SkinList | List;
     title: TitleList | List;
     weapon: WeaponList | List;
 }
@@ -49,6 +51,7 @@ export class Place {
                 profession: new ProfessionList(),
                 race: new RaceList(),
                 sex: new SexList(),
+                skin: new SkinList(),
                 title: new TitleList(),
                 weapon: new WeaponList()
             },
