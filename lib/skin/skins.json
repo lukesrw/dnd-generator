@@ -1,0 +1,518 @@
+[
+    {
+        "value": "fair"
+    },
+    {
+        "value": "beige",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "white"
+    },
+    {
+        "value": "light brown"
+    },
+    {
+        "value": "olive"
+    },
+    {
+        "value": "medium brown"
+    },
+    {
+        "value": "brown"
+    },
+    {
+        "value": "dark brown"
+    },
+    {
+        "value": "tan"
+    },
+    {
+        "value": "alabaster"
+    },
+    {
+        "value": "porcelain",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "ruddy",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "milky",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "ivory",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "creamy",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "rosy",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "peachy",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "fawn",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "honey",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "bronze"
+    },
+    {
+        "value": "albino",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "aquamarine",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "azure",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "blue",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "blue-grey",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "blue-green",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "cerulean",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "cobalt",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "indigo",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "sky blue",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "midnight blue",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "periwinkle",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "sapphire",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "steel blue",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "turquoise",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "ice blue",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "baby blue",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "ultramarine",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "teal blue",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "powder blue",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "electric blue",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "light cyan",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "tiffany blue",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "viridian blue",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "red",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "scarlet",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "carmine",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "ruby red",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "garnet",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "crimson red",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "maroon",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "burgundy",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "blood red",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "royal purple",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "mauve",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "purple",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "violet",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "orchid purple",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "heliotrope purple",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "mulberry",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "pearly purple",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "pansy purple",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "deep purple",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    },
+    {
+        "value": "lavender",
+        "race": [
+            "Tiefling",
+            "Devil's Tongue Tiefling",
+            "Hellfire Tiefling",
+            "Winged Tiefling"
+        ]
+    }
+]
