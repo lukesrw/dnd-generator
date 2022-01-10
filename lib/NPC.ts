@@ -213,11 +213,17 @@ export class NPC {
         if (["infant", "child"].includes(this.age)) return false;
 
         if (this.class) {
-            let { combatant } = this.place.lists.class.getFiltered({
+            let chosen_class = this.place.lists.class.getFiltered({
                 value: this.class
             })[0];
 
-            if (typeof combatant === "boolean" && !combatant) return false;
+            if (
+                chosen_class &&
+                typeof chosen_class.combatant === "boolean" &&
+                !chosen_class.combatant
+            ) {
+                return false;
+            }
         }
 
         if (this.profession) {
