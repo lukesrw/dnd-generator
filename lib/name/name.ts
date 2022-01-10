@@ -36,6 +36,9 @@ export class NameList extends List {
                 break;
 
             case "aasimar":
+            case "scourge":
+            case "fallen":
+            case "protector":
                 race = ["human", "angel"];
                 break;
 
