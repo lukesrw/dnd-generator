@@ -1,6 +1,5 @@
 import * as Generic from "../interfaces/generic";
 import { NPC } from "./NPC";
-import { ucfirst } from "./utils";
 
 export interface ListItem {
     [property: string]: any;
