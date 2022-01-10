@@ -102,11 +102,6 @@
     {
         "nobility": ["Merchant"],
         "age": ["adult", "elder"],
-        "value": "Guild Master"
-    },
-    {
-        "nobility": ["Merchant"],
-        "age": ["adult", "elder"],
         "value": "Innkeeper"
     },
     {

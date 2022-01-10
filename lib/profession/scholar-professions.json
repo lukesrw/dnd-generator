@@ -1,5 +1,10 @@
 [
     {
+        "nobility": ["Merchant"],
+        "age": ["adult", "elder"],
+        "value": "Guild Master"
+    },
+    {
         "nobility": ["Scholar"],
         "age": ["adult", "elder"],
         "value": "Seer"
