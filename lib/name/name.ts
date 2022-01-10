@@ -11,10 +11,13 @@ export class NameList extends List {
 
         if (filter) {
             if (filter.race) race = filter.race;
-            if (filter.gender) gender = filter.gender;
+
+            if (filter.gender) gender = filter.gender.toLowerCase();
         }
 
-        switch (race.toLowerCase().split(" ")[0]) {
+        race = race.toLowerCase();
+
+        switch (race.split(" ")[0]) {
             case "dragonborn":
                 race = "dragon";
                 break;
@@ -136,7 +139,7 @@ export class NameList extends List {
                 break;
 
             default:
-                race = race.toLowerCase().split(" ");
+                race = race.split(" ");
 
                 if (race.length > 1) race.shift();
                 break;
