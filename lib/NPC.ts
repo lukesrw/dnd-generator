@@ -66,7 +66,7 @@ export class NPC {
         }
 
         if (properties && typeof properties.age === "string") {
-            this.age = properties.age;
+            this.age = properties.age.toLowerCase();
         } else {
             this.age = this.place.lists.age.pickRandom(
                 Object.assign({}, properties, this)
