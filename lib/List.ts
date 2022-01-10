@@ -88,10 +88,14 @@ export class List {
         if (item) {
             if (Array.isArray(item.value)) return List.pickRandom(item.value);
         } else {
+            if (filter) {
+                delete filter.place;
+            }
+
             throw new Error(
-                `Unable to find ${ucfirst(
-                    (this.file.split("/").pop() || "").split(".")[0]
-                )} for: ${JSON.stringify(filter)}`
+                `Unable to use ${this.constructor.name} for: ${JSON.stringify(
+                    filter
+                )}`
             );
         }
 
