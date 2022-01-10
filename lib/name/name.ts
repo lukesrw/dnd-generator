@@ -28,6 +28,7 @@ export class NameList extends List {
                 break;
 
             case "genasi":
+            case "fire":
                 race = ["human", "angel", "demon", "fairy"];
                 break;
 
@@ -47,6 +48,9 @@ export class NameList extends List {
                 break;
 
             case "tiefling":
+            case "devil's":
+            case "hellfire":
+            case "winged":
             case "feral": // feral tiefling
                 race = "demon";
                 break;
