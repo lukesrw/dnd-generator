@@ -1,6 +1,6 @@
 # D&D Generator
 
-A system for generation random D&D 5E Characters
+A system for generating random D&D 5E information
 
 ## Lists
 
