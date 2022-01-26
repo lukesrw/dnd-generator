@@ -1,3 +1,4 @@
+import * as Generic from "../interfaces/generic";
 import { Gender } from "./gender/gender";
 import { getPronoun } from "./language/common";
 import { NameList } from "./name/name";
@@ -210,9 +211,7 @@ export class NPC {
     }
 
     withProperties(properties: Partial<NPC>) {
-        let complete: {
-            [key: string]: any;
-        } = {};
+        let complete: Generic.Object = {};
 
         Object.keys(properties).forEach(property => {
             let property_i = property as keyof NPC;
