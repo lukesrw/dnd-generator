@@ -5,3 +5,6 @@ tsconfig.*
 *.scss
 *.tgz
 .eslintrc.json
+watch.js
+clean.js
+.eslintignore
