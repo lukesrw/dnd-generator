@@ -3,16 +3,34 @@
     "scripts": {
         "watch-end": "node clean",
         "build-ts": "tsc",
-        "build-sass": "sass ./css:./css",
-        "build-tailwind": "tailwindcss-cli build ./css/style.css -o ./css/style.css",
         "build": "npm install && npm run watch-end && npm run build-ts",
         "watch-start": "npm run build",
         "watch-after-start": "node index",
         "test": "npm run build && mocha test --reporter min"
     },
-    "devDependencies": {},
+    "devDependencies": {
+        "@types/node": "^14.14.37"
+    },
     "dependencies": {
-        "@types/node": "^14.14.37",
         "fantasy-name-generator": "^2.0.0"
-    }
+    },
+    "name": "dnd-generator",
+    "description": "A system for generating random D&D 5E information",
+    "version": "1.0.0",
+    "directories": {
+        "lib": "lib"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:lukesrw/dnd-generator.git"
+    },
+    "keywords": [
+        "dnd",
+        "generator",
+        "rng",
+        "class",
+        "race"
+    ],
+    "author": "Luke Wilson <lukesrw@gmail.com>",
+    "license": "GPL-3.0"
 }
