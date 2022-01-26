@@ -52,44 +52,53 @@ Each list extends the [List](/lib/List.ts) class, which implements...
             -   Throne sitter and their family
             -   Example: No Royal-only professions
         -   Noble
-            -   Example: ""
+            -   Example: "Disgraced Royal"
         -   Knight
             -   Example: No Knight-only professions
         -   Esquire
             -   Highly respected
-            -   Example: ""
+            -   Example: "Banker"
         -   Gentle
             -   Royal court invitee or regular
-            -   Example: ""
+            -   Example: "Town Crier"
         -   Yeoman
             -   Owner or cultivator of an estate
-            -   Example: ""
+            -   Example: "Farmer"
         -   Scholar
             -   Expert in their academic field
-            -   Example: ""
+            -   Example: "Anthropologist"
         -   Merchant
             -   Proprietor of any commercial endeavour
-            -   Example: ""
+            -   Example: "Wagoner"
         -   Servant
             -   Service to the above
-            -   Example: ""
+            -   Example: "Ferryman"
         -   Common
             -   Most people
             -   Example: "Traveler"
         -   Peasant
             -   Extreme poverty
-            -   Example: ""
+            -   Example: "Runaway Slave"
         -   Underclass
             -   Fringe of society
-            -   Example: ""
+            -   Example: "Squatter"
 -   Race
+    -   Example: "Kobold"
 -   Sex
+    -   Birth-assigned Sex
+    -   Example: "Female"
 -   Skin
+    -   Example: "olive"
 -   Title
+    -   Example: "Mrs"
 -   Weapon
+    -   Assigned only if their age, class, and profession would be a combatant
+    -   Example: "mace"
 
 # Todo
 
 -   Specific number "Age" generator, using existing "Age" list and race for boundaries
 -   "Background" list to pick random background, using race/class/etc. to make sense
 -   "Language" list to pick spoken languages, using background/race/etc. to make sense
+-   Enemy class to begin generating combat encounters or other party situations
+-   More prefabs for standard places (shops, places of worship, etc.)
