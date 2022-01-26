@@ -27,6 +27,9 @@ export class NameList extends List {
                 race = ["human", race.split("-")[1]];
                 break;
 
+            case "water":
+            case "air":
+            case "earth":
             case "genasi":
             case "fire":
                 race = ["human", "angel", "demon", "fairy"];
@@ -159,7 +162,13 @@ export class NameList extends List {
             gender: gender as any
         });
 
-        if (typeof name !== "string") throw name;
+        if (typeof name !== "string") {
+            throw new Error(
+                `${name} (${
+                    filter ? filter.race : "undefined"
+                } => ${race}, ${gender})`
+            );
+        }
 
         return name;
     }
