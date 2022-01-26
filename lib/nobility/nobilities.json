@@ -8,26 +8,32 @@
     },
     {
         "value": "Knighted",
+        "age": ["adult", "elder"],
         "weight": 350
     },
     {
         "value": "Esquire",
+        "age": ["adult", "elder"],
         "weight": 1000
     },
     {
         "value": "Gentle",
+        "age": ["adult", "elder"],
         "weight": 1500
     },
     {
         "value": "Yeoman",
+        "age": ["adult", "elder"],
         "weight": 2500
     },
     {
         "value": "Scholar",
+        "age": ["adult", "elder"],
         "weight": 3000
     },
     {
         "value": "Merchant",
+        "age": ["adult", "elder"],
         "weight": 7500
     },
     {
