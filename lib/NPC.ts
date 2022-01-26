@@ -23,6 +23,7 @@ export class NPC {
     age: string;
     alignment: string;
     armor: string;
+    characteristic: string;
     class: string;
     motivation: string;
     nobility: string;
@@ -132,7 +133,6 @@ export class NPC {
             );
         }
 
-        this.profession = "";
         if (properties && typeof properties.profession === "string") {
             this.profession = properties.profession;
         } else if (this.age !== "infant") {
@@ -144,13 +144,18 @@ export class NPC {
                     this.withProperties(properties)
                 ) as Partial<NPC>
             );
+        } else {
+            this.profession = "";
         }
 
-        this.surname = "";
         if (properties && typeof properties.forename === "string") {
             this.forename = properties.forename;
 
-            if (properties.surname) this.surname = properties.surname;
+            if (properties.surname) {
+                this.surname = properties.surname;
+            } else {
+                this.surname = "";
+            }
         } else {
             let [forename, surname] = new NameList()
                 .pickRandom(this.withProperties(properties))
@@ -179,16 +184,16 @@ export class NPC {
             );
         }
 
-        this.armor = "";
         if (properties && typeof properties.armor === "string") {
             this.armor = properties.armor;
         } else if (this.isCombatant()) {
             this.armor = this.place.lists.armor.pickRandom(
                 this.withProperties(properties)
             );
+        } else {
+            this.armor = "";
         }
 
-        this.weapons = [];
         if (properties && Array.isArray(properties.weapons)) {
             this.weapons = properties.weapons;
         } else if (this.isCombatant()) {
@@ -207,6 +212,16 @@ export class NPC {
             if (this.weapons[1] && this.weapons[1] === this.weapons[0]) {
                 this.weapons.splice(1, 1);
             }
+        } else {
+            this.weapons = [];
+        }
+
+        if (properties && properties.characteristic) {
+            this.characteristic = properties.characteristic;
+        } else {
+            this.characteristic = this.place.lists.characteristic.pickRandom(
+                this.withProperties(properties)
+            );
         }
     }
 
@@ -216,7 +231,7 @@ export class NPC {
         Object.keys(properties).forEach(property => {
             let property_i = property as keyof NPC;
 
-            if (typeof properties[property_i] === "string") {
+            if (typeof properties[property_i] !== "undefined") {
                 complete[property_i] = properties[property_i];
             }
         });
@@ -224,7 +239,7 @@ export class NPC {
         Object.keys(this).forEach(property => {
             let property_i = property as keyof NPC;
 
-            if (typeof this[property_i] === "string") {
+            if (typeof this[property_i] !== "undefined") {
                 complete[property_i] = this[property_i];
             }
         });
@@ -299,8 +314,8 @@ export class NPC {
             this.getName() + (this.profession ? ` (${this.profession})` : "")
         }: ${ucfirst(this.age)} ${this.race} ${this.class}, ${
             this.alignment
-        }. ${this.forename} is {physical detail}${detail + pronoun + items}. ${
-            this.forename
-        } seeks ${this.motivation}.`;
+        }. ${this.forename} is ${
+            this.characteristic + detail + pronoun + items
+        }. ${this.forename} seeks ${this.motivation}.`;
     }
 }
