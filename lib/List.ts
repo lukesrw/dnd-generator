@@ -19,7 +19,7 @@ export class List {
         this.items = items || false;
     }
 
-    static pickRandom(list: any[]) {
+    static pickRandom<Type>(list: Type[]) {
         return list[Math.floor(Math.random() * list.length)];
     }
 
