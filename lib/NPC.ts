@@ -45,7 +45,7 @@ export class NPC {
             this.sex = properties.sex;
         } else {
             this.sex = this.place.lists.sex.pickRandom(
-                Object.assign({}, properties, this)
+                this.withProperties(properties)
             ) as Sex;
         }
 
@@ -58,7 +58,7 @@ export class NPC {
             this.gender = this.sex;
             if (Math.floor(Math.random() * TRANSGENDER_CHANCE) === 1) {
                 this.gender = this.place.lists.sex.pickRandom(
-                    Object.assign({}, properties, this)
+                    this.withProperties(properties)
                 ) as Gender;
             } else if (Math.floor(Math.random() * NON_BINARY_CHANCE) === 1) {
                 this.gender = "Non-Binary";
@@ -69,7 +69,7 @@ export class NPC {
             this.age = properties.age.toLowerCase();
         } else {
             this.age = this.place.lists.age.pickRandom(
-                Object.assign({}, properties, this)
+                this.withProperties(properties)
             );
         }
 
@@ -77,7 +77,7 @@ export class NPC {
             this.alignment = properties.alignment;
         } else {
             this.alignment = this.place.lists.alignment.pickRandom(
-                Object.assign({}, properties, this)
+                this.withProperties(properties)
             );
         }
 
@@ -85,7 +85,7 @@ export class NPC {
             this.race = properties.race;
         } else {
             this.race = this.place.lists.race.pickRandom(
-                Object.assign({}, properties, this)
+                this.withProperties(properties)
             );
         }
 
@@ -93,7 +93,7 @@ export class NPC {
             this.skin = properties.skin;
         } else {
             this.skin = this.place.lists.skin.pickRandom(
-                Object.assign({}, properties, this)
+                this.withProperties(properties)
             );
         }
 
@@ -101,7 +101,7 @@ export class NPC {
             this.class = properties.class;
         } else {
             this.class = this.place.lists.class.pickRandom(
-                Object.assign({}, properties, this)
+                this.withProperties(properties)
             );
         }
 
@@ -109,7 +109,7 @@ export class NPC {
             this.nobility = properties.nobility;
         } else {
             this.nobility = this.place.lists.nobility.pickRandom(
-                Object.assign({}, properties, this)
+                this.withProperties(properties)
             );
         }
 
@@ -119,7 +119,7 @@ export class NPC {
             this.title = this.gender === "Male" ? "Sir" : "Dame";
         } else {
             this.title = this.place.lists.title.pickRandom(
-                Object.assign({}, properties, this)
+                this.withProperties(properties)
             );
         }
 
@@ -127,21 +127,21 @@ export class NPC {
             this.motivation = properties.motivation;
         } else {
             this.motivation = this.place.lists.motivation.pickRandom(
-                Object.assign({}, properties, this)
+                this.withProperties(properties)
             );
         }
 
+        this.profession = "";
         if (properties && typeof properties.profession === "string") {
             this.profession = properties.profession;
-        } else {
+        } else if (this.age !== "infant") {
             this.profession = this.place.lists.profession.pickRandom(
                 Object.assign(
                     {
                         combatant: this.isCombatant()
                     },
-                    properties,
-                    this
-                )
+                    this.withProperties(properties)
+                ) as Partial<NPC>
             );
         }
 
@@ -152,7 +152,7 @@ export class NPC {
             if (properties.surname) this.surname = properties.surname;
         } else {
             let [forename, surname] = new NameList()
-                .pickRandom(Object.assign({}, properties, this))
+                .pickRandom(this.withProperties(properties))
                 .split(" ");
             if (properties && typeof properties.surname === "string") {
                 surname = properties.surname;
@@ -166,7 +166,7 @@ export class NPC {
             this.hair = properties.hair;
         } else {
             this.hair = this.place.lists.hair.pickRandom(
-                Object.assign({}, properties, this)
+                this.withProperties(properties)
             );
         }
 
@@ -174,7 +174,7 @@ export class NPC {
             this.eyes = properties.eyes;
         } else {
             this.eyes = this.place.lists.eye.pickRandom(
-                Object.assign({}, properties, this)
+                this.withProperties(properties)
             );
         }
 
@@ -183,7 +183,7 @@ export class NPC {
             this.armor = properties.armor;
         } else if (this.isCombatant()) {
             this.armor = this.place.lists.armor.pickRandom(
-                Object.assign({}, properties, this)
+                this.withProperties(properties)
             );
         }
 
@@ -196,7 +196,7 @@ export class NPC {
                 .map(() => {
                     if (this.place) {
                         return this.place.lists.weapon.pickRandom(
-                            Object.assign({}, properties, this)
+                            this.withProperties(properties)
                         );
                     }
 
@@ -207,6 +207,30 @@ export class NPC {
                 this.weapons.splice(1, 1);
             }
         }
+    }
+
+    withProperties(properties: Partial<NPC>) {
+        let complete: {
+            [key: string]: any;
+        } = {};
+
+        Object.keys(properties).forEach(property => {
+            let property_i = property as keyof NPC;
+
+            if (typeof properties[property_i] === "string") {
+                complete[property_i] = properties[property_i];
+            }
+        });
+
+        Object.keys(this).forEach(property => {
+            let property_i = property as keyof NPC;
+
+            if (typeof this[property_i] === "string") {
+                complete[property_i] = this[property_i];
+            }
+        });
+
+        return complete;
     }
 
     isCombatant() {
