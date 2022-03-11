@@ -16,7 +16,7 @@
     },
     "name": "dnd-generator",
     "description": "A system for generating random D&D 5E information",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "directories": {
         "lib": "lib"
     },
