@@ -3,7 +3,7 @@
     "scripts": {
         "watch-end": "node clean",
         "build-ts": "tsc",
-        "build": "npm install && npm run watch-end && npm run build-ts",
+        "build": "npm install && npm run watch-end && npm run build-ts && node build",
         "watch-start": "npm run build",
         "watch-after-start": "node index",
         "test": "npm run build && mocha test --reporter min"
