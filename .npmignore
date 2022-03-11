@@ -9,3 +9,4 @@ tsconfig.*
 watch.js
 clean.js
 .eslintignore
+*.json
