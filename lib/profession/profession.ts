@@ -1,63 +1,62 @@
-import { join } from "path";
 import { List } from "../List";
 
 export class CommonProfessionList extends List {
     constructor() {
-        super(join(__dirname, "common-professions.json"));
+        super([]);
     }
 }
 
 export class EsquireProfessionList extends List {
     constructor() {
-        super(join(__dirname, "esquire-professions.json"));
+        super([]);
     }
 }
 
 export class GentleProfessionList extends List {
     constructor() {
-        super(join(__dirname, "gentle-professions.json"));
+        super([]);
     }
 }
 
 export class MerchantProfessionList extends List {
     constructor() {
-        super(join(__dirname, "merchant-professions.json"));
+        super([]);
     }
 }
 
 export class NobleProfessionList extends List {
     constructor() {
-        super(join(__dirname, "noble-professions.json"));
+        super([]);
     }
 }
 
 export class PeasantProfessionList extends List {
     constructor() {
-        super(join(__dirname, "peasant-professions.json"));
+        super([]);
     }
 }
 
 export class ScholarProfessionList extends List {
     constructor() {
-        super(join(__dirname, "scholar-professions.json"));
+        super([]);
     }
 }
 
 export class ServantProfessionList extends List {
     constructor() {
-        super(join(__dirname, "servant-professions.json"));
+        super([]);
     }
 }
 
 export class UnderclassProfessionList extends List {
     constructor() {
-        super(join(__dirname, "underclass-professions.json"));
+        super([]);
     }
 }
 
 export class YeomanProfessionList extends List {
     constructor() {
-        super(join(__dirname, "yeoman-professions.json"));
+        super([]);
     }
 }
 

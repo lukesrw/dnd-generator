@@ -11,11 +11,11 @@ export interface ListItemRaw extends ListItem {
 }
 
 export class List {
-    file: string;
     items: false | ListItem[];
+    weighted: boolean;
 
-    constructor(file?: string, items?: ListItem[]) {
-        this.file = file || "";
+    constructor(items?: ListItem[]) {
+        this.weighted = false;
         this.items = items || false;
     }
 
@@ -24,14 +24,8 @@ export class List {
     }
 
     getItems() {
-        if (this.items) return this.items;
-
-        let data = JSON.parse(JSON.stringify(require(this.file)));
-
-        this.items = [];
-
-        try {
-            data.forEach((item: ListItemRaw) => {
+        if (this.items && !this.weighted) {
+            this.items.forEach((item: ListItemRaw) => {
                 if (!Object.prototype.hasOwnProperty.call(item, "weight")) {
                     item.weight = 1;
                 }
@@ -44,11 +38,11 @@ export class List {
                     );
                 }
             });
-        } catch (e) {
-            console.error(e);
+
+            this.weighted = true;
         }
 
-        return this.items;
+        return this.items as ListItem[];
     }
 
     getFiltered(filter?: Generic.Object) {
