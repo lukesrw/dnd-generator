@@ -2,7 +2,7 @@ import { NPC } from "../lib/NPC";
 import { Place } from "../lib/Place";
 import { List } from "../lib/List";
 
-export class Tavern extends Place {
+export class TavernPrefab extends Place {
     staff: NPC[];
     patrons: NPC[];
 
