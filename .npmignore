@@ -2,6 +2,7 @@ node_modules
 .github
 tsconfig.*
 *.ts
+!*.d.ts
 *.scss
 *.tgz
 .eslintrc.json
