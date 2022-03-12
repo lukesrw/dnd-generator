@@ -21,6 +21,7 @@ export class NPC {
 	gender: Gender;
 
 	maturity: string;
+	age: string;
 	alignment: string;
 	armor: string;
 	characteristic: string;
@@ -87,6 +88,14 @@ export class NPC {
 			this.race = properties.race;
 		} else {
 			this.race = this.place.lists.race.pickRandom(
+				this.withProperties(properties)
+			);
+		}
+
+		if (properties && typeof properties.age === 'number') {
+			this.age = properties.age;
+		} else {
+			this.age = this.place.lists.age.pickRandom(
 				this.withProperties(properties)
 			);
 		}

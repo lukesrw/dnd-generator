@@ -18,6 +18,7 @@ import { WeaponList } from './lib/weapon/weapon';
 import { TavernPrefab } from './prefab/Tavern';
 import { Place as _Place } from './lib/Place';
 import { List as _List } from './lib/List';
+import { AgeList } from './lib/age/age';
 
 export namespace Generator {
 	export const NPC = _NPC;
@@ -31,6 +32,8 @@ export namespace Prefab {
 
 export namespace List {
 	export const List = _List;
+
+	export const Age = AgeList;
 
 	export const Maturity = MaturityList;
 

@@ -14,9 +14,11 @@ import { SexList } from './sex/sex';
 import { SkinList } from './skin/skin';
 import { TitleList } from './title/title';
 import { WeaponList } from './weapon/weapon';
+import { AgeList } from './age/age';
 
 interface Lists {
 	maturity: MaturityList | List;
+	age: AgeList | List;
 	alignment: AlignmentList | List;
 	armor: ArmorList | List;
 	characteristic: CharacteristicList | List;
@@ -40,6 +42,7 @@ export class Place {
 		this.lists = Object.assign(
 			{
 				maturity: new MaturityList(),
+				age: new AgeList(),
 				alignment: new AlignmentList(),
 				armor: new ArmorList(),
 				characteristic: new CharacteristicList(),
