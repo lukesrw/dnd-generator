@@ -18,6 +18,19 @@ import { WeaponList } from "./lib/weapon/weapon";
 import { TavernPrefab } from "./prefab/Tavern";
 import { Place as _Place } from "./lib/Place";
 import { List as _List } from "./lib/List";
+import {
+    CommonProfessionList,
+    EsquireProfessionList,
+    GentleProfessionList,
+    MerchantProfessionList,
+    NobleProfessionList,
+    PeasantProfessionList,
+    ProfessionList,
+    ScholarProfessionList,
+    ServantProfessionList,
+    UnderclassProfessionList,
+    YeomanProfessionList
+} from "./lib/profession/profession";
 
 export namespace Generator {
     export const NPC = _NPC;
@@ -61,6 +74,30 @@ export namespace List {
     export const Title = TitleList;
 
     export const Weapon = WeaponList;
+
+    export namespace Professions {
+        export const All = ProfessionList;
+
+        export const Common = CommonProfessionList;
+
+        export const Esquire = EsquireProfessionList;
+
+        export const Gentle = GentleProfessionList;
+
+        export const Merchant = MerchantProfessionList;
+
+        export const Noble = NobleProfessionList;
+
+        export const Peasant = PeasantProfessionList;
+
+        export const Scholar = ScholarProfessionList;
+
+        export const Servant = ServantProfessionList;
+
+        export const Underclass = UnderclassProfessionList;
+
+        export const Yeoman = YeomanProfessionList;
+    }
 }
 
 export namespace Language {
