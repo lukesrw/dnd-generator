@@ -1,122 +1,122 @@
 [
-    {
-        "nobility": ["Merchant"],
-        "age": ["adult", "elder"],
-        "value": "Guild Master"
-    },
-    {
-        "nobility": ["Scholar"],
-        "age": ["adult", "elder"],
-        "value": "Seer"
-    },
-    {
-        "nobility": ["Scholar", "Gentle"],
-        "age": ["adult", "elder"],
-        "value": "High Priest"
-    },
-    {
-        "nobility": ["Scholar"],
-        "age": ["adult", "elder"],
-        "value": "Anthropologist"
-    },
-    {
-        "nobility": ["Scholar"],
-        "age": ["child", "adult", "elder"],
-        "value": "Apprentice"
-    },
-    {
-        "nobility": ["Scholar"],
-        "age": ["adult", "elder"],
-        "value": "Archaeologist"
-    },
-    {
-        "nobility": ["Scholar"],
-        "age": ["adult", "elder"],
-        "value": "Archivist"
-    },
-    {
-        "nobility": ["Scholar"],
-        "age": ["adult", "elder"],
-        "value": "Astrologer"
-    },
-    {
-        "nobility": ["Scholar"],
-        "age": ["adult", "elder"],
-        "value": "Botanist"
-    },
-    {
-        "nobility": ["Scholar"],
-        "age": ["adult", "elder"],
-        "value": "Cartographer"
-    },
-    {
-        "nobility": ["Scholar"],
-        "age": ["adult", "elder"],
-        "value": "Chemist"
-    },
-    {
-        "nobility": ["Scholar"],
-        "age": ["adult", "elder"],
-        "value": "Dean"
-    },
-    {
-        "nobility": ["Scholar"],
-        "age": ["adult", "elder"],
-        "value": "Engineer"
-    },
-    {
-        "nobility": ["Scholar"],
-        "age": ["adult", "elder"],
-        "value": "Historian"
-    },
-    {
-        "nobility": ["Scholar"],
-        "age": ["adult", "elder"],
-        "value": "Horologist"
-    },
-    {
-        "nobility": ["Scholar"],
-        "age": ["adult", "elder"],
-        "value": "Librarian"
-    },
-    {
-        "nobility": ["Scholar"],
-        "age": ["adult", "elder"],
-        "value": "Mathematician"
-    },
-    {
-        "nobility": ["Scholar"],
-        "age": ["adult", "elder"],
-        "value": "Philosopher"
-    },
-    {
-        "nobility": ["Scholar"],
-        "age": ["adult", "elder"],
-        "value": "Professor"
-    },
-    {
-        "nobility": ["Scholar"],
-        "age": ["adult", "elder"],
-        "value": "Researcher"
-    },
-    {
-        "nobility": ["Scholar"],
-        "age": ["adult", "elder"],
-        "value": "Teacher"
-    },
-    {
-        "nobility": ["Scholar"],
-        "age": ["adult", "elder"],
-        "value": "Theologian"
-    },
-    {
-        "nobility": ["Scholar"],
-        "age": ["adult", "elder"],
-        "value": "Tutor"
-    },
-    {
-        "nobility": ["Scholar"],
-        "age": ["adult", "elder"],
-        "value": "Constable"
-    }
+	{
+		"nobility": ["Merchant"],
+		"maturity": ["adult", "elder"],
+		"value": "Guild Master"
+	},
+	{
+		"nobility": ["Scholar"],
+		"maturity": ["adult", "elder"],
+		"value": "Seer"
+	},
+	{
+		"nobility": ["Scholar", "Gentle"],
+		"maturity": ["adult", "elder"],
+		"value": "High Priest"
+	},
+	{
+		"nobility": ["Scholar"],
+		"maturity": ["adult", "elder"],
+		"value": "Anthropologist"
+	},
+	{
+		"nobility": ["Scholar"],
+		"maturity": ["child", "adult", "elder"],
+		"value": "Apprentice"
+	},
+	{
+		"nobility": ["Scholar"],
+		"maturity": ["adult", "elder"],
+		"value": "Archaeologist"
+	},
+	{
+		"nobility": ["Scholar"],
+		"maturity": ["adult", "elder"],
+		"value": "Archivist"
+	},
+	{
+		"nobility": ["Scholar"],
+		"maturity": ["adult", "elder"],
+		"value": "Astrologer"
+	},
+	{
+		"nobility": ["Scholar"],
+		"maturity": ["adult", "elder"],
+		"value": "Botanist"
+	},
+	{
+		"nobility": ["Scholar"],
+		"maturity": ["adult", "elder"],
+		"value": "Cartographer"
+	},
+	{
+		"nobility": ["Scholar"],
+		"maturity": ["adult", "elder"],
+		"value": "Chemist"
+	},
+	{
+		"nobility": ["Scholar"],
+		"maturity": ["adult", "elder"],
+		"value": "Dean"
+	},
+	{
+		"nobility": ["Scholar"],
+		"maturity": ["adult", "elder"],
+		"value": "Engineer"
+	},
+	{
+		"nobility": ["Scholar"],
+		"maturity": ["adult", "elder"],
+		"value": "Historian"
+	},
+	{
+		"nobility": ["Scholar"],
+		"maturity": ["adult", "elder"],
+		"value": "Horologist"
+	},
+	{
+		"nobility": ["Scholar"],
+		"maturity": ["adult", "elder"],
+		"value": "Librarian"
+	},
+	{
+		"nobility": ["Scholar"],
+		"maturity": ["adult", "elder"],
+		"value": "Mathematician"
+	},
+	{
+		"nobility": ["Scholar"],
+		"maturity": ["adult", "elder"],
+		"value": "Philosopher"
+	},
+	{
+		"nobility": ["Scholar"],
+		"maturity": ["adult", "elder"],
+		"value": "Professor"
+	},
+	{
+		"nobility": ["Scholar"],
+		"maturity": ["adult", "elder"],
+		"value": "Researcher"
+	},
+	{
+		"nobility": ["Scholar"],
+		"maturity": ["adult", "elder"],
+		"value": "Teacher"
+	},
+	{
+		"nobility": ["Scholar"],
+		"maturity": ["adult", "elder"],
+		"value": "Theologian"
+	},
+	{
+		"nobility": ["Scholar"],
+		"maturity": ["adult", "elder"],
+		"value": "Tutor"
+	},
+	{
+		"nobility": ["Scholar"],
+		"maturity": ["adult", "elder"],
+		"value": "Constable"
+	}
 ]

@@ -14,9 +14,13 @@ Each list extends the [List](/lib/List.ts) class, which implements...
 
 ### Existing Lists
 
--   Age
-    -   Age range, not number (see "Todo")
+-   Maturity
+    -   Age range, not number
     -   Example: "adult"
+-   Age
+    -   Age number
+    -   Example: "400"
+    -   Filters: Race and Maturity
 -   Alignment
     -   Example: "Chaotic Good"
 -   Armor
@@ -97,7 +101,6 @@ Each list extends the [List](/lib/List.ts) class, which implements...
 
 # Todo
 
--   Specific number "Age" generator, using existing "Age" list and race for boundaries
 -   "Background" list to pick random background, using race/class/etc. to make sense
 -   "Language" list to pick spoken languages, using background/race/etc. to make sense
 -   Enemy class to begin generating combat encounters or other party situations

@@ -1,70 +1,70 @@
 [
-    {
-        "nobility": ["Underclass"],
-        "age": ["child", "adult", "elder"],
-        "value": "Grave Robber"
-    },
-    {
-        "nobility": ["Underclass"],
-        "age": ["child", "adult", "elder"],
-        "value": "Heckler"
-    },
-    {
-        "nobility": ["Underclass"],
-        "age": ["child", "adult", "elder"],
-        "value": "Heretic"
-    },
-    {
-        "nobility": ["Underclass", "Peasant"],
-        "age": ["adult", "elder"],
-        "value": "Hermit"
-    },
-    {
-        "nobility": ["Underclass"],
-        "age": ["child", "adult", "elder"],
-        "value": "Pilgrim"
-    },
-    {
-        "nobility": ["Underclass"],
-        "value": "Refugee"
-    },
-    {
-        "nobility": ["Underclass"],
-        "value": "Squatter"
-    },
-    {
-        "nobility": ["Underclass"],
-        "value": "Urchin"
-    },
-    {
-        "nobility": ["Underclass"],
-        "age": ["adult", "elder"],
-        "value": "Vagabond"
-    },
-    {
-        "nobility": ["Underclass", "Peasant"],
-        "value": "Exile"
-    },
-    {
-        "nobility": ["Underclass", "Peasant"],
-        "value": "Cultist"
-    },
-    {
-        "nobility": ["Underclass"],
-        "value": "Slave"
-    },
-    {
-        "nobility": ["Underclass"],
-        "value": "Street Sweeper"
-    },
-    {
-        "nobility": ["Underclass"],
-        "age": ["child", "adult", "elder"],
-        "value": "Gravedigger"
-    },
-    {
-        "nobility": ["Underclass", "Peasant"],
-        "age": ["adult", "elder"],
-        "value": "Prostitute"
-    }
+	{
+		"nobility": ["Underclass"],
+		"maturity": ["child", "adult", "elder"],
+		"value": "Grave Robber"
+	},
+	{
+		"nobility": ["Underclass"],
+		"maturity": ["child", "adult", "elder"],
+		"value": "Heckler"
+	},
+	{
+		"nobility": ["Underclass"],
+		"maturity": ["child", "adult", "elder"],
+		"value": "Heretic"
+	},
+	{
+		"nobility": ["Underclass", "Peasant"],
+		"maturity": ["adult", "elder"],
+		"value": "Hermit"
+	},
+	{
+		"nobility": ["Underclass"],
+		"maturity": ["child", "adult", "elder"],
+		"value": "Pilgrim"
+	},
+	{
+		"nobility": ["Underclass"],
+		"value": "Refugee"
+	},
+	{
+		"nobility": ["Underclass"],
+		"value": "Squatter"
+	},
+	{
+		"nobility": ["Underclass"],
+		"value": "Urchin"
+	},
+	{
+		"nobility": ["Underclass"],
+		"maturity": ["adult", "elder"],
+		"value": "Vagabond"
+	},
+	{
+		"nobility": ["Underclass", "Peasant"],
+		"value": "Exile"
+	},
+	{
+		"nobility": ["Underclass", "Peasant"],
+		"value": "Cultist"
+	},
+	{
+		"nobility": ["Underclass"],
+		"value": "Slave"
+	},
+	{
+		"nobility": ["Underclass"],
+		"value": "Street Sweeper"
+	},
+	{
+		"nobility": ["Underclass"],
+		"maturity": ["child", "adult", "elder"],
+		"value": "Gravedigger"
+	},
+	{
+		"nobility": ["Underclass", "Peasant"],
+		"maturity": ["adult", "elder"],
+		"value": "Prostitute"
+	}
 ]

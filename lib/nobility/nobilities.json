@@ -1,55 +1,55 @@
 [
-    {
-        "value": "Royal"
-    },
-    {
-        "value": "Noble",
-        "weight": 5
-    },
-    {
-        "value": "Knighted",
-        "age": ["adult", "elder"],
-        "weight": 350
-    },
-    {
-        "value": "Esquire",
-        "age": ["adult", "elder"],
-        "weight": 1000
-    },
-    {
-        "value": "Gentle",
-        "age": ["adult", "elder"],
-        "weight": 1500
-    },
-    {
-        "value": "Yeoman",
-        "age": ["adult", "elder"],
-        "weight": 2500
-    },
-    {
-        "value": "Scholar",
-        "age": ["adult", "elder"],
-        "weight": 3000
-    },
-    {
-        "value": "Merchant",
-        "age": ["adult", "elder"],
-        "weight": 7500
-    },
-    {
-        "value": "Servant",
-        "weight": 7500
-    },
-    {
-        "value": "Common",
-        "weight": 20500
-    },
-    {
-        "value": "Peasant",
-        "weight": 6000
-    },
-    {
-        "value": "Underclass",
-        "weight": 3145
-    }
+	{
+		"value": "Royal"
+	},
+	{
+		"value": "Noble",
+		"weight": 5
+	},
+	{
+		"value": "Knighted",
+		"maturity": ["adult", "elder"],
+		"weight": 350
+	},
+	{
+		"value": "Esquire",
+		"maturity": ["adult", "elder"],
+		"weight": 1000
+	},
+	{
+		"value": "Gentle",
+		"maturity": ["adult", "elder"],
+		"weight": 1500
+	},
+	{
+		"value": "Yeoman",
+		"maturity": ["adult", "elder"],
+		"weight": 2500
+	},
+	{
+		"value": "Scholar",
+		"maturity": ["adult", "elder"],
+		"weight": 3000
+	},
+	{
+		"value": "Merchant",
+		"maturity": ["adult", "elder"],
+		"weight": 7500
+	},
+	{
+		"value": "Servant",
+		"weight": 7500
+	},
+	{
+		"value": "Common",
+		"weight": 20500
+	},
+	{
+		"value": "Peasant",
+		"weight": 6000
+	},
+	{
+		"value": "Underclass",
+		"weight": 3145
+	}
 ]

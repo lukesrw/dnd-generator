@@ -1,7 +1,7 @@
 [
-    {
-        "nobility": ["Noble"],
-        "age": ["adult", "elder"],
-        "value": "Disgraced Royal"
-    }
+	{
+		"nobility": ["Noble"],
+		"maturity": ["adult", "elder"],
+		"value": "Disgraced Royal"
+	}
 ]
