@@ -1,112 +1,112 @@
 [
-    {
-        "nobility": ["Servant"],
-        "age": ["child", "adult", "elder"],
-        "value": "Shipwright"
-    },
-    {
-        "nobility": ["Servant"],
-        "age": ["adult", "elder"],
-        "value": "Ferryman"
-    },
-    {
-        "nobility": ["Servant"],
-        "age": ["adult", "elder"],
-        "value": "First Mate"
-    },
-    {
-        "nobility": ["Servant"],
-        "age": ["adult", "elder"],
-        "value": "Helmsman"
-    },
-    {
-        "nobility": ["Servant"],
-        "age": ["adult", "elder"],
-        "value": "Navigator"
-    },
-    {
-        "nobility": ["Servant"],
-        "age": ["adult", "elder"],
-        "value": "Sailor"
-    },
-    {
-        "nobility": ["Servant"],
-        "age": ["adult", "elder"],
-        "value": "Purser"
-    },
-    {
-        "nobility": ["Servant"],
-        "age": ["adult", "elder"],
-        "value": "Caravan Guard"
-    },
-    {
-        "nobility": ["Servant"],
-        "age": ["child", "adult"],
-        "value": "Maid"
-    },
-    {
-        "nobility": ["Servant"],
-        "age": ["adult", "elder"],
-        "value": "Butler"
-    },
-    {
-        "nobility": ["Servant"],
-        "age": ["child", "adult", "elder"],
-        "value": "Ward"
-    },
-    {
-        "nobility": ["Servant"],
-        "age": ["child", "adult", "elder"],
-        "value": "Squire"
-    },
-    {
-        "nobility": ["Servant"],
-        "age": ["adult", "elder"],
-        "value": "Steward"
-    },
-    {
-        "nobility": ["Servant"],
-        "age": ["adult", "elder"],
-        "value": "Porter"
-    },
-    {
-        "nobility": ["Servant"],
-        "age": ["adult", "elder"],
-        "value": "Page"
-    },
-    {
-        "nobility": ["Servant"],
-        "age": ["adult", "elder"],
-        "value": "Spokesman"
-    },
-    {
-        "nobility": ["Servant"],
-        "age": ["adult", "elder"],
-        "value": "Master of Coin"
-    },
-    {
-        "nobility": ["Servant"],
-        "age": ["adult", "elder"],
-        "value": "Master of the Revels"
-    },
-    {
-        "nobility": ["Servant"],
-        "age": ["adult", "elder"],
-        "value": "Tax Collector"
-    },
-    {
-        "nobility": ["Servant"],
-        "age": ["adult", "elder"],
-        "value": "Courtier"
-    },
-    {
-        "nobility": ["Servant"],
-        "age": ["child", "adult", "elder"],
-        "value": "Spy"
-    },
-    {
-        "nobility": ["Servant"],
-        "age": ["child", "adult"],
-        "value": "Messenger"
-    }
+	{
+		"nobility": ["Servant"],
+		"maturity": ["child", "adult", "elder"],
+		"value": "Shipwright"
+	},
+	{
+		"nobility": ["Servant"],
+		"maturity": ["adult", "elder"],
+		"value": "Ferryman"
+	},
+	{
+		"nobility": ["Servant"],
+		"maturity": ["adult", "elder"],
+		"value": "First Mate"
+	},
+	{
+		"nobility": ["Servant"],
+		"maturity": ["adult", "elder"],
+		"value": "Helmsman"
+	},
+	{
+		"nobility": ["Servant"],
+		"maturity": ["adult", "elder"],
+		"value": "Navigator"
+	},
+	{
+		"nobility": ["Servant"],
+		"maturity": ["adult", "elder"],
+		"value": "Sailor"
+	},
+	{
+		"nobility": ["Servant"],
+		"maturity": ["adult", "elder"],
+		"value": "Purser"
+	},
+	{
+		"nobility": ["Servant"],
+		"maturity": ["adult", "elder"],
+		"value": "Caravan Guard"
+	},
+	{
+		"nobility": ["Servant"],
+		"maturity": ["child", "adult"],
+		"value": "Maid"
+	},
+	{
+		"nobility": ["Servant"],
+		"maturity": ["adult", "elder"],
+		"value": "Butler"
+	},
+	{
+		"nobility": ["Servant"],
+		"maturity": ["child", "adult", "elder"],
+		"value": "Ward"
+	},
+	{
+		"nobility": ["Servant"],
+		"maturity": ["child", "adult", "elder"],
+		"value": "Squire"
+	},
+	{
+		"nobility": ["Servant"],
+		"maturity": ["adult", "elder"],
+		"value": "Steward"
+	},
+	{
+		"nobility": ["Servant"],
+		"maturity": ["adult", "elder"],
+		"value": "Porter"
+	},
+	{
+		"nobility": ["Servant"],
+		"maturity": ["adult", "elder"],
+		"value": "Page"
+	},
+	{
+		"nobility": ["Servant"],
+		"maturity": ["adult", "elder"],
+		"value": "Spokesman"
+	},
+	{
+		"nobility": ["Servant"],
+		"maturity": ["adult", "elder"],
+		"value": "Master of Coin"
+	},
+	{
+		"nobility": ["Servant"],
+		"maturity": ["adult", "elder"],
+		"value": "Master of the Revels"
+	},
+	{
+		"nobility": ["Servant"],
+		"maturity": ["adult", "elder"],
+		"value": "Tax Collector"
+	},
+	{
+		"nobility": ["Servant"],
+		"maturity": ["adult", "elder"],
+		"value": "Courtier"
+	},
+	{
+		"nobility": ["Servant"],
+		"maturity": ["child", "adult", "elder"],
+		"value": "Spy"
+	},
+	{
+		"nobility": ["Servant"],
+		"maturity": ["child", "adult"],
+		"value": "Messenger"
+	}
 ]

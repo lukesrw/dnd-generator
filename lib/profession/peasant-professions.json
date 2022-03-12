@@ -1,50 +1,50 @@
 [
-    {
-        "nobility": ["Peasant"],
-        "age": ["adult", "elder"],
-        "value": "Deserter"
-    },
-    {
-        "nobility": ["Peasant"],
-        "age": ["adult", "elder"],
-        "value": "Cult Leader"
-    },
-    {
-        "nobility": ["Peasant"],
-        "age": ["adult", "elder"],
-        "value": "Friar"
-    },
-    {
-        "nobility": ["Peasant"],
-        "value": "Beggar"
-    },
-    {
-        "nobility": ["Peasant"],
-        "age": ["adult", "elder"],
-        "value": "Rag-and-Bone Man"
-    },
-    {
-        "nobility": ["Peasant"],
-        "age": ["child", "adult", "elder"],
-        "value": "Rebel"
-    },
-    {
-        "nobility": ["Peasant"],
-        "value": "Runaway Slave"
-    },
-    {
-        "nobility": ["Peasant"],
-        "age": ["child", "adult"],
-        "value": "Chimney Sweep"
-    },
-    {
-        "nobility": ["Peasant"],
-        "age": ["adult", "elder"],
-        "value": "Kidnapper"
-    },
-    {
-        "nobility": ["Peasant"],
-        "age": ["adult", "elder"],
-        "value": "Jester"
-    }
+	{
+		"nobility": ["Peasant"],
+		"maturity": ["adult", "elder"],
+		"value": "Deserter"
+	},
+	{
+		"nobility": ["Peasant"],
+		"maturity": ["adult", "elder"],
+		"value": "Cult Leader"
+	},
+	{
+		"nobility": ["Peasant"],
+		"maturity": ["adult", "elder"],
+		"value": "Friar"
+	},
+	{
+		"nobility": ["Peasant"],
+		"value": "Beggar"
+	},
+	{
+		"nobility": ["Peasant"],
+		"maturity": ["adult", "elder"],
+		"value": "Rag-and-Bone Man"
+	},
+	{
+		"nobility": ["Peasant"],
+		"maturity": ["child", "adult", "elder"],
+		"value": "Rebel"
+	},
+	{
+		"nobility": ["Peasant"],
+		"value": "Runaway Slave"
+	},
+	{
+		"nobility": ["Peasant"],
+		"maturity": ["child", "adult"],
+		"value": "Chimney Sweep"
+	},
+	{
+		"nobility": ["Peasant"],
+		"maturity": ["adult", "elder"],
+		"value": "Kidnapper"
+	},
+	{
+		"nobility": ["Peasant"],
+		"maturity": ["adult", "elder"],
+		"value": "Jester"
+	}
 ]

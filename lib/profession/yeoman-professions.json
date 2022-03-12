@@ -1,17 +1,17 @@
 [
-    {
-        "nobility": ["Yeoman"],
-        "age": ["adult", "elder"],
-        "value": "Entrepreneur"
-    },
-    {
-        "nobility": ["Yeoman", "Gentle"],
-        "age": ["adult", "elder"],
-        "value": "Plantation Owner"
-    },
-    {
-        "nobility": ["Yeoman"],
-        "age": ["adult", "elder"],
-        "value": "Farmer"
-    }
+	{
+		"nobility": ["Yeoman"],
+		"maturity": ["adult", "elder"],
+		"value": "Entrepreneur"
+	},
+	{
+		"nobility": ["Yeoman", "Gentle"],
+		"maturity": ["adult", "elder"],
+		"value": "Plantation Owner"
+	},
+	{
+		"nobility": ["Yeoman"],
+		"maturity": ["adult", "elder"],
+		"value": "Farmer"
+	}
 ]

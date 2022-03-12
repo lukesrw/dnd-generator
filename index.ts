@@ -6,18 +6,13 @@ import { ClassList } from "./lib/class/class";
 import { EyeList } from "./lib/eye/eye";
 import { HairList } from "./lib/hair/hair";
 import * as _Common from "./lib/language/common";
+import { List as _List } from "./lib/List";
+import { MaturityList } from "./lib/maturity/maturity";
 import { MotivationList } from "./lib/motivation/motivation";
 import { NameList } from "./lib/name/name";
 import { NobilityList } from "./lib/nobility/nobility";
 import { NPC as _NPC } from "./lib/NPC";
-import { RaceList } from "./lib/race/race";
-import { SexList } from "./lib/sex/sex";
-import { SkinList } from "./lib/skin/skin";
-import { TitleList } from "./lib/title/title";
-import { WeaponList } from "./lib/weapon/weapon";
-import { TavernPrefab } from "./prefab/Tavern";
 import { Place as _Place } from "./lib/Place";
-import { List as _List } from "./lib/List";
 import {
     CommonProfessionList,
     EsquireProfessionList,
@@ -31,6 +26,12 @@ import {
     UnderclassProfessionList,
     YeomanProfessionList
 } from "./lib/profession/profession";
+import { RaceList } from "./lib/race/race";
+import { SexList } from "./lib/sex/sex";
+import { SkinList } from "./lib/skin/skin";
+import { TitleList } from "./lib/title/title";
+import { WeaponList } from "./lib/weapon/weapon";
+import { TavernPrefab } from "./prefab/Tavern";
 
 export namespace Generator {
     export const NPC = _NPC;
@@ -46,6 +47,8 @@ export namespace List {
     export const List = _List;
 
     export const Age = AgeList;
+
+    export const Maturity = MaturityList;
 
     export const Alignment = AlignmentList;
 
