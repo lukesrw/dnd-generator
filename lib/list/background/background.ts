@@ -1,16 +1,24 @@
 import { List } from "../../List";
 
-export interface PickList {
-    pick: number;
-    items: string[];
+export type PickList = (
+    | string
+    | {
+          pick: number;
+          items: string[];
+      }
+)[];
+export interface BackgroundProperties {
+    languages: number | string[];
+    tools: PickList;
+    skills: PickList;
 }
 
-export class BackgroundList extends List {
+export class BackgroundList extends List<BackgroundProperties> {
     constructor() {
         super([]);
     }
 
-    static pickList(raw: (string | PickList)[]) {
+    static pickList(raw: PickList) {
         let list: string[] = [];
 
         raw.forEach((selection) => {

@@ -1,21 +1,17 @@
 import * as Generic from "../interfaces/generic";
 import { NPC } from "./generator/NPC";
 
-export interface ListItem {
-    [property: string]: any;
+export type Item<Custom> = {
+    weight?: number;
     value: string;
-}
+} & Custom;
 
-export interface ListItemRaw extends ListItem {
-    weight?: number | string;
-}
-
-export class List {
-    items: false | ListItem[];
-    raw: false | ListItem[];
+export class List<Custom = {}> {
+    items: false | Item<Custom>[];
+    raw: false | Item<Custom>[];
     weighted: boolean;
 
-    constructor(items?: ListItem[]) {
+    constructor(items?: Item<Custom>[]) {
         this.weighted = false;
         this.raw = items || false;
         this.items = items || false;
@@ -39,7 +35,7 @@ export class List {
 
     getItems() {
         if (this.items && !this.weighted) {
-            this.items.forEach((item: ListItemRaw) => {
+            this.items.forEach((item: Item<Custom>) => {
                 if (!Object.prototype.hasOwnProperty.call(item, "weight")) {
                     item.weight = 1;
                 }
@@ -56,29 +52,34 @@ export class List {
             this.weighted = true;
         }
 
-        return this.items as ListItem[];
+        return JSON.parse(JSON.stringify(this.items)) as Item<Custom>[];
     }
 
     getFiltered(filter?: Generic.Object) {
         let list = this.getItems();
 
         if (filter && Object.values(filter).length > 0) {
-            let filter_json = JSON.parse(JSON.stringify(filter));
+            let filter_copy = JSON.parse(JSON.stringify(filter));
 
-            return list.filter((item) => {
-                return !Object.keys(filter_json).some((property) => {
-                    if (!Array.isArray(filter_json[property])) {
-                        filter_json[property] = [filter_json[property]];
+            list = list.filter((item) => {
+                return !Object.keys(filter_copy).some((property) => {
+                    if (!Array.isArray(filter_copy[property])) {
+                        filter_copy[property] = [filter_copy[property]];
                     }
 
                     if (Object.prototype.hasOwnProperty.call(item, property)) {
-                        if (!Array.isArray(item[property])) {
-                            item[property] = [item[property]];
-                        }
+                        let key = property as keyof typeof item;
+                        let array = (
+                            Array.isArray(item[key]) ? item[key] : [item[key]]
+                        ) as string[];
 
-                        return item[property].every((option: any) => {
-                            return filter_json[property].indexOf(option) === -1;
-                        });
+                        if (array) {
+                            return array.every((option: any) => {
+                                return (
+                                    filter_copy[property].indexOf(option) === -1
+                                );
+                            });
+                        }
                     }
 
                     return false;

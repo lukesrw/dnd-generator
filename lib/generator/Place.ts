@@ -2,15 +2,21 @@ import { List } from "../List";
 import { AgeList } from "../list/age/age";
 import { AlignmentList } from "../list/alignment/alignment";
 import { ArmorList } from "../list/armor/armor";
-import { BackgroundList } from "../list/background/background";
+import {
+    BackgroundList,
+    BackgroundProperties,
+} from "../list/background/background";
 import { CharacteristicList } from "../list/characteristics/characteristics";
-import { ClassList } from "../list/class/class";
+import { ClassList, ClassProperties } from "../list/class/class";
 import { EyeList } from "../list/eye/eye";
 import { HairList } from "../list/hair/hair";
 import { MaturityList } from "../list/maturity/maturity";
 import { MotivationList } from "../list/motivation/motivation";
 import { NobilityList } from "../list/nobility/nobility";
-import { ProfessionList } from "../list/profession/profession";
+import {
+    ProfessionList,
+    ProfessionProperties,
+} from "../list/profession/profession";
 import { RaceList } from "../list/race/race";
 import { SexList } from "../list/sex/sex";
 import { SkinList } from "../list/skin/skin";
@@ -23,18 +29,18 @@ interface Lists {
     alignment: AlignmentList | List;
     armor: ArmorList | List;
     characteristic: CharacteristicList | List;
-    class: ClassList | List;
+    class: ClassList | List<ClassProperties>;
     eye: EyeList | List;
     hair: HairList | List;
     motivation: MotivationList | List;
     nobility: NobilityList | List;
-    profession: ProfessionList | List;
+    profession: ProfessionList | List<ProfessionProperties>;
     race: RaceList | List;
     sex: SexList | List;
     skin: SkinList | List;
     title: TitleList | List;
     weapon: WeaponList | List;
-    background: BackgroundList | List;
+    background: BackgroundList | List<BackgroundProperties>;
 }
 
 export class Place {

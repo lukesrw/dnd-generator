@@ -7,7 +7,11 @@ import { List } from "../../List";
  * @see https://www.reddit.com/r/DnD/comments/8788on/5e_race_class_synergy_analysis_v5/
  */
 
-export class ClassList extends List {
+export interface ClassProperties {
+    combatant: boolean;
+}
+
+export class ClassList extends List<ClassProperties> {
     constructor() {
         super([]);
     }

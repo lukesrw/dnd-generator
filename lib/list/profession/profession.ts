@@ -1,66 +1,70 @@
 import { List } from "../../List";
 
-export class CommonProfessionList extends List {
+export interface ProfessionProperties {
+    combatant: boolean;
+}
+
+export class CommonProfessionList extends List<ProfessionProperties> {
     constructor() {
         super([]);
     }
 }
 
-export class EsquireProfessionList extends List {
+export class EsquireProfessionList extends List<ProfessionProperties> {
     constructor() {
         super([]);
     }
 }
 
-export class GentleProfessionList extends List {
+export class GentleProfessionList extends List<ProfessionProperties> {
     constructor() {
         super([]);
     }
 }
 
-export class MerchantProfessionList extends List {
+export class MerchantProfessionList extends List<ProfessionProperties> {
     constructor() {
         super([]);
     }
 }
 
-export class NobleProfessionList extends List {
+export class NobleProfessionList extends List<ProfessionProperties> {
     constructor() {
         super([]);
     }
 }
 
-export class PeasantProfessionList extends List {
+export class PeasantProfessionList extends List<ProfessionProperties> {
     constructor() {
         super([]);
     }
 }
 
-export class ScholarProfessionList extends List {
+export class ScholarProfessionList extends List<ProfessionProperties> {
     constructor() {
         super([]);
     }
 }
 
-export class ServantProfessionList extends List {
+export class ServantProfessionList extends List<ProfessionProperties> {
     constructor() {
         super([]);
     }
 }
 
-export class UnderclassProfessionList extends List {
+export class UnderclassProfessionList extends List<ProfessionProperties> {
     constructor() {
         super([]);
     }
 }
 
-export class YeomanProfessionList extends List {
+export class YeomanProfessionList extends List<ProfessionProperties> {
     constructor() {
         super([]);
     }
 }
 
-export class ProfessionList extends List {
+export class ProfessionList extends List<ProfessionProperties> {
     getItems() {
         let professions = [
             new CommonProfessionList(),
