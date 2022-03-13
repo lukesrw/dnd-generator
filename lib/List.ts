@@ -12,15 +12,29 @@ export interface ListItemRaw extends ListItem {
 
 export class List {
     items: false | ListItem[];
+    raw: false | ListItem[];
     weighted: boolean;
 
     constructor(items?: ListItem[]) {
         this.weighted = false;
+        this.raw = items || false;
         this.items = items || false;
     }
 
     static pickRandom<Type>(list: Type[]) {
         return list[Math.floor(Math.random() * list.length)];
+    }
+
+    getValues() {
+        if (!this.raw) return [];
+
+        return this.raw.map((item) => item.value);
+    }
+
+    getItem(value: string) {
+        if (!this.raw) return undefined;
+
+        return this.raw.find((item) => item.value === value);
     }
 
     getItems() {
