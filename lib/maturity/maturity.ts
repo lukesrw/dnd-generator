@@ -1,7 +1,7 @@
-import { List } from '../List';
+import { List } from "../List";
 
 export class MaturityList extends List {
-	constructor() {
-		super([]);
-	}
+    constructor() {
+        super([]);
+    }
 }

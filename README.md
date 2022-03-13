@@ -101,7 +101,6 @@ Each list extends the [List](/lib/List.ts) class, which implements...
 
 # Todo
 
--   "Background" list to pick random background, using race/class/etc. to make sense
 -   "Language" list to pick spoken languages, using background/race/etc. to make sense
 -   Enemy class to begin generating combat encounters or other party situations
 -   More prefabs for standard places (shops, places of worship, etc.)
