@@ -70,6 +70,7 @@
         ]
     },
     {
+        "race": ["Drow Elf", "Elf", "Half-Elf", "Human"],
         "value": "Cormanthor Refugee",
         "languages": ["Elvish"],
         "tools": ["artisan's tools"],
@@ -89,6 +90,15 @@
         "skills": ["Deception", "Stealth"]
     },
     {
+        "race": [
+            "Dwarf",
+            "Mountain Dwarf",
+            "Orc",
+            "Goblin",
+            "Hobgoblin",
+            "Bugbear",
+            "Drow Elf"
+        ],
         "value": "Earthspur Miner",
         "languages": ["Dwarvish", "Undercommon"],
         "tools": [],
@@ -164,12 +174,14 @@
         "skills": ["Medicine", "Religion"]
     },
     {
+        "race": ["Human"],
         "value": "Hillsfar Merchant",
         "languages": 0,
         "tools": ["vehicles (land), vehicles (water)"],
         "skills": ["Insight", "Persuasion"]
     },
     {
+        "race": ["Human"],
         "value": "Hillsfar Smuggler",
         "languages": 1,
         "tools": ["forgery kit"],
@@ -229,6 +241,7 @@
         "skills": ["Athletics", "Persuasion"]
     },
     {
+        "race": ["Human"],
         "nobility": ["Gentle", "Esquire", "Noble"],
         "value": "Mulmaster Aristocrat",
         "languages": 0,
@@ -350,6 +363,8 @@
         "skills": ["Sleight Of Hand", "Stealth"]
     },
     {
+        "race": ["Human"],
+        "class": ["Barbarian"],
         "value": "Uthgardt Tribe Member",
         "languages": 1,
         "tools": [
@@ -364,6 +379,7 @@
         "skills": ["History", "Religion"]
     },
     {
+        "race": ["Human", "Dwarf", "Elf"],
         "value": "Waterdhavian Noble",
         "languages": 1,
         "tools": [{ "pick": 1, "items": ["gaming set", "musical instrument"] }],
