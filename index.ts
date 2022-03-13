@@ -32,6 +32,7 @@ import { TitleList } from "./lib/list/title/title";
 import { WeaponList } from "./lib/list/weapon/weapon";
 import { TavernPrefab } from "./lib/prefab/Tavern";
 import * as _Common from "./lib/language/common";
+import { BackgroundList } from "./lib/list/background/background";
 
 export namespace Generator {
     export const NPC = _NPC;
@@ -49,6 +50,8 @@ export namespace List {
     export const Age = AgeList;
 
     export const Maturity = MaturityList;
+
+    export const Background = BackgroundList;
 
     export const Alignment = AlignmentList;
 
