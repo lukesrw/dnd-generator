@@ -271,9 +271,7 @@ export class NPC {
         if (["infant", "child"].includes(this.maturity)) return false;
 
         if (this.class) {
-            let chosen_class = this.place.lists.class.getFiltered({
-                value: this.class,
-            })[0];
+            let chosen_class = this.place.lists.class.getItem(this.class);
 
             if (
                 chosen_class &&
@@ -285,11 +283,17 @@ export class NPC {
         }
 
         if (this.profession) {
-            let { combatant } = this.place.lists.profession.getFiltered({
-                value: this.profession,
-            })[0];
+            let chosen_profession = this.place.lists.profession.getItem(
+                this.profession
+            );
 
-            if (typeof combatant === "boolean" && !combatant) return false;
+            if (
+                chosen_profession &&
+                typeof chosen_profession.combatant === "boolean" &&
+                !chosen_profession.combatant
+            ) {
+                return false;
+            }
         }
 
         return true;
@@ -340,28 +344,40 @@ export class NPC {
     }
 
     getLanguages() {
-        return this.place.lists.background.getFiltered({
-            value: this.background,
-        })[0].languages;
+        let languages: string[] = [];
+
+        let background = this.place.lists.background.getItem(this.background);
+
+        if (background && Array.isArray(background.languages)) {
+            languages = languages.concat(
+                BackgroundList.pickList(background.languages)
+            );
+        }
+
+        return languages;
     }
 
     getTools() {
-        return [
-            ...BackgroundList.pickList(
-                this.place.lists.background.getFiltered({
-                    value: this.background,
-                })[0].tools
-            ),
-        ];
+        let tools: string[] = [];
+
+        let background = this.place.lists.background.getItem(this.background);
+
+        if (background && Array.isArray(background.tools)) {
+            tools = tools.concat(BackgroundList.pickList(background.tools));
+        }
+
+        return tools;
     }
 
     getSkills() {
-        return [
-            ...BackgroundList.pickList(
-                this.place.lists.background.getFiltered({
-                    value: this.background,
-                })[0].skills
-            ),
-        ];
+        let skills: string[] = [];
+
+        let background = this.place.lists.background.getItem(this.background);
+
+        if (background && Array.isArray(background.skills)) {
+            skills = skills.concat(BackgroundList.pickList(background.skills));
+        }
+
+        return skills;
     }
 }
