@@ -15,7 +15,7 @@ import { SkinList } from "./skin/skin";
 import { TitleList } from "./title/title";
 import { WeaponList } from "./weapon/weapon";
 import { AgeList } from "./age/age";
-import { BackgroundList } from "./backgrounds/backgrounds";
+import { BackgroundList } from "./background/background";
 
 interface Lists {
     maturity: MaturityList | List;

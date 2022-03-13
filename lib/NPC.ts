@@ -1,5 +1,5 @@
 import * as Generic from "../interfaces/generic";
-import { BackgroundList } from "./backgrounds/backgrounds";
+import { BackgroundList } from "./background/background";
 import { Gender } from "./gender/gender";
 import { getPronoun } from "./language/common";
 import { NameList } from "./name/name";
