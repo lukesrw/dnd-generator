@@ -1,0 +1,372 @@
+[
+    {
+        "value": "Acolyte",
+        "languages": 2,
+        "tools": [],
+        "skills": ["Insight", "Religion"]
+    },
+    {
+        "nobility": ["Scholar"],
+        "value": "Anthropologist",
+        "languages": 2,
+        "tools": [],
+        "skills": ["Insight", "Religion"]
+    },
+    {
+        "nobility": ["Scholar"],
+        "value": "Archaeologist",
+        "languages": 1,
+        "tools": ["cartographer's tools", "navigator's tools"],
+        "skills": ["Insight", "Religion"]
+    },
+    {
+        "value": "Adopted",
+        "languages": 2,
+        "tools": [],
+        "skills": ["Persuasion", "Deception", "Stealth"]
+    },
+    {
+        "value": "Black Fist Double Agent",
+        "languages": 0,
+        "tools": [
+            "disguise kit",
+            { "pick": 1, "items": ["artisan's tools", "gambling set"] }
+        ],
+        "skills": ["Deception", "Insight"]
+    },
+    {
+        "value": "Caravan Specialist",
+        "languages": 1,
+        "tools": ["vehicles (land)"],
+        "skills": ["Animal Handling", "Survival"]
+    },
+    {
+        "nobility": ["Underclass", "Peasant"],
+        "value": "Charlatan",
+        "languages": 0,
+        "tools": ["disguise kit", "forgery kit"],
+        "skills": ["Deception", "Sleight Of Hand"]
+    },
+    {
+        "value": "City Watch",
+        "languages": 2,
+        "tools": [],
+        "skills": ["Athletics", "Insight"]
+    },
+    {
+        "value": "Clan Crafter",
+        "languages": 1,
+        "tools": ["artisan's tools"],
+        "skills": ["History", "Insight"]
+    },
+    {
+        "nobility": ["Scholar"],
+        "value": "Cloistered Scholar",
+        "languages": 2,
+        "tools": [],
+        "skills": [
+            "History",
+            { "pick": 1, "items": ["Arcana", "Nature", "Religion"] }
+        ]
+    },
+    {
+        "value": "Cormanthor Refugee",
+        "languages": ["Elvish"],
+        "tools": ["artisan's tools"],
+        "skills": ["Nature", "Survival"]
+    },
+    {
+        "value": "Courtier",
+        "languages": 2,
+        "tools": [],
+        "skills": ["Insight", "Persuasion"]
+    },
+    {
+        "nobility": ["Underclass", "Peasant"],
+        "value": "Criminal",
+        "languages": 0,
+        "tools": ["gaming set", "thieves' tools"],
+        "skills": ["Deception", "Stealth"]
+    },
+    {
+        "value": "Earthspur Miner",
+        "languages": ["Dwarvish", "Undercommon"],
+        "tools": [],
+        "skills": ["Athletics", "Survival"]
+    },
+    {
+        "value": "Entertainer",
+        "languages": 0,
+        "tools": ["disguise kit", "musical instrument"],
+        "skills": ["Acrobatics", "Performance"]
+    },
+    {
+        "value": "Far Traveler",
+        "languages": 1,
+        "tools": [{ "pick": 1, "items": ["musical instrument", "gaming set"] }],
+        "skills": ["Insight", "Perception"]
+    },
+    {
+        "nobility": ["Common", "Knighted"],
+        "value": "Folk Hero",
+        "languages": 0,
+        "tools": ["artisan's tools", "vehicles (land)"],
+        "skills": ["Animal Handling", "Survival"]
+    },
+    {
+        "nobility": ["Underclass", "Peasant"],
+        "value": "Gate Urchin",
+        "languages": 0,
+        "tools": ["musical instrument", "thieves' tools"],
+        "skills": ["Deception", "Sleight Of Hand"]
+    },
+    {
+        "value": "Gladiator",
+        "languages": 0,
+        "tools": ["disguise kit", "unusual weapon"],
+        "skills": ["Acrobatics", "Performance"]
+    },
+    {
+        "value": "Guild Artisan",
+        "languages": 1,
+        "tools": ["artisan's tools"],
+        "skills": ["Insight", "Persuasion"]
+    },
+    {
+        "nobility": ["Merchant"],
+        "value": "Guild Merchant",
+        "languages": 1,
+        "tools": ["navigator's tools"],
+        "skills": ["Insight", "Persuasion"]
+    },
+    {
+        "value": "Harborfolk",
+        "languages": 0,
+        "tools": ["gaming set", "vehicles (water)"],
+        "skills": ["Athletics", "Sleight Of Hand"]
+    },
+    {
+        "value": "Haunted One",
+        "languages": ["Exotic"],
+        "tools": [],
+        "skills": [
+            {
+                "pick": 2,
+                "items": ["Arcana", "Investigation", "Religion", "Survival"]
+            }
+        ]
+    },
+    {
+        "nobility": ["Underclass", "Peasant"],
+        "value": "Hermit",
+        "languages": 1,
+        "tools": ["herbalism kit"],
+        "skills": ["Medicine", "Religion"]
+    },
+    {
+        "value": "Hillsfar Merchant",
+        "languages": 0,
+        "tools": ["vehicles (land), vehicles (water)"],
+        "skills": ["Insight", "Persuasion"]
+    },
+    {
+        "value": "Hillsfar Smuggler",
+        "languages": 1,
+        "tools": ["forgery kit"],
+        "skills": ["Perception", "Stealth"]
+    },
+    {
+        "value": "Inheritor",
+        "languages": 0,
+        "tools": ["gaming set", "musical instrument"],
+        "skills": [
+            "Survival",
+            { "pick": 1, "items": ["Arcana", "History", "Religion"] }
+        ]
+    },
+    {
+        "value": "Initiate",
+        "languages": 0,
+        "tools": ["gaming set", "vehicles (land)"],
+        "skills": ["Athletics", "Intimidation"]
+    },
+    {
+        "value": "Inquisitor",
+        "languages": 0,
+        "tools": ["artisan's tools", "thieves' tools"],
+        "skills": ["Investigation", "Religion"]
+    },
+    {
+        "value": "Investigator",
+        "languages": 2,
+        "tools": [],
+        "skills": ["Insight", "Investigation"]
+    },
+    {
+        "value": "Iron Route Bandit",
+        "languages": 0,
+        "tools": ["gaming set", "vehicles (land)"],
+        "skills": ["Animal Handling", "Stealth"]
+    },
+    {
+        "nobility": ["Knighted"],
+        "value": "Knight",
+        "languages": 1,
+        "tools": ["gaming set"],
+        "skills": ["History", "Persuasion"]
+    },
+    {
+        "nobility": ["Knighted"],
+        "value": "Knight of the Order",
+        "languages": 1,
+        "tools": [{ "pick": 1, "items": ["gaming set", "musical instrument"] }],
+        "skills": ["Persuasion"]
+    },
+    {
+        "value": "Mercenary Veteran",
+        "languages": 0,
+        "tools": ["gaming set", "vehicles (land)"],
+        "skills": ["Athletics", "Persuasion"]
+    },
+    {
+        "nobility": ["Gentle", "Esquire", "Noble"],
+        "value": "Mulmaster Aristocrat",
+        "languages": 0,
+        "tools": ["artisan's tools", "musical instrument"],
+        "skills": ["Deception", "Performance"]
+    },
+    {
+        "nobility": ["Noble"],
+        "value": "Noble",
+        "languages": 1,
+        "tools": ["gaming set"],
+        "skills": ["History", "Persuasion"]
+    },
+    {
+        "value": "Outlander",
+        "languages": 1,
+        "tools": ["musical instrument"],
+        "skills": ["Athletics", "Survival"]
+    },
+    {
+        "value": "Phlan Insurgent",
+        "languages": 0,
+        "tools": ["artisan's tools", "vehicles (land)"],
+        "skills": ["Stealth", "Survival"]
+    },
+    {
+        "value": "Phlan Refugee",
+        "languages": 1,
+        "tools": ["artisan's tools"],
+        "skills": ["Athletics", "Insight"]
+    },
+    {
+        "nobility": ["Merchant"],
+        "maturity": ["child", "adult", "elder"],
+        "value": "Pirate",
+        "languages": 0,
+        "tools": ["navigator's tools", "vehicles (water)"],
+        "skills": ["Athletics", "Perception"]
+    },
+    {
+        "value": "Sage",
+        "languages": 2,
+        "tools": [],
+        "skills": ["Arcana", "History"]
+    },
+    {
+        "nobility": ["Servant"],
+        "maturity": ["adult", "elder"],
+        "value": "Sailor",
+        "languages": 0,
+        "tools": ["navigator's tools", "vehicles (water)"],
+        "skills": ["Athletics", "Perception"]
+    },
+    {
+        "value": "Secret Identity",
+        "languages": 0,
+        "tools": ["disguise kit", "forgery kit"],
+        "skills": ["Deception", "Stealth"]
+    },
+    {
+        "value": "Shade Fanatic",
+        "languages": ["Netherese"],
+        "tools": ["forgery kit"],
+        "skills": ["Deception", "Intimidation"]
+    },
+    {
+        "value": "Soldier",
+        "languages": 0,
+        "tools": ["gaming set", "vehicles (land)"],
+        "skills": ["Athletics", "Intimidation"]
+    },
+    {
+        "nobility": ["Servant"],
+        "maturity": ["child", "adult", "elder"],
+        "value": "Spy",
+        "languages": 0,
+        "tools": ["gaming set", "thieves' tools"],
+        "skills": ["Deception", "Stealth"]
+    },
+    {
+        "value": "Stojanow Prisoner",
+        "languages": 0,
+        "tools": ["gaming set", "thieves' tools"],
+        "skills": ["Deception", "Perception"]
+    },
+    {
+        "value": "Ticklebelly Nomad",
+        "languages": ["Giant"],
+        "tools": ["herbalism kit"],
+        "skills": ["Animal Handling", "Nature"]
+    },
+    {
+        "value": "Trade Sheriff",
+        "languages": ["Elvish"],
+        "tools": ["thieves' tools"],
+        "skills": ["Investigation", "Persuasion"]
+    },
+    {
+        "value": "Urban Bounty Hunter",
+        "languages": 0,
+        "tools": [
+            {
+                "pick": 2,
+                "items": ["gaming set", "musical instrument", "thieves' tools"]
+            }
+        ],
+        "skills": [
+            {
+                "pick": 2,
+                "items": ["Deception", "Insight", "Persuasion", "Stealth"]
+            }
+        ]
+    },
+    {
+        "nobility": ["Underclass"],
+        "value": "Urchin",
+        "languages": 0,
+        "tools": ["disguise kit", "thieves' tools"],
+        "skills": ["Sleight Of Hand", "Stealth"]
+    },
+    {
+        "value": "Uthgardt Tribe Member",
+        "languages": 1,
+        "tools": [
+            { "pick": 1, "items": ["artisan's tools", "musical instrument"] }
+        ],
+        "skills": ["Athletics", "Survival"]
+    },
+    {
+        "value": "Vizier",
+        "languages": 0,
+        "tools": ["artisan's tools", "musical instrument"],
+        "skills": ["History", "Religion"]
+    },
+    {
+        "value": "Waterdhavian Noble",
+        "languages": 1,
+        "tools": [{ "pick": 1, "items": ["gaming set", "musical instrument"] }],
+        "skills": ["History", "Persuasion"]
+    }
+]
