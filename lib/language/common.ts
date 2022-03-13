@@ -1,4 +1,4 @@
-import { Gender } from "../gender/gender";
+import { Gender } from "../list/gender/gender";
 
 export function getPronoun(
     person: "first" | "second" | "third",

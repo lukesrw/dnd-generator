@@ -1,5 +1,5 @@
 import * as Generic from "../interfaces/generic";
-import { NPC } from "./NPC";
+import { NPC } from "./generator/NPC";
 
 export interface ListItem {
     [property: string]: any;

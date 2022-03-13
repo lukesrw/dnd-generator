@@ -1,16 +1,16 @@
 const { readdir, stat, readFile, writeFile } = require("fs/promises");
 const { join } = require("path");
 
-const LIB_DIR = join(__dirname, "lib");
+const LIST_DIR = join(__dirname, "lib", "list");
 const CLASS_REGEX =
     /class (?<name>\w+) extends List_1.List \{[\r\n]+\s+constructor\(\) \{[\r\n]+\s+super\(\[\]\);/giu;
 const NAME_REGEX = /([A-Z][a-z]+)/;
 
 async function build() {
-    let lists = await readdir(LIB_DIR);
+    let lists = await readdir(LIST_DIR);
 
-    lists.forEach(async list => {
-        let list_dir = join(LIB_DIR, list);
+    lists.forEach(async (list) => {
+        let list_dir = join(LIST_DIR, list);
 
         let stats = await stat(list_dir);
 
@@ -24,11 +24,11 @@ async function build() {
 
                 let matches = [...content.matchAll(CLASS_REGEX)];
 
-                matches.forEach(async match => {
+                matches.forEach(async (match) => {
                     let name = match.groups.name.split(NAME_REGEX);
                     name = name
                         .slice(1, name.length - 2)
-                        .filter(part => part)
+                        .filter((part) => part)
                         .join("-")
                         .toLowerCase();
 
