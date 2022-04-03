@@ -22,7 +22,9 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Shifter"
+        "value": "Shifter",
+        "speed": 30,
+        "languages": []
     },
     {
         "class": [
@@ -47,7 +49,9 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Warforged"
+        "value": "Warforged",
+        "speed": 30,
+        "languages": []
     },
     {
         "class": [
@@ -72,7 +76,9 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Verdan"
+        "value": "Verdan",
+        "speed": 30,
+        "languages": ["Goblin", { "pick": 1, "languages": [] }]
     },
     {
         "class": [
@@ -97,7 +103,9 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Gith"
+        "value": "Gith",
+        "speed": 30,
+        "languages": ["Gith"]
     },
     {
         "class": [
@@ -122,7 +130,9 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Locathah"
+        "value": "Locathah",
+        "speed": 30,
+        "languages": ["Aquan"]
     },
     {
         "class": [
@@ -147,7 +157,9 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Simic Hybrid"
+        "value": "Simic Hybrid",
+        "speed": 30,
+        "languages": ["Elvish"]
     },
     {
         "class": [
@@ -172,7 +184,9 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Changeling"
+        "value": "Changeling",
+        "speed": 30,
+        "languages": [{ "pick": 2, "languages": [] }]
     },
     {
         "class": [
@@ -197,7 +211,9 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Minotaur"
+        "value": "Minotaur",
+        "speed": 30,
+        "languages": ["Minotaur"]
     },
     {
         "class": [
@@ -222,7 +238,9 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Loxodon"
+        "value": "Loxodon",
+        "speed": 30,
+        "languages": ["Loxodon"]
     },
     {
         "class": [
@@ -247,7 +265,9 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Vedalken"
+        "value": "Vedalken",
+        "speed": 30,
+        "languages": ["Vedalken", { "pick": 1, "languages": [] }]
     },
     {
         "class": [
@@ -272,7 +292,9 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Centaur"
+        "value": "Centaur",
+        "speed": 40,
+        "languages": ["Sylvan"]
     },
     {
         "class": [
@@ -289,7 +311,9 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Aarakocra"
+        "value": "Aarakocra",
+        "speed": 25,
+        "languages": ["Aarakocra", "Auran"]
     },
     {
         "class": [
@@ -300,7 +324,9 @@
             "Swashbuckler",
             "Warlock"
         ],
-        "value": "Aasimar"
+        "value": "Aasimar",
+        "speed": 30,
+        "languages": ["Celestial"]
     },
     {
         "class": [
@@ -315,7 +341,9 @@
             "Swashbuckler",
             "Blood Hunter"
         ],
-        "value": "Bugbear"
+        "value": "Bugbear",
+        "speed": 30,
+        "languages": ["Goblin"]
     },
     {
         "class": [
@@ -330,7 +358,43 @@
             "Swashbuckler",
             "Warlock"
         ],
-        "value": "Dragonborn"
+        "value": "Draconblood",
+        "speed": 30,
+        "languages": ["Draconic"]
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cavalier",
+            "Cleric",
+            "Fighter",
+            "Knight",
+            "Sorcerer",
+            "Trickster",
+            "Swashbuckler",
+            "Warlock"
+        ],
+        "value": "Ravenite",
+        "speed": 30,
+        "languages": ["Draconic"]
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cavalier",
+            "Cleric",
+            "Fighter",
+            "Knight",
+            "Sorcerer",
+            "Trickster",
+            "Swashbuckler",
+            "Warlock"
+        ],
+        "value": "Dragonborn",
+        "speed": 30,
+        "languages": ["Draconic"]
     },
     {
         "class": [
@@ -342,19 +406,15 @@
             "Trickster",
             "Wizard"
         ],
-        "value": "Duergar Dwarf"
+        "value": "Duergar Dwarf",
+        "speed": 25,
+        "languages": ["Dwarf", "Undercommon"]
     },
-    { "class": ["Barbarian", "Paladin", "Artificer"], "value": "Dwarf" },
     {
-        "class": [
-            "Barbarian",
-            "Cavalier",
-            "Cleric",
-            "Druid",
-            "Knight",
-            "Paladin"
-        ],
-        "value": "Hill Dwarf"
+        "class": ["Barbarian", "Paladin", "Artificer"],
+        "value": "Dwarf",
+        "speed": 25,
+        "languages": ["Dwarf"]
     },
     {
         "class": [
@@ -365,7 +425,35 @@
             "Knight",
             "Paladin"
         ],
-        "value": "Mountain Dwarf"
+        "value": "Hill Dwarf",
+        "speed": 25,
+        "languages": ["Dwarf"]
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Cavalier",
+            "Cleric",
+            "Druid",
+            "Knight",
+            "Paladin"
+        ],
+        "value": "Mark of Warding",
+        "speed": 25,
+        "languages": ["Dwarf"]
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Cavalier",
+            "Cleric",
+            "Druid",
+            "Knight",
+            "Paladin"
+        ],
+        "value": "Mountain Dwarf",
+        "speed": 25,
+        "languages": ["Dwarf"]
     },
     {
         "class": [
@@ -378,7 +466,9 @@
             "Ranger",
             "Inquisitor"
         ],
-        "value": "Firbolg"
+        "value": "Firbolg",
+        "speed": 30,
+        "languages": ["Elvish", "Giant"]
     },
     {
         "class": [
@@ -396,11 +486,15 @@
             "Wizard",
             "Artificer"
         ],
-        "value": "Air Genasi"
+        "value": "Air Genasi",
+        "speed": 30,
+        "languages": ["Primordial"]
     },
     {
         "class": ["Barbarian", "Cavalier", "Knight", "Paladin"],
-        "value": "Earth Genasi"
+        "value": "Earth Genasi",
+        "speed": 30,
+        "languages": ["Primordial"]
     },
     {
         "class": [
@@ -416,7 +510,9 @@
             "Inquisitor",
             "Blood Hunter"
         ],
-        "value": "Water Genasi"
+        "value": "Water Genasi",
+        "speed": 30,
+        "languages": ["Primordial"]
     },
     {
         "class": [
@@ -430,7 +526,9 @@
             "Swashbuckler",
             "Artificer"
         ],
-        "value": "Goblin"
+        "value": "Goblin",
+        "speed": 30,
+        "languages": ["Goblin"]
     },
     {
         "class": [
@@ -446,7 +544,9 @@
             "Inquisitor",
             "Swashbuckler"
         ],
-        "value": "Goliath"
+        "value": "Goliath",
+        "speed": 30,
+        "languages": ["Giant"]
     },
     {
         "class": [
@@ -463,7 +563,9 @@
             "Swashbuckler",
             "Artificer"
         ],
-        "value": "Grung"
+        "value": "Grung",
+        "speed": 25,
+        "languages": ["Grung"]
     },
     {
         "class": [
@@ -488,7 +590,9 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Half-Elf"
+        "value": "Half-Elf",
+        "speed": 30,
+        "languages": ["Elvish"]
     },
     {
         "class": [
@@ -505,7 +609,9 @@
             "Swashbuckler",
             "Warlock"
         ],
-        "value": "Lightfoot Halfling"
+        "value": "Lightfoot Halfling",
+        "speed": 25,
+        "languages": ["Halfling"]
     },
     {
         "class": [
@@ -526,7 +632,9 @@
             "Warlock",
             "Wizard"
         ],
-        "value": "Stout Halfling"
+        "value": "Stout Halfling",
+        "speed": 25,
+        "languages": ["Halfling"]
     },
     {
         "class": [
@@ -542,7 +650,9 @@
             "Swashbuckler",
             "Artificer"
         ],
-        "value": "Halfling"
+        "value": "Halfling",
+        "speed": 25,
+        "languages": ["Halfling"]
     },
     {
         "class": [
@@ -560,7 +670,9 @@
             "Warlock",
             "Blood Hunter"
         ],
-        "value": "Half-Orc"
+        "value": "Half-Orc",
+        "speed": 30,
+        "languages": ["Orc"]
     },
     {
         "class": [
@@ -573,7 +685,9 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Hobgoblin"
+        "value": "Hobgoblin",
+        "speed": 30,
+        "languages": ["Goblin"]
     },
     {
         "class": [
@@ -598,7 +712,9 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Human"
+        "value": "Human",
+        "speed": 25,
+        "languages": [{ "pick": 1, "languages": [] }]
     },
     {
         "class": [
@@ -613,7 +729,9 @@
             "Inquisitor",
             "Swashbuckler"
         ],
-        "value": "Kenku"
+        "value": "Kenku",
+        "speed": 30,
+        "languages": ["Auran"]
     },
     {
         "class": [
@@ -628,11 +746,15 @@
             "Inquisitor",
             "Blood Hunter"
         ],
-        "value": "Lizardfolk"
+        "value": "Lizardfolk",
+        "speed": 30,
+        "languages": ["Draconic"]
     },
     {
         "class": ["Barbarian", "Cavalier", "Druid", "Paladin"],
-        "value": "Orc"
+        "value": "Orc",
+        "speed": 30,
+        "languages": ["Orc"]
     },
     {
         "class": [
@@ -645,7 +767,9 @@
             "Monk",
             "Paladin"
         ],
-        "value": "Tortle"
+        "value": "Tortle",
+        "speed": 30,
+        "languages": ["Aquan"]
     },
     {
         "class": [
@@ -661,7 +785,9 @@
             "Swashbuckler",
             "Warlock"
         ],
-        "value": "Triton"
+        "value": "Triton",
+        "speed": 30,
+        "languages": ["Primordial"]
     },
     {
         "class": [
@@ -686,7 +812,9 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Yuan-ti Pureblood"
+        "value": "Yuan-ti Pureblood",
+        "speed": 30,
+        "languages": ["Abyssal", "Draconic"]
     },
     {
         "class": [
@@ -710,7 +838,9 @@
             "Wizard",
             "Artificer"
         ],
-        "value": "Kalashtar"
+        "value": "Kalashtar",
+        "speed": 30,
+        "languages": ["Quori", { "pick": 1, "languages": [] }]
     },
     {
         "class": [
@@ -721,7 +851,9 @@
             "Warlock",
             "Blood Hunter"
         ],
-        "value": "Fallen Aasimar"
+        "value": "Fallen Aasimar",
+        "speed": 30,
+        "languages": ["Celestial"]
     },
     {
         "class": [
@@ -733,11 +865,15 @@
             "Warlock",
             "Blood Hunter"
         ],
-        "value": "Protector Aasimar"
+        "value": "Protector Aasimar",
+        "speed": 30,
+        "languages": ["Celestial"]
     },
     {
         "class": ["Bard", "Sorcerer", "Swashbuckler", "Warlock"],
-        "value": "Scourge Aasimar"
+        "value": "Scourge Aasimar",
+        "speed": 30,
+        "languages": ["Celestial"]
     },
     {
         "class": [
@@ -752,7 +888,9 @@
             "Swashbuckler",
             "Warlock"
         ],
-        "value": "Drow Elf"
+        "value": "Drow Elf",
+        "speed": 30,
+        "languages": ["Elvish"]
     },
     {
         "class": [
@@ -766,7 +904,9 @@
             "Swashbuckler",
             "Wizard"
         ],
-        "value": "Eladrin Elf"
+        "value": "Eladrin Elf",
+        "speed": 30,
+        "languages": ["Elvish"]
     },
     {
         "class": [
@@ -780,7 +920,9 @@
             "Swashbuckler",
             "Wizard"
         ],
-        "value": "High Elf"
+        "value": "High Elf",
+        "speed": 30,
+        "languages": ["Elvish"]
     },
     {
         "class": [
@@ -795,9 +937,28 @@
             "Swashbuckler",
             "Blood Hunter"
         ],
-        "value": "Wood Elf"
+        "value": "Wood Elf",
+        "speed": 30,
+        "languages": ["Elvish"]
     },
-    { "class": ["Bard", "Trickster", "Artificer"], "value": "Elf" },
+    {
+        "class": ["Bard", "Trickster", "Artificer"],
+        "value": "Elf",
+        "speed": 30,
+        "languages": ["Elvish"]
+    },
+    {
+        "class": ["Bard", "Trickster", "Artificer"],
+        "value": "Sea Elf",
+        "speed": 30,
+        "languages": ["Elvish"]
+    },
+    {
+        "class": ["Bard", "Trickster", "Artificer"],
+        "value": "Shadar Kai",
+        "speed": 30,
+        "languages": ["Elvish"]
+    },
     {
         "class": [
             "Bard",
@@ -810,7 +971,9 @@
             "Inquisitor",
             "Swashbuckler"
         ],
-        "value": "Ghostwise Halfling"
+        "value": "Ghostwise Halfling",
+        "speed": 25,
+        "languages": ["Halfling"]
     },
     {
         "class": [
@@ -823,7 +986,9 @@
             "Swashbuckler",
             "Warlock"
         ],
-        "value": "Tabaxi"
+        "value": "Tabaxi",
+        "speed": 30,
+        "languages": [{ "pick": 1, "languages": [] }]
     },
     {
         "class": [
@@ -839,7 +1004,9 @@
             "Wizard",
             "Artificer"
         ],
-        "value": "Tiefling"
+        "value": "Tiefling",
+        "speed": 30,
+        "languages": ["Infernal"]
     },
     {
         "class": [
@@ -855,7 +1022,9 @@
             "Wizard",
             "Artificer"
         ],
-        "value": "Devil's Tongue Tiefling"
+        "value": "Devil's Tongue Tiefling",
+        "speed": 30,
+        "languages": ["Infernal"]
     },
     {
         "class": [
@@ -871,7 +1040,9 @@
             "Wizard",
             "Artificer"
         ],
-        "value": "Hellfire Tiefling"
+        "value": "Hellfire Tiefling",
+        "speed": 30,
+        "languages": ["Infernal"]
     },
     {
         "class": [
@@ -888,7 +1059,9 @@
             "Wizard",
             "Artificer"
         ],
-        "value": "Winged Tiefling"
+        "value": "Winged Tiefling",
+        "speed": 30,
+        "languages": ["Infernal"]
     },
     {
         "class": [
@@ -906,7 +1079,9 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Fire Genasi"
+        "value": "Fire Genasi",
+        "speed": 30,
+        "languages": ["Primordial"]
     },
     {
         "class": [
@@ -917,7 +1092,9 @@
             "Inquisitor",
             "Swashbuckler"
         ],
-        "value": "Kobold"
+        "value": "Kobold",
+        "speed": 30,
+        "languages": ["Draconic"]
     },
     {
         "class": [
@@ -930,7 +1107,9 @@
             "Wizard",
             "Artificer"
         ],
-        "value": "Deep Gnome"
+        "value": "Deep Gnome",
+        "speed": 25,
+        "languages": ["Gnomish"]
     },
     {
         "class": [
@@ -943,14 +1122,35 @@
             "Wizard",
             "Artificer"
         ],
-        "value": "Forest Gnome"
+        "value": "Forest Gnome",
+        "speed": 25,
+        "languages": ["Gnomish"]
+    },
+    {
+        "class": [
+            "Knight",
+            "Mystic",
+            "Rogue",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Wizard",
+            "Artificer"
+        ],
+        "value": "Mark of Scribing",
+        "speed": 25,
+        "languages": ["Gnomish"]
     },
     {
         "class": ["Knight", "Mystic", "Trickster", "Wizard", "Artificer"],
-        "value": "Rock Gnome"
+        "value": "Rock Gnome",
+        "speed": 25,
+        "languages": ["Gnomish"]
     },
     {
         "class": ["Knight", "Mystic", "Trickster", "Artificer"],
-        "value": "Gnome"
+        "value": "Gnome",
+        "speed": 25,
+        "languages": ["Gnomish"]
     }
 ]
