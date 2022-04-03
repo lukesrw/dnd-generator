@@ -1,7 +1,9 @@
 import * as Generic from "../../interfaces/generic";
 import { getPronoun } from "../language/common";
+import { List, PickList } from "../List";
 import { BackgroundList } from "../list/background/background";
 import { Gender } from "../list/gender/gender";
+import { LanguageList } from "../list/languages/languages";
 import { NameList } from "../list/name/name";
 import { Sex } from "../list/sex/sex";
 import { ucfirst } from "../utils";
@@ -343,8 +345,22 @@ export class NPC {
         }. ${this.forename} seeks ${this.motivation}.`;
     }
 
+    getSpeed() {
+        let raceData = this.place.lists.race.getItem(this.race);
+        return raceData ? raceData.speed : 30;
+    }
+
     getLanguages() {
-        let languages: string[] = [];
+        let languages: PickList = [];
+
+        let allLanguages = this.place.lists.languages.getValues();
+
+        let raceData = this.place.lists.race.getItem(this.race);
+
+        if (raceData) {
+            //placeholder
+            languages = List.pickList(raceData.languages);
+        }
 
         let background = this.place.lists.background.getItem(this.background);
 

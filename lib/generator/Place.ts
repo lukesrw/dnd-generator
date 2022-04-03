@@ -10,6 +10,7 @@ import { CharacteristicList } from "../list/characteristics/characteristics";
 import { ClassList, ClassProperties } from "../list/class/class";
 import { EyeList } from "../list/eye/eye";
 import { HairList } from "../list/hair/hair";
+import { LanguageList } from "../list/languages/languages";
 import { MaturityList } from "../list/maturity/maturity";
 import { MotivationList } from "../list/motivation/motivation";
 import { NobilityList } from "../list/nobility/nobility";
@@ -17,7 +18,7 @@ import {
     ProfessionList,
     ProfessionProperties,
 } from "../list/profession/profession";
-import { RaceList } from "../list/race/race";
+import { RaceList, RaceProperties } from "../list/race/race";
 import { SexList } from "../list/sex/sex";
 import { SkinList } from "../list/skin/skin";
 import { TitleList } from "../list/title/title";
@@ -35,12 +36,13 @@ interface Lists {
     motivation: MotivationList | List;
     nobility: NobilityList | List;
     profession: ProfessionList | List<ProfessionProperties>;
-    race: RaceList | List;
+    race: RaceList | List<RaceProperties>;
     sex: SexList | List;
     skin: SkinList | List;
     title: TitleList | List;
     weapon: WeaponList | List;
     background: BackgroundList | List<BackgroundProperties>;
+    languages: LanguageList | List;
 }
 
 export class Place {
@@ -66,6 +68,7 @@ export class Place {
                 title: new TitleList(),
                 weapon: new WeaponList(),
                 background: new BackgroundList(),
+                languages: new LanguageList(),
             },
             lists || {}
         );
