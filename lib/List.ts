@@ -1,6 +1,14 @@
 import * as Generic from "../interfaces/generic";
 import { NPC } from "./generator/NPC";
 
+export type PickList = (
+    | string
+    | {
+          pick: number;
+          items: string[];
+      }
+)[];
+
 export type Item<Custom> = {
     weight?: number;
     value: string;
@@ -19,6 +27,29 @@ export class List<Custom = {}> {
 
     static pickRandom<Type>(list: Type[]) {
         return list[Math.floor(Math.random() * list.length)];
+    }
+
+    static pickList(raw: PickList) {
+        let list: string[] = [];
+
+        raw.forEach((selection) => {
+            if (typeof selection === "string") {
+                list.push(selection);
+            } else {
+                let picks = JSON.parse(JSON.stringify(selection.items));
+
+                for (let i = 0; i < selection.pick; i += 1) {
+                    let pick = List.pickRandom(selection.items);
+
+                    if (pick) {
+                        list.push(pick);
+                        picks.splice(pick.indexOf(pick), 1);
+                    }
+                }
+            }
+        });
+
+        return list;
     }
 
     getValues() {
