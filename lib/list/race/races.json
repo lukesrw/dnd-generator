@@ -408,13 +408,13 @@
         ],
         "value": "Duergar Dwarf",
         "speed": 25,
-        "languages": ["Dwarf", "Undercommon"]
+        "languages": ["Dwarvish", "Undercommon"]
     },
     {
         "class": ["Barbarian", "Paladin", "Artificer"],
         "value": "Dwarf",
         "speed": 25,
-        "languages": ["Dwarf"]
+        "languages": ["Dwarvish"]
     },
     {
         "class": [
@@ -427,7 +427,7 @@
         ],
         "value": "Hill Dwarf",
         "speed": 25,
-        "languages": ["Dwarf"]
+        "languages": ["Dwarvish"]
     },
     {
         "class": [
@@ -440,7 +440,7 @@
         ],
         "value": "Mark of Warding Dwarf",
         "speed": 25,
-        "languages": ["Dwarf"]
+        "languages": ["Dwarvish"]
     },
     {
         "class": [
@@ -453,7 +453,7 @@
         ],
         "value": "Mountain Dwarf",
         "speed": 25,
-        "languages": ["Dwarf"]
+        "languages": ["Dwarvish"]
     },
     {
         "class": [
