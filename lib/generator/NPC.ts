@@ -1,9 +1,7 @@
 import * as Generic from "../../interfaces/generic";
 import { getPronoun } from "../language/common";
-import { List, PickList } from "../List";
-import { BackgroundList } from "../list/background/background";
+import { List } from "../List";
 import { Gender } from "../list/gender/gender";
-import { LanguageList } from "../list/languages/languages";
 import { NameList } from "../list/name/name";
 import { Sex } from "../list/sex/sex";
 import { ucfirst } from "../utils";
@@ -351,26 +349,39 @@ export class NPC {
     }
 
     getLanguages() {
-        let languages: PickList = [];
-
+        let allLanguagesClone = this.place.lists.languages.getValues();
         let allLanguages = this.place.lists.languages.getValues();
 
-        let raceData = this.place.lists.race.getItem(this.race);
-
-        if (raceData) {
-            //placeholder
-            languages = List.pickList(raceData.languages);
-        }
-
+        let race = this.place.lists.race.getItem(this.race);
         let background = this.place.lists.background.getItem(this.background);
 
-        if (background && Array.isArray(background.languages)) {
-            languages = languages.concat(
-                BackgroundList.pickList(background.languages)
-            );
-        }
+        return List.pickList(
+            [
+                "Common",
+                ...(race && race.languages ? race.languages : []),
+                ...(background && background.languages
+                    ? background.languages
+                    : []),
+            ],
+            (item?: string) => {
+                if (item) {
+                    let index = allLanguages.indexOf(item);
 
-        return languages;
+                    if (index > -1) {
+                        console.log(`Picked "${item}" (removing ${index})`);
+
+                        allLanguages.splice(index, 1);
+                    } else if (
+                        item !== "Common" &&
+                        allLanguagesClone.indexOf(item) === -1
+                    ) {
+                        throw new Error(`! Missing Language "${item}" !`);
+                    }
+                }
+
+                return allLanguages;
+            }
+        );
     }
 
     getTools() {
@@ -379,7 +390,7 @@ export class NPC {
         let background = this.place.lists.background.getItem(this.background);
 
         if (background && Array.isArray(background.tools)) {
-            tools = tools.concat(BackgroundList.pickList(background.tools));
+            tools = tools.concat(List.pickList(background.tools));
         }
 
         return tools;
@@ -391,7 +402,7 @@ export class NPC {
         let background = this.place.lists.background.getItem(this.background);
 
         if (background && Array.isArray(background.skills)) {
-            skills = skills.concat(BackgroundList.pickList(background.skills));
+            skills = skills.concat(List.pickList(background.skills));
         }
 
         return skills;
