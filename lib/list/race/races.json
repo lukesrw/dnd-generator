@@ -24,7 +24,7 @@
         ],
         "value": "Shifter",
         "speed": 30,
-        "languages": []
+        "items": []
     },
     {
         "class": [
@@ -51,7 +51,7 @@
         ],
         "value": "Warforged",
         "speed": 30,
-        "languages": []
+        "items": []
     },
     {
         "class": [
@@ -78,7 +78,7 @@
         ],
         "value": "Verdan",
         "speed": 30,
-        "languages": ["Goblin", { "pick": 1, "languages": [] }]
+        "languages": ["Goblin", { "pick": 1, "items": [] }]
     },
     {
         "class": [
@@ -186,7 +186,7 @@
         ],
         "value": "Changeling",
         "speed": 30,
-        "languages": [{ "pick": 2, "languages": [] }]
+        "languages": [{ "pick": 2, "items": [] }]
     },
     {
         "class": [
@@ -267,7 +267,7 @@
         ],
         "value": "Vedalken",
         "speed": 30,
-        "languages": ["Vedalken", { "pick": 1, "languages": [] }]
+        "languages": ["Vedalken", { "pick": 1, "items": [] }]
     },
     {
         "class": [
@@ -438,7 +438,7 @@
             "Knight",
             "Paladin"
         ],
-        "value": "Mark of Warding",
+        "value": "Mark of Warding Dwarf",
         "speed": 25,
         "languages": ["Dwarf"]
     },
@@ -714,7 +714,7 @@
         ],
         "value": "Human",
         "speed": 25,
-        "languages": [{ "pick": 1, "languages": [] }]
+        "languages": [{ "pick": 1, "items": [] }]
     },
     {
         "class": [
@@ -840,7 +840,7 @@
         ],
         "value": "Kalashtar",
         "speed": 30,
-        "languages": ["Quori", { "pick": 1, "languages": [] }]
+        "languages": ["Quori", { "pick": 1, "items": [] }]
     },
     {
         "class": [
@@ -955,7 +955,7 @@
     },
     {
         "class": ["Bard", "Trickster", "Artificer"],
-        "value": "Shadar Kai",
+        "value": "Shadar-Kai",
         "speed": 30,
         "languages": ["Elvish"]
     },
@@ -988,7 +988,7 @@
         ],
         "value": "Tabaxi",
         "speed": 30,
-        "languages": [{ "pick": 1, "languages": [] }]
+        "languages": [{ "pick": 1, "items": [] }]
     },
     {
         "class": [
@@ -1137,7 +1137,7 @@
             "Wizard",
             "Artificer"
         ],
-        "value": "Mark of Scribing",
+        "value": "Mark of Scribing Gnome",
         "speed": 25,
         "languages": ["Gnomish"]
     },

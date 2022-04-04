@@ -36,12 +36,33 @@
         "value": "Infernal"
     },
     {
-        "value": "Primoridal"
+        "value": "Primordial"
     },
     {
         "value": "Sylvan"
     },
     {
         "value": "Undercommon"
+    },
+    {
+        "value": "Netherese"
+    },
+    {
+        "value": "Aarakocra"
+    },
+    {
+        "value": "Auran"
+    },
+    {
+        "value": "Gith"
+    },
+    {
+        "value": "Aquan"
+    },
+    {
+        "value": "Loxodon"
+    },
+    {
+        "value": "Minotaur"
     }
 ]
