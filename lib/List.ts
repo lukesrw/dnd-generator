@@ -9,6 +9,8 @@ export type PickList = (
       }
 )[];
 
+export type PickListCallback = (item?: string) => string[];
+
 export type Item<Custom> = {
     weight?: number;
     value: string;
@@ -29,19 +31,31 @@ export class List<Custom = {}> {
         return list[Math.floor(Math.random() * list.length)];
     }
 
-    static pickList(raw: PickList) {
+    static pickList(raw: PickList, onPickCallback?: PickListCallback) {
         let list: string[] = [];
 
         raw.forEach((selection) => {
             if (typeof selection === "string") {
                 list.push(selection);
+
+                if (onPickCallback) onPickCallback(selection);
             } else {
-                let picks = JSON.parse(JSON.stringify(selection.items));
+                let picks: string[] = [];
+
+                if (selection.items.length) {
+                    picks = selection.items;
+                } else if (onPickCallback) {
+                    picks = onPickCallback();
+                }
+
+                picks = JSON.parse(JSON.stringify(picks));
 
                 for (let i = 0; i < selection.pick; i += 1) {
-                    let pick = List.pickRandom(selection.items);
+                    let pick = List.pickRandom(picks);
 
                     if (pick) {
+                        if (onPickCallback) onPickCallback(pick);
+
                         list.push(pick);
                         picks.splice(pick.indexOf(pick), 1);
                     }

@@ -60,6 +60,18 @@ const RANGES: {
         adult: [15, 50],
         elder: [50, 80],
     },
+    Draconblood: {
+        infant: [0, 1],
+        child: [1, 15],
+        adult: [15, 50],
+        elder: [50, 80],
+    },
+    Ravenite: {
+        infant: [0, 1],
+        child: [1, 15],
+        adult: [15, 50],
+        elder: [50, 80],
+    },
     "Drow Elf": {
         infant: [0, 6],
         child: [6, 100],
@@ -78,6 +90,7 @@ const RANGES: {
         adult: [18, 200],
         elder: [200, 350],
     },
+
     "Earth Genasi": {
         infant: [0, 6],
         child: [6, 18],
@@ -91,6 +104,12 @@ const RANGES: {
         elder: [650, 750],
     },
     Elf: {
+        infant: [0, 6],
+        child: [6, 100],
+        adult: [100, 650],
+        elder: [650, 750],
+    },
+    "Shadar-Kai": {
         infant: [0, 6],
         child: [6, 100],
         adult: [100, 650],
@@ -115,6 +134,12 @@ const RANGES: {
         elder: [65, 120],
     },
     "Forest Gnome": {
+        infant: [0, 6],
+        child: [6, 20],
+        adult: [20, 200],
+        elder: [200, 400],
+    },
+    "Mark of Scribing Gnome": {
         infant: [0, 6],
         child: [6, 20],
         adult: [20, 200],
@@ -187,6 +212,12 @@ const RANGES: {
         elder: [650, 750],
     },
     "Hill Dwarf": {
+        infant: [0, 6],
+        child: [6, 18],
+        adult: [18, 200],
+        elder: [200, 350],
+    },
+    "Mark of Warding Dwarf": {
         infant: [0, 6],
         child: [6, 18],
         adult: [18, 200],
@@ -360,6 +391,12 @@ const RANGES: {
         adult: [100, 650],
         elder: [650, 750],
     },
+    "Sea Elf": {
+        infant: [0, 6],
+        child: [6, 100],
+        adult: [100, 650],
+        elder: [650, 750],
+    },
     "Yuan-ti Pureblood": {
         infant: [0, 4],
         child: [4, 12],
@@ -377,6 +414,11 @@ export class AgeList extends List {
             if (filter.race) race = filter.race;
             if (filter.maturity) maturity = filter.maturity;
         }
+
+        if (!(race in RANGES)) throw new Error(`Unsupported Race: ${race}`);
+
+        if (!(maturity in RANGES[race]))
+            throw new Error(`Unsupported Race/Maturity: ${race}/${maturity}`);
 
         let ageRange = RANGES[race][maturity];
 

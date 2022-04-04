@@ -2,7 +2,7 @@ import { List } from "../../List";
 import { PickList } from "../../List";
 
 export interface BackgroundProperties {
-    languages: number | string[];
+    languages?: PickList;
     tools: PickList;
     skills: PickList;
 }

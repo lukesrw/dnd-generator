@@ -9,5 +9,5 @@ export class RaceList extends List<RaceProperties> {
 
 export interface RaceProperties {
     speed: number;
-    languages: PickList;
+    languages?: PickList;
 }

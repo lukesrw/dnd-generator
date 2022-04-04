@@ -19,6 +19,8 @@ export class NameList extends List {
 
         switch (race.split(" ")[0]) {
             case "dragonborn":
+            case "ravenite":
+            case "draconblood":
                 race = "dragon";
                 break;
 
@@ -124,6 +126,10 @@ export class NameList extends List {
                 race = ["human", "gnome"];
                 break;
 
+            case "mark":
+                race = race.split(" ").pop() || "gnome";
+                break;
+
             case "loxodon":
                 race = ["human", "ogre"];
                 break;
@@ -140,6 +146,7 @@ export class NameList extends List {
                 break;
 
             case "verdan":
+            case "shadar-kai":
                 race = ["elf", "highelf", "darkelf"];
                 break;
 
