@@ -6,7 +6,11 @@ tsconfig.*
 *.scss
 *.tgz
 .eslintrc.json
+build.js
 watch.js
 clean.js
 .eslintignore
 *.json
+jest.config.js
+.prettierrc
+*.test.*
