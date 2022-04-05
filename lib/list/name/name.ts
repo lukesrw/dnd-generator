@@ -1,182 +1,85 @@
-import { List } from "../../List";
-
+import { nameByRace } from "fantasy-name-generator";
 import { NPC } from "../../generator/NPC";
+import { List } from "../../List";
+import { Gender } from "../gender/gender";
+import { RaceList } from "../race/race";
+import { Sex } from "../sex/sex";
 
-import { nameByRace, allRaces } from "fantasy-name-generator";
+export const fNGSupportedRaces = {
+    cavePerson: true,
+    dwarf: true,
+    halfling: true,
+    gnome: true,
+    elf: true,
+    highelf: true,
+    fairy: true,
+    highfairy: true,
+    darkelf: true,
+    drow: true,
+    halfdemon: true,
+    dragon: true,
+    angel: true,
+    demon: false,
+    human: false,
+    goblin: false,
+    ogre: false,
+    orc: false
+};
+
+function nameByRaceWrapper(
+    race: keyof typeof fNGSupportedRaces,
+    sex?: Sex,
+    gender?: Gender
+) {
+    if (
+        race in fNGSupportedRaces &&
+        fNGSupportedRaces[race] &&
+        (typeof gender === "undefined" || gender === "Non-Binary")
+    ) {
+        gender = sex || List.pickRandom(["Male", "Female"]);
+    }
+
+    let name = nameByRace(
+        race.substring(0, 1).toLowerCase() + race.substring(1),
+        {
+            allowMultipleNames: true,
+            gender: gender
+                ? (gender.toLowerCase() as "male" | "female")
+                : undefined
+        }
+    );
+
+    if (typeof name === "string") return name;
+
+    throw new Error(
+        `NameList doesn't support "${race}" race, "${sex}" sex with "${gender}" gender`
+    );
+}
+
+let races = new RaceList();
 
 export class NameList extends List {
     pickRandom(filter?: Partial<NPC>): string {
-        let race: string | string[] = "human";
-        let gender;
+        let race = filter && filter.race ? filter.race : "human";
+        let args: [Sex | undefined, Gender | undefined] = [
+            filter && filter.sex ? filter.sex : undefined,
+            filter && filter.gender ? filter.gender : undefined
+        ];
 
-        if (filter) {
-            if (filter.race) race = filter.race;
-
-            if (filter.gender) gender = filter.gender.toLowerCase();
-        }
-
-        race = race.toLowerCase();
-
-        switch (race.split(" ")[0]) {
-            case "dragonborn":
-            case "ravenite":
-            case "draconblood":
-                race = "dragon";
-                break;
-
-            case "half-elf":
-            case "half-orc":
-                race = ["human", race.split("-")[1]];
-                break;
-
-            case "water":
-            case "air":
-            case "earth":
-            case "genasi":
-            case "fire":
-                race = ["human", "angel", "demon", "fairy"];
-                break;
-
-            case "goliath":
-                race = ["human", "ogre"];
-                break;
-
-            case "aasimar":
-            case "scourge":
-            case "fallen":
-            case "protector":
-                race = ["human", "angel"];
-                break;
-
-            case "fugbear":
-                race = ["ogre", "goblin"];
-                break;
-
-            case "tiefling":
-            case "devil's":
-            case "hellfire":
-            case "winged":
-            case "feral": // feral tiefling
-                race = "demon";
-                break;
-
-            case "hobgoblin":
-                race = "goblin";
-                break;
-
-            case "kenku":
-                race = ["fairy", "cavePerson"];
-                break;
-
-            case "kobold":
-                race = ["dragon", "drow"];
-                break;
-
-            case "gith":
-                race = "drow";
-                break;
-
-            case "lizardfolk":
-                race = "cavePerson";
-                break;
-
-            case "tabaxi":
-                race = ["human", "cavePerson"];
-                break;
-
-            case "aarakocra":
-                race = "angel";
-                break;
-
-            case "firbolg":
-                race = ["orc", "dwarf"];
-                break;
-
-            case "centaur":
-            case "minotaur":
-                race = ["human", "orc"];
-                break;
-
-            case "bugbear":
-                race = ["goblin", "ogre"];
-                break;
-
-            case "triton":
-                race = ["human", "highelf"];
-                break;
-
-            case "yuan-ti":
-                race = ["human", "drow", "darkelf"];
-                break;
-
-            case "tortle":
-                race = ["human", "drow"];
-                break;
-
-            case "changeling":
-                race = ["fairy"];
-                break;
-
-            case "kalashtar":
-            case "shifter":
-                race = "human";
-                break;
-
-            case "warforged":
-                race = ["human", "gnome"];
-                break;
-
-            case "mark":
-                race = race.split(" ").pop() || "gnome";
-                break;
-
-            case "loxodon":
-                race = ["human", "ogre"];
-                break;
-
-            case "simic":
-                race = ([] as string[]).concat(
-                    allRaces.otherRaces,
-                    allRaces.racesWithGender
-                );
-                break;
-
-            case "vedalken":
-                race = ["human", "fairy"];
-                break;
-
-            case "verdan":
-            case "shadar-kai":
-                race = ["elf", "highelf", "darkelf"];
-                break;
-
-            case "locathah":
-            case "grung":
-                race = ["fairy", "goblin"];
-                break;
-
-            default:
-                race = race.split(" ");
-
-                if (race.length > 1) race.shift();
-                break;
-        }
-
-        if (Array.isArray(race)) race = List.pickRandom(race);
-
-        let name = nameByRace(race as string, {
-            allowMultipleNames: true,
-            gender: gender as any,
-        });
-
-        if (typeof name !== "string") {
-            throw new Error(
-                `${name} (${
-                    filter ? filter.race : "undefined"
-                } => ${race}, ${gender})`
+        try {
+            return nameByRaceWrapper(
+                race as keyof typeof fNGSupportedRaces,
+                ...args
             );
-        }
+        } catch (error) {
+            /**
+             * On fail, check if the gender has a "names" backup
+             */
+            let raceItem = races.getItem(race);
 
-        return name;
+            if (!(raceItem && Array.isArray(raceItem.names))) throw error;
+
+            return nameByRaceWrapper(List.pickRandom(raceItem.names), ...args);
+        }
     }
 }
