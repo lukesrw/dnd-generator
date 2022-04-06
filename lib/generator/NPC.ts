@@ -95,7 +95,7 @@ export class NPC {
             );
         }
 
-        if (properties && typeof properties.age === "number") {
+        if (properties && typeof properties.age === "string") {
             this.age = properties.age;
         } else {
             this.age = this.place.lists.age.pickRandom(

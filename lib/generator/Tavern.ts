@@ -1,8 +1,8 @@
-import { NPC } from "../generator/NPC";
-import { Place } from "../generator/Place";
+import { NPC } from "./NPC";
+import { Place } from "./Place";
 import { List } from "../List";
 
-export class TavernPrefab extends Place {
+export class Tavern extends Place {
     staff: NPC[];
     patrons: NPC[];
 
