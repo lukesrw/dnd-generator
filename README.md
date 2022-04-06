@@ -14,9 +14,6 @@ Each list extends the [List](/lib/List.ts) class, which implements...
 
 ### Existing Lists
 
--   Maturity
-    -   Age range, not number
-    -   Example: "adult"
 -   Age
     -   Age number
     -   Example: "400"
@@ -26,6 +23,8 @@ Each list extends the [List](/lib/List.ts) class, which implements...
 -   Armor
     -   Example: "studded leather armor"
     -   Filters: Druids not using metal
+-   Background
+    -   Example: "Entertainer"
 -   Characteristics
     -   Example: "slender"
 -   Class
@@ -34,13 +33,16 @@ Each list extends the [List](/lib/List.ts) class, which implements...
 -   Eye
     -   Example: "blue"
     -   Weights: Match the real world currently
--   Gender
-    -   Gender identity (currently "Male", "Female", "Non-Binary")
-    -   Example: "Non-Binary"
 -   Hair
     -   Hair colour
     -   Example: "light brown"
     -   Weights: Match the real world currently
+-   Language
+    -   Spoken language
+    -   Example: "Giant"
+-   Maturity
+    -   Age range, not number
+    -   Example: "adult"
 -   Motivation
     -   Example: "family"
 -   Name
@@ -101,6 +103,5 @@ Each list extends the [List](/lib/List.ts) class, which implements...
 
 # Todo
 
--   "Language" list to pick spoken languages, using background/race/etc. to make sense
 -   Enemy class to begin generating combat encounters or other party situations
 -   More prefabs for standard places (shops, places of worship, etc.)
