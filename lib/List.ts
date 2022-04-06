@@ -34,7 +34,7 @@ export class List<Custom = {}> {
     static pickList(raw: PickList, onPickCallback?: PickListCallback) {
         let list: string[] = [];
 
-        raw.forEach((selection) => {
+        raw.forEach(selection => {
             if (typeof selection === "string") {
                 list.push(selection);
 
@@ -47,6 +47,7 @@ export class List<Custom = {}> {
                 for (let i = 0; i < selection.pick; i += 1) {
                     if (picks.length === 0 && onPickCallback) {
                         picks = onPickCallback();
+
                         if (picks.length === 0) break;
 
                         picks = JSON.parse(JSON.stringify(picks));
@@ -57,9 +58,10 @@ export class List<Custom = {}> {
                     if (pick) {
                         if (onPickCallback) {
                             picks = onPickCallback(pick);
-                            picks = JSON.parse(JSON.stringify(picks));
 
                             if (picks.length === 0) break;
+
+                            picks = JSON.parse(JSON.stringify(picks));
                         }
 
                         list.push(pick);
@@ -75,13 +77,13 @@ export class List<Custom = {}> {
     getValues() {
         if (!this.raw) return [];
 
-        return this.raw.map((item) => item.value);
+        return this.raw.map(item => item.value);
     }
 
     getItem(value: string) {
         if (!this.raw) return undefined;
 
-        return this.raw.find((item) => item.value === value);
+        return this.raw.find(item => item.value === value);
     }
 
     getItems() {
@@ -114,8 +116,8 @@ export class List<Custom = {}> {
         if (filter && Object.values(filter).length > 0) {
             let filter_copy = JSON.parse(JSON.stringify(filter));
 
-            list = list.filter((item) => {
-                return !Object.keys(filter_copy).some((property) => {
+            list = list.filter(item => {
+                return !Object.keys(filter_copy).some(property => {
                     if (!Array.isArray(filter_copy[property])) {
                         filter_copy[property] = [filter_copy[property]];
                     }
