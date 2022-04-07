@@ -11,6 +11,7 @@ import { CharacteristicList } from "./lib/list/characteristics/characteristics";
 import { ClassList } from "./lib/list/class/class";
 import { EyeList } from "./lib/list/eye/eye";
 import { HairList } from "./lib/list/hair/hair";
+import { LanguageList } from "./lib/list/languages/languages";
 import { MaturityList } from "./lib/list/maturity/maturity";
 import { MotivationList } from "./lib/list/motivation/motivation";
 import { NameList } from "./lib/list/name/name";
@@ -26,7 +27,7 @@ import {
     ScholarProfessionList,
     ServantProfessionList,
     UnderclassProfessionList,
-    YeomanProfessionList,
+    YeomanProfessionList
 } from "./lib/list/profession/profession";
 import { RaceList } from "./lib/list/race/race";
 import { SexList } from "./lib/list/sex/sex";
@@ -47,13 +48,11 @@ export namespace List {
 
     export const Age = AgeList;
 
-    export const Maturity = MaturityList;
-
-    export const Background = BackgroundList;
-
     export const Alignment = AlignmentList;
 
     export const Armor = ArmorList;
+
+    export const Background = BackgroundList;
 
     export const Characteristics = CharacteristicList;
 
@@ -62,6 +61,10 @@ export namespace List {
     export const Eye = EyeList;
 
     export const Hair = HairList;
+
+    export const Language = LanguageList;
+
+    export const Maturity = MaturityList;
 
     export const Motivation = MotivationList;
 

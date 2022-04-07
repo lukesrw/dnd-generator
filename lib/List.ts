@@ -1,17 +1,27 @@
 import * as Generic from "../interfaces/generic";
 import { NPC } from "./generator/NPC";
 
+export type PickList = (
+    | string
+    | {
+          pick: number;
+          items: string[];
+      }
+)[];
+
+export type PickListCallback = (item?: string) => string[];
+
 export type Item<Custom> = {
     weight?: number;
     value: string;
 } & Custom;
 
 export class List<Custom = {}> {
-    items: false | Item<Custom>[];
-    raw: false | Item<Custom>[];
+    items: false | Item<Partial<Custom>>[];
+    raw: false | Item<Partial<Custom>>[];
     weighted: boolean;
 
-    constructor(items?: Item<Custom>[]) {
+    constructor(items?: Item<Partial<Custom>>[]) {
         this.weighted = false;
         this.raw = items || false;
         this.items = items || false;
@@ -21,21 +31,64 @@ export class List<Custom = {}> {
         return list[Math.floor(Math.random() * list.length)];
     }
 
+    static pickList(raw: PickList, onPickCallback?: PickListCallback) {
+        let list: string[] = [];
+
+        raw.forEach(selection => {
+            if (typeof selection === "string") {
+                list.push(selection);
+
+                if (onPickCallback) onPickCallback(selection);
+            } else {
+                let picks: string[] = JSON.parse(
+                    JSON.stringify(selection.items)
+                );
+
+                for (let i = 0; i < selection.pick; i += 1) {
+                    if (picks.length === 0 && onPickCallback) {
+                        picks = onPickCallback();
+
+                        if (picks.length === 0) break;
+
+                        picks = JSON.parse(JSON.stringify(picks));
+                    }
+
+                    let pick = List.pickRandom(picks);
+
+                    if (pick) {
+                        if (onPickCallback) {
+                            picks = onPickCallback(pick);
+
+                            if (picks.length === 0) break;
+
+                            picks = JSON.parse(JSON.stringify(picks));
+                        }
+
+                        list.push(pick);
+                        picks.splice(pick.indexOf(pick), 1);
+                    }
+                }
+            }
+        });
+
+        return list;
+    }
+
     getValues() {
         if (!this.raw) return [];
 
-        return this.raw.map((item) => item.value);
+        return this.raw.map(item => item.value);
     }
 
     getItem(value: string) {
         if (!this.raw) return undefined;
 
-        return this.raw.find((item) => item.value === value);
+        return this.raw.find(item => item.value === value);
     }
 
     getItems() {
         if (this.items && !this.weighted) {
-            this.items.forEach((item: Item<Custom>) => {
+            this.items.forEach((item: Item<Partial<Custom>>) => {
                 if (!Object.prototype.hasOwnProperty.call(item, "weight")) {
                     item.weight = 1;
                 }
@@ -52,7 +105,9 @@ export class List<Custom = {}> {
             this.weighted = true;
         }
 
-        return JSON.parse(JSON.stringify(this.items)) as Item<Custom>[];
+        return JSON.parse(JSON.stringify(this.items)) as Item<
+            Partial<Custom>
+        >[];
     }
 
     getFiltered(filter?: Generic.Object) {
@@ -61,8 +116,8 @@ export class List<Custom = {}> {
         if (filter && Object.values(filter).length > 0) {
             let filter_copy = JSON.parse(JSON.stringify(filter));
 
-            list = list.filter((item) => {
-                return !Object.keys(filter_copy).some((property) => {
+            list = list.filter(item => {
+                return !Object.keys(filter_copy).some(property => {
                     if (!Array.isArray(filter_copy[property])) {
                         filter_copy[property] = [filter_copy[property]];
                     }

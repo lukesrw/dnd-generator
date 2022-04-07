@@ -22,7 +22,15 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Shifter"
+        "value": "Shifter",
+        "speed": 30,
+        "names": ["human"],
+        "age": {
+            "infant": [0, 3],
+            "child": [3, 10],
+            "adult": [10, 55],
+            "elder": [55, 70]
+        }
     },
     {
         "class": [
@@ -47,7 +55,15 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Warforged"
+        "value": "Warforged",
+        "speed": 30,
+        "names": ["human", "gnome"],
+        "age": {
+            "infant": [0, 1],
+            "child": [1, 2],
+            "adult": [2, 25],
+            "elder": [25, 30]
+        }
     },
     {
         "class": [
@@ -72,7 +88,16 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Verdan"
+        "value": "Verdan",
+        "speed": 30,
+        "languages": ["Goblin", { "pick": 1, "items": [] }],
+        "names": ["elf", "highelf", "darkelf"],
+        "age": {
+            "infant": [0, 10],
+            "child": [10, 24],
+            "adult": [24, 150],
+            "elder": [150, 200]
+        }
     },
     {
         "class": [
@@ -97,7 +122,16 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Gith"
+        "value": "Gith",
+        "speed": 30,
+        "languages": ["Gith"],
+        "names": ["drow"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 17],
+            "adult": [18, 65],
+            "elder": [65, 100]
+        }
     },
     {
         "class": [
@@ -122,7 +156,16 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Locathah"
+        "value": "Locathah",
+        "speed": 30,
+        "languages": ["Aquan"],
+        "names": ["fairy", "goblin"],
+        "age": {
+            "infant": [0, 3],
+            "child": [3, 10],
+            "adult": [10, 60],
+            "elder": [60, 80]
+        }
     },
     {
         "class": [
@@ -147,7 +190,35 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Simic Hybrid"
+        "value": "Simic Hybrid",
+        "speed": 30,
+        "languages": ["Elvish"],
+        "names": [
+            "cavePerson",
+            "dwarf",
+            "halfling",
+            "gnome",
+            "elf",
+            "highelf",
+            "fairy",
+            "highfairy",
+            "darkelf",
+            "drow",
+            "halfdemon",
+            "demon",
+            "angel",
+            "demon",
+            "human",
+            "gobin",
+            "ogre",
+            "orc"
+        ],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 59],
+            "adult": [59, 357],
+            "elder": [357, 425]
+        }
     },
     {
         "class": [
@@ -172,7 +243,16 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Changeling"
+        "value": "Changeling",
+        "speed": 30,
+        "languages": [{ "pick": 2, "items": [] }],
+        "names": ["fairy"],
+        "age": {
+            "infant": [0, 4],
+            "child": [4, 16],
+            "adult": [16, 65],
+            "elder": [65, 160]
+        }
     },
     {
         "class": [
@@ -197,7 +277,16 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Minotaur"
+        "value": "Minotaur",
+        "speed": 30,
+        "languages": ["Minotaur"],
+        "names": ["human", "orc"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 17],
+            "adult": [17, 90],
+            "elder": [90, 150]
+        }
     },
     {
         "class": [
@@ -222,7 +311,16 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Loxodon"
+        "value": "Loxodon",
+        "speed": 30,
+        "languages": ["Loxodon"],
+        "names": ["human", "ogre"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 60],
+            "adult": [60, 350],
+            "elder": [350, 450]
+        }
     },
     {
         "class": [
@@ -247,7 +345,16 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Vedalken"
+        "value": "Vedalken",
+        "speed": 30,
+        "languages": ["Vedalken", { "pick": 1, "items": [] }],
+        "names": ["human", "fairy"],
+        "age": {
+            "infant": [0, 10],
+            "child": [10, 40],
+            "adult": [40, 300],
+            "elder": [300, 500]
+        }
     },
     {
         "class": [
@@ -272,7 +379,16 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Centaur"
+        "value": "Centaur",
+        "speed": 40,
+        "languages": ["Sylvan"],
+        "names": ["human", "orc"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 17],
+            "adult": [18, 65],
+            "elder": [65, 160]
+        }
     },
     {
         "class": [
@@ -289,7 +405,16 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Aarakocra"
+        "value": "Aarakocra",
+        "speed": 25,
+        "languages": ["Aarakocra", "Auran"],
+        "names": ["angel"],
+        "age": {
+            "infant": [0, 1],
+            "child": [1, 3],
+            "adult": [3, 25],
+            "elder": [25, 30]
+        }
     },
     {
         "class": [
@@ -300,7 +425,16 @@
             "Swashbuckler",
             "Warlock"
         ],
-        "value": "Aasimar"
+        "value": "Aasimar",
+        "speed": 30,
+        "languages": ["Celestial"],
+        "names": ["human", "angel"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 17],
+            "adult": [18, 65],
+            "elder": [65, 160]
+        }
     },
     {
         "class": [
@@ -315,7 +449,16 @@
             "Swashbuckler",
             "Blood Hunter"
         ],
-        "value": "Bugbear"
+        "value": "Bugbear",
+        "speed": 30,
+        "languages": ["Goblin"],
+        "names": ["goblin", "ogre"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 16],
+            "adult": [16, 60],
+            "elder": [60, 80]
+        }
     },
     {
         "class": [
@@ -330,7 +473,64 @@
             "Swashbuckler",
             "Warlock"
         ],
-        "value": "Dragonborn"
+        "value": "Draconblood",
+        "speed": 30,
+        "languages": ["Draconic"],
+        "names": ["dragon"],
+        "age": {
+            "infant": [0, 1],
+            "child": [1, 15],
+            "adult": [15, 50],
+            "elder": [50, 80]
+        }
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cavalier",
+            "Cleric",
+            "Fighter",
+            "Knight",
+            "Sorcerer",
+            "Trickster",
+            "Swashbuckler",
+            "Warlock"
+        ],
+        "value": "Ravenite",
+        "speed": 30,
+        "languages": ["Draconic"],
+        "names": ["dragon"],
+        "age": {
+            "infant": [0, 1],
+            "child": [1, 15],
+            "adult": [15, 50],
+            "elder": [50, 80]
+        }
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Bard",
+            "Cavalier",
+            "Cleric",
+            "Fighter",
+            "Knight",
+            "Sorcerer",
+            "Trickster",
+            "Swashbuckler",
+            "Warlock"
+        ],
+        "value": "Dragonborn",
+        "speed": 30,
+        "languages": ["Draconic"],
+        "names": ["dragon"],
+        "age": {
+            "infant": [0, 1],
+            "child": [1, 15],
+            "adult": [15, 50],
+            "elder": [50, 80]
+        }
     },
     {
         "class": [
@@ -342,9 +542,29 @@
             "Trickster",
             "Wizard"
         ],
-        "value": "Duergar Dwarf"
+        "value": "Duergar Dwarf",
+        "speed": 25,
+        "languages": ["Dwarvish", "Undercommon"],
+        "names": ["dwarf"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 17],
+            "adult": [18, 200],
+            "elder": [200, 350]
+        }
     },
-    { "class": ["Barbarian", "Paladin", "Artificer"], "value": "Dwarf" },
+    {
+        "class": ["Barbarian", "Paladin", "Artificer"],
+        "value": "Dwarf",
+        "speed": 25,
+        "languages": ["Dwarvish"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 17],
+            "adult": [18, 200],
+            "elder": [200, 350]
+        }
+    },
     {
         "class": [
             "Barbarian",
@@ -354,7 +574,16 @@
             "Knight",
             "Paladin"
         ],
-        "value": "Hill Dwarf"
+        "value": "Hill Dwarf",
+        "speed": 25,
+        "languages": ["Dwarvish"],
+        "names": ["dwarf"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 17],
+            "adult": [18, 200],
+            "elder": [200, 350]
+        }
     },
     {
         "class": [
@@ -365,7 +594,36 @@
             "Knight",
             "Paladin"
         ],
-        "value": "Mountain Dwarf"
+        "value": "Mark of Warding Dwarf",
+        "speed": 25,
+        "languages": ["Dwarvish"],
+        "names": ["dwarf"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 17],
+            "adult": [18, 200],
+            "elder": [200, 350]
+        }
+    },
+    {
+        "class": [
+            "Barbarian",
+            "Cavalier",
+            "Cleric",
+            "Druid",
+            "Knight",
+            "Paladin"
+        ],
+        "value": "Mountain Dwarf",
+        "speed": 25,
+        "languages": ["Dwarvish"],
+        "names": ["dwarf"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 17],
+            "adult": [18, 200],
+            "elder": [200, 350]
+        }
     },
     {
         "class": [
@@ -378,7 +636,16 @@
             "Ranger",
             "Inquisitor"
         ],
-        "value": "Firbolg"
+        "value": "Firbolg",
+        "speed": 30,
+        "languages": ["Elvish", "Giant"],
+        "names": ["orc", "dwarf"],
+        "age": {
+            "infant": [0, 15],
+            "child": [15, 30],
+            "adult": [30, 350],
+            "elder": [350, 500]
+        }
     },
     {
         "class": [
@@ -396,11 +663,29 @@
             "Wizard",
             "Artificer"
         ],
-        "value": "Air Genasi"
+        "value": "Air Genasi",
+        "speed": 30,
+        "languages": ["Primordial"],
+        "names": ["human", "angel", "demon", "fairy"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 17],
+            "adult": [18, 65],
+            "elder": [65, 120]
+        }
     },
     {
         "class": ["Barbarian", "Cavalier", "Knight", "Paladin"],
-        "value": "Earth Genasi"
+        "value": "Earth Genasi",
+        "speed": 30,
+        "languages": ["Primordial"],
+        "names": ["human", "angel", "demon", "fairy"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 17],
+            "adult": [18, 65],
+            "elder": [65, 120]
+        }
     },
     {
         "class": [
@@ -416,7 +701,16 @@
             "Inquisitor",
             "Blood Hunter"
         ],
-        "value": "Water Genasi"
+        "value": "Water Genasi",
+        "speed": 30,
+        "languages": ["Primordial"],
+        "names": ["human", "angel", "demon", "fairy"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 17],
+            "adult": [18, 65],
+            "elder": [65, 120]
+        }
     },
     {
         "class": [
@@ -430,7 +724,15 @@
             "Swashbuckler",
             "Artificer"
         ],
-        "value": "Goblin"
+        "value": "Goblin",
+        "speed": 30,
+        "languages": ["Goblin"],
+        "age": {
+            "infant": [0, 3],
+            "child": [3, 8],
+            "adult": [8, 45],
+            "elder": [45, 60]
+        }
     },
     {
         "class": [
@@ -446,7 +748,16 @@
             "Inquisitor",
             "Swashbuckler"
         ],
-        "value": "Goliath"
+        "value": "Goliath",
+        "speed": 30,
+        "languages": ["Giant"],
+        "names": ["human", "ogre"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 17],
+            "adult": [18, 65],
+            "elder": [65, 80]
+        }
     },
     {
         "class": [
@@ -463,7 +774,16 @@
             "Swashbuckler",
             "Artificer"
         ],
-        "value": "Grung"
+        "value": "Grung",
+        "speed": 25,
+        "languages": ["Grung"],
+        "names": ["fairy", "goblin"],
+        "age": {
+            "infant": [0, 1],
+            "child": [1, 2],
+            "adult": [2, 40],
+            "elder": [40, 50]
+        }
     },
     {
         "class": [
@@ -488,7 +808,16 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Half-Elf"
+        "value": "Half-Elf",
+        "speed": 30,
+        "languages": ["Elvish"],
+        "names": ["human", "elf"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 20],
+            "adult": [20, 150],
+            "elder": [150, 180]
+        }
     },
     {
         "class": [
@@ -505,7 +834,16 @@
             "Swashbuckler",
             "Warlock"
         ],
-        "value": "Lightfoot Halfling"
+        "value": "Lightfoot Halfling",
+        "speed": 25,
+        "languages": ["Halfling"],
+        "names": ["halfling"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 20],
+            "adult": [20, 150],
+            "elder": [150, 250]
+        }
     },
     {
         "class": [
@@ -526,7 +864,16 @@
             "Warlock",
             "Wizard"
         ],
-        "value": "Stout Halfling"
+        "value": "Stout Halfling",
+        "speed": 25,
+        "languages": ["Halfling"],
+        "names": ["halfling"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 20],
+            "adult": [20, 150],
+            "elder": [150, 250]
+        }
     },
     {
         "class": [
@@ -542,7 +889,15 @@
             "Swashbuckler",
             "Artificer"
         ],
-        "value": "Halfling"
+        "value": "Halfling",
+        "speed": 25,
+        "languages": ["Halfling"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 20],
+            "adult": [20, 150],
+            "elder": [150, 250]
+        }
     },
     {
         "class": [
@@ -560,7 +915,16 @@
             "Warlock",
             "Blood Hunter"
         ],
-        "value": "Half-Orc"
+        "value": "Half-Orc",
+        "speed": 30,
+        "languages": ["Orc"],
+        "names": ["human", "orc"],
+        "age": {
+            "infant": [0, 1],
+            "child": [1, 14],
+            "adult": [14, 60],
+            "elder": [60, 75]
+        }
     },
     {
         "class": [
@@ -573,7 +937,16 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Hobgoblin"
+        "value": "Hobgoblin",
+        "speed": 30,
+        "languages": ["Goblin"],
+        "names": ["goblin"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 17],
+            "adult": [18, 65],
+            "elder": [65, 100]
+        }
     },
     {
         "class": [
@@ -598,7 +971,15 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Human"
+        "value": "Human",
+        "speed": 25,
+        "languages": [{ "pick": 1, "items": [] }],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 17],
+            "adult": [18, 65],
+            "elder": [65, 100]
+        }
     },
     {
         "class": [
@@ -613,7 +994,16 @@
             "Inquisitor",
             "Swashbuckler"
         ],
-        "value": "Kenku"
+        "value": "Kenku",
+        "speed": 30,
+        "languages": ["Auran"],
+        "names": ["fairy", "cavePerson"],
+        "age": {
+            "infant": [0, 4],
+            "child": [4, 12],
+            "adult": [12, 50],
+            "elder": [50, 60]
+        }
     },
     {
         "class": [
@@ -628,11 +1018,28 @@
             "Inquisitor",
             "Blood Hunter"
         ],
-        "value": "Lizardfolk"
+        "value": "Lizardfolk",
+        "speed": 30,
+        "languages": ["Draconic"],
+        "names": ["cavePerson"],
+        "age": {
+            "infant": [0, 4],
+            "child": [4, 14],
+            "adult": [14, 50],
+            "elder": [50, 60]
+        }
     },
     {
         "class": ["Barbarian", "Cavalier", "Druid", "Paladin"],
-        "value": "Orc"
+        "value": "Orc",
+        "speed": 30,
+        "languages": ["Orc"],
+        "age": {
+            "infant": [0, 4],
+            "child": [4, 12],
+            "adult": [12, 40],
+            "elder": [40, 50]
+        }
     },
     {
         "class": [
@@ -645,7 +1052,16 @@
             "Monk",
             "Paladin"
         ],
-        "value": "Tortle"
+        "value": "Tortle",
+        "speed": 30,
+        "languages": ["Aquan"],
+        "names": ["human", "drow"],
+        "age": {
+            "infant": [0, 4],
+            "child": [4, 15],
+            "adult": [15, 40],
+            "elder": [40, 50]
+        }
     },
     {
         "class": [
@@ -661,7 +1077,16 @@
             "Swashbuckler",
             "Warlock"
         ],
-        "value": "Triton"
+        "value": "Triton",
+        "speed": 30,
+        "languages": ["Primordial"],
+        "names": ["human", "highelf"],
+        "age": {
+            "infant": [0, 4],
+            "child": [4, 15],
+            "adult": [15, 150],
+            "elder": [150, 200]
+        }
     },
     {
         "class": [
@@ -686,7 +1111,16 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Yuan-ti Pureblood"
+        "value": "Yuan-ti Pureblood",
+        "speed": 30,
+        "languages": ["Abyssal", "Draconic"],
+        "names": ["human", "drow", "darkelf"],
+        "age": {
+            "infant": [0, 4],
+            "child": [4, 12],
+            "adult": [12, 65],
+            "elder": [65, 120]
+        }
     },
     {
         "class": [
@@ -710,7 +1144,16 @@
             "Wizard",
             "Artificer"
         ],
-        "value": "Kalashtar"
+        "value": "Kalashtar",
+        "speed": 30,
+        "languages": ["Quori", { "pick": 1, "items": [] }],
+        "names": ["human"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 17],
+            "adult": [18, 65],
+            "elder": [65, 100]
+        }
     },
     {
         "class": [
@@ -721,7 +1164,16 @@
             "Warlock",
             "Blood Hunter"
         ],
-        "value": "Fallen Aasimar"
+        "value": "Fallen Aasimar",
+        "speed": 30,
+        "languages": ["Celestial"],
+        "names": ["human", "angel"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 17],
+            "adult": [18, 65],
+            "elder": [65, 160]
+        }
     },
     {
         "class": [
@@ -733,11 +1185,29 @@
             "Warlock",
             "Blood Hunter"
         ],
-        "value": "Protector Aasimar"
+        "value": "Protector Aasimar",
+        "speed": 30,
+        "languages": ["Celestial"],
+        "names": ["human", "angel"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 17],
+            "adult": [18, 65],
+            "elder": [65, 160]
+        }
     },
     {
         "class": ["Bard", "Sorcerer", "Swashbuckler", "Warlock"],
-        "value": "Scourge Aasimar"
+        "value": "Scourge Aasimar",
+        "speed": 30,
+        "languages": ["Celestial"],
+        "names": ["human", "angel"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 17],
+            "adult": [18, 65],
+            "elder": [65, 160]
+        }
     },
     {
         "class": [
@@ -752,7 +1222,16 @@
             "Swashbuckler",
             "Warlock"
         ],
-        "value": "Drow Elf"
+        "value": "Drow Elf",
+        "speed": 30,
+        "languages": ["Elvish"],
+        "names": ["drow"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 100],
+            "adult": [100, 650],
+            "elder": [650, 750]
+        }
     },
     {
         "class": [
@@ -766,7 +1245,16 @@
             "Swashbuckler",
             "Wizard"
         ],
-        "value": "Eladrin Elf"
+        "value": "Eladrin Elf",
+        "speed": 30,
+        "languages": ["Elvish"],
+        "names": ["elf"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 100],
+            "adult": [100, 650],
+            "elder": [650, 750]
+        }
     },
     {
         "class": [
@@ -780,7 +1268,16 @@
             "Swashbuckler",
             "Wizard"
         ],
-        "value": "High Elf"
+        "value": "High Elf",
+        "speed": 30,
+        "languages": ["Elvish"],
+        "names": ["elf"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 100],
+            "adult": [100, 650],
+            "elder": [650, 750]
+        }
     },
     {
         "class": [
@@ -795,9 +1292,55 @@
             "Swashbuckler",
             "Blood Hunter"
         ],
-        "value": "Wood Elf"
+        "value": "Wood Elf",
+        "speed": 30,
+        "languages": ["Elvish"],
+        "names": ["elf"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 100],
+            "adult": [100, 650],
+            "elder": [650, 750]
+        }
     },
-    { "class": ["Bard", "Trickster", "Artificer"], "value": "Elf" },
+    {
+        "class": ["Bard", "Trickster", "Artificer"],
+        "value": "Elf",
+        "speed": 30,
+        "languages": ["Elvish"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 100],
+            "adult": [100, 650],
+            "elder": [650, 750]
+        }
+    },
+    {
+        "class": ["Bard", "Trickster", "Artificer"],
+        "value": "Sea Elf",
+        "speed": 30,
+        "languages": ["Elvish"],
+        "names": ["elf"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 100],
+            "adult": [100, 650],
+            "elder": [650, 750]
+        }
+    },
+    {
+        "class": ["Bard", "Trickster", "Artificer"],
+        "value": "Shadar-Kai",
+        "speed": 30,
+        "languages": ["Elvish"],
+        "names": ["elf", "highelf", "darkelf"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 100],
+            "adult": [100, 650],
+            "elder": [650, 750]
+        }
+    },
     {
         "class": [
             "Bard",
@@ -810,7 +1353,16 @@
             "Inquisitor",
             "Swashbuckler"
         ],
-        "value": "Ghostwise Halfling"
+        "value": "Ghostwise Halfling",
+        "speed": 25,
+        "languages": ["Halfling"],
+        "names": ["halfling"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 20],
+            "adult": [20, 150],
+            "elder": [150, 250]
+        }
     },
     {
         "class": [
@@ -823,7 +1375,16 @@
             "Swashbuckler",
             "Warlock"
         ],
-        "value": "Tabaxi"
+        "value": "Tabaxi",
+        "speed": 30,
+        "languages": [{ "pick": 1, "items": [] }],
+        "names": ["human"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 17],
+            "adult": [18, 65],
+            "elder": [65, 100]
+        }
     },
     {
         "class": [
@@ -839,7 +1400,16 @@
             "Wizard",
             "Artificer"
         ],
-        "value": "Tiefling"
+        "value": "Tiefling",
+        "speed": 30,
+        "languages": ["Infernal"],
+        "names": ["demon", "halfdemon"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 17],
+            "adult": [18, 70],
+            "elder": [70, 100]
+        }
     },
     {
         "class": [
@@ -855,7 +1425,16 @@
             "Wizard",
             "Artificer"
         ],
-        "value": "Devil's Tongue Tiefling"
+        "value": "Devil's Tongue Tiefling",
+        "speed": 30,
+        "languages": ["Infernal"],
+        "names": ["demon", "halfdemon"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 17],
+            "adult": [18, 70],
+            "elder": [70, 100]
+        }
     },
     {
         "class": [
@@ -871,7 +1450,16 @@
             "Wizard",
             "Artificer"
         ],
-        "value": "Hellfire Tiefling"
+        "value": "Hellfire Tiefling",
+        "speed": 30,
+        "languages": ["Infernal"],
+        "names": ["demon", "halfdemon"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 17],
+            "adult": [18, 70],
+            "elder": [70, 100]
+        }
     },
     {
         "class": [
@@ -888,7 +1476,16 @@
             "Wizard",
             "Artificer"
         ],
-        "value": "Winged Tiefling"
+        "value": "Winged Tiefling",
+        "speed": 30,
+        "languages": ["Infernal"],
+        "names": ["demon", "halfdemon"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 17],
+            "adult": [18, 70],
+            "elder": [70, 100]
+        }
     },
     {
         "class": [
@@ -906,7 +1503,16 @@
             "Artificer",
             "Blood Hunter"
         ],
-        "value": "Fire Genasi"
+        "value": "Fire Genasi",
+        "speed": 30,
+        "languages": ["Primordial"],
+        "names": ["human", "angel", "demon", "fairy"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 17],
+            "adult": [18, 65],
+            "elder": [65, 120]
+        }
     },
     {
         "class": [
@@ -917,7 +1523,16 @@
             "Inquisitor",
             "Swashbuckler"
         ],
-        "value": "Kobold"
+        "value": "Kobold",
+        "speed": 30,
+        "languages": ["Draconic"],
+        "names": ["dragon", "drow"],
+        "age": {
+            "infant": [0, 2],
+            "child": [2, 6],
+            "adult": [6, 100],
+            "elder": [100, 120]
+        }
     },
     {
         "class": [
@@ -930,7 +1545,16 @@
             "Wizard",
             "Artificer"
         ],
-        "value": "Deep Gnome"
+        "value": "Deep Gnome",
+        "speed": 25,
+        "languages": ["Gnomish"],
+        "names": ["gnome"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 20],
+            "adult": [20, 200],
+            "elder": [200, 400]
+        }
     },
     {
         "class": [
@@ -943,14 +1567,62 @@
             "Wizard",
             "Artificer"
         ],
-        "value": "Forest Gnome"
+        "value": "Forest Gnome",
+        "speed": 25,
+        "languages": ["Gnomish"],
+        "names": ["gnome"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 20],
+            "adult": [20, 200],
+            "elder": [200, 400]
+        }
+    },
+    {
+        "class": [
+            "Knight",
+            "Mystic",
+            "Rogue",
+            "Trickster",
+            "Inquisitor",
+            "Swashbuckler",
+            "Wizard",
+            "Artificer"
+        ],
+        "value": "Mark of Scribing Gnome",
+        "speed": 25,
+        "languages": ["Gnomish"],
+        "names": ["gnome"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 20],
+            "adult": [20, 200],
+            "elder": [200, 400]
+        }
     },
     {
         "class": ["Knight", "Mystic", "Trickster", "Wizard", "Artificer"],
-        "value": "Rock Gnome"
+        "value": "Rock Gnome",
+        "speed": 25,
+        "languages": ["Gnomish"],
+        "names": ["gnome"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 20],
+            "adult": [20, 200],
+            "elder": [200, 400]
+        }
     },
     {
         "class": ["Knight", "Mystic", "Trickster", "Artificer"],
-        "value": "Gnome"
+        "value": "Gnome",
+        "speed": 25,
+        "languages": ["Gnomish"],
+        "age": {
+            "infant": [0, 6],
+            "child": [6, 20],
+            "adult": [20, 200],
+            "elder": [200, 400]
+        }
     }
 ]

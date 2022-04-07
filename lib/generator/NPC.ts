@@ -1,6 +1,6 @@
 import * as Generic from "../../interfaces/generic";
 import { getPronoun } from "../language/common";
-import { BackgroundList } from "../list/background/background";
+import { List } from "../List";
 import { Gender } from "../list/gender/gender";
 import { NameList } from "../list/name/name";
 import { Sex } from "../list/sex/sex";
@@ -151,7 +151,7 @@ export class NPC {
             this.profession = this.place.lists.profession.pickRandom(
                 Object.assign(
                     {
-                        combatant: this.isCombatant(),
+                        combatant: this.isCombatant()
                     },
                     this.withProperties(properties)
                 ) as Partial<NPC>
@@ -309,7 +309,7 @@ export class NPC {
         let detail: string[] | string = [
             this.hair ? `${this.hair} hair` : "",
             this.skin ? `${this.skin} skin` : "",
-            this.eyes ? `${this.eyes} eyes` : "",
+            this.eyes ? `${this.eyes} eyes` : ""
         ].filter((value) => value);
 
         if (detail.length > 2) {
@@ -323,7 +323,7 @@ export class NPC {
 
         let items: string = [
             this.armor ? `wears ${this.armor}` : "",
-            this.weapons.length ? `wields a ${this.weapons.join(" and ")}` : "",
+            this.weapons.length ? `wields a ${this.weapons.join(" and ")}` : ""
         ]
             .filter((value) => value)
             .join(" and ");
@@ -343,41 +343,46 @@ export class NPC {
         }. ${this.forename} seeks ${this.motivation}.`;
     }
 
+    getSpeed() {
+        let raceData = this.place.lists.race.getItem(this.race);
+        return raceData ? raceData.speed : 30;
+    }
+
     getLanguages() {
-        let languages: string[] = [];
+        let allLanguages = this.place.lists.languages.getValues();
+        let raceItem = this.place.lists.race.getItem(this.race);
+        let bgItem = this.place.lists.background.getItem(this.background);
 
-        let background = this.place.lists.background.getItem(this.background);
+        let input = [
+            "Common",
+            ...(raceItem && raceItem.languages ? raceItem.languages : []),
+            ...(bgItem && bgItem.languages ? bgItem.languages : [])
+        ];
 
-        if (background && Array.isArray(background.languages)) {
-            languages = languages.concat(
-                BackgroundList.pickList(background.languages)
-            );
-        }
+        return List.pickList(input, (item?: string) => {
+            if (item) {
+                let index = allLanguages.indexOf(item);
 
-        return languages;
+                if (index > -1) {
+                    allLanguages.splice(index, 1);
+                }
+            }
+
+            return allLanguages;
+        });
     }
 
     getTools() {
-        let tools: string[] = [];
+        let bgItem = this.place.lists.background.getItem(this.background);
 
-        let background = this.place.lists.background.getItem(this.background);
-
-        if (background && Array.isArray(background.tools)) {
-            tools = tools.concat(BackgroundList.pickList(background.tools));
-        }
-
-        return tools;
+        return List.pickList([...(bgItem && bgItem.tools ? bgItem.tools : [])]);
     }
 
     getSkills() {
-        let skills: string[] = [];
+        let bgItem = this.place.lists.background.getItem(this.background);
 
-        let background = this.place.lists.background.getItem(this.background);
-
-        if (background && Array.isArray(background.skills)) {
-            skills = skills.concat(BackgroundList.pickList(background.skills));
-        }
-
-        return skills;
+        return List.pickList([
+            ...(bgItem && bgItem.skills ? bgItem.skills : [])
+        ]);
     }
 }
