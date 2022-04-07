@@ -19,7 +19,7 @@ interface SkillsList {
     survival: number;
 }
 
-export class Skills {
+export class Skills implements SkillsList {
     acrobatics: number = 0;
     animal_handling: number = 0;
     arcana: number = 0;
@@ -49,7 +49,7 @@ interface AbilitiesList {
     charisma: number;
 }
 
-export class Abilities {
+export class Abilities implements AbilitiesList {
     strength: number = 0;
     dexterity: number = 0;
     constitution: number = 0;
