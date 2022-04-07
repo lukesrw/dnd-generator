@@ -1,7 +1,6 @@
 import { NPC as _NPC } from "./lib/generator/NPC";
 import { Place as _Place } from "./lib/generator/Place";
 import { Tavern as _Tavern } from "./lib/generator/Tavern";
-import * as _Common from "./lib/language/common";
 import { List as _List } from "./lib/List";
 import { AgeList } from "./lib/list/age/age";
 import { AlignmentList } from "./lib/list/alignment/alignment";
@@ -105,8 +104,4 @@ export namespace List {
 
         export const Yeoman = YeomanProfessionList;
     }
-}
-
-export namespace Language {
-    export const Common = _Common;
 }
