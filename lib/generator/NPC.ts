@@ -1,10 +1,9 @@
 import * as Generic from "../../interfaces/generic";
-import { getPronoun } from "../language/common";
 import { List } from "../List";
 import { Gender } from "../list/gender/gender";
 import { NameList } from "../list/name/name";
 import { Sex } from "../list/sex/sex";
-import { ucfirst } from "../utils";
+import { getPronoun, ucfirst } from "../utils";
 import { Place } from "./Place";
 
 const TRANSGENDER_CHANCE = 50;
@@ -248,7 +247,7 @@ export class NPC {
     withProperties(properties: Partial<NPC>) {
         let complete: Generic.Object = {};
 
-        Object.keys(properties).forEach((property) => {
+        Object.keys(properties).forEach(property => {
             let property_i = property as keyof NPC;
 
             if (typeof properties[property_i] !== "undefined") {
@@ -256,7 +255,7 @@ export class NPC {
             }
         });
 
-        Object.keys(this).forEach((property) => {
+        Object.keys(this).forEach(property => {
             let property_i = property as keyof NPC;
 
             if (typeof this[property_i] !== "undefined") {
@@ -301,7 +300,7 @@ export class NPC {
 
     getName() {
         return [this.title, this.forename, this.surname]
-            .filter((name) => name)
+            .filter(name => name)
             .join(" ");
     }
 
@@ -310,7 +309,7 @@ export class NPC {
             this.hair ? `${this.hair} hair` : "",
             this.skin ? `${this.skin} skin` : "",
             this.eyes ? `${this.eyes} eyes` : ""
-        ].filter((value) => value);
+        ].filter(value => value);
 
         if (detail.length > 2) {
             detail[detail.length - 1] = `and ${detail[detail.length - 1]}`;
@@ -325,7 +324,7 @@ export class NPC {
             this.armor ? `wears ${this.armor}` : "",
             this.weapons.length ? `wields a ${this.weapons.join(" and ")}` : ""
         ]
-            .filter((value) => value)
+            .filter(value => value)
             .join(" and ");
 
         let pronoun = "";
