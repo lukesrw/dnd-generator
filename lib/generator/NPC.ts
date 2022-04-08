@@ -33,8 +33,8 @@ export class NPC {
     skin: string;
     title: string;
     weapons: string[];
-
     background: string;
+    languages: string[];
 
     // physical
     hair: string;
@@ -241,6 +241,16 @@ export class NPC {
             this.background = this.place.lists.background.pickRandom(
                 this.withProperties(properties)
             );
+        }
+
+        if (
+            properties &&
+            properties.languages &&
+            Array.isArray(properties.languages)
+        ) {
+            this.languages = properties.languages;
+        } else {
+            this.languages = this.getLanguages();
         }
     }
 
