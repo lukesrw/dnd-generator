@@ -100,8 +100,3 @@ Each list extends the [List](/lib/List.ts) class, which implements...
 -   Weapon
     -   Assigned only if their age, class, and profession would be a combatant
     -   Example: "mace"
-
-# Todo
-
--   Enemy class to begin generating combat encounters or other party situations
--   More prefabs for standard places (shops, places of worship, etc.)
