@@ -35,6 +35,7 @@ export class NPC {
     weapons: string[];
     background: string;
     languages: string[];
+    speed: number;
 
     // physical
     hair: string;
@@ -252,6 +253,12 @@ export class NPC {
         } else {
             this.languages = this.getLanguages();
         }
+
+        if (properties && properties.speed) {
+            this.speed = properties.speed;
+        } else {
+            this.speed = this.getSpeed();
+        }
     }
 
     withProperties(properties: Partial<NPC>) {
@@ -353,8 +360,9 @@ export class NPC {
     }
 
     getSpeed() {
-        let raceData = this.place.lists.race.getItem(this.race);
-        return raceData ? raceData.speed : 30;
+        let raceItem = this.place.lists.race.getItem(this.race);
+
+        return raceItem && raceItem.speed ? raceItem.speed : 30;
     }
 
     getLanguages() {
