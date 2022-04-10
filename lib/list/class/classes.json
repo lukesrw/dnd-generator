@@ -45,8 +45,7 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Barbarian",
-        "hitPoints": 12
+        "value": "Barbarian"
     },
     {
         "race": [
@@ -99,8 +98,7 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Bard",
-        "hitPoints": 8
+        "value": "Bard"
     },
     {
         "race": [
@@ -147,8 +145,7 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Cavalier",
-        "hitPoints": 10
+        "value": "Cavalier"
     },
     {
         "race": [
@@ -192,8 +189,7 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Cleric",
-        "hitPoints": 8
+        "value": "Cleric"
     },
     {
         "race": [
@@ -234,8 +230,7 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Druid",
-        "hitPoints": 8
+        "value": "Druid"
     },
     {
         "race": [
@@ -264,8 +259,7 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Fighter",
-        "hitPoints": 10
+        "value": "Fighter"
     },
     {
         "race": [
@@ -314,8 +308,7 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Knight",
-        "hitPoints": 10
+        "value": "Knight"
     },
     {
         "race": [
@@ -354,8 +347,7 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Monk",
-        "hitPoints": 8
+        "value": "Monk"
     },
     {
         "race": [
@@ -391,8 +383,7 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Mystic",
-        "hitPoints": 8
+        "value": "Mystic"
     },
     {
         "race": [
@@ -431,8 +422,7 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Paladin",
-        "hitPoints": 10
+        "value": "Paladin"
     },
     {
         "race": [
@@ -456,8 +446,7 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Ranger",
-        "hitPoints": 10
+        "value": "Ranger"
     },
     {
         "race": [
@@ -497,8 +486,7 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Rogue",
-        "hitPoints": 8
+        "value": "Rogue"
     },
     {
         "race": [
@@ -537,8 +525,7 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Sorcerer",
-        "hitPoints": 6
+        "value": "Sorcerer"
     },
     {
         "race": [
@@ -596,8 +583,7 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Trickster",
-        "hitPoints": 8
+        "value": "Trickster"
     },
     {
         "race": [
@@ -647,8 +633,7 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Inquisitor",
-        "hitPoints": 8
+        "value": "Inquisitor"
     },
     {
         "race": [
@@ -702,8 +687,7 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Swashbuckler",
-        "hitPoints": 8
+        "value": "Swashbuckler"
     },
     {
         "race": [
@@ -743,8 +727,7 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Warlock",
-        "hitPoints": 8
+        "value": "Warlock"
     },
     {
         "race": [
@@ -779,8 +762,7 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Wizard",
-        "hitPoints": 6
+        "value": "Wizard"
     },
     {
         "race": [
@@ -820,8 +802,7 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Artificer",
-        "hitPoints": 8
+        "value": "Artificer"
     },
     {
         "race": [
@@ -851,7 +832,6 @@
             "Lizardfolk",
             "Yuan-ti Pureblood"
         ],
-        "value": "Blood Hunter",
-        "hitPoints": 10
+        "value": "Blood Hunter"
     }
 ]
