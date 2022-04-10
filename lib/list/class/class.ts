@@ -9,6 +9,7 @@ import { List } from "../../List";
 
 export interface ClassProperties {
     combatant: boolean;
+    hitPoints: number;
 }
 
 export class ClassList extends List<ClassProperties> {

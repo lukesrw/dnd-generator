@@ -5,6 +5,7 @@ import { NameList } from "../list/name/name";
 import { Sex } from "../list/sex/sex";
 import { getPronoun, ucfirst } from "../utils";
 import { Place } from "./Place";
+import { DiceRoll } from "@dice-roller/rpg-dice-roller";
 
 const TRANSGENDER_CHANCE = 50;
 const NON_BINARY_CHANCE = 50;
@@ -19,6 +20,17 @@ export class NPC {
 
     sex: Sex;
     gender: Gender;
+
+    //stats
+    level: number;
+    hitPoints: number;
+
+    strength: number;
+    constitution: number;
+    intelligence: number;
+    wisdom: number;
+    charisma: number;
+    dexterity: number;
 
     maturity: string;
     age: string;
@@ -259,6 +271,51 @@ export class NPC {
         } else {
             this.speed = this.getSpeed();
         }
+
+        if (properties && properties.level) {
+            this.level = properties.level;
+        } else {
+            this.level = Math.floor(Math.random() * (21 - 1) + 1);
+        }
+
+        if (properties && properties.charisma) {
+            this.charisma = properties.charisma;
+        } else {
+            this.charisma = new DiceRoll("4d6").total;
+        }
+        if (properties && properties.strength) {
+            this.strength = properties.strength;
+        } else {
+            this.strength = new DiceRoll("4d6").total;
+        }
+        if (properties && properties.constitution) {
+            this.constitution = properties.constitution;
+        } else {
+            this.constitution = new DiceRoll("4d6").total;
+        }
+        if (properties && properties.intelligence) {
+            this.intelligence = properties.intelligence;
+        } else {
+            this.intelligence = new DiceRoll("4d6").total;
+        }
+        if (properties && properties.wisdom) {
+            this.wisdom = properties.wisdom;
+        } else {
+            this.wisdom = new DiceRoll("4d6").total;
+        }
+        if (properties && properties.dexterity) {
+            this.dexterity = properties.dexterity;
+        } else {
+            this.dexterity = new DiceRoll("4d6").total;
+        }
+
+        if (properties && properties.hitPoints) {
+            this.hitPoints = properties.hitPoints;
+        } else {
+            // this.hitPoints = this.getHitPoints();
+            this.hitPoints = 1;
+            this.getHitPoints();
+        }
     }
 
     withProperties(properties: Partial<NPC>) {
@@ -363,6 +420,23 @@ export class NPC {
         let raceItem = this.place.lists.race.getItem(this.race);
 
         return raceItem && raceItem.speed ? raceItem.speed : 30;
+    }
+
+    getHitPoints() {
+        let classItem = this.place.lists.class.getItem(this.class);
+        if (classItem) {
+            let hitPointsNumber = classItem?.hitPoints;
+
+            if (this.level === 1 && hitPointsNumber)
+                return hitPointsNumber + this.constitution;
+            else {
+                let roll = new DiceRoll(this.level + "d" + hitPointsNumber);
+                console.log(this.level + "d" + hitPointsNumber);
+                console.log(roll.total);
+                return roll.total;
+            }
+        }
+        return 0;
     }
 
     getLanguages() {
