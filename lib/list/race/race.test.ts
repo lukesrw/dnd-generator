@@ -4,11 +4,16 @@ import { RaceList } from "./race";
 let races = new RaceList();
 let classes = new ClassList();
 
-classes.getValues().forEach((class_name) => {
+classes.getValues().forEach(class_name => {
     test(`RaceList supports "${class_name}" class`, () => {
         expect(() => {
             races.pickRandom({
-                class: class_name
+                classes: [
+                    {
+                        name: class_name,
+                        level: 1
+                    }
+                ]
             });
         }).not.toThrow();
     });
