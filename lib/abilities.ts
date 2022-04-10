@@ -1,43 +1,46 @@
+import { DiceRoll } from "@dice-roller/rpg-dice-roller";
+import { List } from "./List";
+
 interface SkillsList {
-    acrobatics: number;
-    animal_handling: number;
-    arcana: number;
-    athletics: number;
-    deception: number;
-    history: number;
-    insight: number;
-    intimidation: number;
-    investigation: number;
-    medicine: number;
-    nature: number;
-    perception: number;
-    performance: number;
-    persuasion: number;
-    religion: number;
-    sleight_of_hand: number;
-    stealth: number;
-    survival: number;
+    acrobatics: boolean;
+    animal_handling: boolean;
+    arcana: boolean;
+    athletics: boolean;
+    deception: boolean;
+    history: boolean;
+    insight: boolean;
+    intimidation: boolean;
+    investigation: boolean;
+    medicine: boolean;
+    nature: boolean;
+    perception: boolean;
+    performance: boolean;
+    persuasion: boolean;
+    religion: boolean;
+    sleight_of_hand: boolean;
+    stealth: boolean;
+    survival: boolean;
 }
 
 export class Skills implements SkillsList {
-    acrobatics: number = 0;
-    animal_handling: number = 0;
-    arcana: number = 0;
-    athletics: number = 0;
-    deception: number = 0;
-    history: number = 0;
-    insight: number = 0;
-    intimidation: number = 0;
-    investigation: number = 0;
-    medicine: number = 0;
-    nature: number = 0;
-    perception: number = 0;
-    performance: number = 0;
-    persuasion: number = 0;
-    religion: number = 0;
-    sleight_of_hand: number = 0;
-    stealth: number = 0;
-    survival: number = 0;
+    acrobatics: boolean = false;
+    animal_handling: boolean = false;
+    arcana: boolean = false;
+    athletics: boolean = false;
+    deception: boolean = false;
+    history: boolean = false;
+    insight: boolean = false;
+    intimidation: boolean = false;
+    investigation: boolean = false;
+    medicine: boolean = false;
+    nature: boolean = false;
+    perception: boolean = false;
+    performance: boolean = false;
+    persuasion: boolean = false;
+    religion: boolean = false;
+    sleight_of_hand: boolean = false;
+    stealth: boolean = false;
+    survival: boolean = false;
 }
 
 interface AbilitiesList {
@@ -49,6 +52,15 @@ interface AbilitiesList {
     charisma: number;
 }
 
+export type AbilityScores = [number, number, number, number, number, number];
+
+export interface AbilitiesOptions {
+    /**
+     * If string supplied, must be valid input for https://dice-roller.github.io/documentation/
+     */
+    method?: AbilityScores | "array" | string;
+}
+
 export class Abilities implements AbilitiesList {
     strength: number = 0;
     dexterity: number = 0;
@@ -57,6 +69,41 @@ export class Abilities implements AbilitiesList {
     wisdom: number = 0;
     charisma: number = 0;
 
+    constructor(options: AbilitiesOptions = {}) {
+        let abilityScores: AbilityScores;
+        let abilities: (keyof AbilitiesList)[] = [
+            "strength",
+            "dexterity",
+            "constitution",
+            "intelligence",
+            "wisdom",
+            "charisma"
+        ];
+
+        if (options.method === "array") {
+            abilityScores = [15, 14, 13, 12, 10, 8];
+        } else if (Array.isArray(options.method)) {
+            abilityScores = options.method;
+        } else {
+            if (typeof options.method !== "string") {
+                options.method = "4d6r=1d1";
+            }
+
+            abilityScores = [
+                new DiceRoll(options.method).total,
+                new DiceRoll(options.method).total,
+                new DiceRoll(options.method).total,
+                new DiceRoll(options.method).total,
+                new DiceRoll(options.method).total,
+                new DiceRoll(options.method).total
+            ];
+        }
+
+        abilities.forEach(ability => {
+            this.setValue(ability, List.pickRandom(abilityScores));
+        });
+    }
+
     setValue(ability: keyof AbilitiesList, value: number) {
         this[ability] = value;
 
@@ -64,14 +111,10 @@ export class Abilities implements AbilitiesList {
     }
 
     getValue(ability: keyof AbilitiesList) {
-        return this[ability] as number;
+        return this[ability];
     }
 
     getModifier(ability: keyof AbilitiesList) {
         return Math.floor(this.getValue(ability) / 2 - 5);
     }
 }
-
-let test = new Abilities();
-
-test.getValue("dexterity");
