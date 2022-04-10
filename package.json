@@ -12,6 +12,7 @@
         "typescript": "^4.6.3"
     },
     "dependencies": {
+        "@dice-roller/rpg-dice-roller": "^5.1.0",
         "fantasy-name-generator": "^2.0.0"
     },
     "name": "dnd-generator",
