@@ -1,7 +1,9 @@
+import {
+    Abilities as _Abilities,
+    Skills as _Skills
+} from "./lib/generator/Abilities";
 import { NPC as _NPC } from "./lib/generator/NPC";
-import { Place as _Place } from "./lib/list/Place";
 import { Tavern as _Tavern } from "./lib/generator/Tavern";
-import { List as _List } from "./lib/list/List";
 import { AgeList } from "./lib/list/age/age";
 import { AlignmentList } from "./lib/list/alignment/alignment";
 import { ArmorList } from "./lib/list/armor/armor";
@@ -11,10 +13,12 @@ import { ClassList } from "./lib/list/class/class";
 import { EyeList } from "./lib/list/eye/eye";
 import { HairList } from "./lib/list/hair/hair";
 import { LanguageList } from "./lib/list/languages/languages";
+import { List as _List } from "./lib/list/List";
 import { MaturityList } from "./lib/list/maturity/maturity";
 import { MotivationList } from "./lib/list/motivation/motivation";
 import { NameList } from "./lib/list/name/name";
 import { NobilityList } from "./lib/list/nobility/nobility";
+import { Place as _Place } from "./lib/list/Place";
 import {
     CommonProfessionList,
     EsquireProfessionList,
@@ -37,14 +41,24 @@ import { WeaponList } from "./lib/list/weapon/weapon";
 export namespace Generator {
     export const NPC = _NPC;
 
-    export const Place = _Place;
-
     export const Tavern = _Tavern;
+
+    export const Abilities = _Abilities;
+
+    export const Skills = _Skills;
 }
 
 export namespace List {
+    /**
+     * List building...
+     */
     export const List = _List;
 
+    export const Place = _Place;
+
+    /**
+     * Data lists...
+     */
     export const Age = AgeList;
 
     export const Alignment = AlignmentList;
