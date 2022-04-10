@@ -4,11 +4,12 @@ import { AlignmentList } from "../list/alignment/alignment";
 import { ArmorList } from "../list/armor/armor";
 import {
     BackgroundList,
-    BackgroundProperties,
+    BackgroundProperties
 } from "../list/background/background";
 import { CharacteristicList } from "../list/characteristics/characteristics";
 import { ClassList, ClassProperties } from "../list/class/class";
 import { EyeList } from "../list/eye/eye";
+import { FlawList } from "../list/flaw/flaw";
 import { HairList } from "../list/hair/hair";
 import { LanguageList } from "../list/languages/languages";
 import { MaturityList } from "../list/maturity/maturity";
@@ -16,7 +17,7 @@ import { MotivationList } from "../list/motivation/motivation";
 import { NobilityList } from "../list/nobility/nobility";
 import {
     ProfessionList,
-    ProfessionProperties,
+    ProfessionProperties
 } from "../list/profession/profession";
 import { RaceList, RaceProperties } from "../list/race/race";
 import { SexList } from "../list/sex/sex";
@@ -25,6 +26,7 @@ import { TitleList } from "../list/title/title";
 import { WeaponList } from "../list/weapon/weapon";
 
 interface Lists {
+    flaw: FlawList | List;
     maturity: MaturityList | List;
     age: AgeList | List;
     alignment: AlignmentList | List;
@@ -60,6 +62,7 @@ export class Place {
                 eye: new EyeList(),
                 hair: new HairList(),
                 motivation: new MotivationList(),
+                flaw: new FlawList(),
                 nobility: new NobilityList(),
                 profession: new ProfessionList(),
                 race: new RaceList(),
@@ -68,7 +71,7 @@ export class Place {
                 title: new TitleList(),
                 weapon: new WeaponList(),
                 background: new BackgroundList(),
-                languages: new LanguageList(),
+                languages: new LanguageList()
             },
             lists || {}
         );
