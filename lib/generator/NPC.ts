@@ -5,7 +5,6 @@ import { NameList } from "../list/name/name";
 import { Sex } from "../list/sex/sex";
 import { getPronoun, ucfirst } from "../utils";
 import { Place } from "./Place";
-import { DiceRoll } from "@dice-roller/rpg-dice-roller";
 
 const TRANSGENDER_CHANCE = 50;
 const NON_BINARY_CHANCE = 50;
@@ -29,6 +28,7 @@ export class NPC {
     class: string;
     motivation: string;
     flaw: string;
+    ideal: string;
     nobility: string;
     profession: string;
     race: string;
@@ -153,6 +153,16 @@ export class NPC {
             this.flaw = this.place.lists.flaw.pickRandom(
                 this.withProperties(properties)
             );
+        }
+
+        if (properties && typeof properties.ideal === "string") {
+            this.ideal = properties.ideal;
+        } else {
+            let [ethic, moral] = this.alignment.split(" ");
+            this.ideal = this.place.lists.ideal.pickRandom({
+                ethic: ethic,
+                moral: moral
+            });
         }
 
         if (properties && typeof properties.profession === "string") {

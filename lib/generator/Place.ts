@@ -11,6 +11,7 @@ import { ClassList, ClassProperties } from "../list/class/class";
 import { EyeList } from "../list/eye/eye";
 import { FlawList } from "../list/flaw/flaw";
 import { HairList } from "../list/hair/hair";
+import { IdealList } from "../list/ideal/ideal";
 import { LanguageList } from "../list/languages/languages";
 import { MaturityList } from "../list/maturity/maturity";
 import { MotivationList } from "../list/motivation/motivation";
@@ -26,6 +27,7 @@ import { TitleList } from "../list/title/title";
 import { WeaponList } from "../list/weapon/weapon";
 
 interface Lists {
+    ideal: any;
     flaw: FlawList | List;
     maturity: MaturityList | List;
     age: AgeList | List;
@@ -63,6 +65,7 @@ export class Place {
                 hair: new HairList(),
                 motivation: new MotivationList(),
                 flaw: new FlawList(),
+                ideal: new IdealList(),
                 nobility: new NobilityList(),
                 profession: new ProfessionList(),
                 race: new RaceList(),

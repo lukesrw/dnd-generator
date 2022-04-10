@@ -1,0 +1,380 @@
+[
+    {
+        "value": "Faith",
+        "desc": "I trust that my deity will guide my actions. I have faith that if I work hard, things will go well.",
+        "ethic": "Lawful"
+    },
+    {
+        "value": "Tradition",
+        "desc": "The ancient traditions of worship and sacrifice must be preserved and upheld",
+        "ethic": "Lawful"
+    },
+    {
+        "value": "Charity",
+        "desc": "I always try to help those in need, no matter what the personal cost",
+        "moral": "Good"
+    },
+    {
+        "value": "Change",
+        "desc": "We must help bring about the changes the gods are constantly working in the world",
+        "ethic": "Chaotic"
+    },
+    {
+        "value": "Power",
+        "desc": "I hope to one day rise to the top of my faith's religious hierarchy",
+        "ethic": "Lawful"
+    },
+    {
+        "value": "Aspiration",
+        "desc": "I seek to prove my self worthy of my god's favor by matching my actions against his or her teachings"
+    },
+    {
+        "value": "Independence",
+        "desc": "I am a free spirit--no one tells me what to do",
+        "ethic": "Chaotic"
+    },
+    {
+        "value": "Fairness",
+        "desc": "I never target people who can't afford to lose a few coins",
+        "ethic": "Lawful"
+    },
+    {
+        "value": "Charity",
+        "desc": "I distribute money I acquire to the people who really need it",
+        "moral": "Good"
+    },
+    {
+        "value": "Creativity",
+        "desc": "I never run the same con twice",
+        "ethic": "Chaotic"
+    },
+    {
+        "value": "Friendship",
+        "desc": "Material goods come and go. Bonds of friendship last forever",
+        "moral": "Good"
+    },
+    {
+        "value": "Aspiration",
+        "desc": "I'm determined to make something of myself"
+    },
+    {
+        "value": "Honor",
+        "desc": "I don't steal from others in the trade",
+        "ethic": "Lawful"
+    },
+    {
+        "value": "Freedom",
+        "desc": "Chains are meant to be broken, as are those who would forge them",
+        "ethic": "Chaotic"
+    },
+    {
+        "value": "Charity",
+        "desc": "I steal from the wealthy so that I can help people in need",
+        "moral": "Good"
+    },
+    {
+        "value": "Greed",
+        "desc": "I will do whatever it takes to become wealthy",
+        "moral": "Evil"
+    },
+    {
+        "value": "People",
+        "desc": "I'm loyal to my friends, not to any ideals, and everyone else can take a trip down the Styx for all I care",
+        "moral": "Neutral"
+    },
+    {
+        "value": "Redemption",
+        "desc": "There's a spark of good in everyone",
+        "moral": "Good"
+    },
+    {
+        "value": "Beauty",
+        "desc": "When I perform, I make the world better than it was",
+        "moral": "Good"
+    },
+    {
+        "value": "Tradition",
+        "desc": "The stories, legends, and songs of the past must never be forgotten",
+        "ethic": "Lawful"
+    },
+    {
+        "value": "Creativity",
+        "desc": "The world is in need of new ideas and bold action",
+        "ethic": "Chaotic"
+    },
+    {
+        "value": "Greed",
+        "desc": "I'm only in it for the money and fame",
+        "moral": "Evil"
+    },
+    {
+        "value": "People",
+        "desc": "I like seeing the smiles on people's faces when I perform. That's all that matters",
+        "moral": "Neutral"
+    },
+    {
+        "value": "Honesty",
+        "desc": "Art should reflect the soul; it should come from within and reveal who we really are"
+    },
+    {
+        "value": "Respect",
+        "desc": "People deserve to be treated with dignity and respect",
+        "moral": "Good"
+    },
+    {
+        "value": "Fairness",
+        "desc": "No one should get preferential treatment before the law, and no one is above the law",
+        "ethic": "Lawful"
+    },
+    {
+        "value": "Freedom",
+        "desc": "Tyrants must not be allowed to oppress the people",
+        "ethic": "Chaotic"
+    },
+    {
+        "value": "Might",
+        "desc": "If I become strong, I can take what I want--what I deserve",
+        "moral": "Evil"
+    },
+    {
+        "value": "Sincerity",
+        "desc": "There's no good pretending to be something I'm not",
+        "moral": "Neutral"
+    },
+    {
+        "value": "Destiny",
+        "desc": "Nothing and no one can steer me away from my higher calling"
+    },
+    {
+        "value": "Community",
+        "desc": "It is the duty of all civilized people to strengthen the bonds of community and the security of civilization",
+        "ethic": "Lawful"
+    },
+    {
+        "value": "Generosity",
+        "desc": "My talents were given to me so that I could use them to benefit the world",
+        "moral": "Good"
+    },
+    {
+        "value": "Freedom",
+        "desc": "Everyone should be free to pursue his or her livelihood",
+        "ethic": "Chaotic"
+    },
+    {
+        "value": "Greed",
+        "desc": "I'm only in it for the money",
+        "moral": "Evil"
+    },
+    {
+        "value": "People",
+        "desc": "I'm committed to the people I care about, not to ideals",
+        "ethic": "Neutral"
+    },
+    {
+        "value": "Aspiration",
+        "desc": "I work hard to be the best there is at my craft"
+    },
+    {
+        "value": "Greater Good",
+        "desc": "My gifts are meant to be shared with all, not used for my own benefit",
+        "moral": "Good"
+    },
+    {
+        "value": "Logic",
+        "desc": "Emotions must not cloud our sense of what is right and true, or our logical thinking",
+        "ethic": "Lawful"
+    },
+    {
+        "value": "Free Thinking",
+        "desc": "Inquiry and curiosity are the pillars of progress",
+        "ethic": "Chaotic"
+    },
+    {
+        "value": "Power",
+        "desc": "Solitude and contemplation are paths toward mystical or magical power",
+        "moral": "Evil"
+    },
+    {
+        "value": "Live and Let Live",
+        "desc": "Meddling in the affairs of others only causes trouble",
+        "ethic": "Neutral"
+    },
+    {
+        "value": "Self-Knowledge",
+        "desc": "If you know yourself, there's nothing left to know"
+    },
+    {
+        "value": "Respect",
+        "desc": "Respect is due to me because of my position, but all people regardless of station deserve to be treated with dignity",
+        "moral": "Good"
+    },
+    {
+        "value": "Responsibility",
+        "desc": "It is my duty to respect the authority of those above me, just as those below me must respect mine",
+        "ethic": "Lawful"
+    },
+    {
+        "value": "Independence",
+        "desc": "I must prove that I can handle myself without the coddling of my family",
+        "ethic": "Chaotic"
+    },
+    {
+        "value": "Power",
+        "desc": "If I can attain more power, no one will tell me what to do",
+        "moral": "Evil"
+    },
+    {
+        "value": "Family",
+        "desc": "Blood runs thicker than water"
+    },
+    {
+        "value": "Noble Obligation",
+        "desc": "It is my duty to protect and care for the people beneath me",
+        "moral": "Good"
+    },
+    {
+        "value": "Change",
+        "desc": "Life is like the seasons, in constant change, and we must change with it",
+        "ethic": "Chaotic"
+    },
+    {
+        "value": "Greater Good",
+        "desc": "It is each person's responsibility to make the most happiness for the whole tribe",
+        "moral": "Good"
+    },
+    {
+        "value": "Honor",
+        "desc": "If I dishonor myself, I dishonor my whole clan",
+        "ethic": "Lawful"
+    },
+    {
+        "value": "Might",
+        "desc": "The strongest are meant to rule",
+        "moral": "Evil"
+    },
+    {
+        "value": "Nature",
+        "desc": "The natural world is more important than all the constructs of civilization",
+        "ethic": "Neutral"
+    },
+    {
+        "value": "Glory",
+        "desc": "I must earn glory in battle, for myself and my clan"
+    },
+    {
+        "value": "Knowledge",
+        "desc": "The path to power and self-improvement is through knowledge",
+        "moral": "Neutral"
+    },
+    {
+        "value": "Beauty",
+        "desc": "What is beautiful points us beyond itself toward what is true",
+        "moral": "Good"
+    },
+    {
+        "value": "Logic",
+        "desc": "Emotions must not cloud our logical thinking",
+        "ethic": "Lawful"
+    },
+    {
+        "value": "No Limits",
+        "desc": "Nothing should fetter the infinite possibility inherent in all existence",
+        "ethic": "Chaotic"
+    },
+    {
+        "value": "Power",
+        "desc": "Knowledge is the path to power and domination",
+        "moral": "Evil"
+    },
+    {
+        "value": "Self-improvement",
+        "desc": "The goal of a life of study is the betterment of oneself"
+    },
+    {
+        "value": "Respect",
+        "desc": "The thing that keeps a ship together is mutual respect between captain and crew",
+        "moral": "Good"
+    },
+    {
+        "value": "Fairness",
+        "desc": "We all do the work, so we all share in the rewards",
+        "ethic": "Lawful"
+    },
+    {
+        "value": "Freedom",
+        "desc": "The sea is freedom--the freedom to go anywhere and do anything",
+        "ethic": "Chaotic"
+    },
+    {
+        "value": "Master",
+        "desc": "I'm a predator, and the other ships on the sea are my prey",
+        "moral": "Evil"
+    },
+    {
+        "value": "People",
+        "desc": "I'm committed to my crewmates, not to ideals",
+        "ethic": "Neutral"
+    },
+    {
+        "value": "Aspiration",
+        "desc": "Someday I'll own my own ship and chart my own destiny"
+    },
+    {
+        "value": "Greater Good",
+        "desc": "Our lot is to lay down our lives in defense of others",
+        "moral": "Good"
+    },
+    {
+        "value": "Responsibility",
+        "desc": "I do what I must and obey just authority",
+        "ethic": "Lawful"
+    },
+    {
+        "value": "Independence",
+        "desc": "When people follow orders blindly they embrace a kind of tyranny",
+        "ethic": "Chaotic"
+    },
+    {
+        "value": "Might",
+        "desc": "In life as in war, the stronger force wins",
+        "moral": "Evil"
+    },
+    {
+        "value": "Neutral",
+        "desc": "Ideals aren't worth killing for or going to war for",
+        "moral": "Neutral"
+    },
+    {
+        "value": "Nation",
+        "desc": "My city, nation, or people are all that matters"
+    },
+    {
+        "value": "Respect",
+        "desc": "All people, rich or poor, deserve respect",
+        "moral": "Good"
+    },
+    {
+        "value": "Community",
+        "desc": "We have to take care of each other because no one else is going to do it",
+        "ethic": "Lawful"
+    },
+    {
+        "value": "Change",
+        "desc": "The low is lifted up, and the high and mighty are brought down. Change is the nature of things",
+        "ethic": "Chaotic"
+    },
+    {
+        "value": "Retribution",
+        "desc": "The rich need to be shown what life and death are like in the gutters",
+        "moral": "Evil"
+    },
+    {
+        "value": "People",
+        "desc": "I help people who help me--that's what keeps us alive",
+        "moral": "Neutral"
+    },
+    {
+        "value": "Aspiration",
+        "desc": "I'm going to prove that I'm worthy of a better life"
+    }
+]
