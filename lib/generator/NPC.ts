@@ -5,6 +5,7 @@ import { NameList } from "../list/name/name";
 import { Sex } from "../list/sex/sex";
 import { getPronoun, ucfirst } from "../utils";
 import { Place } from "./Place";
+import { DiceRoll } from "@dice-roller/rpg-dice-roller";
 
 const TRANSGENDER_CHANCE = 50;
 const NON_BINARY_CHANCE = 50;
@@ -19,6 +20,10 @@ export class NPC {
 
     sex: Sex;
     gender: Gender;
+
+    //stats
+    level: number;
+    hitPoints: number;
 
     maturity: string;
     age: string;
@@ -259,6 +264,20 @@ export class NPC {
         } else {
             this.speed = this.getSpeed();
         }
+
+        if (properties && properties.level) {
+            this.level = properties.level;
+        } else {
+            this.level = Math.floor(Math.random() * (21 - 1) + 1);
+        }
+
+        if (properties && properties.hitPoints) {
+            this.hitPoints = properties.hitPoints;
+        } else {
+            // this.hitPoints = this.getHitPoints();
+            this.getHitPoints();
+            this.hitPoints = 1;
+        }
     }
 
     withProperties(properties: Partial<NPC>) {
@@ -363,6 +382,23 @@ export class NPC {
         let raceItem = this.place.lists.race.getItem(this.race);
 
         return raceItem && raceItem.speed ? raceItem.speed : 30;
+    }
+
+    getHitPoints() {
+        let classItem = this.place.lists.class.getItem(this.class);
+        if (classItem) {
+            let hitPointsNumber = classItem?.hitPoints;
+
+            //TODO: if level 1: add constituion to hitPointsNumber
+            if (this.level === 1) return hitPointsNumber;
+            else {
+                let roll = new DiceRoll(this.level + "d" + hitPointsNumber);
+                console.log(this.level + "d" + hitPointsNumber);
+                console.log(roll.total);
+                return roll.total;
+            }
+        }
+        return 0;
     }
 
     getLanguages() {
