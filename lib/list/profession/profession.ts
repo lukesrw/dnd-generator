@@ -1,4 +1,4 @@
-import { List } from "../../List";
+import { List } from "../List";
 
 export interface ProfessionProperties {
     combatant: boolean;
@@ -76,11 +76,11 @@ export class ProfessionList extends List<ProfessionProperties> {
             new ScholarProfessionList(),
             new ServantProfessionList(),
             new UnderclassProfessionList(),
-            new YeomanProfessionList(),
+            new YeomanProfessionList()
         ];
 
         this.items = [];
-        professions.forEach((profession) => {
+        professions.forEach(profession => {
             if (this.items) {
                 this.items = this.items.concat(profession.getItems());
             }

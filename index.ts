@@ -1,7 +1,7 @@
 import { NPC as _NPC } from "./lib/generator/NPC";
-import { Place as _Place } from "./lib/generator/Place";
+import { Place as _Place } from "./lib/list/Place";
 import { Tavern as _Tavern } from "./lib/generator/Tavern";
-import { List as _List } from "./lib/List";
+import { List as _List } from "./lib/list/List";
 import { AgeList } from "./lib/list/age/age";
 import { AlignmentList } from "./lib/list/alignment/alignment";
 import { ArmorList } from "./lib/list/armor/armor";

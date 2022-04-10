@@ -1,5 +1,5 @@
-import * as Generic from "../interfaces/generic";
-import { NPC } from "./generator/NPC";
+import * as Generic from "../../interfaces/generic";
+import { NPC } from "../generator/NPC";
 
 export type PickList = (
     | string

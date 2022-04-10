@@ -1,6 +1,6 @@
 import { NPC } from "./NPC";
-import { Place } from "./Place";
-import { List } from "../List";
+import { Place } from "../list/Place";
+import { List } from "../list/List";
 
 export class Tavern extends Place {
     staff: NPC[];
@@ -19,15 +19,15 @@ export class Tavern extends Place {
     generateStaff() {
         let professions = this.lists.profession
             .getItems()
-            .filter((item) => {
+            .filter(item => {
                 return /tavern|barkeep|maid|inn/iu.test(item.value);
             })
-            .map((item) => item.value);
+            .map(item => item.value);
 
         this.staff = this.staff.map(() => {
             return new NPC(this, {
                 maturity: List.pickRandom(["adult", "elder"]),
-                profession: List.pickRandom(professions),
+                profession: List.pickRandom(professions)
             });
         });
     }
@@ -54,7 +54,7 @@ export class Tavern extends Place {
         /**
          * assign any "young" patrons parents/guardians
          */
-        young_patrons.forEach((patron) => {
+        young_patrons.forEach(patron => {
             let parent = List.pickRandom(adult_patrons);
 
             patron.surname = parent.surname;

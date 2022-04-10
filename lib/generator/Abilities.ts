@@ -1,5 +1,5 @@
 import { DiceRoll } from "@dice-roller/rpg-dice-roller";
-import { List } from "./List";
+import { List } from "../list/List";
 
 interface SkillsList {
     acrobatics: boolean;

@@ -1,6 +1,6 @@
 import { nameByRace } from "fantasy-name-generator";
 import { NPC } from "../../generator/NPC";
-import { List } from "../../List";
+import { List } from "../List";
 import { Gender } from "../gender/gender";
 import { RaceList } from "../race/race";
 import { Sex } from "../sex/sex";

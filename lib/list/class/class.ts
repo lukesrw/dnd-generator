@@ -1,4 +1,4 @@
-import { List } from "../../List";
+import { List } from "../List";
 
 /**
  * Using table of race & class synergies to filter sensible/reasonable combinations

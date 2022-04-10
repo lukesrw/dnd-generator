@@ -1,12 +1,12 @@
 import * as Generic from "../../interfaces/generic";
-import { List } from "../List";
+import { List } from "../list/List";
 import { Gender } from "../list/gender/gender";
 import { NameList } from "../list/name/name";
 import { Sex } from "../list/sex/sex";
 import { getPronoun, ucfirst } from "../utils";
-import { Place } from "./Place";
+import { Place } from "../list/Place";
 import { DiceRoll } from "@dice-roller/rpg-dice-roller";
-import { Abilities, AbilitiesOptions } from "../abilities";
+import { AbilitiesOptions, Abilities } from "./Abilities";
 
 const TRANSGENDER_CHANCE = 50;
 const NON_BINARY_CHANCE = 50;
