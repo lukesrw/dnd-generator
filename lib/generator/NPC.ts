@@ -164,7 +164,6 @@ export class NPC {
             this.flaw = this.place.lists.flaw.pickRandom(
                 this.withProperties(properties)
             );
-            console.log(this.flaw);
         }
 
         if (properties && typeof properties.profession === "string") {
@@ -441,8 +440,6 @@ export class NPC {
                 return hitPointsNumber + this.constitution;
             else {
                 let roll = new DiceRoll(this.level + "d" + hitPointsNumber);
-                // console.log(this.level + "d" + hitPointsNumber);
-                // console.log(roll.total);
                 return roll.total;
             }
         }
