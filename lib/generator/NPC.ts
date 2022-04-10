@@ -39,6 +39,7 @@ export class NPC {
     characteristic: string;
     class: string;
     motivation: string;
+    flaw: string;
     nobility: string;
     profession: string;
     race: string;
@@ -155,6 +156,15 @@ export class NPC {
             this.motivation = this.place.lists.motivation.pickRandom(
                 this.withProperties(properties)
             );
+        }
+
+        if (properties && typeof properties.flaw === "string") {
+            this.flaw = properties.flaw;
+        } else {
+            this.flaw = this.place.lists.flaw.pickRandom(
+                this.withProperties(properties)
+            );
+            console.log(this.flaw);
         }
 
         if (properties && typeof properties.profession === "string") {
@@ -431,8 +441,8 @@ export class NPC {
                 return hitPointsNumber + this.constitution;
             else {
                 let roll = new DiceRoll(this.level + "d" + hitPointsNumber);
-                console.log(this.level + "d" + hitPointsNumber);
-                console.log(roll.total);
+                // console.log(this.level + "d" + hitPointsNumber);
+                // console.log(roll.total);
                 return roll.total;
             }
         }
