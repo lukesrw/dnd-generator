@@ -46,7 +46,7 @@
             "Kalashtar"
         ],
         "value": "Barbarian",
-        "hitPoints": 12
+        "hitDice": "d12"
     },
     {
         "race": [
@@ -100,7 +100,7 @@
             "Kalashtar"
         ],
         "value": "Bard",
-        "hitPoints": 8
+        "hitDice": "d8"
     },
     {
         "race": [
@@ -148,7 +148,7 @@
             "Kalashtar"
         ],
         "value": "Cavalier",
-        "hitPoints": 10
+        "hitDice": "d10"
     },
     {
         "race": [
@@ -193,7 +193,7 @@
             "Kalashtar"
         ],
         "value": "Cleric",
-        "hitPoints": 8
+        "hitDice": "d8"
     },
     {
         "race": [
@@ -235,7 +235,7 @@
             "Kalashtar"
         ],
         "value": "Druid",
-        "hitPoints": 8
+        "hitDice": "d8"
     },
     {
         "race": [
@@ -265,7 +265,7 @@
             "Kalashtar"
         ],
         "value": "Fighter",
-        "hitPoints": 10
+        "hitDice": "d10"
     },
     {
         "race": [
@@ -315,7 +315,7 @@
             "Kalashtar"
         ],
         "value": "Knight",
-        "hitPoints": 10
+        "hitDice": "d10"
     },
     {
         "race": [
@@ -355,7 +355,7 @@
             "Kalashtar"
         ],
         "value": "Monk",
-        "hitPoints": 8
+        "hitDice": "d8"
     },
     {
         "race": [
@@ -392,7 +392,7 @@
             "Kalashtar"
         ],
         "value": "Mystic",
-        "hitPoints": 8
+        "hitDice": "d8"
     },
     {
         "race": [
@@ -432,7 +432,7 @@
             "Kalashtar"
         ],
         "value": "Paladin",
-        "hitPoints": 10
+        "hitDice": "d10"
     },
     {
         "race": [
@@ -457,7 +457,7 @@
             "Kalashtar"
         ],
         "value": "Ranger",
-        "hitPoints": 10
+        "hitDice": "d10"
     },
     {
         "race": [
@@ -498,7 +498,7 @@
             "Kalashtar"
         ],
         "value": "Rogue",
-        "hitPoints": 8
+        "hitDice": "d8"
     },
     {
         "race": [
@@ -538,7 +538,7 @@
             "Kalashtar"
         ],
         "value": "Sorcerer",
-        "hitPoints": 6
+        "hitDice": "d6"
     },
     {
         "race": [
@@ -597,7 +597,7 @@
             "Kalashtar"
         ],
         "value": "Trickster",
-        "hitPoints": 8
+        "hitDice": "d8"
     },
     {
         "race": [
@@ -648,7 +648,7 @@
             "Kalashtar"
         ],
         "value": "Inquisitor",
-        "hitPoints": 8
+        "hitDice": "d8"
     },
     {
         "race": [
@@ -703,7 +703,7 @@
             "Kalashtar"
         ],
         "value": "Swashbuckler",
-        "hitPoints": 8
+        "hitDice": "d8"
     },
     {
         "race": [
@@ -744,7 +744,7 @@
             "Kalashtar"
         ],
         "value": "Warlock",
-        "hitPoints": 8
+        "hitDice": "d8"
     },
     {
         "race": [
@@ -780,7 +780,7 @@
             "Kalashtar"
         ],
         "value": "Wizard",
-        "hitPoints": 6
+        "hitDice": "d6"
     },
     {
         "race": [
@@ -821,7 +821,7 @@
             "Kalashtar"
         ],
         "value": "Artificer",
-        "hitPoints": 8
+        "hitDice": "d8"
     },
     {
         "race": [
@@ -852,6 +852,6 @@
             "Yuan-ti Pureblood"
         ],
         "value": "Blood Hunter",
-        "hitPoints": 10
+        "hitDice": "d10"
     }
 ]
