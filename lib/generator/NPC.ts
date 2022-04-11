@@ -6,7 +6,7 @@ import { Sex } from "../list/sex/sex";
 import { getPronoun, ucfirst } from "../utils";
 import { Place } from "../list/Place";
 import { DiceRoll } from "@dice-roller/rpg-dice-roller";
-import { AbilitiesOptions, Abilities } from "./Abilities";
+import { AbilitiesOptions, Abilities, Skills } from "./Abilities";
 
 const TRANSGENDER_CHANCE = 50;
 const NON_BINARY_CHANCE = 50;
@@ -30,6 +30,7 @@ export class NPC {
     hitPoints: number;
 
     abilities: Abilities;
+    skills: Skills;
 
     maturity: string;
     age: string;
@@ -289,6 +290,12 @@ export class NPC {
             this.abilities = new Abilities(options.abilitiesOptions);
         }
 
+        if (properties && properties.skills instanceof Skills) {
+            this.skills = properties.skills;
+        } else {
+            this.skills = new Skills(this);
+        }
+
         if (properties && properties.hitPoints) {
             this.hitPoints = properties.hitPoints;
         } else {
@@ -413,16 +420,21 @@ export class NPC {
     getHitPoints() {
         if (this.hitPoints) return this.hitPoints;
 
+        let level = this.getLevel();
+
         let hitDice = this.classes.map(classSet => {
             let classItem = this.place.lists.class.getItem(classSet.name);
 
-            return classItem && classItem.hitDice ? classItem.hitDice : "d4";
+            let hitDice =
+                classItem && classItem.hitDice ? classItem.hitDice : "d4";
+
+            if (level === 1) hitDice += "min" + hitDice.substring(1);
+
+            return `(${hitDice} +
+                ${this.abilities.getModifier("constitution")})`;
         });
 
-        return new DiceRoll(
-            hitDice.join(" + ") +
-                (this.getLevel() === 1 ? "min" + hitDice[0].substring(1) : "")
-        ).total;
+        return new DiceRoll(hitDice.join(" + ")).total;
     }
 
     getLanguages() {
@@ -463,5 +475,9 @@ export class NPC {
         return List.pickList([
             ...(bgItem && bgItem.skills ? bgItem.skills : [])
         ]);
+    }
+
+    getProficiencyBonus() {
+        return Math.floor((this.getLevel() - 1) / 4) + 2;
     }
 }
