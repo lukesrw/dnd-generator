@@ -29,6 +29,7 @@ export class NPC {
     motivation: string;
     flaw: string;
     ideal: string;
+    trait: string;
     nobility: string;
     profession: string;
     race: string;
@@ -163,6 +164,14 @@ export class NPC {
                 ethic: ethic,
                 moral: moral
             });
+        }
+
+        if (properties && typeof properties.trait === "string") {
+            this.trait = properties.trait;
+        } else {
+            this.trait = this.place.lists.trait.pickRandom(
+                this.withProperties(properties)
+            );
         }
 
         if (properties && typeof properties.profession === "string") {

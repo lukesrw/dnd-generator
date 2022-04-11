@@ -24,6 +24,7 @@ import { RaceList, RaceProperties } from "../list/race/race";
 import { SexList } from "../list/sex/sex";
 import { SkinList } from "../list/skin/skin";
 import { TitleList } from "../list/title/title";
+import { TraitList } from "../list/trait/trait";
 import { WeaponList } from "../list/weapon/weapon";
 
 interface Lists {
@@ -38,6 +39,7 @@ interface Lists {
     eye: EyeList | List;
     hair: HairList | List;
     motivation: MotivationList | List;
+    trait: TraitList | List;
     nobility: NobilityList | List;
     profession: ProfessionList | List<ProfessionProperties>;
     race: RaceList | List<RaceProperties>;
@@ -66,6 +68,7 @@ export class Place {
                 motivation: new MotivationList(),
                 flaw: new FlawList(),
                 ideal: new IdealList(),
+                trait: new TraitList(),
                 nobility: new NobilityList(),
                 profession: new ProfessionList(),
                 race: new RaceList(),
