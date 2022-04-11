@@ -1,5 +1,6 @@
 import { DiceRoll } from "@dice-roller/rpg-dice-roller";
 import { List } from "../list/List";
+import { NPC } from "./NPC";
 
 interface SkillsList {
     acrobatics: boolean;
@@ -23,6 +24,8 @@ interface SkillsList {
 }
 
 export class Skills implements SkillsList {
+    #npc: NPC;
+
     acrobatics: boolean = false;
     animal_handling: boolean = false;
     arcana: boolean = false;
@@ -41,6 +44,64 @@ export class Skills implements SkillsList {
     sleight_of_hand: boolean = false;
     stealth: boolean = false;
     survival: boolean = false;
+
+    constructor(npc: NPC) {
+        this.#npc = npc;
+    }
+
+    setProficient(
+        skill: keyof SkillsList | (keyof SkillsList)[],
+        isProficient = true
+    ) {
+        if (Array.isArray(skill)) {
+            skill.forEach(item => this.setProficient(item, isProficient));
+        } else {
+            this[skill] = isProficient;
+        }
+
+        return this;
+    }
+
+    getValue(skill: keyof SkillsList) {
+        let modifier = 0;
+
+        switch (skill) {
+            case "athletics":
+                modifier = this.#npc.abilities.getModifier("strength");
+                break;
+
+            case "acrobatics":
+            case "sleight_of_hand":
+            case "stealth":
+                modifier = this.#npc.abilities.getModifier("dexterity");
+                break;
+
+            case "arcana":
+            case "history":
+            case "investigation":
+            case "nature":
+            case "religion":
+                modifier = this.#npc.abilities.getModifier("intelligence");
+                break;
+
+            case "animal_handling":
+            case "insight":
+            case "medicine":
+            case "perception":
+            case "survival":
+                modifier = this.#npc.abilities.getModifier("wisdom");
+                break;
+
+            case "deception":
+            case "intimidation":
+            case "performance":
+            case "persuasion":
+                modifier = this.#npc.abilities.getModifier("charisma");
+                break;
+        }
+
+        return modifier + (this[skill] ? this.#npc.getProficiencyBonus() : 0);
+    }
 }
 
 interface AbilitiesList {
@@ -100,7 +161,13 @@ export class Abilities implements AbilitiesList {
         }
 
         abilities.forEach(ability => {
-            this.setValue(ability, List.pickRandom(abilityScores));
+            this.setValue(
+                ability,
+                abilityScores.splice(
+                    abilityScores.indexOf(List.pickRandom(abilityScores)),
+                    1
+                )[0]
+            );
         });
     }
 
