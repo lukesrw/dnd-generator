@@ -1,5 +1,4 @@
 import * as Generic from "../../interfaces/generic";
-import { NPC } from "../generator/NPC";
 
 export type PickList = (
     | string
@@ -31,6 +30,7 @@ export class List<Custom = {}> {
         return list[Math.floor(Math.random() * list.length)];
     }
 
+    //pick multipule randoms from list (either array or object)
     static pickList(raw: PickList, onPickCallback?: PickListCallback) {
         let list: string[] = [];
 
@@ -74,18 +74,21 @@ export class List<Custom = {}> {
         return list;
     }
 
+    //returns unique array containing every unique value in the list
     getValues() {
         if (!this.raw) return [];
 
         return this.raw.map(item => item.value);
     }
 
+    //returns one  item with a particular value
     getItem(value: string) {
         if (!this.raw) return undefined;
 
         return this.raw.find(item => item.value === value);
     }
 
+    //returns the entire list
     getItems() {
         if (this.items && !this.weighted) {
             this.items.forEach((item: Item<Partial<Custom>>) => {
@@ -110,6 +113,7 @@ export class List<Custom = {}> {
         >[];
     }
 
+    //returns a list according to filter
     getFiltered(filter?: Generic.Object) {
         let list = this.getItems();
 
@@ -145,7 +149,8 @@ export class List<Custom = {}> {
         return list;
     }
 
-    pickRandom(filter?: Partial<NPC>): string {
+    //creates the list and then returns a randomized item
+    pickRandom(filter?: Generic.Object): string {
         let item = List.pickRandom(this.getFiltered(filter));
 
         if (item) {

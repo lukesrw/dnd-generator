@@ -11,6 +11,7 @@ import { BackgroundList } from "./lib/list/background/background";
 import { CharacteristicList } from "./lib/list/characteristics/characteristics";
 import { ClassList } from "./lib/list/class/class";
 import { EyeList } from "./lib/list/eye/eye";
+import { FlawList } from "./lib/list/flaw/flaw";
 import { HairList } from "./lib/list/hair/hair";
 import { LanguageList } from "./lib/list/languages/languages";
 import { List as _List } from "./lib/list/List";
@@ -72,6 +73,8 @@ export namespace List {
     export const Class = ClassList;
 
     export const Eye = EyeList;
+
+    export const Flaw = FlawList;
 
     export const Hair = HairList;
 

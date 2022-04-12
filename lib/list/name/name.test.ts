@@ -1,15 +1,27 @@
 import { RaceList } from "../race/race";
-import { NameList } from "./name";
+import { fNGSupportedRaces, NameList } from "./name";
 
 let names = new NameList();
 let races = new RaceList();
 
-races.getValues().forEach((race) => {
+let allRaces: string[] = Object.keys(fNGSupportedRaces);
+
+races.getItems().forEach(race => {
+    if (allRaces.indexOf(race.value) === -1) allRaces.push(race.value);
+
+    if (Array.isArray(race.names)) {
+        race.names.forEach(name => {
+            if (allRaces.indexOf(name) === -1) allRaces.push(name);
+        });
+    }
+});
+
+allRaces.forEach(race => {
     test(`NameList supports "${race}" race (Male)`, () => {
         expect(() => {
             names.pickRandom({
                 race: race,
-                gender: "Male"
+                sex: "Male"
             });
         }).not.toThrow();
     });
@@ -18,12 +30,12 @@ races.getValues().forEach((race) => {
         expect(() => {
             names.pickRandom({
                 race: race,
-                gender: "Female"
+                sex: "Female"
             });
         }).not.toThrow();
     });
 
-    test(`NameList supports "${race}" race, "Non-Binary" gender, "Male" sex`, () => {
+    test(`NameList supports "${race}" race, "Male" sex with "Non-Binary" gender`, () => {
         expect(() => {
             names.pickRandom({
                 race: race,
@@ -33,7 +45,7 @@ races.getValues().forEach((race) => {
         }).not.toThrow();
     });
 
-    test(`NameList supports "${race}" race, "Non-Binary" gender, "Female" sex`, () => {
+    test(`NameList supports "${race}" race, "Female" sex with "Non-Binary" gender`, () => {
         expect(() => {
             names.pickRandom({
                 race: race,

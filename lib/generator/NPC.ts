@@ -1,12 +1,12 @@
+import { DiceRoll } from "@dice-roller/rpg-dice-roller";
 import * as Generic from "../../interfaces/generic";
-import { List } from "../list/List";
 import { Gender } from "../list/gender/gender";
+import { List } from "../list/List";
 import { NameList } from "../list/name/name";
+import { Place, SharedProperties } from "../list/Place";
 import { Sex } from "../list/sex/sex";
 import { getPronoun, ucfirst } from "../utils";
-import { Place } from "../list/Place";
-import { DiceRoll } from "@dice-roller/rpg-dice-roller";
-import { AbilitiesOptions, Abilities, Skills } from "./Abilities";
+import { Abilities, AbilitiesOptions, Skills } from "./Abilities";
 
 const TRANSGENDER_CHANCE = 50;
 const NON_BINARY_CHANCE = 50;
@@ -15,7 +15,7 @@ export interface NPCOptions {
     abilitiesOptions?: AbilitiesOptions;
 }
 
-export class NPC {
+export class NPC implements SharedProperties {
     // basic
     place: Place;
 
@@ -32,29 +32,31 @@ export class NPC {
     abilities: Abilities;
     skills: Skills;
 
-    maturity: string;
-    age: string;
-    alignment: string;
     armor: string;
-    characteristic: string;
     classes: {
         name: string;
         level: number;
     }[];
-    motivation: string;
-    nobility: string;
+    maturity!: string;
+    age!: string;
+    alignment!: string;
+    characteristic!: string;
+    class!: string;
+    motivation!: string;
+    flaw!: string;
+    ideal: string;
+    trait!: string;
+    nobility!: string;
     profession: string;
-    race: string;
-    skin: string;
+    race!: string;
+    skin!: string;
     title: string;
     weapons: string[];
-    background: string;
+    background!: string;
     languages: string[];
     speed: number;
-
-    // physical
-    hair: string;
-    eyes: string;
+    hair!: string;
+    eyes!: string;
 
     constructor(
         place?: Place,
@@ -90,45 +92,31 @@ export class NPC {
             }
         }
 
-        if (properties && typeof properties.maturity === "string") {
-            this.maturity = properties.maturity.toLowerCase();
-        } else {
-            this.maturity = this.place.lists.maturity.pickRandom(
-                this.withProperties(properties)
-            );
-        }
-
-        if (properties && typeof properties.alignment === "string") {
-            this.alignment = properties.alignment;
-        } else {
-            this.alignment = this.place.lists.alignment.pickRandom(
-                this.withProperties(properties)
-            );
-        }
-
-        if (properties && typeof properties.race === "string") {
-            this.race = properties.race;
-        } else {
-            this.race = this.place.lists.race.pickRandom(
-                this.withProperties(properties)
-            );
-        }
-
-        if (properties && typeof properties.age === "string") {
-            this.age = properties.age;
-        } else {
-            this.age = this.place.lists.age.pickRandom(
-                this.withProperties(properties)
-            );
-        }
-
-        if (properties && typeof properties.skin === "string") {
-            this.skin = properties.skin;
-        } else {
-            this.skin = this.place.lists.skin.pickRandom(
-                this.withProperties(properties)
-            );
-        }
+        (
+            [
+                "maturity",
+                "alignment",
+                "race",
+                "age",
+                "skin",
+                "nobility",
+                "motivation",
+                "flaw",
+                "trait",
+                "hair",
+                "eyes",
+                "characteristic",
+                "background"
+            ] as (keyof SharedProperties)[]
+        ).forEach(property => {
+            if (properties && typeof properties[property] === "string") {
+                this[property] = properties[property] as string;
+            } else {
+                this[property] = this.place.lists[property].pickRandom(
+                    this.withProperties(properties)
+                );
+            }
+        });
 
         if (properties && typeof properties.classes === "string") {
             this.classes = properties.classes;
@@ -143,14 +131,6 @@ export class NPC {
             ];
         }
 
-        if (properties && typeof properties.nobility === "string") {
-            this.nobility = properties.nobility;
-        } else {
-            this.nobility = this.place.lists.nobility.pickRandom(
-                this.withProperties(properties)
-            );
-        }
-
         if (properties && typeof properties.title === "string") {
             this.title = properties.title;
         } else if (this.nobility === "Knighted") {
@@ -161,12 +141,14 @@ export class NPC {
             );
         }
 
-        if (properties && typeof properties.motivation === "string") {
-            this.motivation = properties.motivation;
+        if (properties && typeof properties.ideal === "string") {
+            this.ideal = properties.ideal;
         } else {
-            this.motivation = this.place.lists.motivation.pickRandom(
-                this.withProperties(properties)
-            );
+            let [ethic, moral] = this.alignment.split(" ");
+            this.ideal = this.place.lists.ideal.pickRandom({
+                ethic: ethic,
+                moral: moral
+            });
         }
 
         if (properties && typeof properties.profession === "string") {
@@ -204,22 +186,6 @@ export class NPC {
             this.surname = (surname || "").trim();
         }
 
-        if (properties && typeof properties.hair === "string") {
-            this.hair = properties.hair;
-        } else {
-            this.hair = this.place.lists.hair.pickRandom(
-                this.withProperties(properties)
-            );
-        }
-
-        if (properties && typeof properties.eyes === "string") {
-            this.eyes = properties.eyes;
-        } else {
-            this.eyes = this.place.lists.eye.pickRandom(
-                this.withProperties(properties)
-            );
-        }
-
         if (properties && typeof properties.armor === "string") {
             this.armor = properties.armor;
         } else if (this.isCombatant()) {
@@ -237,7 +203,7 @@ export class NPC {
                 .fill(null)
                 .map(() => {
                     if (this.place) {
-                        return this.place.lists.weapon.pickRandom(
+                        return this.place.lists.weapons.pickRandom(
                             this.withProperties(properties)
                         );
                     }
@@ -250,22 +216,6 @@ export class NPC {
             }
         } else {
             this.weapons = [];
-        }
-
-        if (properties && properties.characteristic) {
-            this.characteristic = properties.characteristic;
-        } else {
-            this.characteristic = this.place.lists.characteristic.pickRandom(
-                this.withProperties(properties)
-            );
-        }
-
-        if (properties && properties.background) {
-            this.background = properties.background;
-        } else {
-            this.background = this.place.lists.background.pickRandom(
-                this.withProperties(properties)
-            );
         }
 
         if (
