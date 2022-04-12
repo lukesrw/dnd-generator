@@ -27,7 +27,28 @@ import { TitleList } from "../list/title/title";
 import { TraitList } from "../list/trait/trait";
 import { WeaponList } from "../list/weapon/weapon";
 
-interface Lists {
+export interface SharedProperties {
+    ideal: any;
+    flaw: any;
+    maturity: any;
+    age: any;
+    alignment: any;
+    armor: any;
+    characteristic: any;
+    class: any;
+    eyes: any;
+    hair: any;
+    motivation: any;
+    trait: any;
+    nobility: any;
+    profession: any;
+    race: any;
+    skin: any;
+    title: any;
+    background: any;
+}
+
+interface Lists extends SharedProperties {
     ideal: IdealList | List;
     flaw: FlawList | List;
     maturity: MaturityList | List;
@@ -36,7 +57,7 @@ interface Lists {
     armor: ArmorList | List;
     characteristic: CharacteristicList | List;
     class: ClassList | List<ClassProperties>;
-    eye: EyeList | List;
+    eyes: EyeList | List;
     hair: HairList | List;
     motivation: MotivationList | List;
     trait: TraitList | List;
@@ -46,7 +67,7 @@ interface Lists {
     sex: SexList | List;
     skin: SkinList | List;
     title: TitleList | List;
-    weapon: WeaponList | List;
+    weapons: WeaponList | List;
     background: BackgroundList | List<BackgroundProperties>;
     languages: LanguageList | List;
 }
@@ -63,7 +84,7 @@ export class Place {
                 armor: new ArmorList(),
                 characteristic: new CharacteristicList(),
                 class: new ClassList(),
-                eye: new EyeList(),
+                eyes: new EyeList(),
                 hair: new HairList(),
                 motivation: new MotivationList(),
                 flaw: new FlawList(),
@@ -75,7 +96,7 @@ export class Place {
                 sex: new SexList(),
                 skin: new SkinList(),
                 title: new TitleList(),
-                weapon: new WeaponList(),
+                weapons: new WeaponList(),
                 background: new BackgroundList(),
                 languages: new LanguageList()
             },
