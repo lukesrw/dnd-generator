@@ -28,7 +28,7 @@ import { TraitList } from "../list/trait/trait";
 import { WeaponList } from "../list/weapon/weapon";
 
 interface Lists {
-    ideal: any;
+    ideal: IdealList | List;
     flaw: FlawList | List;
     maturity: MaturityList | List;
     age: AgeList | List;
