@@ -31,6 +31,9 @@ function nameByRaceWrapper(
     sex?: Sex,
     gender?: Gender
 ) {
+    race = (race.substring(0, 1).toLowerCase() +
+        race.substring(1)) as keyof typeof fNGSupportedRaces;
+
     if (
         race in fNGSupportedRaces &&
         fNGSupportedRaces[race] &&
@@ -39,15 +42,10 @@ function nameByRaceWrapper(
         gender = sex || List.pickRandom(["Male", "Female"]);
     }
 
-    let name = nameByRace(
-        race.substring(0, 1).toLowerCase() + race.substring(1),
-        {
-            allowMultipleNames: true,
-            gender: gender
-                ? (gender.toLowerCase() as "male" | "female")
-                : undefined
-        }
-    );
+    let name = nameByRace(race, {
+        allowMultipleNames: true,
+        gender: gender ? (gender.toLowerCase() as "male" | "female") : undefined
+    });
 
     if (typeof name === "string") return name;
 
