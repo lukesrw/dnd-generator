@@ -177,11 +177,7 @@ export class Abilities implements AbilitiesList {
         return this;
     }
 
-    getValue(ability: keyof AbilitiesList) {
-        return this[ability];
-    }
-
     getModifier(ability: keyof AbilitiesList) {
-        return Math.floor(this.getValue(ability) / 2 - 5);
+        return Math.floor(this[ability] / 2 - 5);
     }
 }
