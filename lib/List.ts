@@ -1,5 +1,4 @@
 import * as Generic from "../interfaces/generic";
-import { NPC } from "./generator/NPC";
 
 export type PickList = (
     | string
@@ -151,7 +150,7 @@ export class List<Custom = {}> {
     }
 
     //creates the list and then returns a randomized item
-    pickRandom(filter?: Partial<NPC>): string {
+    pickRandom(filter?: Generic.Object): string {
         let item = List.pickRandom(this.getFiltered(filter));
 
         if (item) {
