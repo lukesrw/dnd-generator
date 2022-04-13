@@ -1,8 +1,8 @@
 import { NPC } from "./NPC";
-import { Place } from "../list/Place";
+import { Context } from "../context/Context";
 import { List } from "../list/List";
 
-export class Tavern extends Place {
+export class Tavern extends Context {
     staff: NPC[];
     patrons: NPC[];
 
@@ -17,7 +17,7 @@ export class Tavern extends Place {
     }
 
     generateStaff() {
-        let professions = this.lists.profession
+        let professions = this.profession
             .getItems()
             .filter(item => {
                 return /tavern|barkeep|maid|inn/iu.test(item.value);
