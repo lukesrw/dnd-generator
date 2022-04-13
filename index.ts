@@ -19,7 +19,7 @@ import { MaturityList } from "./lib/list/maturity/maturity";
 import { MotivationList } from "./lib/list/motivation/motivation";
 import { NameList } from "./lib/list/name/name";
 import { NobilityList } from "./lib/list/nobility/nobility";
-import { Place as _Place } from "./lib/list/Place";
+import { Context as _Context } from "./lib/context/Context";
 import {
     CommonProfessionList,
     EsquireProfessionList,
@@ -49,13 +49,15 @@ export namespace Generator {
     export const Skills = _Skills;
 }
 
+export namespace Context {
+    export const Context = _Context;
+}
+
 export namespace List {
     /**
      * List building...
      */
     export const List = _List;
-
-    export const Place = _Place;
 
     /**
      * Data lists...
