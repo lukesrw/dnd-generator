@@ -8,7 +8,7 @@ export class Tavern {
     patrons: NPC[];
     staff: NPC[];
 
-    constructor(patrons: number | NPC[], staff: number | NPC[]) {
+    constructor(patrons: number | NPC[] = 5, staff: number | NPC[] = 2) {
         if (Array.isArray(patrons)) {
             this.patrons = patrons;
         } else {
