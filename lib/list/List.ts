@@ -157,7 +157,7 @@ export class List<Custom = {}> {
             if (Array.isArray(item.value)) return List.pickRandom(item.value);
         } else {
             if (filter) {
-                delete filter.place;
+                delete filter.context;
             }
 
             throw new Error(

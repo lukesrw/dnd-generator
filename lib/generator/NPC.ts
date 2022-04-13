@@ -17,7 +17,7 @@ export interface NPCOptions {
 
 export class NPC implements SharedProperties {
     // basic
-    place: Context;
+    context: Context;
 
     // name
     forename: string;
@@ -59,11 +59,11 @@ export class NPC implements SharedProperties {
     eyes!: string;
 
     constructor(
-        place?: Context,
+        context?: Context,
         properties: Partial<NPC> = {},
         options: NPCOptions = {}
     ) {
-        this.place = place instanceof Context ? place : new Context();
+        this.context = context instanceof Context ? context : new Context();
 
         /**
          * born as...
@@ -71,7 +71,7 @@ export class NPC implements SharedProperties {
         if (properties && typeof properties.sex === "string") {
             this.sex = properties.sex;
         } else {
-            this.sex = this.place.sex.pickRandom(
+            this.sex = this.context.sex.pickRandom(
                 this.withProperties(properties)
             ) as Sex;
         }
@@ -84,7 +84,7 @@ export class NPC implements SharedProperties {
         } else {
             this.gender = this.sex;
             if (Math.floor(Math.random() * TRANSGENDER_CHANCE) === 1) {
-                this.gender = this.place.sex.pickRandom(
+                this.gender = this.context.sex.pickRandom(
                     this.withProperties(properties)
                 ) as Gender;
             } else if (Math.floor(Math.random() * NON_BINARY_CHANCE) === 1) {
@@ -112,7 +112,7 @@ export class NPC implements SharedProperties {
             if (properties && typeof properties[property] === "string") {
                 this[property] = properties[property] as string;
             } else {
-                this[property] = this.place[property].pickRandom(
+                this[property] = this.context[property].pickRandom(
                     this.withProperties(properties)
                 );
             }
@@ -123,7 +123,7 @@ export class NPC implements SharedProperties {
         } else {
             this.classes = [
                 {
-                    name: this.place.class.pickRandom(
+                    name: this.context.class.pickRandom(
                         this.withProperties(properties)
                     ),
                     level: 1
@@ -136,7 +136,7 @@ export class NPC implements SharedProperties {
         } else if (this.nobility === "Knighted") {
             this.title = this.gender === "Male" ? "Sir" : "Dame";
         } else {
-            this.title = this.place.title.pickRandom(
+            this.title = this.context.title.pickRandom(
                 this.withProperties(properties)
             );
         }
@@ -145,7 +145,7 @@ export class NPC implements SharedProperties {
             this.ideal = properties.ideal;
         } else {
             let [ethic, moral] = this.alignment.split(" ");
-            this.ideal = this.place.ideal.pickRandom({
+            this.ideal = this.context.ideal.pickRandom({
                 ethic: ethic,
                 moral: moral
             });
@@ -154,7 +154,7 @@ export class NPC implements SharedProperties {
         if (properties && typeof properties.profession === "string") {
             this.profession = properties.profession;
         } else if (this.maturity !== "infant") {
-            this.profession = this.place.profession.pickRandom(
+            this.profession = this.context.profession.pickRandom(
                 Object.assign(
                     {
                         combatant: this.isCombatant()
@@ -189,7 +189,7 @@ export class NPC implements SharedProperties {
         if (properties && typeof properties.armor === "string") {
             this.armor = properties.armor;
         } else if (this.isCombatant()) {
-            this.armor = this.place.armor.pickRandom(
+            this.armor = this.context.armor.pickRandom(
                 this.withProperties(properties)
             );
         } else {
@@ -202,8 +202,8 @@ export class NPC implements SharedProperties {
             this.weapons = new Array(Math.floor(Math.random() * 2) + 1)
                 .fill(null)
                 .map(() => {
-                    if (this.place) {
-                        return this.place.weapons.pickRandom(
+                    if (this.context) {
+                        return this.context.weapons.pickRandom(
                             this.withProperties(properties)
                         );
                     }
@@ -280,7 +280,7 @@ export class NPC implements SharedProperties {
 
         if (this.classes) {
             let is_combatant = this.classes.some(classSet => {
-                let classItem = this.place.class.getItem(classSet.name);
+                let classItem = this.context.class.getItem(classSet.name);
 
                 return (
                     classItem &&
@@ -293,7 +293,7 @@ export class NPC implements SharedProperties {
         }
 
         if (this.profession) {
-            let chosen_profession = this.place.profession.getItem(
+            let chosen_profession = this.context.profession.getItem(
                 this.profession
             );
 
@@ -356,7 +356,7 @@ export class NPC implements SharedProperties {
     getSpeed() {
         if (this.speed) return this.speed;
 
-        let raceItem = this.place.race.getItem(this.race);
+        let raceItem = this.context.race.getItem(this.race);
 
         return raceItem && raceItem.speed ? raceItem.speed : 30;
     }
@@ -373,7 +373,7 @@ export class NPC implements SharedProperties {
         let level = this.getLevel();
 
         let hitDice = this.classes.map(classSet => {
-            let classItem = this.place.class.getItem(classSet.name);
+            let classItem = this.context.class.getItem(classSet.name);
 
             let hitDice =
                 classItem && classItem.hitDice ? classItem.hitDice : "d4";
@@ -390,9 +390,9 @@ export class NPC implements SharedProperties {
     getLanguages() {
         if (this.languages) return this.languages;
 
-        let allLanguages = this.place.languages.getValues();
-        let raceItem = this.place.race.getItem(this.race);
-        let bgItem = this.place.background.getItem(this.background);
+        let allLanguages = this.context.languages.getValues();
+        let raceItem = this.context.race.getItem(this.race);
+        let bgItem = this.context.background.getItem(this.background);
 
         let input = [
             "Common",
@@ -414,13 +414,13 @@ export class NPC implements SharedProperties {
     }
 
     getTools() {
-        let bgItem = this.place.background.getItem(this.background);
+        let bgItem = this.context.background.getItem(this.background);
 
         return List.pickList([...(bgItem && bgItem.tools ? bgItem.tools : [])]);
     }
 
     getSkills() {
-        let bgItem = this.place.background.getItem(this.background);
+        let bgItem = this.context.background.getItem(this.background);
 
         return List.pickList([
             ...(bgItem && bgItem.skills ? bgItem.skills : [])
