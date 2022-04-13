@@ -1,10 +1,8 @@
 import { Context as _Context } from "./lib/context/Context";
-import {
-    Abilities as _Abilities,
-    Skills as _Skills
-} from "./lib/generator/Abilities";
-import { NPC as _NPC } from "./lib/generator/NPC";
-import { Tavern as _Tavern } from "./lib/generator/Tavern";
+import { TavernPatronContext, TavernStaffContext } from "./lib/context/Tavern";
+import { Abilities, Skills } from "./lib/generator/Abilities";
+import { NPC } from "./lib/generator/NPC";
+import { Tavern } from "./lib/generator/Tavern";
 import { AgeList } from "./lib/list/age/age";
 import { AlignmentList } from "./lib/list/alignment/alignment";
 import { ArmorList } from "./lib/list/armor/armor";
@@ -40,14 +38,16 @@ import { TitleList } from "./lib/list/title/title";
 import { WeaponList } from "./lib/list/weapon/weapon";
 
 export const Generator = {
-    Abilities: _Abilities,
-    NPC: _NPC,
-    Skills: _Skills,
-    Tavern: _Tavern
+    Abilities: Abilities,
+    NPC: NPC,
+    Skills: Skills,
+    Tavern: Tavern
 };
 
 export const Context = {
-    Context: _Context
+    Context: _Context,
+    TavernStaff: TavernStaffContext,
+    TavernPatron: TavernPatronContext
 };
 
 export const List = {
