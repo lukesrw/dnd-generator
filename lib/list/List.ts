@@ -10,7 +10,7 @@ export type PickList = (
 
 export type PickListCallback = (item?: string) => string[];
 
-export type Item<Custom> = {
+export type Item<Custom = {}> = {
     weight?: number;
     value: string;
 } & Custom;
