@@ -45,7 +45,8 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Barbarian"
+        "value": "Barbarian",
+        "hitDice": "d12"
     },
     {
         "race": [
@@ -98,7 +99,8 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Bard"
+        "value": "Bard",
+        "hitDice": "d8"
     },
     {
         "race": [
@@ -145,7 +147,8 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Cavalier"
+        "value": "Cavalier",
+        "hitDice": "d10"
     },
     {
         "race": [
@@ -189,7 +192,8 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Cleric"
+        "value": "Cleric",
+        "hitDice": "d8"
     },
     {
         "race": [
@@ -230,7 +234,8 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Druid"
+        "value": "Druid",
+        "hitDice": "d8"
     },
     {
         "race": [
@@ -259,7 +264,8 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Fighter"
+        "value": "Fighter",
+        "hitDice": "d10"
     },
     {
         "race": [
@@ -308,7 +314,8 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Knight"
+        "value": "Knight",
+        "hitDice": "d10"
     },
     {
         "race": [
@@ -347,7 +354,8 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Monk"
+        "value": "Monk",
+        "hitDice": "d8"
     },
     {
         "race": [
@@ -383,7 +391,8 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Mystic"
+        "value": "Mystic",
+        "hitDice": "d8"
     },
     {
         "race": [
@@ -422,7 +431,8 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Paladin"
+        "value": "Paladin",
+        "hitDice": "d10"
     },
     {
         "race": [
@@ -446,7 +456,8 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Ranger"
+        "value": "Ranger",
+        "hitDice": "d10"
     },
     {
         "race": [
@@ -486,7 +497,8 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Rogue"
+        "value": "Rogue",
+        "hitDice": "d8"
     },
     {
         "race": [
@@ -525,7 +537,8 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Sorcerer"
+        "value": "Sorcerer",
+        "hitDice": "d6"
     },
     {
         "race": [
@@ -583,7 +596,8 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Trickster"
+        "value": "Trickster",
+        "hitDice": "d8"
     },
     {
         "race": [
@@ -633,7 +647,8 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Inquisitor"
+        "value": "Inquisitor",
+        "hitDice": "d8"
     },
     {
         "race": [
@@ -687,7 +702,8 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Swashbuckler"
+        "value": "Swashbuckler",
+        "hitDice": "d8"
     },
     {
         "race": [
@@ -727,7 +743,8 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Warlock"
+        "value": "Warlock",
+        "hitDice": "d8"
     },
     {
         "race": [
@@ -762,7 +779,8 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Wizard"
+        "value": "Wizard",
+        "hitDice": "d6"
     },
     {
         "race": [
@@ -802,7 +820,8 @@
             "Yuan-ti Pureblood",
             "Kalashtar"
         ],
-        "value": "Artificer"
+        "value": "Artificer",
+        "hitDice": "d8"
     },
     {
         "race": [
@@ -832,6 +851,7 @@
             "Lizardfolk",
             "Yuan-ti Pureblood"
         ],
-        "value": "Blood Hunter"
+        "value": "Blood Hunter",
+        "hitDice": "d10"
     }
 ]

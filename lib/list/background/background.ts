@@ -1,5 +1,5 @@
-import { List } from "../../List";
-import { PickList } from "../../List";
+import { List } from "../List";
+import { PickList } from "../List";
 
 export interface BackgroundProperties {
     languages?: PickList;

@@ -1,17 +1,23 @@
+import { DiceRoll } from "@dice-roller/rpg-dice-roller";
 import * as Generic from "../../interfaces/generic";
-import { List } from "../List";
 import { Gender } from "../list/gender/gender";
+import { List } from "../list/List";
 import { NameList } from "../list/name/name";
+import { Context, SharedProperties } from "../context/Context";
 import { Sex } from "../list/sex/sex";
 import { getPronoun, ucfirst } from "../utils";
-import { Place, SharedProperties } from "./Place";
+import { Abilities, AbilitiesOptions, Skills } from "./Abilities";
 
 const TRANSGENDER_CHANCE = 50;
 const NON_BINARY_CHANCE = 50;
 
+export interface NPCOptions {
+    abilitiesOptions?: AbilitiesOptions;
+}
+
 export class NPC implements SharedProperties {
     // basic
-    place: Place;
+    context: Context;
 
     // name
     forename: string;
@@ -20,10 +26,20 @@ export class NPC implements SharedProperties {
     sex: Sex;
     gender: Gender;
 
+    //stats
+    hitPoints: number;
+
+    abilities: Abilities;
+    skills: Skills;
+
+    armor: string;
+    classes: {
+        name: string;
+        level: number;
+    }[];
     maturity!: string;
     age!: string;
     alignment!: string;
-    armor: string;
     characteristic!: string;
     class!: string;
     motivation!: string;
@@ -42,8 +58,12 @@ export class NPC implements SharedProperties {
     hair!: string;
     eyes!: string;
 
-    constructor(place?: Place, properties: Partial<NPC> = {}) {
-        this.place = place instanceof Place ? place : new Place();
+    constructor(
+        context?: Context,
+        properties: Partial<NPC> = {},
+        options: NPCOptions = {}
+    ) {
+        this.context = context instanceof Context ? context : new Context();
 
         /**
          * born as...
@@ -51,7 +71,7 @@ export class NPC implements SharedProperties {
         if (properties && typeof properties.sex === "string") {
             this.sex = properties.sex;
         } else {
-            this.sex = this.place.lists.sex.pickRandom(
+            this.sex = this.context.sex.pickRandom(
                 this.withProperties(properties)
             ) as Sex;
         }
@@ -64,7 +84,7 @@ export class NPC implements SharedProperties {
         } else {
             this.gender = this.sex;
             if (Math.floor(Math.random() * TRANSGENDER_CHANCE) === 1) {
-                this.gender = this.place.lists.sex.pickRandom(
+                this.gender = this.context.sex.pickRandom(
                     this.withProperties(properties)
                 ) as Gender;
             } else if (Math.floor(Math.random() * NON_BINARY_CHANCE) === 1) {
@@ -79,7 +99,6 @@ export class NPC implements SharedProperties {
                 "race",
                 "age",
                 "skin",
-                "class",
                 "nobility",
                 "motivation",
                 "flaw",
@@ -93,18 +112,31 @@ export class NPC implements SharedProperties {
             if (properties && typeof properties[property] === "string") {
                 this[property] = properties[property] as string;
             } else {
-                this[property] = this.place.lists[property].pickRandom(
+                this[property] = this.context[property].pickRandom(
                     this.withProperties(properties)
                 );
             }
         });
+
+        if (properties && typeof properties.classes === "string") {
+            this.classes = properties.classes;
+        } else {
+            this.classes = [
+                {
+                    name: this.context.class.pickRandom(
+                        this.withProperties(properties)
+                    ),
+                    level: 1
+                }
+            ];
+        }
 
         if (properties && typeof properties.title === "string") {
             this.title = properties.title;
         } else if (this.nobility === "Knighted") {
             this.title = this.gender === "Male" ? "Sir" : "Dame";
         } else {
-            this.title = this.place.lists.title.pickRandom(
+            this.title = this.context.title.pickRandom(
                 this.withProperties(properties)
             );
         }
@@ -113,7 +145,7 @@ export class NPC implements SharedProperties {
             this.ideal = properties.ideal;
         } else {
             let [ethic, moral] = this.alignment.split(" ");
-            this.ideal = this.place.lists.ideal.pickRandom({
+            this.ideal = this.context.ideal.pickRandom({
                 ethic: ethic,
                 moral: moral
             });
@@ -122,7 +154,7 @@ export class NPC implements SharedProperties {
         if (properties && typeof properties.profession === "string") {
             this.profession = properties.profession;
         } else if (this.maturity !== "infant") {
-            this.profession = this.place.lists.profession.pickRandom(
+            this.profession = this.context.profession.pickRandom(
                 Object.assign(
                     {
                         combatant: this.isCombatant()
@@ -157,7 +189,7 @@ export class NPC implements SharedProperties {
         if (properties && typeof properties.armor === "string") {
             this.armor = properties.armor;
         } else if (this.isCombatant()) {
-            this.armor = this.place.lists.armor.pickRandom(
+            this.armor = this.context.armor.pickRandom(
                 this.withProperties(properties)
             );
         } else {
@@ -170,8 +202,8 @@ export class NPC implements SharedProperties {
             this.weapons = new Array(Math.floor(Math.random() * 2) + 1)
                 .fill(null)
                 .map(() => {
-                    if (this.place) {
-                        return this.place.lists.weapons.pickRandom(
+                    if (this.context) {
+                        return this.context.weapons.pickRandom(
                             this.withProperties(properties)
                         );
                     }
@@ -201,6 +233,24 @@ export class NPC implements SharedProperties {
         } else {
             this.speed = this.getSpeed();
         }
+
+        if (properties && properties.abilities instanceof Abilities) {
+            this.abilities = properties.abilities;
+        } else {
+            this.abilities = new Abilities(options.abilitiesOptions);
+        }
+
+        if (properties && properties.skills instanceof Skills) {
+            this.skills = properties.skills;
+        } else {
+            this.skills = new Skills(this);
+        }
+
+        if (properties && properties.hitPoints) {
+            this.hitPoints = properties.hitPoints;
+        } else {
+            this.hitPoints = this.getHitPoints();
+        }
     }
 
     withProperties(properties: Partial<NPC>) {
@@ -228,20 +278,22 @@ export class NPC implements SharedProperties {
     isCombatant() {
         if (["infant", "child"].includes(this.maturity)) return false;
 
-        if (this.class) {
-            let chosen_class = this.place.lists.class.getItem(this.class);
+        if (this.classes) {
+            let is_combatant = this.classes.some(classSet => {
+                let classItem = this.context.class.getItem(classSet.name);
 
-            if (
-                chosen_class &&
-                typeof chosen_class.combatant === "boolean" &&
-                !chosen_class.combatant
-            ) {
-                return false;
-            }
+                return (
+                    classItem &&
+                    typeof classItem.combatant === "boolean" &&
+                    classItem.combatant
+                );
+            });
+
+            if (!is_combatant) return false;
         }
 
         if (this.profession) {
-            let chosen_profession = this.place.lists.profession.getItem(
+            let chosen_profession = this.context.profession.getItem(
                 this.profession
             );
 
@@ -294,7 +346,7 @@ export class NPC implements SharedProperties {
 
         return `${
             this.getName() + (this.profession ? ` (${this.profession})` : "")
-        }: ${ucfirst(this.maturity)} ${this.race} ${this.class}, ${
+        }: ${ucfirst(this.maturity)} ${this.race} ${this.classes}, ${
             this.alignment
         }. ${this.forename} is ${
             this.characteristic + detail + pronoun + items
@@ -302,15 +354,45 @@ export class NPC implements SharedProperties {
     }
 
     getSpeed() {
-        let raceItem = this.place.lists.race.getItem(this.race);
+        if (this.speed) return this.speed;
+
+        let raceItem = this.context.race.getItem(this.race);
 
         return raceItem && raceItem.speed ? raceItem.speed : 30;
     }
 
+    getLevel() {
+        return this.classes.reduce((level, classSet) => {
+            return level + classSet.level;
+        }, 0);
+    }
+
+    getHitPoints() {
+        if (this.hitPoints) return this.hitPoints;
+
+        let level = this.getLevel();
+
+        let hitDice = this.classes.map(classSet => {
+            let classItem = this.context.class.getItem(classSet.name);
+
+            let hitDice =
+                classItem && classItem.hitDice ? classItem.hitDice : "d4";
+
+            if (level === 1) hitDice += "min" + hitDice.substring(1);
+
+            return `(${hitDice} +
+                ${this.abilities.getModifier("constitution")})`;
+        });
+
+        return new DiceRoll(hitDice.join(" + ")).total;
+    }
+
     getLanguages() {
-        let allLanguages = this.place.lists.languages.getValues();
-        let raceItem = this.place.lists.race.getItem(this.race);
-        let bgItem = this.place.lists.background.getItem(this.background);
+        if (this.languages) return this.languages;
+
+        let allLanguages = this.context.languages.getValues();
+        let raceItem = this.context.race.getItem(this.race);
+        let bgItem = this.context.background.getItem(this.background);
 
         let input = [
             "Common",
@@ -332,16 +414,20 @@ export class NPC implements SharedProperties {
     }
 
     getTools() {
-        let bgItem = this.place.lists.background.getItem(this.background);
+        let bgItem = this.context.background.getItem(this.background);
 
         return List.pickList([...(bgItem && bgItem.tools ? bgItem.tools : [])]);
     }
 
     getSkills() {
-        let bgItem = this.place.lists.background.getItem(this.background);
+        let bgItem = this.context.background.getItem(this.background);
 
         return List.pickList([
             ...(bgItem && bgItem.skills ? bgItem.skills : [])
         ]);
+    }
+
+    getProficiencyBonus() {
+        return Math.floor((this.getLevel() - 1) / 4) + 2;
     }
 }

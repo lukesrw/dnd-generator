@@ -1,64 +1,28 @@
+import { TavernPatronContext, TavernStaffContext } from "../context/Tavern";
 import { NPC } from "./NPC";
-import { Place } from "./Place";
-import { List } from "../List";
 
-export class Tavern extends Place {
-    staff: NPC[];
+const patronContext = new TavernPatronContext();
+const staffContext = new TavernStaffContext();
+
+export class Tavern {
     patrons: NPC[];
+    staff: NPC[];
 
-    constructor(staff: number, patrons: number) {
-        super();
+    constructor(patrons: number | NPC[] = 5, staff: number | NPC[] = 2) {
+        if (Array.isArray(patrons)) {
+            this.patrons = patrons;
+        } else {
+            this.patrons = new Array(patrons)
+                .fill(null)
+                .map(_ => new NPC(patronContext));
+        }
 
-        this.staff = new Array(staff).fill(null);
-        this.generateStaff();
-
-        this.patrons = new Array(patrons).fill(null);
-        this.generatePatrons();
-    }
-
-    generateStaff() {
-        let professions = this.lists.profession
-            .getItems()
-            .filter((item) => {
-                return /tavern|barkeep|maid|inn/iu.test(item.value);
-            })
-            .map((item) => item.value);
-
-        this.staff = this.staff.map(() => {
-            return new NPC(this, {
-                maturity: List.pickRandom(["adult", "elder"]),
-                profession: List.pickRandom(professions),
-            });
-        });
-    }
-
-    generatePatrons() {
-        let young_patrons: NPC[] = [];
-        let adult_patrons: NPC[] = [];
-
-        this.patrons = this.patrons.map(() => {
-            let npc = new NPC();
-
-            /**
-             * sort npcs into "young" and "adult"
-             */
-            if (npc.maturity === "infant" || npc.maturity === "child") {
-                young_patrons.push(npc);
-            } else if (npc.surname) {
-                adult_patrons.push(npc);
-            }
-
-            return npc;
-        });
-
-        /**
-         * assign any "young" patrons parents/guardians
-         */
-        young_patrons.forEach((patron) => {
-            let parent = List.pickRandom(adult_patrons);
-
-            patron.surname = parent.surname;
-            patron.race = parent.race;
-        });
+        if (Array.isArray(staff)) {
+            this.staff = staff;
+        } else {
+            this.staff = new Array(staff)
+                .fill(null)
+                .map(_ => new NPC(staffContext));
+        }
     }
 }

@@ -1,4 +1,4 @@
-import * as Generic from "../interfaces/generic";
+import * as Generic from "../../interfaces/generic";
 
 export type PickList = (
     | string
@@ -10,7 +10,7 @@ export type PickList = (
 
 export type PickListCallback = (item?: string) => string[];
 
-export type Item<Custom> = {
+export type Item<Custom = {}> = {
     weight?: number;
     value: string;
 } & Custom;
@@ -157,7 +157,7 @@ export class List<Custom = {}> {
             if (Array.isArray(item.value)) return List.pickRandom(item.value);
         } else {
             if (filter) {
-                delete filter.place;
+                delete filter.context;
             }
 
             throw new Error(

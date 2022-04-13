@@ -1,4 +1,4 @@
-import { List } from "../../List";
+import { List } from "../List";
 import { NPC } from "../../generator/NPC";
 
 export type Sex = "Male" | "Female";

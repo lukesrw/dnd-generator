@@ -1,4 +1,4 @@
-import { List, PickList } from "../../List";
+import { List, PickList } from "../List";
 import { fNGSupportedRaces } from "../name/name";
 
 export interface RaceProperties {

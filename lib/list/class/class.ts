@@ -1,4 +1,4 @@
-import { List } from "../../List";
+import { List } from "../List";
 
 /**
  * Using table of race & class synergies to filter sensible/reasonable combinations
@@ -9,6 +9,7 @@ import { List } from "../../List";
 
 export interface ClassProperties {
     combatant: boolean;
+    hitDice: string;
 }
 
 export class ClassList extends List<ClassProperties> {

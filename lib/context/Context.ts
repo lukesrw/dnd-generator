@@ -1,4 +1,3 @@
-import { List } from "../List";
 import { AgeList } from "../list/age/age";
 import { AlignmentList } from "../list/alignment/alignment";
 import { ArmorList } from "../list/armor/armor";
@@ -13,6 +12,7 @@ import { FlawList } from "../list/flaw/flaw";
 import { HairList } from "../list/hair/hair";
 import { IdealList } from "../list/ideal/ideal";
 import { LanguageList } from "../list/languages/languages";
+import { List } from "../list/List";
 import { MaturityList } from "../list/maturity/maturity";
 import { MotivationList } from "../list/motivation/motivation";
 import { NobilityList } from "../list/nobility/nobility";
@@ -72,35 +72,50 @@ interface Lists extends SharedProperties {
     languages: LanguageList | List;
 }
 
-export class Place {
-    lists: Lists;
+export class Context {
+    ideal: IdealList | List;
+    flaw: FlawList | List;
+    maturity: MaturityList | List;
+    age: AgeList | List;
+    alignment: AlignmentList | List;
+    armor: ArmorList | List;
+    characteristic: CharacteristicList | List;
+    class: ClassList | List<ClassProperties>;
+    eyes: EyeList | List;
+    hair: HairList | List;
+    motivation: MotivationList | List;
+    trait: TraitList | List;
+    nobility: NobilityList | List;
+    profession: ProfessionList | List<ProfessionProperties>;
+    race: RaceList | List<RaceProperties>;
+    sex: SexList | List;
+    skin: SkinList | List;
+    title: TitleList | List;
+    weapons: WeaponList | List;
+    background: BackgroundList | List<BackgroundProperties>;
+    languages: LanguageList | List;
 
-    constructor(lists?: Partial<Lists>) {
-        this.lists = Object.assign(
-            {
-                maturity: new MaturityList(),
-                age: new AgeList(),
-                alignment: new AlignmentList(),
-                armor: new ArmorList(),
-                characteristic: new CharacteristicList(),
-                class: new ClassList(),
-                eyes: new EyeList(),
-                hair: new HairList(),
-                motivation: new MotivationList(),
-                flaw: new FlawList(),
-                ideal: new IdealList(),
-                trait: new TraitList(),
-                nobility: new NobilityList(),
-                profession: new ProfessionList(),
-                race: new RaceList(),
-                sex: new SexList(),
-                skin: new SkinList(),
-                title: new TitleList(),
-                weapons: new WeaponList(),
-                background: new BackgroundList(),
-                languages: new LanguageList()
-            },
-            lists || {}
-        );
+    constructor(lists: Partial<Lists> = {}) {
+        this.maturity = lists.maturity || new MaturityList();
+        this.age = lists.age || new AgeList();
+        this.alignment = lists.alignment || new AlignmentList();
+        this.armor = lists.armor || new ArmorList();
+        this.characteristic = lists.characteristic || new CharacteristicList();
+        this.class = lists.class || new ClassList();
+        this.eyes = lists.eyes || new EyeList();
+        this.hair = lists.hair || new HairList();
+        this.motivation = lists.motivation || new MotivationList();
+        this.flaw = lists.flaw || new FlawList();
+        this.ideal = lists.ideal || new IdealList();
+        this.trait = lists.trait || new TraitList();
+        this.nobility = lists.nobility || new NobilityList();
+        this.profession = lists.profession || new ProfessionList();
+        this.race = lists.race || new RaceList();
+        this.sex = lists.sex || new SexList();
+        this.skin = lists.skin || new SkinList();
+        this.title = lists.title || new TitleList();
+        this.weapons = lists.weapons || new WeaponList();
+        this.background = lists.background || new BackgroundList();
+        this.languages = lists.languages || new LanguageList();
     }
 }

@@ -4,7 +4,7 @@ A system for generating random D&D 5E information
 
 ## Lists
 
-Each list extends the [List](/lib/List.ts) class, which implements...
+Each list extends the [List](lib/list/List.ts) class, which implements...
 
 -   Constructor to set file location/items directly
 -   `getItems` method to retrieve all items
