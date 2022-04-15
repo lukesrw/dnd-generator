@@ -65,27 +65,22 @@ export class YeomanProfessionList extends List<ProfessionProperties> {
 }
 
 export class ProfessionList extends List<ProfessionProperties> {
-    getItems() {
-        let professions = [
-            new CommonProfessionList(),
-            new EsquireProfessionList(),
-            new GentleProfessionList(),
-            new MerchantProfessionList(),
-            new NobleProfessionList(),
-            new PeasantProfessionList(),
-            new ScholarProfessionList(),
-            new ServantProfessionList(),
-            new UnderclassProfessionList(),
-            new YeomanProfessionList()
-        ];
-
-        this.items = [];
-        professions.forEach(profession => {
-            if (this.items) {
-                this.items = this.items.concat(profession.getItems());
-            }
-        });
-
-        return this.items;
+    constructor() {
+        super(
+            ([] as any[])
+                .concat(
+                    new CommonProfessionList().raw,
+                    new EsquireProfessionList().raw,
+                    new GentleProfessionList().raw,
+                    new MerchantProfessionList().raw,
+                    new NobleProfessionList().raw,
+                    new PeasantProfessionList().raw,
+                    new ScholarProfessionList().raw,
+                    new ServantProfessionList().raw,
+                    new UnderclassProfessionList().raw,
+                    new YeomanProfessionList().raw
+                )
+                .filter(item => item)
+        );
     }
 }
