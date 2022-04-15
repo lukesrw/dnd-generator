@@ -20,17 +20,49 @@ export class List<Custom = {}> {
     raw: false | Item<Partial<Custom>>[];
     weighted: boolean;
 
+    /**
+     * ### List
+     *
+     * Create a new list for the given `items`.
+     *
+     * @param items Array of items to represent
+     */
     constructor(items?: Item<Partial<Custom>>[]) {
         this.weighted = false;
         this.raw = items || false;
         this.items = items || false;
     }
 
+    /**
+     * ### List.pickRandom
+     *
+     * Pick a random item from the given array.
+     *
+     * @param list Array to pick from
+     * @returns random item from given array
+     */
     static pickRandom<Type>(list: Type[]) {
         return list[Math.floor(Math.random() * list.length)];
     }
 
-    //pick multipule randoms from list (either array or object)
+    /**
+     * ### List.pickList
+     *
+     * Process and pick a list of items from a Pick List.
+     *
+     * #### Example `raw`
+     *
+     * ```
+     * [
+     *      "always picked",
+     *      { "pick": 1, "items": ["1/3 chance to be picked", "1/3 chance to be picked", "1/3 chance to be picked"] }
+     * ]
+     * ```
+     *
+     * @param raw Array of strings or object with "pick" and "items" keys
+     * @param onPickCallback Callback after an item is picked/substitution for when items is empty
+     * @returns array of picked items
+     */
     static pickList(raw: PickList, onPickCallback?: PickListCallback) {
         let list: string[] = [];
 
@@ -74,21 +106,40 @@ export class List<Custom = {}> {
         return list;
     }
 
-    //returns unique array containing every unique value in the list
+    /**
+     * ### getValues
+     *
+     * Retrieve all `"value"` properties from the current List.
+     *
+     * @returns array of values from the current List
+     */
     getValues() {
         if (!this.raw) return [];
 
         return this.raw.map(item => item.value);
     }
 
-    //returns one  item with a particular value
+    /**
+     * ### getItem
+     *
+     * Retrieve a single item from the current List for the given `value`.
+     *
+     * @param value Find specific Item with this value
+     * @returns Item object with the given value
+     */
     getItem(value: string) {
         if (!this.raw) return undefined;
 
         return this.raw.find(item => item.value === value);
     }
 
-    //returns the entire list
+    /**
+     * ### getItems
+     *
+     * Retrieve all items weighted from the current List.
+     *
+     * @returns weighted array of the current List's Items
+     */
     getItems() {
         if (this.items && !this.weighted) {
             this.items.forEach((item: Item<Partial<Custom>>) => {
@@ -113,7 +164,19 @@ export class List<Custom = {}> {
         >[];
     }
 
-    //returns a list according to filter
+    /**
+     * ### getFiltered
+     *
+     * Retrieve all items from the current List that match the given filter.
+     *
+     * #### Example `filter`
+     * ```{ "race": "Human", sex: "Male", gender: "Male" }```
+     *
+     * This would filter items from the List that aren't available to a Male Human
+     *
+     * @param filter Filter to use to find Items
+     * @returns array of filtered Items
+     */
     getFiltered(filter?: Generic.Object) {
         let list = this.getItems();
 
@@ -149,7 +212,14 @@ export class List<Custom = {}> {
         return list;
     }
 
-    //creates the list and then returns a randomized item
+    /**
+     * ### pickRandom
+     *
+     * Pick a random item from the current List that matches a given filter.
+     *
+     * @param filter Filter to use to find Items (see `getFiltered`)
+     * @returns `"value"` of the picked Item
+     */
     pickRandom(filter?: Generic.Object): string {
         let item = List.pickRandom(this.getFiltered(filter));
 
