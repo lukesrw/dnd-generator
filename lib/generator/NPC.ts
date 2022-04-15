@@ -400,17 +400,7 @@ export class NPC implements SharedProperties {
             ...(bgItem && bgItem.languages ? bgItem.languages : [])
         ];
 
-        return List.pickList(input, (item?: string) => {
-            if (item) {
-                let index = allLanguages.indexOf(item);
-
-                if (index > -1) {
-                    allLanguages.splice(index, 1);
-                }
-            }
-
-            return allLanguages;
-        });
+        return List.pickList(input, () => allLanguages);
     }
 
     getTools() {
