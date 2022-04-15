@@ -81,20 +81,12 @@ export class List<Custom = {}> {
                         picks = onPickCallback();
 
                         if (picks.length === 0) break;
-
-                        picks = JSON.parse(JSON.stringify(picks));
                     }
 
                     let pick = List.pickRandom(picks);
 
                     if (pick) {
-                        if (onPickCallback) {
-                            picks = onPickCallback(pick);
-
-                            if (picks.length === 0) break;
-
-                            picks = JSON.parse(JSON.stringify(picks));
-                        }
+                        if (onPickCallback) onPickCallback(pick);
 
                         list.push(pick);
                         picks.splice(pick.indexOf(pick), 1);
