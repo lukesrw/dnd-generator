@@ -76,20 +76,23 @@ export class List<Custom = {}> {
                     JSON.stringify(selection.items)
                 );
 
+                if (picks.length === 0 && onPickCallback) {
+                    picks = onPickCallback();
+
+                    if (picks.length === 0) return;
+                }
+
                 for (let i = 0; i < selection.pick; i += 1) {
-                    if (picks.length === 0 && onPickCallback) {
-                        picks = onPickCallback();
-
-                        if (picks.length === 0) break;
-                    }
-
                     let pick = List.pickRandom(picks);
 
                     if (pick) {
                         if (onPickCallback) onPickCallback(pick);
 
                         list.push(pick);
-                        picks.splice(pick.indexOf(pick), 1);
+
+                        picks.splice(picks.indexOf(pick), 1);
+
+                        if (picks.length === 0) break;
                     }
                 }
             }
