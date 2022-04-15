@@ -1,4 +1,4 @@
-import { DiceRoll } from "@dice-roller/rpg-dice-roller";
+const { DiceRoll } = require("@dice-roller/rpg-dice-roller/lib/umd/bundle.js");
 import * as Generic from "../../interfaces/generic";
 import { Gender } from "../list/gender/gender";
 import { List } from "../list/List";
