@@ -1,10 +1,12 @@
 import { List, Item } from "../list/List";
 import { MaturityList } from "../list/maturity/maturity";
+import { NobilityList } from "../list/nobility/nobility";
 import { ProfessionList } from "../list/profession/profession";
 import { Context } from "./Context";
 
 let { raw: maturitiesRaw } = new MaturityList();
 let { raw: professionsRaw } = new ProfessionList();
+let { raw: nobilitiesRaw } = new NobilityList();
 
 let maturityItems: Item[] = [];
 if (maturitiesRaw) {
@@ -24,9 +26,19 @@ export class TavernStaffContext extends Context {
             });
         }
 
+        let nobilityItems: Item[] = [];
+        if (nobilitiesRaw) {
+            nobilityItems = nobilitiesRaw.filter(item => {
+                return /Common|Merchant/iu.test(item.value);
+            });
+        }
+
+        console.log(professionItems);
+
         super({
             maturity: maturityList,
-            profession: new List(professionItems)
+            profession: new List(professionItems),
+            nobility: new List(nobilityItems)
         });
     }
 }
