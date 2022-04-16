@@ -62,4 +62,4 @@ async function clean(source = []) {
     }
 }
 
-clean([__dirname]);
+clean([__dirname, ".."]);

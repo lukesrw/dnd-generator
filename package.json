@@ -1,8 +1,10 @@
 {
     "main": "./index",
     "scripts": {
-        "build": "npm install && node clean && tsc && node build",
-        "test": "npm run build && cls && jest && node clean"
+        "clean": "node tools/clean",
+        "build": "npm install && npm run clean && tsc && node tools/build",
+        "test": "npm run build && cls && jest && npm run clean",
+        "tool": "npm run build && node tools/index"
     },
     "devDependencies": {
         "@types/jest": "^27.4.1",
