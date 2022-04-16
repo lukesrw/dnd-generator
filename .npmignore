@@ -6,9 +6,7 @@ tsconfig.*
 *.scss
 *.tgz
 .eslintrc.json
-build.js
-watch.js
-clean.js
+/tools/
 .eslintignore
 *.json
 jest.config.js
