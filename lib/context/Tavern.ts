@@ -33,8 +33,6 @@ export class TavernStaffContext extends Context {
             });
         }
 
-        console.log(professionItems);
-
         super({
             maturity: maturityList,
             profession: new List(professionItems),
