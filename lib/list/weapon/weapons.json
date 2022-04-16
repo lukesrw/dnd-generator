@@ -27,7 +27,7 @@
         "value": "spear"
     },
     {
-        "class": ["Ranger", "Rogue"],
+        "classes": ["Ranger", "Rogue"],
         "value": ["blowgun", "longbow", "shortbow", "crossbow"]
     },
     {

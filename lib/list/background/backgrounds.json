@@ -378,7 +378,7 @@
     },
     {
         "race": ["Human"],
-        "class": ["Barbarian"],
+        "classes": ["Barbarian"],
         "value": "Uthgardt Tribe Member",
         "languages": [{ "pick": 1, "items": [] }],
         "tools": [

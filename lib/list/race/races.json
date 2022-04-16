@@ -1,6 +1,6 @@
 [
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cavalier",
@@ -33,7 +33,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cavalier",
@@ -66,7 +66,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cavalier",
@@ -100,7 +100,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cavalier",
@@ -134,7 +134,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cavalier",
@@ -168,7 +168,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cavalier",
@@ -221,7 +221,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cavalier",
@@ -255,7 +255,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cavalier",
@@ -289,7 +289,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cavalier",
@@ -323,7 +323,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cavalier",
@@ -357,7 +357,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cavalier",
@@ -391,7 +391,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cleric",
@@ -417,7 +417,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cleric",
@@ -437,7 +437,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cavalier",
@@ -461,7 +461,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cavalier",
@@ -485,7 +485,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cavalier",
@@ -509,7 +509,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cavalier",
@@ -533,7 +533,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Cavalier",
             "Knight",
@@ -554,7 +554,7 @@
         }
     },
     {
-        "class": ["Barbarian", "Paladin", "Artificer"],
+        "classes": ["Barbarian", "Paladin", "Artificer"],
         "value": "Dwarf",
         "speed": 25,
         "languages": ["Dwarvish"],
@@ -566,7 +566,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Cavalier",
             "Cleric",
@@ -586,7 +586,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Cavalier",
             "Cleric",
@@ -606,7 +606,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Cavalier",
             "Cleric",
@@ -626,7 +626,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Cavalier",
             "Cleric",
@@ -648,7 +648,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cleric",
@@ -675,7 +675,7 @@
         }
     },
     {
-        "class": ["Barbarian", "Cavalier", "Knight", "Paladin"],
+        "classes": ["Barbarian", "Cavalier", "Knight", "Paladin"],
         "value": "Earth Genasi",
         "speed": 30,
         "languages": ["Primordial"],
@@ -688,7 +688,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Cavalier",
             "Cleric",
@@ -713,7 +713,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cleric",
@@ -735,7 +735,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cavalier",
@@ -760,7 +760,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cleric",
@@ -786,7 +786,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cavalier",
@@ -820,7 +820,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cavalier",
@@ -846,7 +846,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cavalier",
@@ -876,7 +876,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cavalier",
@@ -900,7 +900,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Cavalier",
             "Druid",
@@ -927,7 +927,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Fighter",
             "Knight",
@@ -949,7 +949,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cavalier",
@@ -982,7 +982,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cleric",
@@ -1006,7 +1006,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Cavalier",
             "Cleric",
@@ -1030,7 +1030,7 @@
         }
     },
     {
-        "class": ["Barbarian", "Cavalier", "Druid", "Paladin"],
+        "classes": ["Barbarian", "Cavalier", "Druid", "Paladin"],
         "value": "Orc",
         "speed": 30,
         "languages": ["Orc"],
@@ -1042,7 +1042,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cavalier",
@@ -1064,7 +1064,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cavalier",
@@ -1089,7 +1089,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cavalier",
@@ -1123,7 +1123,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Barbarian",
             "Bard",
             "Cavalier",
@@ -1156,7 +1156,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Bard",
             "Cleric",
             "Sorcerer",
@@ -1176,7 +1176,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Bard",
             "Cleric",
             "Druid",
@@ -1197,7 +1197,7 @@
         }
     },
     {
-        "class": ["Bard", "Sorcerer", "Swashbuckler", "Warlock"],
+        "classes": ["Bard", "Sorcerer", "Swashbuckler", "Warlock"],
         "value": "Scourge Aasimar",
         "speed": 30,
         "languages": ["Celestial"],
@@ -1210,7 +1210,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Bard",
             "Cavalier",
             "Knight",
@@ -1234,7 +1234,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Bard",
             "Cavalier",
             "Knight",
@@ -1257,7 +1257,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Bard",
             "Cavalier",
             "Knight",
@@ -1280,7 +1280,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Bard",
             "Cavalier",
             "Cleric",
@@ -1304,7 +1304,7 @@
         }
     },
     {
-        "class": ["Bard", "Trickster", "Artificer"],
+        "classes": ["Bard", "Trickster", "Artificer"],
         "value": "Elf",
         "speed": 30,
         "languages": ["Elvish"],
@@ -1316,7 +1316,7 @@
         }
     },
     {
-        "class": ["Bard", "Trickster", "Artificer"],
+        "classes": ["Bard", "Trickster", "Artificer"],
         "value": "Sea Elf",
         "speed": 30,
         "languages": ["Elvish"],
@@ -1329,7 +1329,7 @@
         }
     },
     {
-        "class": ["Bard", "Trickster", "Artificer"],
+        "classes": ["Bard", "Trickster", "Artificer"],
         "value": "Shadar-Kai",
         "speed": 30,
         "languages": ["Elvish"],
@@ -1342,7 +1342,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Bard",
             "Cavalier",
             "Cleric",
@@ -1365,7 +1365,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Bard",
             "Monk",
             "Rogue",
@@ -1387,7 +1387,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Bard",
             "Mystic",
             "Paladin",
@@ -1412,7 +1412,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Bard",
             "Mystic",
             "Paladin",
@@ -1437,7 +1437,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Bard",
             "Mystic",
             "Paladin",
@@ -1462,7 +1462,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Bard",
             "Knight",
             "Mystic",
@@ -1488,7 +1488,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Cavalier",
             "Fighter",
             "Knight",
@@ -1515,7 +1515,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Cavalier",
             "Monk",
             "Rogue",
@@ -1535,7 +1535,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Knight",
             "Mystic",
             "Rogue",
@@ -1557,7 +1557,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Knight",
             "Mystic",
             "Rogue",
@@ -1579,7 +1579,7 @@
         }
     },
     {
-        "class": [
+        "classes": [
             "Knight",
             "Mystic",
             "Rogue",
@@ -1601,7 +1601,7 @@
         }
     },
     {
-        "class": ["Knight", "Mystic", "Trickster", "Wizard", "Artificer"],
+        "classes": ["Knight", "Mystic", "Trickster", "Wizard", "Artificer"],
         "value": "Rock Gnome",
         "speed": 25,
         "languages": ["Gnomish"],
@@ -1614,7 +1614,7 @@
         }
     },
     {
-        "class": ["Knight", "Mystic", "Trickster", "Artificer"],
+        "classes": ["Knight", "Mystic", "Trickster", "Artificer"],
         "value": "Gnome",
         "speed": 25,
         "languages": ["Gnomish"],

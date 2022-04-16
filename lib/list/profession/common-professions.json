@@ -148,7 +148,7 @@
         "alignment": ["Lawful Good", "Lawful Neutral", "Lawful Evil"]
     },
     {
-        "class": ["Ranger"],
+        "classes": ["Ranger"],
         "nobility": ["Common"],
         "maturity": ["adult", "elder"],
         "value": "Archer"
@@ -224,7 +224,7 @@
         "value": "Illusionist"
     },
     {
-        "class": ["Wizard", "Sorcerer", "Warlock", "Cleric"],
+        "classes": ["Wizard", "Sorcerer", "Warlock", "Cleric"],
         "nobility": [
             "Common",
             "Scholar",
@@ -329,7 +329,7 @@
         "value": "Kitchen Drudge"
     },
     {
-        "class": ["Wizard", "Sorcerer", "Warlock", "Cleric"],
+        "classes": ["Wizard", "Sorcerer", "Warlock", "Cleric"],
         "nobility": ["Common", "Scholar"],
         "maturity": ["adult", "elder"],
         "value": "Alchemist"
@@ -345,7 +345,7 @@
         "value": "Bloodletter"
     },
     {
-        "class": ["Wizard", "Sorcerer", "Warlock", "Cleric", "Druid"],
+        "classes": ["Wizard", "Sorcerer", "Warlock", "Cleric", "Druid"],
         "nobility": [
             "Common",
             "Scholar",
