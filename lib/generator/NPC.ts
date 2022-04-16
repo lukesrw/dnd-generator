@@ -15,6 +15,11 @@ export interface NPCOptions {
     abilitiesOptions?: AbilitiesOptions;
 }
 
+export type Classes = {
+    name: string;
+    level: number;
+};
+
 export class NPC implements SharedProperties {
     // basic
     context: Context;
@@ -33,10 +38,7 @@ export class NPC implements SharedProperties {
     skills: Skills;
 
     armor: string;
-    classes: {
-        name: string;
-        level: number;
-    }[];
+    classes: Classes[];
     maturity!: string;
     age!: string;
     alignment!: string;
