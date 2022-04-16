@@ -185,8 +185,6 @@ export class List<Custom = {}> {
                         filter_copy[property] = [filter_copy[property]];
                     }
 
-                    if (!(property in item)) return false;
-
                     if (Object.prototype.hasOwnProperty.call(item, property)) {
                         let key = property as keyof typeof item;
                         let array = (
@@ -194,15 +192,13 @@ export class List<Custom = {}> {
                         ) as string[];
 
                         if (array) {
-                            return array.every((option: any) => {
-                                if (property === "classes") {
-                                    return !(
-                                        filter_copy[property] as Classes[]
-                                    ).some(classSet => {
-                                        return classSet.name === option;
-                                    });
-                                }
+                            if (property === "classes") {
+                                return !(
+                                    filter_copy.classes as Classes[]
+                                ).every(set => array.includes(set.name));
+                            }
 
+                            return array.every((option: any) => {
                                 return (
                                     filter_copy[property].indexOf(option) === -1
                                 );
