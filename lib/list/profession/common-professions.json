@@ -109,32 +109,29 @@
         "nobility": ["Common"],
         "maturity": ["adult", "elder"],
         "value": "Torturer",
-        "alignment": [
-            "Lawful Neutral",
-            "True Neutral",
-            "Chaotic Neutral",
-            "Lawful Evil",
-            "Neutral Evil",
-            "Chaotic Evil"
-        ]
+        "moral": ["Neutral", "Evil"],
+        "ethic": ["Lawful", "Neutral", "Chaotic"]
     },
     {
         "nobility": ["Common"],
         "maturity": ["adult", "elder"],
         "value": "Guard",
-        "alignment": ["Lawful Good", "Lawful Neutral", "Lawful Evil"]
+        "moral": ["Good", "Neutral", "Evil"],
+        "ethic": ["Lawful"]
     },
     {
         "nobility": ["Common"],
         "maturity": ["adult", "elder"],
         "value": "Jailer",
-        "alignment": ["Lawful Good", "Lawful Neutral", "Lawful Evil"]
+        "moral": ["Good", "Neutral", "Evil"],
+        "ethic": ["Lawful"]
     },
     {
         "nobility": ["Common"],
         "maturity": ["adult", "elder"],
         "value": "Warden",
-        "alignment": ["Lawful Good", "Lawful Neutral", "Lawful Evil"]
+        "moral": ["Good", "Neutral", "Evil"],
+        "ethic": ["Lawful"]
     },
     {
         "nobility": ["Common"],
@@ -145,7 +142,8 @@
         "nobility": ["Common", "Knighted"],
         "maturity": ["adult", "elder"],
         "value": "Admiral",
-        "alignment": ["Lawful Good", "Lawful Neutral", "Lawful Evil"]
+        "moral": ["Good", "Neutral", "Evil"],
+        "ethic": ["Lawful"]
     },
     {
         "classes": ["Ranger"],
@@ -656,12 +654,8 @@
         "nobility": ["Common"],
         "maturity": ["adult", "elder"],
         "value": "Pimp",
-        "alignment": [
-            "True Neutral",
-            "Chaotic Neutral",
-            "Neutral Evil",
-            "Chaotic Evil"
-        ]
+        "moral": ["Neutral", "Evil"],
+        "ethic": ["Chaotic", "Neutral"]
     },
     {
         "nobility": ["Common"],
@@ -792,51 +786,29 @@
         "nobility": ["Common"],
         "maturity": ["adult", "elder"],
         "value": "Drug Lord",
-        "alignment": [
-            "Lawful Neutral",
-            "True Neutral",
-            "Chaotic Neutral",
-            "Lawful Evil",
-            "Neutral Evil",
-            "Chaotic Evil"
-        ]
+        "ethic": ["Neutral", "Chaotic"],
+        "moral": ["Neutral", "Evil"]
     },
     {
         "nobility": ["Common"],
         "maturity": ["adult", "elder"],
         "value": "Fence",
-        "alignment": [
-            "Neutral Good",
-            "Chaotic Good",
-            "True Neutral",
-            "Chaotic Neutral",
-            "Neutral Evil",
-            "Chaotic Evil"
-        ]
+        "ethic": ["Neutral", "Chaotic"],
+        "moral": ["Good", "Neutral", "Evil"]
     },
     {
         "nobility": ["Common"],
         "maturity": ["adult", "elder"],
         "value": "Loan Shark",
-        "alignment": [
-            "True Neutral",
-            "Chaotic Neutral",
-            "Neutral Evil",
-            "Chaotic Evil"
-        ]
+        "ethic": ["Neutral", "Chaotic"],
+        "moral": ["Neutral", "Evil"]
     },
     {
         "nobility": ["Common"],
         "maturity": ["adult", "elder"],
         "value": "Outlaw",
-        "alignment": [
-            "Neutral Good",
-            "Chaotic Good",
-            "True Neutral",
-            "Chaotic Neutral",
-            "Neutral Evil",
-            "Chaotic Evil"
-        ]
+        "ethic": ["Neutral", "Chaotic"],
+        "moral": ["Good", "Neutral", "Evil"]
     },
     {
         "nobility": ["Common"],
@@ -852,14 +824,8 @@
         "nobility": ["Common"],
         "maturity": ["child", "adult", "elder"],
         "value": "Thief",
-        "alignment": [
-            "Neutral Good",
-            "Chaotic Good",
-            "True Neutral",
-            "Chaotic Neutral",
-            "Neutral Evil",
-            "Chaotic Evil"
-        ]
+        "ethic": ["Neutral", "Chaotic"],
+        "moral": ["Good", "Neutral", "Evil"]
     },
     {
         "nobility": ["Common"],

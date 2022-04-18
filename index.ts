@@ -4,17 +4,18 @@ import { Abilities, Skills } from "./lib/generator/Abilities";
 import { NPC } from "./lib/generator/NPC";
 import { Tavern } from "./lib/generator/Tavern";
 import { AgeList } from "./lib/list/age/age";
-import { AlignmentList } from "./lib/list/alignment/alignment";
 import { ArmorList } from "./lib/list/armor/armor";
 import { BackgroundList } from "./lib/list/background/background";
 import { CharacteristicList } from "./lib/list/characteristics/characteristics";
 import { ClassList } from "./lib/list/class/class";
+import { EthicList } from "./lib/list/ethic/ethic";
 import { EyeList } from "./lib/list/eye/eye";
 import { FlawList } from "./lib/list/flaw/flaw";
 import { HairList } from "./lib/list/hair/hair";
 import { LanguageList } from "./lib/list/languages/languages";
 import { List as _List } from "./lib/list/List";
 import { MaturityList } from "./lib/list/maturity/maturity";
+import { MoralList } from "./lib/list/moral/moral";
 import { MotivationList } from "./lib/list/motivation/motivation";
 import { NameList } from "./lib/list/name/name";
 import { NobilityList } from "./lib/list/nobility/nobility";
@@ -52,17 +53,18 @@ export const Context = {
 
 export const List = {
     Age: AgeList,
-    Alignment: AlignmentList,
     Armor: ArmorList,
     Background: BackgroundList,
     Characteristics: CharacteristicList,
     Class: ClassList,
+    Ethic: EthicList,
     Eye: EyeList,
     Flaw: FlawList,
     Hair: HairList,
     Language: LanguageList,
     List: _List,
     Maturity: MaturityList,
+    Moral: MoralList,
     Motivation: MotivationList,
     Name: NameList,
     Nobility: NobilityList,
