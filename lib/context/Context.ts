@@ -1,5 +1,4 @@
 import { AgeList } from "../list/age/age";
-import { AlignmentList } from "../list/alignment/alignment";
 import { ArmorList } from "../list/armor/armor";
 import {
     BackgroundList,
@@ -7,6 +6,7 @@ import {
 } from "../list/background/background";
 import { CharacteristicList } from "../list/characteristics/characteristics";
 import { ClassList, ClassProperties } from "../list/class/class";
+import { EthicList } from "../list/ethic/ethic";
 import { EyeList } from "../list/eye/eye";
 import { FlawList } from "../list/flaw/flaw";
 import { HairList } from "../list/hair/hair";
@@ -14,6 +14,7 @@ import { IdealList } from "../list/ideal/ideal";
 import { LanguageList } from "../list/languages/languages";
 import { List } from "../list/List";
 import { MaturityList } from "../list/maturity/maturity";
+import { MoralList } from "../list/moral/moral";
 import { MotivationList } from "../list/motivation/motivation";
 import { NobilityList } from "../list/nobility/nobility";
 import {
@@ -32,9 +33,10 @@ export interface SharedProperties {
     flaw: any;
     maturity: any;
     age: any;
-    alignment: any;
     armor: any;
     characteristic: any;
+    moral: any;
+    ethic: any;
     class: any;
     eyes: any;
     hair: any;
@@ -53,8 +55,9 @@ interface Lists extends SharedProperties {
     flaw: FlawList | List;
     maturity: MaturityList | List;
     age: AgeList | List;
-    alignment: AlignmentList | List;
     armor: ArmorList | List;
+    moral: MoralList | List;
+    ethic: EthicList | List;
     characteristic: CharacteristicList | List;
     class: ClassList | List<ClassProperties>;
     eyes: EyeList | List;
@@ -72,15 +75,16 @@ interface Lists extends SharedProperties {
     languages: LanguageList | List;
 }
 
-export class Context {
+export class Context implements Lists {
     ideal: IdealList | List;
     flaw: FlawList | List;
     maturity: MaturityList | List;
     age: AgeList | List;
-    alignment: AlignmentList | List;
     armor: ArmorList | List;
     characteristic: CharacteristicList | List;
     class: ClassList | List<ClassProperties>;
+    moral: MoralList | List;
+    ethic: EthicList | List;
     eyes: EyeList | List;
     hair: HairList | List;
     motivation: MotivationList | List;
@@ -98,7 +102,8 @@ export class Context {
     constructor(lists: Partial<Lists> = {}) {
         this.maturity = lists.maturity || new MaturityList();
         this.age = lists.age || new AgeList();
-        this.alignment = lists.alignment || new AlignmentList();
+        this.moral = lists.moral || new MoralList();
+        this.ethic = lists.ethic || new EthicList();
         this.armor = lists.armor || new ArmorList();
         this.characteristic = lists.characteristic || new CharacteristicList();
         this.class = lists.class || new ClassList();
