@@ -37,11 +37,14 @@ export class NPC implements SharedProperties {
     abilities: Abilities;
     skills: Skills;
 
+    // alignment
+    moral!: string;
+    ethic!: string;
+
     armor: string;
     classes: Classes[];
     maturity!: string;
     age!: string;
-    alignment!: string;
     characteristic!: string;
     class!: string;
     motivation!: string;
@@ -97,8 +100,9 @@ export class NPC implements SharedProperties {
         (
             [
                 "maturity",
-                "alignment",
                 "race",
+                "ethic",
+                "moral",
                 "age",
                 "skin",
                 "nobility",
@@ -146,11 +150,9 @@ export class NPC implements SharedProperties {
         if (properties && typeof properties.ideal === "string") {
             this.ideal = properties.ideal;
         } else {
-            let [ethic, moral] = this.alignment.split(" ");
-            this.ideal = this.context.ideal.pickRandom({
-                ethic: ethic,
-                moral: moral
-            });
+            this.ideal = this.context.ideal.pickRandom(
+                this.withProperties(properties)
+            );
         }
 
         if (properties && typeof properties.profession === "string") {
@@ -348,9 +350,9 @@ export class NPC implements SharedProperties {
 
         return `${
             this.getName() + (this.profession ? ` (${this.profession})` : "")
-        }: ${ucfirst(this.maturity)} ${this.race} ${this.classes}, ${
-            this.alignment
-        }. ${this.forename} is ${
+        }: ${ucfirst(this.maturity)} ${this.race} ${
+            this.classes
+        }, ${this.getAlignment()}. ${this.forename} is ${
             this.characteristic + detail + pronoun + items
         }. ${this.forename} seeks ${this.motivation}.`;
     }
@@ -421,5 +423,11 @@ export class NPC implements SharedProperties {
 
     getProficiencyBonus() {
         return Math.floor((this.getLevel() - 1) / 4) + 2;
+    }
+
+    getAlignment() {
+        let alignment = `${this.ethic} ${this.moral}`;
+
+        return alignment === "Neutral Neutral" ? "True Neutral" : alignment;
     }
 }
