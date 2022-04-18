@@ -1,25 +1,19 @@
 [
-	{
-		"nobility": ["Esquire"],
-		"maturity": ["adult", "elder"],
-		"value": "Banker"
-	},
-	{
-		"nobility": ["Esquire", "Noble, Royal"],
-		"maturity": ["elder"],
-		"value": "Judge",
-		"alignment": [
-			"Lawful Good",
-			"Neutral Good",
-			"Lawful Neutral",
-			"True Neutral",
-			"Lawful Evil",
-			"Neutral Evil"
-		]
-	},
-	{
-		"nobility": ["Esquire", "Noble", "Royal"],
-		"maturity": ["adult", "elder"],
-		"value": "Diplomat"
-	}
+    {
+        "nobility": ["Esquire"],
+        "maturity": ["adult", "elder"],
+        "value": "Banker"
+    },
+    {
+        "nobility": ["Esquire", "Noble, Royal"],
+        "maturity": ["elder"],
+        "value": "Judge",
+        "moral": ["Good", "Neutral", "Evil"],
+        "ethic": ["Lawful", "Neutral"]
+    },
+    {
+        "nobility": ["Esquire", "Noble", "Royal"],
+        "maturity": ["adult", "elder"],
+        "value": "Diplomat"
+    }
 ]
