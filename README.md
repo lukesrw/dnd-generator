@@ -18,8 +18,6 @@ Each list extends the [List](lib/list/List.ts) class, which implements...
     -   Age number
     -   Example: "400"
     -   Filters: Race and Maturity
--   Alignment
-    -   Example: "Chaotic Good"
 -   Armor
     -   Example: "studded leather armor"
     -   Filters: Druids not using metal
@@ -30,6 +28,8 @@ Each list extends the [List](lib/list/List.ts) class, which implements...
 -   Class
     -   Example: "Paladin"
     -   Filters: Races not suiting a class
+-   Ethic
+    -   Example: "Chaotic"
 -   Eye
     -   Example: "blue"
     -   Weights: Match the real world currently
@@ -43,6 +43,8 @@ Each list extends the [List](lib/list/List.ts) class, which implements...
 -   Maturity
     -   Age range, not number
     -   Example: "adult"
+-   Moral
+    -   Example: "Good"
 -   Motivation
     -   Example: "family"
 -   Name
