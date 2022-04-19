@@ -38,17 +38,17 @@ import { SkinList } from "./lib/list/skin/skin";
 import { TitleList } from "./lib/list/title/title";
 import { WeaponList } from "./lib/list/weapon/weapon";
 
+export const Context = {
+    Context: _Context,
+    TavernStaff: TavernStaffContext,
+    TavernPatron: TavernPatronContext
+};
+
 export const Generator = {
     Abilities: Abilities,
     NPC: NPC,
     Skills: Skills,
     Tavern: Tavern
-};
-
-export const Context = {
-    Context: _Context,
-    TavernStaff: TavernStaffContext,
-    TavernPatron: TavernPatronContext
 };
 
 export const List = {
@@ -87,3 +87,5 @@ export const List = {
     Title: TitleList,
     Weapon: WeaponList
 };
+
+export * as utils from "./lib/utils";
