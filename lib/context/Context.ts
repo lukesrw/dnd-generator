@@ -28,54 +28,39 @@ import { TitleList } from "../list/title/title";
 import { TraitList } from "../list/trait/trait";
 import { WeaponList } from "../list/weapon/weapon";
 
-export interface SharedProperties {
-    ideal: any;
-    flaw: any;
-    maturity: any;
-    age: any;
-    armor: any;
-    characteristic: any;
-    moral: any;
-    ethic: any;
-    class: any;
-    eyes: any;
-    hair: any;
-    motivation: any;
-    trait: any;
-    nobility: any;
-    profession: any;
-    race: any;
-    skin: any;
-    title: any;
-    background: any;
+export interface Shared<Type = any> {
+    ideal: Type;
+    flaw: Type;
+    maturity: Type;
+    age: Type;
+    armor: Type;
+    characteristic: Type;
+    moral: Type;
+    ethic: Type;
+    class: Type;
+    eyes: Type;
+    hair: Type;
+    motivation: Type;
+    trait: Type;
+    nobility: Type;
+    profession: Type;
+    race: Type;
+    skin: Type;
+    title: Type;
+    background: Type;
+    weapons: Type;
+    languages: Type;
+    sex: Type;
 }
 
-interface Lists extends SharedProperties {
-    ideal: IdealList | List;
-    flaw: FlawList | List;
-    maturity: MaturityList | List;
-    age: AgeList | List;
-    armor: ArmorList | List;
-    moral: MoralList | List;
-    ethic: EthicList | List;
-    characteristic: CharacteristicList | List;
+interface SharedProperties extends Shared<List> {
     class: ClassList | List<ClassProperties>;
-    eyes: EyeList | List;
-    hair: HairList | List;
-    motivation: MotivationList | List;
-    trait: TraitList | List;
-    nobility: NobilityList | List;
     profession: ProfessionList | List<ProfessionProperties>;
     race: RaceList | List<RaceProperties>;
-    sex: SexList | List;
-    skin: SkinList | List;
-    title: TitleList | List;
-    weapons: WeaponList | List;
     background: BackgroundList | List<BackgroundProperties>;
-    languages: LanguageList | List;
 }
 
-export class Context implements Lists {
+export class Context implements SharedProperties {
     ideal: IdealList | List;
     flaw: FlawList | List;
     maturity: MaturityList | List;
@@ -99,7 +84,7 @@ export class Context implements Lists {
     background: BackgroundList | List<BackgroundProperties>;
     languages: LanguageList | List;
 
-    constructor(lists: Partial<Lists> = {}) {
+    constructor(lists: Partial<SharedProperties> = {}) {
         this.maturity = lists.maturity || new MaturityList();
         this.age = lists.age || new AgeList();
         this.moral = lists.moral || new MoralList();
