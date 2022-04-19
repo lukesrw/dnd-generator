@@ -3,10 +3,11 @@ import * as Generic from "../../interfaces/generic";
 import { Gender } from "../list/gender/gender";
 import { List } from "../list/List";
 import { NameList } from "../list/name/name";
-import { Context, SharedProperties } from "../context/Context";
+import { Context, Shared } from "../context/Context";
 import { Sex } from "../list/sex/sex";
 import { getPronoun, ucfirst } from "../utils";
 import { Abilities, AbilitiesOptions, Skills } from "./Abilities";
+import { Modify } from "../../types/modify";
 
 const TRANSGENDER_CHANCE = 50;
 const NON_BINARY_CHANCE = 50;
@@ -20,7 +21,16 @@ export type Classes = {
     level: number;
 };
 
-export class NPC implements SharedProperties {
+export class NPC
+    implements
+        Modify<
+            Shared<string>,
+            {
+                weapons: string[];
+                languages: string[];
+            }
+        >
+{
     // basic
     context: Context;
 
@@ -113,7 +123,7 @@ export class NPC implements SharedProperties {
                 "eyes",
                 "characteristic",
                 "background"
-            ] as (keyof SharedProperties)[]
+            ] as const
         ).forEach(property => {
             if (properties && typeof properties[property] === "string") {
                 this[property] = properties[property] as string;
