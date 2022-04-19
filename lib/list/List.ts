@@ -1,5 +1,4 @@
-import * as Generic from "../../interfaces/generic";
-import { Classes } from "../generator/NPC";
+import { Classes, NPC } from "../generator/NPC";
 
 export type PickList = (
     | string
@@ -173,7 +172,7 @@ export class List<Custom = {}> {
      * @param filter Filter to use to find Items
      * @returns array of filtered Items
      */
-    getFiltered(filter?: Generic.Object) {
+    getFiltered(filter: Partial<NPC> = {}) {
         let list = this.getItems();
 
         if (filter && Object.values(filter).length > 0) {
@@ -222,7 +221,7 @@ export class List<Custom = {}> {
      * @param filter Filter to use to find Items (see `getFiltered`)
      * @returns `"value"` of the picked Item
      */
-    pickRandom(filter?: Generic.Object): string {
+    pickRandom(filter: Partial<NPC> = {}): string {
         let item = List.pickRandom(this.getFiltered(filter));
 
         if (item) {
