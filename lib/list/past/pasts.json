@@ -1,0 +1,13 @@
+[
+    {
+        "value": "",
+        "weight": 13
+    },
+    { "value": " yesterday" },
+    { "value": " the day before last" },
+    { "value": " several days ago" },
+    { "value": " last week" },
+    { "value": " last month" },
+    { "value": " last year" },
+    { "value": " several years ago" }
+]
