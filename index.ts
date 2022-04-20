@@ -34,6 +34,8 @@ import {
     YeomanProfessionList
 } from "./lib/list/profession/profession";
 import { RaceList } from "./lib/list/race/race";
+import { RumorList } from "./lib/list/rumor/rumor";
+import { RumorOriginList } from "./lib/list/rumor-origin/rumor-origin";
 import { SexList } from "./lib/list/sex/sex";
 import { SkinList } from "./lib/list/skin/skin";
 import { SubtletyList } from "./lib/list/subtlety/subtlety";
@@ -86,6 +88,8 @@ export const List = {
         Yeoman: YeomanProfessionList
     },
     Race: RaceList,
+    Rumor: RumorList,
+    RumorOrigin: RumorOriginList,
     Sex: SexList,
     Skin: SkinList,
     Subtlety: SubtletyList,
