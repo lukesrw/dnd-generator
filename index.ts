@@ -19,6 +19,7 @@ import { MoralList } from "./lib/list/moral/moral";
 import { MotivationList } from "./lib/list/motivation/motivation";
 import { NameList } from "./lib/list/name/name";
 import { NobilityList } from "./lib/list/nobility/nobility";
+import { PastList } from "./lib/list/past/past";
 import {
     CommonProfessionList,
     EsquireProfessionList,
@@ -35,7 +36,9 @@ import {
 import { RaceList } from "./lib/list/race/race";
 import { SexList } from "./lib/list/sex/sex";
 import { SkinList } from "./lib/list/skin/skin";
+import { SubtletyList } from "./lib/list/subtlety/subtlety";
 import { TitleList } from "./lib/list/title/title";
+import { VerbList } from "./lib/list/verb/verb";
 import { WeaponList } from "./lib/list/weapon/weapon";
 
 export const Context = {
@@ -68,6 +71,7 @@ export const List = {
     Motivation: MotivationList,
     Name: NameList,
     Nobility: NobilityList,
+    Past: PastList,
     Professions: {
         All: ProfessionList,
         Common: CommonProfessionList,
@@ -84,7 +88,9 @@ export const List = {
     Race: RaceList,
     Sex: SexList,
     Skin: SkinList,
+    Subtlety: SubtletyList,
     Title: TitleList,
+    Verb: VerbList,
     Weapon: WeaponList
 };
 
