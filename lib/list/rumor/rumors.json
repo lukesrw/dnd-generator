@@ -1,5 +1,5 @@
 [
     {
-        "value": "{NPC[culprit]:getName} {Subtlety:pickRandom} {Verb:pickRandom} {NPC[victim]:getName}{Past:pickRandom}."
+        "value": "{RumorOrigin:pickRandom}{NPC[culprit]:getName} {Subtlety:pickRandom} {Verb:pickRandom} {NPC[victim]:getName}{Past:pickRandom}."
     }
 ]
