@@ -1,5 +1,14 @@
 [
     {
         "value": "{RumorOrigin:pickRandom}{NPC[culprit]:getName} {Subtlety:pickRandom} {Verb:pickRandom} {NPC[victim]:getName}{Past:pickRandom}."
+    },
+    {
+        "value": "{Monster:pickRandom} was spotted out by the {Location:pickRandom}{Past:pickRandom}. {NPC[victim]:getName} saw it and {Conclusion:pickRandom}."
+    },
+    {
+        "value": "there's a hidden treasure at the {Location:pickRandom} for anyone stupid enough to go after it. They say {Monster:pickRandom} guards it."
+    },
+    {
+        "value": "{NPC[victim]:getName} went missing{Past:pickRandom} and was last seen {Danger:pickRandom}, never to be seen again."
     }
 ]
