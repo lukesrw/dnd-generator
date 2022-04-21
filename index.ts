@@ -42,6 +42,10 @@ import { SubtletyList } from "./lib/list/subtlety/subtlety";
 import { TitleList } from "./lib/list/title/title";
 import { VerbList } from "./lib/list/verb/verb";
 import { WeaponList } from "./lib/list/weapon/weapon";
+import { MonsterList } from "./lib/list/monster/monster";
+import { ConclusionList } from "./lib/list/conclusion/conclusion";
+import { DangerList } from "./lib/list/danger/danger";
+import { LocationList } from "./lib/list/location/location";
 
 export const Context = {
     Context: _Context,
@@ -63,6 +67,9 @@ export const List = {
     Characteristics: CharacteristicList,
     Class: ClassList,
     Ethic: EthicList,
+    Monster: MonsterList,
+    Past: PastList,
+    Conclusion: ConclusionList,
     Eye: EyeList,
     Flaw: FlawList,
     Hair: HairList,
@@ -71,9 +78,10 @@ export const List = {
     Maturity: MaturityList,
     Moral: MoralList,
     Motivation: MotivationList,
+    Location: LocationList,
     Name: NameList,
     Nobility: NobilityList,
-    Past: PastList,
+    Danger: DangerList,
     Professions: {
         All: ProfessionList,
         Common: CommonProfessionList,
