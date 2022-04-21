@@ -35,7 +35,6 @@ import {
 } from "./lib/list/profession/profession";
 import { RaceList } from "./lib/list/race/race";
 import { RumorList } from "./lib/list/rumor/rumor";
-import { RumorOriginList } from "./lib/list/rumor-origin/rumor-origin";
 import { SexList } from "./lib/list/sex/sex";
 import { SkinList } from "./lib/list/skin/skin";
 import { SubtletyList } from "./lib/list/subtlety/subtlety";
@@ -66,22 +65,22 @@ export const List = {
     Background: BackgroundList,
     Characteristics: CharacteristicList,
     Class: ClassList,
-    Ethic: EthicList,
-    Monster: MonsterList,
-    Past: PastList,
     Conclusion: ConclusionList,
+    Danger: DangerList,
+    Ethic: EthicList,
     Eye: EyeList,
     Flaw: FlawList,
     Hair: HairList,
     Language: LanguageList,
     List: _List,
+    Location: LocationList,
     Maturity: MaturityList,
+    Monster: MonsterList,
     Moral: MoralList,
     Motivation: MotivationList,
-    Location: LocationList,
     Name: NameList,
     Nobility: NobilityList,
-    Danger: DangerList,
+    Past: PastList,
     Professions: {
         All: ProfessionList,
         Common: CommonProfessionList,
@@ -97,7 +96,6 @@ export const List = {
     },
     Race: RaceList,
     Rumor: RumorList,
-    RumorOrigin: RumorOriginList,
     Sex: SexList,
     Skin: SkinList,
     Subtlety: SubtletyList,
