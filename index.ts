@@ -45,6 +45,7 @@ import { MonsterList } from "./lib/list/monster/monster";
 import { ConclusionList } from "./lib/list/conclusion/conclusion";
 import { DangerList } from "./lib/list/danger/danger";
 import { LocationList } from "./lib/list/location/location";
+import { CurrencyList } from "./lib/list/currency/currency";
 
 export const Context = {
     Context: _Context,
@@ -66,6 +67,7 @@ export const List = {
     Characteristics: CharacteristicList,
     Class: ClassList,
     Conclusion: ConclusionList,
+    Currency: CurrencyList,
     Danger: DangerList,
     Ethic: EthicList,
     Eye: EyeList,
