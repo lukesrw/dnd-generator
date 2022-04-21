@@ -1,27 +1,17 @@
 [
     {
-        "value": " yesterday"
+        "value": "old millhouse"
     },
     {
-        "value": " the day before last"
+        "value": "empty riverbed"
     },
     {
-        "value": " several days ago"
+        "value": "caves to the north"
     },
     {
-        "value": " last week"
+        "value": "abandoned farmhouse outside of town"
     },
     {
-        "value": " last month"
-    },
-    {
-        "value": " last year"
-    },
-    {
-        "value": " several years ago"
-    },
-    {
-        "value": "",
-        "weight": 16
+        "value": "ancient ruins"
     }
 ]
