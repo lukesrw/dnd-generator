@@ -15,6 +15,6 @@
         "value": "{NPC[owner]:getName} the {NPC[owner]:profession} found{Past:pickRandom} an ancient and magical {Weapon:pickRandom}"
     },
     {
-        "value": "{NPC[loser]:getName} lost all {NPC[loser]:getPronoun} {Currency:pickRandom} gambling to {Monster:pickRandom}"
+        "value": "{NPC[loser]:getName} lost all of {NPC[loser]:getPronoun} {Currency:pickRandom} {MoneySink:pickRandom}"
     }
 ]
