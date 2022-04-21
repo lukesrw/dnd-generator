@@ -4,6 +4,7 @@ import {
 } from "../../../index";
 import * as Generic from "../../../interfaces/generic";
 import { NPC } from "../../generator/NPC";
+import { ucfirst } from "../../utils";
 import { List } from "../List";
 
 export const regexRumorVariable =
@@ -83,7 +84,7 @@ export class RumorList extends List {
             );
         } while (regexRumorVariable.test(rumor));
 
-        return rumor;
+        return ucfirst(rumor);
     }
 
     pickRandom(filter: Partial<NPC> = {}) {
