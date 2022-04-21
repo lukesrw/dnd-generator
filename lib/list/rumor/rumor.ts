@@ -6,7 +6,13 @@ import * as Generic from "../../../interfaces/generic";
 import { NPC } from "../../generator/NPC";
 import { ucfirst } from "../../utils";
 import { List } from "../List";
-import { RumorOriginList } from "../rumor-origin/rumor-origin";
+import { MoneySinkList } from "./money-sink";
+import { RumorOriginList } from "./rumor-origin";
+
+const SourceRecursive = {
+    RumorOrigin: RumorOriginList,
+    MoneySink: MoneySinkList
+};
 
 export const regexRumorVariable =
     /\{(?<source>\w+)(?:\[(?<name>\w+)\])?:(?<property>\w+)?\}/giu;
@@ -20,7 +26,7 @@ export class RumorList extends List {
         rumor: string,
         initialMemory: Generic.Object<Generic.Object<any>> = {}
     ) {
-        let rumorOrigin = new RumorOriginList();
+        let rumorOrigin = new SourceRecursive.RumorOrigin();
         let memory: Generic.Object<Generic.Object<any>> = initialMemory;
 
         rumor = rumorOrigin.pickRandom() + rumor;
@@ -61,6 +67,10 @@ export class RumorList extends List {
                         } else if (source in SourceList) {
                             item = new (SourceList[
                                 source as keyof typeof SourceList
+                            ] as any)();
+                        } else if (source in SourceRecursive) {
+                            item = new (SourceRecursive[
+                                source as keyof typeof SourceRecursive
                             ] as any)();
                         } else {
                             throw new Error(`Unable to find source: ${source}`);
