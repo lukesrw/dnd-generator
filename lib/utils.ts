@@ -4,10 +4,21 @@ export function ucfirst(string: string) {
     return string.substring(0, 1).toUpperCase() + string.substring(1);
 }
 
+export namespace Pronoun {
+    export type Person = "first" | "second" | "third";
+    export type Topic = "singular" | "plural" | Gender;
+    export type Context =
+        | "subject"
+        | "object"
+        | "determiner"
+        | "possessive"
+        | "reflexive";
+}
+
 export function getPronoun(
-    person: "first" | "second" | "third",
-    topic: "singular" | "plural" | Gender,
-    context: "subject" | "object" | "determiner" | "possessive" | "reflexive"
+    person: Pronoun.Person,
+    topic: Pronoun.Topic,
+    context: Pronoun.Context
 ) {
     switch (person) {
         case "first":
