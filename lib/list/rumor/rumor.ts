@@ -6,6 +6,7 @@ import * as Generic from "../../../interfaces/generic";
 import { NPC } from "../../generator/NPC";
 import { ucfirst } from "../../utils";
 import { List } from "../List";
+import { RumorOriginList } from "../rumor-origin/rumor-origin";
 
 export const regexRumorVariable =
     /\{(?<source>\w+)(?:\[(?<name>\w+)\])?:(?<property>\w+)?\}/giu;
@@ -19,7 +20,10 @@ export class RumorList extends List {
         rumor: string,
         initialMemory: Generic.Object<Generic.Object<any>> = {}
     ) {
+        let rumorOrigin = new RumorOriginList();
         let memory: Generic.Object<Generic.Object<any>> = initialMemory;
+
+        rumor = rumorOrigin.pickRandom() + rumor;
 
         do {
             rumor = rumor.replaceAll(
