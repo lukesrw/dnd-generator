@@ -1,12 +1,11 @@
 import { RumorList } from "./rumor";
 
-test("", () => {
+test("RumorList is able to parse each rumor template", () => {
     let rumor = new RumorList();
 
     rumor.getItems().forEach(({ value }) => {
-        console.table({
-            input: value,
-            output: RumorList.parse(value)
-        });
+        expect(() => {
+            RumorList.parse(value);
+        }).not.toThrow();
     });
 });
