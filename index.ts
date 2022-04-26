@@ -19,6 +19,7 @@ import { MoralList } from "./lib/list/moral/moral";
 import { MotivationList } from "./lib/list/motivation/motivation";
 import { NameList } from "./lib/list/name/name";
 import { NobilityList } from "./lib/list/nobility/nobility";
+import { PastList } from "./lib/list/past/past";
 import {
     CommonProfessionList,
     EsquireProfessionList,
@@ -33,10 +34,18 @@ import {
     YeomanProfessionList
 } from "./lib/list/profession/profession";
 import { RaceList } from "./lib/list/race/race";
+import { RumorList } from "./lib/list/rumor/rumor";
 import { SexList } from "./lib/list/sex/sex";
 import { SkinList } from "./lib/list/skin/skin";
+import { SubtletyList } from "./lib/list/subtlety/subtlety";
 import { TitleList } from "./lib/list/title/title";
+import { VerbList } from "./lib/list/verb/verb";
 import { WeaponList } from "./lib/list/weapon/weapon";
+import { MonsterList } from "./lib/list/monster/monster";
+import { ConclusionList } from "./lib/list/conclusion/conclusion";
+import { DangerList } from "./lib/list/danger/danger";
+import { LocationList } from "./lib/list/location/location";
+import { CurrencyList } from "./lib/list/currency/currency";
 
 export const Context = {
     Context: _Context,
@@ -57,17 +66,23 @@ export const List = {
     Background: BackgroundList,
     Characteristics: CharacteristicList,
     Class: ClassList,
+    Conclusion: ConclusionList,
+    Currency: CurrencyList,
+    Danger: DangerList,
     Ethic: EthicList,
     Eye: EyeList,
     Flaw: FlawList,
     Hair: HairList,
     Language: LanguageList,
     List: _List,
+    Location: LocationList,
     Maturity: MaturityList,
+    Monster: MonsterList,
     Moral: MoralList,
     Motivation: MotivationList,
     Name: NameList,
     Nobility: NobilityList,
+    Past: PastList,
     Professions: {
         All: ProfessionList,
         Common: CommonProfessionList,
@@ -82,9 +97,12 @@ export const List = {
         Yeoman: YeomanProfessionList
     },
     Race: RaceList,
+    Rumor: RumorList,
     Sex: SexList,
     Skin: SkinList,
+    Subtlety: SubtletyList,
     Title: TitleList,
+    Verb: VerbList,
     Weapon: WeaponList
 };
 

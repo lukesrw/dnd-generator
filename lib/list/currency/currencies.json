@@ -1,0 +1,21 @@
+[
+    {
+        "value": "copper",
+        "weight": 1000
+    },
+    {
+        "value": "silver",
+        "weight": 100
+    },
+    {
+        "value": "electrum",
+        "weight": 20
+    },
+    {
+        "value": "gold",
+        "weight": 10
+    },
+    {
+        "value": "platinum"
+    }
+]

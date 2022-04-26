@@ -1,5 +1,6 @@
 const { readdir, stat, readFile, writeFile } = require("fs/promises");
 const { join } = require("path");
+const { addSuffix } = require("./suffix");
 
 const LIST_DIR = join(__dirname, "..", "lib", "list");
 const CLASS_REGEX =
@@ -32,13 +33,9 @@ async function build() {
                         .join("-")
                         .toLowerCase();
 
-                    if (name.endsWith("y")) {
-                        name = name.substring(0, name.length - 1) + "ie";
-                    } else if (name.endsWith("s") || name.endsWith("x")) {
-                        name += "e";
-                    }
+                    name = addSuffix(name);
 
-                    let json_path = join(list_dir, name + "s.json");
+                    let json_path = join(list_dir, name + ".json");
 
                     try {
                         let list = await readFile(json_path, "utf-8");
