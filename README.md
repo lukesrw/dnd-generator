@@ -15,7 +15,7 @@ Each list extends the [List](lib/list/List.ts) class, which implements...
 -   Constructor to set file location/items directly
 -   `getItems()` to retrieve all items
 -   `getValues()` - to retrieve all item values
--   `getItem()` - to retrieve a specific item by value
+-   `getItem(value)` - to retrieve a specific item by value
 -   `getFiltered(filter?)` to retrieve all items with a filter
 -   `pickRandom(filter?)` to pick random item from all items (with an optional filter)
 
