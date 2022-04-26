@@ -4,14 +4,14 @@ import {
     BackgroundList,
     BackgroundProperties
 } from "../list/background/background";
-import { CharacteristicList } from "../list/characteristics/characteristics";
+import { CharacteristicList } from "../list/characteristic/characteristic";
 import { ClassList, ClassProperties } from "../list/class/class";
 import { EthicList } from "../list/ethic/ethic";
 import { EyeList } from "../list/eye/eye";
 import { FlawList } from "../list/flaw/flaw";
 import { HairList } from "../list/hair/hair";
 import { IdealList } from "../list/ideal/ideal";
-import { LanguageList } from "../list/languages/languages";
+import { LanguageList } from "../list/language/language";
 import { List } from "../list/List";
 import { MaturityList } from "../list/maturity/maturity";
 import { MoralList } from "../list/moral/moral";
