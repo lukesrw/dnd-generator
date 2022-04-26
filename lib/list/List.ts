@@ -146,7 +146,7 @@ export class List<Custom = {}> {
 
                 if (this.items) {
                     this.items = this.items.concat(
-                        new Array(item.weight).fill(item)
+                        new Array(item.weight - 1).fill(item)
                     );
                 }
             });
