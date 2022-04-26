@@ -16,5 +16,20 @@
     },
     {
         "value": "{NPC[loser]:getName} lost all of {NPC[loser]:getPronoun} {Currency:pickRandom} {MoneySink:pickRandom}"
+    },
+    {
+        "value": "{NPC[older]:getName} is a descendant of the famous folk hero {NPC[younger]:getName}"
+    },
+    {
+        "value": "A {Merchant:pickRandom} from the town was {Verb:pickRandom}{Past:pickRandom}"
+    },
+    {
+        "value": "{NPC[boaster]:forename} was heard boasting that {NPC[boaster]:getPronoun} has acquired a magical {Weapon:pickRandom} which protects {NPC[boaster]:getPronoun} from death"
+    },
+    {
+        "value": "Famous wizard {NPC[wizard]:forename} has vanished, along with his living spells"
+    },
+    {
+        "value": "Most of the town guards are {Moral:pickRandom} but the local {Scholar:pickRandom} is trying to change that"
     }
 ]
