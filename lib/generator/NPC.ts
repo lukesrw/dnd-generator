@@ -5,7 +5,7 @@ import { List } from "../list/List";
 import { NameList } from "../list/name/name";
 import { Context, Shared } from "../context/Context";
 import { Sex } from "../list/sex/sex";
-import { getPronoun, ucfirst } from "../utils";
+import { getPronoun, Pronoun, ucfirst } from "../utils";
 import { Abilities, AbilitiesOptions, Skills } from "./Abilities";
 import { Modify } from "../../types/modify";
 
@@ -354,7 +354,7 @@ export class NPC
 
         let pronoun = "";
         if (items) {
-            pronoun = getPronoun("third", this.gender, "subject");
+            pronoun = this.getPronoun("third", "subject");
             pronoun = detail ? `. ${ucfirst(pronoun)} ` : `, ${pronoun} `;
         }
 
@@ -365,6 +365,13 @@ export class NPC
         }, ${this.getAlignment()}. ${this.forename} is ${
             this.characteristic + detail + pronoun + items
         }. ${this.forename} seeks ${this.motivation}.`;
+    }
+
+    getPronoun(
+        person: Pronoun.Person = "third",
+        context: Pronoun.Context = "determiner"
+    ) {
+        return getPronoun(person, this.gender, context);
     }
 
     getSpeed() {
