@@ -1,20 +1,25 @@
 import { Context as _Context } from "./lib/context/Context";
 import { TavernPatronContext, TavernStaffContext } from "./lib/context/Tavern";
-import { Abilities, Skills } from "./lib/generator/Abilities";
+import { Abilities } from "./lib/generator/Abilities";
 import { NPC } from "./lib/generator/NPC";
 import { Tavern } from "./lib/generator/Tavern";
 import { AgeList } from "./lib/list/age/age";
 import { ArmorList } from "./lib/list/armor/armor";
 import { BackgroundList } from "./lib/list/background/background";
-import { CharacteristicList } from "./lib/list/characteristics/characteristics";
+import { CharacteristicList } from "./lib/list/characteristic/characteristic";
 import { ClassList } from "./lib/list/class/class";
+import { ConclusionList } from "./lib/list/conclusion/conclusion";
+import { CurrencyList } from "./lib/list/currency/currency";
+import { DangerList } from "./lib/list/danger/danger";
 import { EthicList } from "./lib/list/ethic/ethic";
 import { EyeList } from "./lib/list/eye/eye";
 import { FlawList } from "./lib/list/flaw/flaw";
 import { HairList } from "./lib/list/hair/hair";
-import { LanguageList } from "./lib/list/languages/languages";
+import { LanguageList } from "./lib/list/language/language";
 import { List as _List } from "./lib/list/List";
+import { LocationList } from "./lib/list/location/location";
 import { MaturityList } from "./lib/list/maturity/maturity";
+import { MonsterList } from "./lib/list/monster/monster";
 import { MoralList } from "./lib/list/moral/moral";
 import { MotivationList } from "./lib/list/motivation/motivation";
 import { NameList } from "./lib/list/name/name";
@@ -41,11 +46,6 @@ import { SubtletyList } from "./lib/list/subtlety/subtlety";
 import { TitleList } from "./lib/list/title/title";
 import { VerbList } from "./lib/list/verb/verb";
 import { WeaponList } from "./lib/list/weapon/weapon";
-import { MonsterList } from "./lib/list/monster/monster";
-import { ConclusionList } from "./lib/list/conclusion/conclusion";
-import { DangerList } from "./lib/list/danger/danger";
-import { LocationList } from "./lib/list/location/location";
-import { CurrencyList } from "./lib/list/currency/currency";
 
 export const Context = {
     Context: _Context,
@@ -56,7 +56,6 @@ export const Context = {
 export const Generator = {
     Abilities: Abilities,
     NPC: NPC,
-    Skills: Skills,
     Tavern: Tavern
 };
 
