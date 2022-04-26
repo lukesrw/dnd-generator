@@ -4,9 +4,9 @@ A system for generating random D&D information
 
 ## Generators
 
--   [Abilities](lib/generator/Abilities.ts) (random generation of a Character/NPC's ability scores)
--   [NPC](lib/generator/NPC.ts) (random generation of an NPC, using the below "Lists")
--   [Tavern](lib/generator/Tavern.ts) (random generation of a tavern with staff and patrons)
+-   [**Abilities**](lib/generator/Abilities.ts) (random generation of a Character/NPC's ability scores)
+-   [**NPC**](lib/generator/NPC.ts) (random generation of an NPC, using the below "Lists")
+-   [**Tavern**](lib/generator/Tavern.ts) (random generation of a tavern with staff and patrons)
 
 ## Lists
 
