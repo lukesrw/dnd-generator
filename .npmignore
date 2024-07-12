@@ -1,14 +1,3 @@
-node_modules
-.github
-tsconfig.*
-*.ts
-!*.d.ts
-*.scss
-*.tgz
-.eslintrc.json
-/tools/
-.eslintignore
-*.json
-jest.config.js
-.prettierrc
-*.test.*
+dist/**
+dist/*
+dist/

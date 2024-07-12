@@ -1,33 +1,55 @@
 {
-    "main": "./index",
+    "name": "dnd-generator",
+    "version": "1.2.0",
+    "type": "module",
+    "tshy": {
+        "main": true,
+        "exports": {
+            "./package.json": "./package.json",
+            ".": "./src/index.ts"
+        }
+    },
+    "main": "./dist/commonjs/index.js",
+    "types": "./dist/commonjs/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "description": "A system for generating random D&D/fantasy information",
+    "author": "Luke Wilson <lukesrw@gmail.com>",
+    "license": "GPL-3.0",
+    "repository": "git://github.com/lukesrw/dnd-generator.git",
     "scripts": {
-        "clean": "node tools/clean",
-        "build": "npm install && npm run clean && tsc && node tools/build",
-        "test": "npm run build && cls && jest && npm run clean",
-        "tool": "npm run build && node tools/index"
+        "preinstall": "npm run clean",
+        "clean": "rimraf -g *.tgz && rimraf -g .tshy* && rimraf coverage && rimraf html && rimraf dist",
+        "build": "npm run clean && tshy && cls",
+        "pretest": "npm run clean && tsc && cls",
+        "test": "vitest --run --coverage",
+        "posttest": "npm run clean",
+        "prepack": "npm run build && npm run readme",
+        "postpack": "npm run clean",
+        "readme": "node dist/commonjs/script/readme"
+    },
+    "prettier": {
+        "tabWidth": 4,
+        "useTabs": false,
+        "singleQuote": false,
+        "trailingComma": "none",
+        "arrowParens": "avoid",
+        "printWidth": 120
     },
     "devDependencies": {
-        "@types/jest": "^27.4.1",
-        "@types/node": "^14.14.37",
-        "@types/xml2js": "^0.4.11",
-        "jest": "^27.5.1",
-        "ts-jest": "^27.1.4",
-        "typescript": "^4.6.3",
-        "xml2js": "^0.4.23"
+        "@types/madge": "^5.0.3",
+        "@types/node": "^20.14.8",
+        "@vitest/coverage-istanbul": "^1.6.0",
+        "madge": "^7.0.0",
+        "rimraf": "^5.0.7",
+        "tshy": "^1.15.1",
+        "typescript": "^5.5.2",
+        "vitest": "^1.6.0"
     },
     "dependencies": {
         "@dice-roller/rpg-dice-roller": "^5.1.0",
         "fantasy-name-generator": "^2.0.0"
-    },
-    "name": "dnd-generator",
-    "description": "A system for generating random D&D 5E information",
-    "version": "1.2.0",
-    "directories": {
-        "lib": "lib"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git@github.com:lukesrw/dnd-generator.git"
     },
     "keywords": [
         "dnd",
@@ -36,6 +58,19 @@
         "class",
         "race"
     ],
-    "author": "Luke Wilson <lukesrw@gmail.com>",
-    "license": "GPL-3.0"
+    "exports": {
+        "./package.json": "./package.json",
+        ".": {
+            "import": {
+                "source": "./src/index.ts",
+                "types": "./dist/esm/index.d.ts",
+                "default": "./dist/esm/index.js"
+            },
+            "require": {
+                "source": "./src/index.ts",
+                "types": "./dist/commonjs/index.d.ts",
+                "default": "./dist/commonjs/index.js"
+            }
+        }
+    }
 }

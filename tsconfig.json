@@ -1,38 +1,23 @@
 {
     "compilerOptions": {
-        /* Basic Options */
-        "target": "ESNext",
-        "module": "commonjs",
+        "incremental": true,
+        "target": "ES2015",
+        "module": "NodeNext",
+        "moduleResolution": "Node16",
         "sourceMap": true,
         "removeComments": true,
         "declaration": true,
         "declarationMap": true,
-
-        /* Strict Type-Checking Options */
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "moduleDetection": "force",
+        "isolatedModules": true,
         "strict": true,
-        "noImplicitAny": true,
-        "strictNullChecks": true,
-        "strictFunctionTypes": true,
-        "strictBindCallApply": true,
-        "strictPropertyInitialization": true,
-        "noImplicitThis": true,
-        "alwaysStrict": false,
-
-        /* Additional Checks */
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "noImplicitReturns": true,
-        "noFallthroughCasesInSwitch": true,
-
-        /* Module Resolution Options */
-        // "moduleResolution": "node",
-        "noImplicitUseStrict": true,
-
-        /* Advanced Options */
-        "skipLibCheck": true /* Skip type checking of declaration files. */,
-        "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */,
-        // "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true
+        "noUncheckedIndexedAccess": true,
+        "lib": ["ES2015"],
+        "types": ["vitest/globals"],
+        "outDir": "dist"
     },
+    "include": ["src", "vitest.config.ts"],
     "exclude": ["node_modules"]
 }
