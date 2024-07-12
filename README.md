@@ -12,16 +12,6 @@ Install the package:
 npm install dnd-generator
 ```
 
-Generate some content:
-
-```ts Readme Getting Started
-const myRandomNpc = new NPC();
-console.log(`${myRandomNpc.property.race} ${myRandomNpc.property.class} called ${myRandomNpc.property.name}`); // Mark of Warding Dwarf Sorcerer called Fuldda
-
-const myRandomArmour = new Armour.List().pick();
-console.log(myRandomArmour); // Hide
-```
-
 ## Utilities
 
 ### List 📃
@@ -31,11 +21,11 @@ _Lists_ allow you to group related concepts into a single _List_ which can then 
 ```ts Readme List
 const nobilityList = new Nobility.List();
 
-console.log(nobilityList.pickItem()); // { value: 'Servant', maturity: [ 'Child', 'Adult', 'Elder' ],...
+console.log(nobilityList.pickItem()); // { value: 'Peasant', weight: 6000, importance: -1 }
 console.log(nobilityList.pick()); // Common
 console.log(nobilityList.getItems()); // [ { value: 'Royal', importance: 9 }, { value: 'Noble', weigh...
 console.log(nobilityList.getItem("Scholar")); // { value: 'Scholar', maturity: [ 'Adult', 'Elder' ], weight: ...
-console.log(nobilityList.getValues()); // [ 'Royal', 'Noble', 'Esquire', 'Knighted', 'Gentle', 'Yeoman...
+console.log(nobilityList.getValues());
 
 const smallerNobilityList = nobilityList.filter(item => item.value.includes("a"));
 const uppercaseNobilityList = nobilityList.map(item => {
@@ -52,6 +42,18 @@ _Sentences_ allow you to generate random text based off pre-defined _Sentence Pa
 
 ```ts Readme Sentence
 const mySentence = new Sentence([]);
+```
+
+### 📦 Generator
+
+_Generators_ allow you to generate random content which comprises multiple other _Lists_ and _Sentences_.
+
+```ts Readme Generator
+const randomNpc = new NPC();
+console.log(`${randomNpc.property.race} ${randomNpc.property.class} called ${randomNpc.property.name}`); // Lizardfolk Fighter called Guh-Guh
+
+const randomTavern = new Tavern();
+console.log(`${randomTavern.name} has ${randomTavern.staff.length} staff and ${randomTavern.patrons.length} patrons.`); // The Olive Dog has 2 staff and 5 patrons.
 ```
 
 ### Available Components

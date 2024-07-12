@@ -25,12 +25,6 @@ Install the package:
 npm install dnd-generator
 \`\`\`
 
-Generate some content:
-
-\`\`\`ts Readme Getting Started
-
-\`\`\`
-
 ## Utilities
 
 ### List 📃
@@ -45,6 +39,13 @@ _Lists_ allow you to group related concepts into a single _List_ which can then 
 _Sentences_ allow you to generate random text based off pre-defined _Sentence Parts_ which provide the possible combinations, see the [_Sentences_ documentation](/src/lib/sentence/README.md) for full details.
 
 \`\`\`ts Readme Sentence
+\`\`\`
+
+### 📦 Generator
+
+_Generators_ allow you to generate random content which comprises multiple other _Lists_ and _Sentences_.
+
+\`\`\`ts Readme Generator
 \`\`\`
 
 ### Available Components

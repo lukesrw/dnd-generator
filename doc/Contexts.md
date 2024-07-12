@@ -4,33 +4,24 @@
 
 For example, an [NPC](/src/lib/generator/NPC.ts) will be a random race, which is great when you don't have a starting point, but if we're in a dwarven camp? The NPC's `config.context` can be set to only dwarves, allowing you to set how 'random' it is.
 
-```ts
+```ts Contexts Dwarf Camp
 const dwarfCamp = {
     race: new Race.List().filter(race => race.value.includes("Dwarf"))
 };
 
-for (let i = 0; i < 7; i++) {
-    const dwarf = new NPC(
-        {},
-        {
-            context: dwarfCamp
-        }
-    );
+const dwarf = new NPC(
+    {},
+    {
+        context: dwarfCamp
+    }
+);
 
-    /**
-     * I'm a Duergar Dwarf
-     * I'm a Dwarf
-     * I'm a Hill Dwarf
-     * I'm a Mark of Warding Dwarf
-     * I'm a Mountain Dwarf
-     */
-    console.log(`I'm a ${dwarf.property.race}`);
-}
+console.log(`I'm a ${dwarf.property.race}`); // I'm a Dwarf
 ```
 
 Generators will use the built-in lists if you don't provide one, but you can also easily make your own entirely custom lists:
 
-```ts
+```ts Contexts Space
 const space = {
     race: new List([
         {
@@ -52,10 +43,5 @@ const alien = new NPC(
     }
 );
 
-/**
- * I'm a Hearthian
- * I'm a Nomai
- * I'm a Owlk
- */
-console.log(`I'm a ${alien.property.race}`);
+console.log(`I'm a ${alien.property.race}`); // I'm a Owlk
 ```
