@@ -33,7 +33,7 @@ Migration may be required in order to upgrade to 2.0.0:
 -   Removed `list.pickRandom(filter)` in favour of `list.filter(filter).pick()`
 -   Removed `npc.classes` array in favour of `npc.property.class` and `npc.property.level`
 -   Removed `npc.getLevel()` in favour of `npc.property.level`
--   Removed nobility profession lists, e.g. `List.Professions.Merchant` in favour of `new Profession.List().filter({ nobility: "Merchant" })`
+-   Removed `List.Professions.*` in favour of `new Profession.List().filter({ nobility: "*" })`
 -   Renamed `list.pickRandom()` to `list.pick()`
 -   Renamed `List.*` to `Component.*.List` (e.g. `List.Class` to `Component.Class.List`)
 -   Renamed `List.Eye` to `Component.Eye.Colour.List`
