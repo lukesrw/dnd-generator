@@ -23,8 +23,8 @@ Rather than add it if you do:
 ```ts Fake Capitalisation Item
 /* Fake example */
 const item = new Class.List().pick();
-console.log(item); // fighter
-console.log(item.substring(0, 1).toUpperCase() + item.substring(1)); // Fighter
+console.log(item); // paladin
+console.log(item.substring(0, 1).toUpperCase() + item.substring(1)); // Paladin
 ```
 
 If you want a list without any capitalisation, you can use `list.map()` to create a new list:
@@ -36,8 +36,8 @@ const list = new Class.List().map(item => {
         value: item.value.toLowerCase()
     };
 });
-console.log(list.pick()); // barbarian
-console.log(list.pick()); // fighter
+console.log(list.pick()); // mystic
+console.log(list.pick()); // pacifist
 ```
 
 ## Full Stops
@@ -48,9 +48,9 @@ It's simpler for you to add a full stop if you need it:
 
 ```ts Full Stop Item
 const item = new Class.List().pick();
-console.log(item); // Cavalier
-console.log(item + "."); // Cavalier.
-console.log(`${item}.`); // Cavalier.
+console.log(item); // Monk
+console.log(item + "."); // Monk.
+console.log(`${item}.`); // Monk.
 ```
 
 Rather than remove it if you don't:
@@ -58,8 +58,8 @@ Rather than remove it if you don't:
 ```ts Fake Full Stop Item
 /* Fake example */
 const item = new Class.List().pick();
-console.log(item); // Rogue.
-console.log(item.substring(0, item.length - 1)); // Rogue
+console.log(item); // Barbarian.
+console.log(item.substring(0, item.length - 1)); // Barbarian
 ```
 
 If you want a list with full stops, you can use `list.map()` to create a new list:
@@ -71,6 +71,6 @@ const list = new Class.List().map(item => {
         value: `${item.value}.`
     };
 });
-console.log(list.pick()); // Cavalier.
-console.log(list.pick()); // Rogue.
+console.log(list.pick()); // Barbarian.
+console.log(list.pick()); // Bard.
 ```
