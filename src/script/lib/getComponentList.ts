@@ -11,6 +11,7 @@ export const TAB_SIZE = 4;
 
 export function getComponentList(object: Record<string, unknown>, depth = 0) {
     let line = "";
+    let previousLetter = "";
 
     for (const objectKey of objectKeys(object)) {
         const leaf = object[objectKey] as Record<string, unknown>;
@@ -56,7 +57,12 @@ export function getComponentList(object: Record<string, unknown>, depth = 0) {
             component += ` [\`ts\`](/src/component/${objectKey}.ts)`;
         }
 
-        component = `\n${" ".repeat(depth * TAB_SIZE)}- ${component}`;
+        if (previousLetter === objectKey[0] && children.length === 0 && depth === 0) {
+            component = `, ${component}`;
+        } else {
+            component = `\n${" ".repeat(depth * TAB_SIZE)}- ${component}`;
+            previousLetter = children.length ? "|" : objectKey[0] ?? "";
+        }
 
         if ((icons.length || children.length) && !(objectKey in UTILS)) {
             line += component + children;

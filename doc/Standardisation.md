@@ -14,8 +14,8 @@ It's simpler for you to remove the capitalisation if you don't need it:
 
 ```ts Capitalisation Item
 const item = new Class.List().pick();
-console.log(item); // Barbarian
-console.log(item.toLowerCase()); // barbarian
+console.log(item); // Rogue
+console.log(item.toLowerCase()); // rogue
 ```
 
 Rather than add it if you do:
@@ -23,8 +23,8 @@ Rather than add it if you do:
 ```ts Fake Capitalisation Item
 /* Fake example */
 const item = new Class.List().pick();
-console.log(item); // warlock
-console.log(item.substring(0, 1).toUpperCase() + item.substring(1)); // Warlock
+console.log(item); // paladin
+console.log(item.substring(0, 1).toUpperCase() + item.substring(1)); // Paladin
 ```
 
 If you want a list without any capitalisation, you can use `list.map()` to create a new list:
@@ -36,8 +36,8 @@ const list = new Class.List().map(item => {
         value: item.value.toLowerCase()
     };
 });
-console.log(list.pick()); // inquisitor
-console.log(list.pick()); // bard
+console.log(list.pick()); // cleric
+console.log(list.pick()); // druid
 ```
 
 ## Full Stops
@@ -48,9 +48,9 @@ It's simpler for you to add a full stop if you need it:
 
 ```ts Full Stop Item
 const item = new Class.List().pick();
-console.log(item); // Mystic
-console.log(item + "."); // Mystic.
-console.log(`${item}.`); // Mystic.
+console.log(item); // Bard
+console.log(item + "."); // Bard.
+console.log(`${item}.`); // Bard.
 ```
 
 Rather than remove it if you don't:
@@ -58,8 +58,8 @@ Rather than remove it if you don't:
 ```ts Fake Full Stop Item
 /* Fake example */
 const item = new Class.List().pick();
-console.log(item); // Pacifist.
-console.log(item.substring(0, item.length - 1)); // Pacifist
+console.log(item); // Rogue.
+console.log(item.substring(0, item.length - 1)); // Rogue
 ```
 
 If you want a list with full stops, you can use `list.map()` to create a new list:
@@ -71,6 +71,6 @@ const list = new Class.List().map(item => {
         value: `${item.value}.`
     };
 });
-console.log(list.pick()); // Warlock.
-console.log(list.pick()); // Mystic.
+console.log(list.pick()); // Cavalier.
+console.log(list.pick()); // Monk.
 ```
