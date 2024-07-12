@@ -51,9 +51,9 @@ export function getComponentList(object: Record<string, unknown>, depth = 0) {
         /**
          * Wrap the component name with a link
          */
-        let component = `\`${objectKey.replace(/([a-z])([A-Z])/g, "$1 $2")} ${isNew ? "🎉" : ""}${icons}\``;
+        let component = `\`${objectKey.replace(/([a-z])([A-Z])/g, "$1 $2") + (isNew ? " 🎉" : "") + icons}\``;
         if (depth === 0) {
-            component = `[${component}](/src/component/${objectKey}.ts)`;
+            component += ` [\`ts\`](/src/component/${objectKey}.ts)`;
         }
 
         component = `\n${" ".repeat(depth * TAB_SIZE)}- ${component}`;
