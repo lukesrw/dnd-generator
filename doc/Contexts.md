@@ -43,5 +43,5 @@ const alien = new NPC(
     }
 );
 
-console.log(`I'm a ${alien.property.race}`); // I'm a Owlk
+console.log(`I'm a ${alien.property.race}`); // I'm a Nomai
 ```

@@ -16,13 +16,13 @@ npm install dnd-generator
 
 ### List 📃
 
-_Lists_ allow you to group related concepts into a single _List_ which can then be randomly picked from, further filtered, etc. see the [_Lists_ documentation](/src/lib/list/README.md) for full details.
+_Lists_ are the core primitive of D&D Generator, allowing you to group related concepts into a single _List_ which can then be passed around and picked from. See the [_Lists_ documentation](/src/lib/list/README.md) for full details.
 
 ```ts Readme List
 const nobilityList = new Nobility.List();
 
-console.log(nobilityList.pickItem()); // { value: 'Peasant', weight: 6000, importance: -1 }
-console.log(nobilityList.pick()); // Common
+console.log(nobilityList.pickItem()); // { value: 'Scholar', maturity: [ 'Adult', 'Elder' ], weight: ...
+console.log(nobilityList.pick()); // Merchant
 console.log(nobilityList.getItems()); // [ { value: 'Royal', importance: 9 }, { value: 'Noble', weigh...
 console.log(nobilityList.getItem("Scholar")); // { value: 'Scholar', maturity: [ 'Adult', 'Elder' ], weight: ...
 console.log(nobilityList.getValues());
@@ -38,7 +38,7 @@ const uppercaseNobilityList = nobilityList.map(item => {
 
 ### ✏️ Sentence
 
-_Sentences_ allow you to generate random text based off pre-defined _Sentence Parts_ which provide the possible combinations, see the [_Sentences_ documentation](/src/lib/sentence/README.md) for full details.
+_Sentences_ allow you to create text from pre-defined _Sentence Parts_ which provide the possible random permutations. See the [_Sentences_ documentation](/src/lib/sentence/README.md) for full details. _Sentences_
 
 ```ts Readme Sentence
 const mySentence = new Sentence([]);
@@ -46,14 +46,14 @@ const mySentence = new Sentence([]);
 
 ### 📦 Generator
 
-_Generators_ allow you to generate random content which comprises multiple other _Lists_ and _Sentences_.
+_Generators_ allow you to create/utilise random content which is comprised from other _Lists_, _Sentences_, or _Generators_. See the [_Generators_ documentation](/src/lib/generator/README.md) for full details.
 
 ```ts Readme Generator
 const randomNpc = new NPC();
-console.log(`${randomNpc.property.race} ${randomNpc.property.class} called ${randomNpc.property.name}`); // Lizardfolk Fighter called Guh-Guh
+console.log(`${randomNpc.property.race} ${randomNpc.property.class} called ${randomNpc.property.name}`); // Goliath Barbarian called Cusheal
 
 const randomTavern = new Tavern();
-console.log(`${randomTavern.name} has ${randomTavern.staff.length} staff and ${randomTavern.patrons.length} patrons.`); // The Olive Dog has 2 staff and 5 patrons.
+console.log(`${randomTavern.name} tavern has ${randomTavern.patrons.length} patrons.`); // The Tall Mastiff tavern has 5 patrons.
 ```
 
 ### Available Components

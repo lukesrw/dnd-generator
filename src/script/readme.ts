@@ -29,21 +29,21 @@ npm install dnd-generator
 
 ### List 📃
 
-_Lists_ allow you to group related concepts into a single _List_ which can then be randomly picked from, further filtered, etc. see the [_Lists_ documentation](/src/lib/list/README.md) for full details.
+_Lists_ are the core primitive of D&D Generator, allowing you to group related concepts into a single _List_ which can then be passed around and picked from. See the [_Lists_ documentation](/src/lib/list/README.md) for full details.
 
 \`\`\`ts Readme List
 \`\`\`
 
 ### ✏️ Sentence
 
-_Sentences_ allow you to generate random text based off pre-defined _Sentence Parts_ which provide the possible combinations, see the [_Sentences_ documentation](/src/lib/sentence/README.md) for full details.
+_Sentences_ allow you to create text from pre-defined _Sentence Parts_ which provide the possible random permutations. See the [_Sentences_ documentation](/src/lib/sentence/README.md) for full details. _Sentences_
 
 \`\`\`ts Readme Sentence
 \`\`\`
 
 ### 📦 Generator
 
-_Generators_ allow you to generate random content which comprises multiple other _Lists_ and _Sentences_.
+_Generators_ allow you to create/utilise random content which is comprised from other _Lists_, _Sentences_, or _Generators_. See the [_Generators_ documentation](/src/lib/generator/README.md) for full details.
 
 \`\`\`ts Readme Generator
 \`\`\`
