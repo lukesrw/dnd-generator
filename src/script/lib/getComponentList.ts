@@ -9,10 +9,11 @@ export const UTILS = {
 export const V1_RENAMES = ["Physicality", "Armour", "Eye.Colour", "Skin.Colour", "Hair.Colour"] as const;
 export const TAB_SIZE = 4;
 
-export function getComponentList(object: Record<string, unknown>, prefix = "", previousLetter = "") {
+export function getComponentList(object: Record<string, unknown>, prefix = "", previousLetter = "", parent?: string) {
     let line = "";
 
     for (const key of objectKeys(object)) {
+        const keyParent = parent || key;
         const leaf = object[key] as Record<string, unknown>;
 
         /**
@@ -48,7 +49,8 @@ export function getComponentList(object: Record<string, unknown>, prefix = "", p
             const nextUtil = getComponentList(
                 leaf,
                 `${prefix + key}.`,
-                icons.length && !(key in UTILS) ? letter : previousLetter
+                icons.length && !(key in UTILS) ? letter : previousLetter,
+                keyParent
             );
             if (nextUtil.length) {
                 children += nextUtil;
@@ -61,7 +63,7 @@ export function getComponentList(object: Record<string, unknown>, prefix = "", p
         if (icons.length && !(key in UTILS)) {
             line +=
                 (previousLetter === letter ? ", " : "\n- ") +
-                `\`${(prefix + key + " " + (isNew ? "🎉" : "") + icons).trim()}\``;
+                `[\`${(prefix + key + " " + (isNew ? "🎉" : "") + icons).trim()}\`](/src/component/${keyParent}.ts)`;
             previousLetter = letter;
         }
         line += children;
