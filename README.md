@@ -21,11 +21,11 @@ _Lists_ are the core primitive of D&D Generator, allowing you to group related c
 ```ts Readme List
 const nobilityList = new Nobility.List();
 
-console.log(nobilityList.pickItem()); // { value: 'Common', weight: 20500, importance: 0 } Common
-console.log(nobilityList.pick()); // [ { value: 'Royal', importance: 9 }, { value: 'Noble', weigh...
-console.log(nobilityList.getItems());
-console.log(nobilityList.getItem("Scholar"));
-console.log(nobilityList.getValues());
+console.log(nobilityList.pickItem()); // { value: 'Servant', maturity: [ 'Child', 'Adult', 'Elder' ],...
+console.log(nobilityList.pick()); // Gentle
+console.log(nobilityList.getItems()); // [ { value: 'Royal', importance: 9 }, { value: 'Noble', weigh...
+console.log(nobilityList.getItem("Scholar")); // { value: 'Scholar', maturity: [ 'Adult', 'Elder' ], weight: ...
+console.log(nobilityList.getValues()); // [ 'Royal', 'Noble', 'Esquire', 'Knighted', 'Gentle', 'Yeoman...
 
 const smallerNobilityList = nobilityList.filter(item => item.value.includes("a"));
 const uppercaseNobilityList = nobilityList.map(item => {
@@ -50,10 +50,10 @@ _Generators_ allow you to create/utilise random content which is comprised from 
 
 ```ts Readme Generator
 const randomNpc = new NPC();
-console.log(`${randomNpc.property.race} ${randomNpc.property.class} called ${randomNpc.property.name}`); // Eladrin Elf Paladin called Calaldan
+console.log(`${randomNpc.property.race} ${randomNpc.property.class} called ${randomNpc.property.name}`); // Warforged Inquisitor called Cayrin
 
 const randomTavern = new Tavern();
-console.log(`${randomTavern.name} tavern has ${randomTavern.patrons.length} patrons.`); // The Trim Mule tavern has 6 patrons.
+console.log(`${randomTavern.name} tavern has ${randomTavern.patrons.length} patrons.`); // The Green Chicken tavern has 8 patrons.
 ```
 
 ### Available Components
@@ -73,7 +73,6 @@ console.log(`${randomTavern.name} tavern has ${randomTavern.patrons.length} patr
 - `Past 🎉📃`, `Physicality 📃`, `Profession 🎉📃`
 - `Race 📃`, `Relationship 🎉📃`, `Rumour 🎉✏️`, `Rumour.Body 🎉📃`
 - `Sex 📃`, `Skill 🎉📃`, `Skin.Colour 📃`, `Subtlety 🎉📃`
-- `Tavern 📦`
-- `Tavern.Name ✏️`, `Tool 🎉📃`, `Trait 🎉📃`
+- `Tavern 📦`, `Tavern.Name ✏️`, `Tool 🎉📃`, `Trait 🎉📃`
 - `Verb 🎉📃`
 - `Weapon 📃`

@@ -12,17 +12,19 @@ export const TAB_SIZE = 4;
 export function getComponentList(object: Record<string, unknown>, prefix = "", previousLetter = "") {
     let line = "";
 
-    for (const objectKey of objectKeys(object)) {
-        const leaf = object[objectKey] as Record<string, unknown>;
+    for (const key of objectKeys(object)) {
+        const leaf = object[key] as Record<string, unknown>;
 
         /**
          * Determine if this is a new component
          */
-        const isNew =
-            !(objectKey in List) &&
-            !(objectKey in Generator) &&
-            !(objectKey in Prefab) &&
-            !arrayIncludes(V1_RENAMES, prefix + objectKey);
+        // prettier-ignore
+        const isNew = (
+            !(key in List) &&
+            !(key in Generator) &&
+            !(key in Prefab) &&
+            !arrayIncludes(V1_RENAMES, prefix + key)
+        );
 
         /**
          * Aggregate util/function icons
@@ -40,9 +42,14 @@ export function getComponentList(object: Record<string, unknown>, prefix = "", p
          * If the component has non-array sub-components, recursively check them
          */
         let children = "";
+        const letter = (prefix + key)[0] ?? "";
         const objectSubKeys = objectKeys(leaf);
         if (objectSubKeys.length && objectSubKeys[0] !== "0") {
-            const nextUtil = getComponentList(leaf, `${prefix + objectKey}.`, previousLetter);
+            const nextUtil = getComponentList(
+                leaf,
+                `${prefix + key}.`,
+                icons.length && !(key in UTILS) ? letter : previousLetter
+            );
             if (nextUtil.length) {
                 children += nextUtil;
             }
@@ -51,11 +58,10 @@ export function getComponentList(object: Record<string, unknown>, prefix = "", p
         /**
          * Wrap the component name with a link
          */
-        const letter = (prefix + objectKey)[0] ?? "";
-        if (icons.length && !(objectKey in UTILS)) {
+        if (icons.length && !(key in UTILS)) {
             line +=
                 (previousLetter === letter ? ", " : "\n- ") +
-                `\`${(prefix + objectKey + " " + (isNew ? "🎉" : "") + icons).trim()}\``;
+                `\`${(prefix + key + " " + (isNew ? "🎉" : "") + icons).trim()}\``;
             previousLetter = letter;
         }
         line += children;
