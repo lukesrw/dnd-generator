@@ -21,11 +21,11 @@ _Lists_ are the core primitive of D&D Generator, allowing you to group related c
 ```ts Readme List
 const nobilityList = new Nobility.List();
 
-console.log(nobilityList.pickItem()); // { value: 'Servant', maturity: [ 'Child', 'Adult', 'Elder' ],...
-console.log(nobilityList.pick()); // Gentle
+console.log(nobilityList.pickItem()); // { value: 'Merchant', maturity: [ 'Adult', 'Elder' ], weight:...
+console.log(nobilityList.pick()); // Common
 console.log(nobilityList.getItems()); // [ { value: 'Royal', importance: 9 }, { value: 'Noble', weigh...
 console.log(nobilityList.getItem("Scholar")); // { value: 'Scholar', maturity: [ 'Adult', 'Elder' ], weight: ...
-console.log(nobilityList.getValues()); // [ 'Royal', 'Noble', 'Esquire', 'Knighted', 'Gentle', 'Yeoman...
+console.log(nobilityList.getValues());
 
 const smallerNobilityList = nobilityList.filter(item => item.value.includes("a"));
 const uppercaseNobilityList = nobilityList.map(item => {
@@ -49,11 +49,11 @@ const mySentence = new Sentence([]);
 _Generators_ allow you to create/utilise random content which is comprised from other _Lists_, _Sentences_, or _Generators_. See the [_Generators_ documentation](/src/lib/generator/README.md) for full details.
 
 ```ts Readme Generator
-const randomNpc = new NPC();
-console.log(`${randomNpc.property.race} ${randomNpc.property.class} called ${randomNpc.property.name}`); // Warforged Inquisitor called Cayrin
+const { property } = new NPC();
+console.log(`${property.name}, the ${property.race} ${property.class}.`); // Dolgo, the Rock Gnome Warlock.
 
-const randomTavern = new Tavern();
-console.log(`${randomTavern.name} tavern has ${randomTavern.patrons.length} patrons.`); // The Green Chicken tavern has 8 patrons.
+const { name, patrons } = new Tavern();
+console.log(`${name} tavern has ${patrons.length} patrons.`); // The Fawn Owl tavern has 8 patrons.
 ```
 
 ### Available Components

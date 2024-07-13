@@ -3,8 +3,8 @@ import { Tavern } from "../component/Tavern.js";
 
 // Begin example
 
-const randomNpc = new NPC();
-console.log(`${randomNpc.property.race} ${randomNpc.property.class} called ${randomNpc.property.name}`);
+const { property } = new NPC();
+console.log(`${property.name}, the ${property.race} ${property.class}.`);
 
-const randomTavern = new Tavern();
-console.log(`${randomTavern.name} tavern has ${randomTavern.patrons.length} patrons.`);
+const { name, patrons } = new Tavern();
+console.log(`${name} tavern has ${patrons.length} patrons.`);
