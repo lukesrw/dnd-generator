@@ -19,7 +19,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
     -   `Ideal`
     -   `Language`, `Level`, `Location`
     -   `Money Sink`, `Monster`, `Moral`
-    -   `Past`, `Profession`
+    -   `Past`
     -   `Relationship`, `Rumour.Body`
     -   `Skill`
     -   `Subtlety`

@@ -6,12 +6,11 @@ export const UTILS = {
     List: "📃",
     Sentence: "✏️"
 } satisfies Record<keyof typeof Util, string>;
-export const V1_RENAMES = ["Physicality", "Armour"] as const;
+export const V1_RENAMES = ["Physicality", "Armour", "Eye.Colour", "Skin.Colour", "Hair.Colour"] as const;
 export const TAB_SIZE = 4;
 
-export function getComponentList(object: Record<string, unknown>, prefix = "") {
+export function getComponentList(object: Record<string, unknown>, prefix = "", previousLetter = "") {
     let line = "";
-    let previousLetter = "";
 
     for (const objectKey of objectKeys(object)) {
         const leaf = object[objectKey] as Record<string, unknown>;
@@ -43,7 +42,7 @@ export function getComponentList(object: Record<string, unknown>, prefix = "") {
         let children = "";
         const objectSubKeys = objectKeys(leaf);
         if (objectSubKeys.length && objectSubKeys[0] !== "0") {
-            const nextUtil = getComponentList(leaf, `${prefix + objectKey}.`);
+            const nextUtil = getComponentList(leaf, `${prefix + objectKey}.`, previousLetter);
             if (nextUtil.length) {
                 children += nextUtil;
             }
@@ -52,17 +51,12 @@ export function getComponentList(object: Record<string, unknown>, prefix = "") {
         /**
          * Wrap the component name with a link
          */
-        let component = `\`${(prefix + objectKey + " " + (isNew ? "🎉" : "") + icons).trim()}\``;
         const letter = (prefix + objectKey)[0] ?? "";
-        if (previousLetter === letter) {
-            component = `, ${component}`;
-        } else {
-            component = `\n- ${component}`;
-            previousLetter = letter;
-        }
-
         if (icons.length && !(objectKey in UTILS)) {
-            line += component;
+            line +=
+                (previousLetter === letter ? ", " : "\n- ") +
+                `\`${(prefix + objectKey + " " + (isNew ? "🎉" : "") + icons).trim()}\``;
+            previousLetter = letter;
         }
         line += children;
     }
