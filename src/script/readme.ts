@@ -27,7 +27,7 @@ npm install dnd-generator
 
 ## Utilities
 
-### List 📃 ([docs](/src/util/List.md))
+### 📃 List ([docs](/src/util/List.md))
 
 _Lists_ are the core primitive, allowing you to group related concepts which can then be picked from, or further filtered.
 
