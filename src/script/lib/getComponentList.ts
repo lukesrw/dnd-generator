@@ -9,7 +9,7 @@ export const UTILS = {
 export const V1_RENAMES = ["Physicality", "Armour"] as const;
 export const TAB_SIZE = 4;
 
-export function getComponentList(object: Record<string, unknown>, depth = 0) {
+export function getComponentList(object: Record<string, unknown>, prefix = "") {
     let line = "";
     let previousLetter = "";
 
@@ -23,7 +23,7 @@ export function getComponentList(object: Record<string, unknown>, depth = 0) {
             !(objectKey in List) &&
             !(objectKey in Generator) &&
             !(objectKey in Prefab) &&
-            !arrayIncludes(V1_RENAMES, objectKey);
+            !arrayIncludes(V1_RENAMES, prefix + objectKey);
 
         /**
          * Aggregate util/function icons
@@ -43,7 +43,7 @@ export function getComponentList(object: Record<string, unknown>, depth = 0) {
         let children = "";
         const objectSubKeys = objectKeys(leaf);
         if (objectSubKeys.length && objectSubKeys[0] !== "0") {
-            const nextUtil = getComponentList(leaf, depth + 1);
+            const nextUtil = getComponentList(leaf, `${prefix + objectKey}.`);
             if (nextUtil.length) {
                 children += nextUtil;
             }
@@ -52,23 +52,19 @@ export function getComponentList(object: Record<string, unknown>, depth = 0) {
         /**
          * Wrap the component name with a link
          */
-        let component = `\`${(
-            objectKey.replace(/([a-z])([A-Z])/g, "$1 $2") +
-            " " +
-            (isNew ? "🎉" : "") +
-            icons
-        ).trim()}\``;
-
-        if (previousLetter === objectKey[0] && children.length === 0 && depth === 0) {
+        let component = `\`${(prefix + objectKey + " " + (isNew ? "🎉" : "") + icons).trim()}\``;
+        const letter = (prefix + objectKey)[0] ?? "";
+        if (previousLetter === letter) {
             component = `, ${component}`;
         } else {
-            component = `\n${" ".repeat(depth * TAB_SIZE)}- ${component}`;
-            previousLetter = children.length ? "|" : objectKey[0] ?? "";
+            component = `\n- ${component}`;
+            previousLetter = letter;
         }
 
-        if ((icons.length || children.length) && !(objectKey in UTILS)) {
-            line += component + children;
+        if (icons.length && !(objectKey in UTILS)) {
+            line += component;
         }
+        line += children;
     }
 
     return line;

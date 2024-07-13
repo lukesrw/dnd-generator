@@ -29,7 +29,7 @@ npm install dnd-generator
 
 ### List 📃
 
-_Lists_ are the core primitive of D&D Generator, allowing you to group related concepts into a single _List_ which can then be passed around and picked from. See the [_Lists_ documentation](/src/lib/list/README.md) for full details.
+_Lists_ are the core primitive of D&D Generator, allowing you to group related concepts into a single set which can then be reused, further filtered, and picked from. See the [_Lists_ documentation](/src/lib/list/README.md) for full details.
 
 \`\`\`ts Readme List
 \`\`\`

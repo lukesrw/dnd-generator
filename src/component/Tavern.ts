@@ -1,4 +1,5 @@
 import { randomItem } from "../lib/randomItem.js";
+import { randomNumber } from "../lib/randomNumber.js";
 import { Sentence as _Sentence } from "../util/Sentence.js";
 import { Animal } from "./Animal.js";
 import { Colour } from "./Colour.js";
@@ -31,10 +32,12 @@ export class Tavern {
             };
         }
     ) {
+        const staffCount = config?.staff?.count ?? 2;
+
         this.config = {
             staff: {
                 list: config?.staff?.list ?? [],
-                count: config?.staff?.count ?? 2,
+                count: staffCount,
                 config: {
                     context: {
                         maturity: Tavern.MATURITIES,
@@ -48,7 +51,7 @@ export class Tavern {
             },
             patrons: {
                 list: config?.patrons?.list ?? [],
-                count: config?.patrons?.count ?? 5,
+                count: config?.patrons?.count ?? staffCount * randomNumber(4, 3),
                 config: {
                     context: {
                         maturity: Tavern.MATURITIES,

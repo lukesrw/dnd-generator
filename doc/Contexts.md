@@ -16,7 +16,7 @@ const dwarf = new NPC(
     }
 );
 
-console.log(`I'm a ${dwarf.property.race}`); // I'm a Dwarf
+console.log(`I'm a ${dwarf.property.race}`); // I'm a Mountain Dwarf
 ```
 
 Generators will use the built-in lists if you don't provide one, but you can also easily make your own entirely custom lists:
@@ -43,5 +43,5 @@ const alien = new NPC(
     }
 );
 
-console.log(`I'm a ${alien.property.race}`); // I'm a Nomai
+console.log(`I'm a ${alien.property.race}`); // I'm a Owlk
 ```

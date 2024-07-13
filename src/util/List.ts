@@ -270,4 +270,50 @@ export class List<
     ) {
         return new (List.createList(this.items.map(callback)))();
     }
+
+    // #region V1 API
+    /**
+     * Check whether the List is weighted
+     */
+    get weighted() {
+        process.emitWarning(
+            "dnd-generator: `NPC.weighted` has been removed, Lists are now weighted automatically.",
+            "DeprecationWarning"
+        );
+
+        return true;
+    }
+
+    /**
+     * Get the items from a filtered version of the List
+     */
+    getFiltered(filter: Filter<TValue, TKeys, TOnPick>) {
+        process.emitWarning(
+            "dnd-generator: `List.getFiltered(filter)` has been removed, use `List.filter(filter).getItems()` instead.",
+            "DeprecationWarning"
+        );
+
+        return this.filter(filter).getItems();
+    }
+
+    /**
+     * Get a random item from a filtered version of the List
+     */
+    pickRandom(filter?: Filter<TValue, TKeys, TOnPick>) {
+        if (filter) {
+            process.emitWarning(
+                "dnd-generator: `List.pickRandom(filter)` has been removed, use `List.filter(filter).pick()` instead.",
+                "DeprecationWarning"
+            );
+
+            return this.filter(filter).pick();
+        }
+
+        process.emitWarning(
+            "dnd-generator: `List.pickRandom()` has been renamed to `List.pick()`.",
+            "DeprecationWarning"
+        );
+
+        return this.pick();
+    }
 }

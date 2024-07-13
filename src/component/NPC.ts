@@ -108,10 +108,8 @@ export class NPC {
     /**
      * ### Random Non-Player Character
      *
-     * @param property to pre-define the NPC
-     * @param options to control random generation
-     * @param context to restrict random lists
-     * @param order to generate properties in
+     * @param property to pre-define the NPC properties
+     * @param config to set context, options, and generation order
      *
      * Control when properties are generated, this limits the possible combinations (e.g. Nobility influences Title).
      *
@@ -245,6 +243,9 @@ export class NPC {
         this.skills = new NPC.Skills(this);
     }
 
+    /**
+     * Generate the NPC's armour
+     */
     protected pickArmour() {
         if (this.isCombatant() && this.config.context.armour) {
             return this.config.context.armour.filter(this.property).pick();
@@ -253,6 +254,9 @@ export class NPC {
         return "";
     }
 
+    /**
+     * Generate the NPC's gender
+     */
     protected pickGender() {
         if (
             this.config.context.sex?.items.length &&
@@ -273,10 +277,15 @@ export class NPC {
             return this.property.sex;
         }
 
-        // otherwise we pick a gender from the provided context
+        /**
+         * Otherwise we pick a gender from the provided context
+         */
         return this.config.context.gender?.filter(this.property).pick();
     }
 
+    /**
+     * Generate the NPC's tools
+     */
     protected pickTools() {
         const tools: AutoComplete<Tool>[] = [];
 
@@ -291,6 +300,9 @@ export class NPC {
         return tools;
     }
 
+    /**
+     * Generate the NPC's languages
+     */
     protected pickLanguages() {
         const languages: AutoComplete<Language>[] = [];
 
@@ -305,6 +317,9 @@ export class NPC {
         return languages;
     }
 
+    /**
+     * Get the NPC pronoun based on the context and person
+     */
     getPronoun(context: PronounContext = "their", person: PronounPerson = "third") {
         let pronounTopic: PronounTopic = "Non-Binary";
         if (isPronounTopic(this.property.gender)) {
@@ -316,6 +331,9 @@ export class NPC {
         return getPronoun(context, pronounTopic, person);
     }
 
+    /**
+     * Determine whether the NPC is a combatant
+     */
     isCombatant() {
         /**
          * Check whether the maturity is a combatant
@@ -344,8 +362,41 @@ export class NPC {
         return true;
     }
 
+    /**
+     * Get the NPC proficiency bonus
+     */
     getProficiencyBonus() {
         return Math.floor((this.property.level - 1) / 4) + 2;
+    }
+
+    // #region V1 API
+    /**
+     * Get the NPC level
+     */
+    getLevel() {
+        process.emitWarning(
+            "dnd-generator: `NPC.getLevel` has been removed, use `NPC.property.level` instead.",
+            "DeprecationWarning"
+        );
+
+        return this.property.level;
+    }
+
+    /**
+     * Get the NPC class and level as an array
+     */
+    get classes() {
+        process.emitWarning(
+            "dnd-generator: `NPC.classes` has been removed, use `NPC.property.class` and `NPC.property.level` instead.",
+            "DeprecationWarning"
+        );
+
+        return [
+            {
+                name: this.property.class,
+                level: this.property.level
+            }
+        ];
     }
 }
 

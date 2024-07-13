@@ -16,13 +16,13 @@ npm install dnd-generator
 
 ### List 📃
 
-_Lists_ are the core primitive of D&D Generator, allowing you to group related concepts into a single _List_ which can then be passed around and picked from. See the [_Lists_ documentation](/src/lib/list/README.md) for full details.
+_Lists_ are the core primitive of D&D Generator, allowing you to group related concepts into a single set which can then be reused, further filtered, and picked from. See the [_Lists_ documentation](/src/lib/list/README.md) for full details.
 
 ```ts Readme List
 const nobilityList = new Nobility.List();
 
-console.log(nobilityList.pickItem()); // { value: 'Scholar', maturity: [ 'Adult', 'Elder' ], weight: ...
-console.log(nobilityList.pick()); // Merchant
+console.log(nobilityList.pickItem()); // { value: 'Servant', maturity: [ 'Child', 'Adult', 'Elder' ],...
+console.log(nobilityList.pick()); // Peasant
 console.log(nobilityList.getItems()); // [ { value: 'Royal', importance: 9 }, { value: 'Noble', weigh...
 console.log(nobilityList.getItem("Scholar")); // { value: 'Scholar', maturity: [ 'Adult', 'Elder' ], weight: ...
 console.log(nobilityList.getValues());
@@ -50,10 +50,10 @@ _Generators_ allow you to create/utilise random content which is comprised from 
 
 ```ts Readme Generator
 const randomNpc = new NPC();
-console.log(`${randomNpc.property.race} ${randomNpc.property.class} called ${randomNpc.property.name}`); // Goliath Barbarian called Cusheal
+console.log(`${randomNpc.property.race} ${randomNpc.property.class} called ${randomNpc.property.name}`); // Aasimar Cleric called Alantat
 
 const randomTavern = new Tavern();
-console.log(`${randomTavern.name} tavern has ${randomTavern.patrons.length} patrons.`); // The Tall Mastiff tavern has 5 patrons.
+console.log(`${randomTavern.name} tavern has ${randomTavern.patrons.length} patrons.`); // The Bronze Cow tavern has 6 patrons.
 ```
 
 ### Available Components
@@ -63,29 +63,20 @@ console.log(`${randomTavern.name} tavern has ${randomTavern.patrons.length} patr
 - `Class 📃`, `Colour 🎉📃`, `Conclusion 🎉📃`, `Currency 🎉📃`
 - `Danger 🎉📃`, `Dice 🎉📃`
 - `Ethic 🎉📃`
-- `Eye`
-    - `Colour 🎉📃`
+- `Eye.Colour 🎉📃`
 - `Flaw 🎉📃`
 - `Gender 🎉📃`, `Gossip 🎉📃`
-- `Hair`
-    - `Colour 🎉📃`
+- `Hair.Colour 🎉📃`
 - `Ideal 🎉📃`
 - `Language 🎉📃`, `Level 🎉📃`, `Location 🎉📃`
-- `Maturity 📃`, `Money Sink 🎉📃✏️`, `Monster 🎉📃`, `Moral 🎉📃`, `Motivation 📃`
-- `Name 📃`, `Nobility 📃`
-- `NPC 📦`
-    - `Abilities 🎉📦`
-    - `Skills 📦`
+- `Maturity 📃`, `MoneySink 🎉📃✏️`, `Monster 🎉📃`, `Moral 🎉📃`, `Motivation 📃`
+- `Name 📃`, `Nobility 📃`, `NPC 📦`
+- `NPC.Abilities 🎉📦`, `NPC.Skills 📦`
 - `Past 🎉📃`, `Physicality 📃`, `Profession 🎉📃`
-- `Race 📃`, `Relationship 🎉📃`
-- `Rumour 🎉✏️`
-    - `Body 🎉📃`
+- `Race 📃`, `Relationship 🎉📃`, `Rumour 🎉✏️`
+- `Rumour.Body 🎉📃`
 - `Sex 📃`, `Skill 🎉📃`
-- `Skin`
-    - `Colour 🎉📃`
-- `Subtlety 🎉📃`
-- `Tavern 📦`
-    - `Name ✏️`
-- `Tool 🎉📃`, `Trait 🎉📃`
+- `Skin.Colour 🎉📃`, `Subtlety 🎉📃`
+- `Tavern 📦`, `Tavern.Name ✏️`, `Tool 🎉📃`, `Trait 🎉📃`
 - `Verb 🎉📃`
 - `Weapon 📃`
