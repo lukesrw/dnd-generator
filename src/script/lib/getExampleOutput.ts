@@ -5,7 +5,7 @@ import { join } from "path";
 const DOC_DIR_NAME = "doc";
 const DOC_DIR = join(process.cwd(), "src", DOC_DIR_NAME);
 const REGEX_EXAMPLE_NAME = /```ts (.+)/u;
-const CONSOLE_LOG_LENGTH = 60;
+const CONSOLE_LOG_LENGTH = 100;
 
 export async function getExampleOutput(example: string) {
     const name = example.match(REGEX_EXAMPLE_NAME)?.[1] ?? "";
@@ -29,6 +29,7 @@ export async function getExampleOutput(example: string) {
         }
         if (line.startsWith("console.log")) {
             consoleLogs.push(index - start);
+            console.table({ line, index: index - start });
         }
     });
     content = content.slice(start, content.length - 1);
@@ -41,7 +42,6 @@ export async function getExampleOutput(example: string) {
     return new Promise<string>(async (resolve, reject) => {
         const { stderr, stdout } = spawn("node", [`dist/commonjs/${DOC_DIR_NAME}/${name}`]).on("exit", () => {
             resolve("```ts " + name + "\n" + content.join("\n") + "\n```");
-            console.groupEnd();
         });
 
         stderr.addListener("data", data => {
@@ -54,6 +54,9 @@ export async function getExampleOutput(example: string) {
             if (typeof contentIndex === "undefined") return;
 
             data = data.toString().replace(/\n\s*/g, " ").trim().replace(/,\s*'/g, ", '");
+            // console.log(contentIndex);
+            // console.log(data);
+            // console.log("---");
             if (data.length > CONSOLE_LOG_LENGTH) {
                 data = data.substring(0, CONSOLE_LOG_LENGTH) + "...";
             }

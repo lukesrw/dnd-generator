@@ -16,16 +16,16 @@ npm install dnd-generator
 
 ### List 📃 ([docs](/src/util/List.md))
 
-_Lists_ are the core primitive of D&D Generator, allowing you to group related concepts into a single set which can then be reused, further filtered, and picked from.
+_Lists_ are the core primitive, allowing you to group related concepts which can then be picked from, or further filtered.
 
 ```ts Readme List
 const nobilityList = new Nobility.List();
 
-console.log(nobilityList.pickItem()); // { value: 'Merchant', maturity: [ 'Adult', 'Elder' ], weight:...
+console.log(nobilityList.pickItem()); // { value: 'Merchant', maturity: [ 'Adult', 'Elder' ], weight: 7500, importance: 2 }
 console.log(nobilityList.pick()); // Common
-console.log(nobilityList.getItems()); // [ { value: 'Royal', importance: 9 }, { value: 'Noble', weigh...
-console.log(nobilityList.getItem("Scholar")); // { value: 'Scholar', maturity: [ 'Adult', 'Elder' ], weight: ...
-console.log(nobilityList.getValues());
+console.log(nobilityList.getItems()); // [ { value: 'Royal', importance: 9 }, { value: 'Noble', weight: 5, importance: 8 }, { value: 'Esquire...
+console.log(nobilityList.getItem("Scholar")); // { value: 'Scholar', maturity: [ 'Adult', 'Elder' ], weight: 3000, importance: 3 }
+console.log(nobilityList.getValues()); // [ 'Royal', 'Noble', 'Esquire', 'Knighted', 'Gentle', 'Yeoman', 'Scholar', 'Merchant', 'Servant', 'Co...
 
 const smallerNobilityList = nobilityList.filter(item => item.value.includes("a"));
 const uppercaseNobilityList = nobilityList.map(item => {
@@ -38,10 +38,19 @@ const uppercaseNobilityList = nobilityList.map(item => {
 
 ### ✏️ Sentence ([docs](/src/util/Sentence.md))
 
-_Sentences_ allow you to create text from pre-defined _Sentence Parts_ which provide the possible random permutations. See the [_Sentences_ documentation](/src/lib/sentence/README.md) for full details. _Sentences_
+_Sentences_ allow you to create text from pre-defined _Sentence Parts_ which provide the possible random permutations.
 
 ```ts Readme Sentence
-const mySentence = new Sentence([]);
+const hotel = new Sentence([
+    "Hotel",
+    () => randomItem(["California", "Letztes Jahr", "Emerson"]) + ":",
+    "if you're looking for",
+    store => store.item("ideal", () => new Component.Ideal.List().pickItem().category).toLowerCase(),
+    " - you found it!",
+    store => `(${store.item("ideal", () => "Ideal")})`
+]);
+console.log(hotel.build()); // Hotel California: if you're looking for greed - you found it! (Greed)
+console.log(hotel.build()); // Hotel Letztes Jahr: if you're looking for nature - you found it! (Nature)
 ```
 
 ### 📦 Generator
@@ -50,10 +59,10 @@ _Generators_ allow you to create/utilise random content which is comprised from 
 
 ```ts Readme Generator
 const { property } = new NPC();
-console.log(`${property.name}, the ${property.race} ${property.class}.`); // Brahl, the Scourge Aasimar Barbarian.
+console.log(`${property.name}, the ${property.race} ${property.class}.`); // Burlri, the Mountain Dwarf Druid.
 
 const { name, patrons } = new Tavern();
-console.log(`${name} tavern has ${patrons.length} patrons.`); // The Tan Cow tavern has 6 patrons.
+console.log(`${name} tavern has ${patrons.length} patrons.`); // The Tall Mule tavern has 8 patrons.
 ```
 
 ### Available Components
