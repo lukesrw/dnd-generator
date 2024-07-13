@@ -4,10 +4,10 @@ import { Nobility } from "../component/Nobility.js";
 
 const nobilityList = new Nobility.List();
 
-console.log(nobilityList.pickItem());
 console.log(nobilityList.pick());
-console.log(nobilityList.getItems());
+console.log(nobilityList.pickItem());
 console.log(nobilityList.getItem("Scholar"));
+console.log(nobilityList.getItems());
 console.log(nobilityList.getValues());
 
 const smallerNobilityList = nobilityList.filter(item => item.value.includes("a"));
