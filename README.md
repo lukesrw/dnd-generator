@@ -14,17 +14,17 @@ npm install dnd-generator
 
 ## Utilities
 
-### List 📃 ([docs](/src/util/List.md))
+### 📃 List ([docs](/src/util/List.md))
 
 _Lists_ are the core primitive, allowing you to group related concepts which can then be picked from, or further filtered.
 
 ```ts Readme List
 const nobilityList = new Nobility.List();
 
-console.log(nobilityList.pickItem()); // { value: 'Merchant', maturity: [ 'Adult', 'Elder' ], weight: 7500, importance: 2 }
 console.log(nobilityList.pick()); // Common
-console.log(nobilityList.getItems()); // [ { value: 'Royal', importance: 9 }, { value: 'Noble', weight: 5, importance: 8 }, { value: 'Esquire...
+console.log(nobilityList.pickItem()); // { value: 'Common', weight: 20500, importance: 0 }
 console.log(nobilityList.getItem("Scholar")); // { value: 'Scholar', maturity: [ 'Adult', 'Elder' ], weight: 3000, importance: 3 }
+console.log(nobilityList.getItems()); // [ { value: 'Royal', importance: 9 }, { value: 'Noble', weight: 5, importance: 8 }, { value: 'Esquire...
 console.log(nobilityList.getValues()); // [ 'Royal', 'Noble', 'Esquire', 'Knighted', 'Gentle', 'Yeoman', 'Scholar', 'Merchant', 'Servant', 'Co...
 
 const smallerNobilityList = nobilityList.filter(item => item.value.includes("a"));
@@ -46,11 +46,11 @@ const hotel = new Sentence([
     () => randomItem(["California", "Letztes Jahr", "Emerson"]) + ":",
     "if you're looking for",
     store => store.item("ideal", () => new Component.Ideal.List().pickItem().category).toLowerCase(),
-    " - you found it!",
+    "- you found it!",
     store => `(${store.item("ideal", () => "Ideal")})`
 ]);
-console.log(hotel.build()); // Hotel California: if you're looking for greed - you found it! (Greed)
-console.log(hotel.build()); // Hotel Letztes Jahr: if you're looking for nature - you found it! (Nature)
+console.log(hotel.build()); // Hotel California: if you're looking for logic - you found it! (Logic)
+console.log(hotel.build()); // Hotel California: if you're looking for noble obligation - you found it! (Noble Obligation)
 ```
 
 ### 📦 Generator
@@ -59,10 +59,10 @@ _Generators_ allow you to create/utilise random content which is comprised from 
 
 ```ts Readme Generator
 const { property } = new NPC();
-console.log(`${property.name}, the ${property.race} ${property.class}.`); // Burlri, the Mountain Dwarf Druid.
+console.log(`${property.name}, the ${property.race} ${property.class}.`); // Barmanthys, the Dragonborn Bard.
 
 const { name, patrons } = new Tavern();
-console.log(`${name} tavern has ${patrons.length} patrons.`); // The Tall Mule tavern has 8 patrons.
+console.log(`${name} tavern has ${patrons.length} patrons.`); // The Slender Elk tavern has 8 patrons.
 ```
 
 ### Available Components
