@@ -21,7 +21,7 @@ _Lists_ are the core primitive, allowing you to group related concepts which can
 ```ts Readme List
 const nobilityList = new Nobility.List();
 
-console.log(nobilityList.pick()); // Common
+console.log(nobilityList.pick()); // Servant
 console.log(nobilityList.pickItem()); // { value: 'Common', weight: 20500, importance: 0 }
 console.log(nobilityList.getItem("Scholar")); // { value: 'Scholar', maturity: [ 'Adult', 'Elder' ], weight: 3000, importance: 3 }
 console.log(nobilityList.getItems()); // [ { value: 'Royal', importance: 9 }, { value: 'Noble', weight: 5, importance: 8 }, { value: 'Esquire...
@@ -49,8 +49,8 @@ const hotel = new Sentence([
     "- you found it!",
     store => `(${store.item("ideal", () => "Ideal")})`
 ]);
-console.log(hotel.build()); // Hotel California: if you're looking for logic - you found it! (Logic)
-console.log(hotel.build()); // Hotel California: if you're looking for noble obligation - you found it! (Noble Obligation)
+console.log(hotel.build()); // Hotel Emerson: if you're looking for freedom - you found it! (Freedom)
+console.log(hotel.build()); // Hotel Letztes Jahr: if you're looking for tradition - you found it! (Tradition)
 ```
 
 ### 📦 Generator
@@ -59,29 +59,29 @@ _Generators_ allow you to create/utilise random content which is comprised from 
 
 ```ts Readme Generator
 const { property } = new NPC();
-console.log(`${property.name}, the ${property.race} ${property.class}.`); // Barmanthys, the Dragonborn Bard.
+console.log(`${property.name}, the ${property.race} ${property.class}.`); // Hornia Quiller, the Rock Gnome Druid.
 
 const { name, patrons } = new Tavern();
-console.log(`${name} tavern has ${patrons.length} patrons.`); // The Slender Elk tavern has 8 patrons.
+console.log(`${name} tavern has ${patrons.length} patrons.`); // The Beige Chicken tavern has 6 patrons.
 ```
 
-### Available Components
+## Components
 
-- [`Ability 🎉📃`](/src/component/Ability.ts), [`Age 📃`](/src/component/Age.ts), [`Alignment 📃`](/src/component/Alignment.ts), [`Animal 🎉📃`](/src/component/Animal.ts), [`Armour 📃`](/src/component/Armour.ts)
-- [`Background 🎉📃`](/src/component/Background.ts)
-- [`Class 📃`](/src/component/Class.ts), [`Colour 🎉📃`](/src/component/Colour.ts), [`Conclusion 🎉📃`](/src/component/Conclusion.ts), [`Currency 🎉📃`](/src/component/Currency.ts)
-- [`Danger 🎉📃`](/src/component/Danger.ts), [`Dice 🎉📃`](/src/component/Dice.ts)
-- [`Ethic 🎉📃`](/src/component/Ethic.ts), [`Eye.Colour 📃`](/src/component/Eye.ts)
-- [`Flaw 🎉📃`](/src/component/Flaw.ts)
-- [`Gender 🎉📃`](/src/component/Gender.ts), [`Gossip 🎉📃`](/src/component/Gossip.ts)
-- [`Hair.Colour 📃`](/src/component/Hair.ts)
-- [`Ideal 🎉📃`](/src/component/Ideal.ts)
-- [`Language 🎉📃`](/src/component/Language.ts), [`Level 🎉📃`](/src/component/Level.ts), [`Location 🎉📃`](/src/component/Location.ts)
-- [`Maturity 📃`](/src/component/Maturity.ts), [`MoneySink 🎉📃✏️`](/src/component/MoneySink.ts), [`Monster 🎉📃`](/src/component/Monster.ts), [`Moral 🎉📃`](/src/component/Moral.ts), [`Motivation 📃`](/src/component/Motivation.ts)
-- [`Name 📃`](/src/component/Name.ts), [`Nobility 📃`](/src/component/Nobility.ts), [`NPC 📦`](/src/component/NPC.ts), [`NPC.Abilities 🎉📦`](/src/component/NPC.ts), [`NPC.Skills 📦`](/src/component/NPC.ts)
-- [`Past 🎉📃`](/src/component/Past.ts), [`Physicality 📃`](/src/component/Physicality.ts), [`Profession 🎉📃`](/src/component/Profession.ts)
-- [`Race 📃`](/src/component/Race.ts), [`Relationship 🎉📃`](/src/component/Relationship.ts), [`Rumour 🎉✏️`](/src/component/Rumour.ts), [`Rumour.Body 🎉📃`](/src/component/Rumour.ts)
-- [`Sex 📃`](/src/component/Sex.ts), [`Skill 🎉📃`](/src/component/Skill.ts), [`Skin.Colour 📃`](/src/component/Skin.ts), [`Subtlety 🎉📃`](/src/component/Subtlety.ts)
-- [`Tavern 📦`](/src/component/Tavern.ts), [`Tavern.Name ✏️`](/src/component/Tavern.ts), [`Tool 🎉📃`](/src/component/Tool.ts), [`Trait 🎉📃`](/src/component/Trait.ts)
-- [`Verb 🎉📃`](/src/component/Verb.ts)
-- [`Weapon 📃`](/src/component/Weapon.ts)
+-   [`Ability 🎉📃`](/src/component/Ability.ts), [`Age 📃`](/src/component/Age.ts), [`Alignment 📃`](/src/component/Alignment.ts), [`Animal 🎉📃`](/src/component/Animal.ts), [`Armour 📃`](/src/component/Armour.ts)
+-   [`Background 🎉📃`](/src/component/Background.ts)
+-   [`Class 📃`](/src/component/Class.ts), [`Colour 🎉📃`](/src/component/Colour.ts), [`Conclusion 🎉📃`](/src/component/Conclusion.ts), [`Currency 🎉📃`](/src/component/Currency.ts)
+-   [`Danger 🎉📃`](/src/component/Danger.ts), [`Dice 🎉📃`](/src/component/Dice.ts)
+-   [`Ethic 🎉📃`](/src/component/Ethic.ts), [`Eye.Colour 📃`](/src/component/Eye.ts)
+-   [`Flaw 🎉📃`](/src/component/Flaw.ts)
+-   [`Gender 🎉📃`](/src/component/Gender.ts), [`Gossip 🎉📃`](/src/component/Gossip.ts)
+-   [`Hair.Colour 📃`](/src/component/Hair.ts)
+-   [`Ideal 🎉📃`](/src/component/Ideal.ts)
+-   [`Language 🎉📃`](/src/component/Language.ts), [`Level 🎉📃`](/src/component/Level.ts), [`Location 🎉📃`](/src/component/Location.ts)
+-   [`Maturity 📃`](/src/component/Maturity.ts), [`MoneySink 🎉📃✏️`](/src/component/MoneySink.ts), [`Monster 🎉📃`](/src/component/Monster.ts), [`Moral 🎉📃`](/src/component/Moral.ts), [`Motivation 📃`](/src/component/Motivation.ts)
+-   [`Name 📃`](/src/component/Name.ts), [`Nobility 📃`](/src/component/Nobility.ts), [`NPC 📦`](/src/component/NPC.ts), [`NPC.Abilities 🎉📦`](/src/component/NPC.ts), [`NPC.Skills 📦`](/src/component/NPC.ts)
+-   [`Past 🎉📃`](/src/component/Past.ts), [`Physicality 📃`](/src/component/Physicality.ts), [`Profession 🎉📃`](/src/component/Profession.ts)
+-   [`Race 📃`](/src/component/Race.ts), [`Relationship 🎉📃`](/src/component/Relationship.ts), [`Rumour 🎉✏️`](/src/component/Rumour.ts), [`Rumour.Body 🎉📃`](/src/component/Rumour.ts)
+-   [`Sex 📃`](/src/component/Sex.ts), [`Skill 🎉📃`](/src/component/Skill.ts), [`Skin.Colour 📃`](/src/component/Skin.ts), [`Subtlety 🎉📃`](/src/component/Subtlety.ts)
+-   [`Tavern 📦`](/src/component/Tavern.ts), [`Tavern.Name ✏️`](/src/component/Tavern.ts), [`Tool 🎉📃`](/src/component/Tool.ts), [`Trait 🎉📃`](/src/component/Trait.ts)
+-   [`Verb 🎉📃`](/src/component/Verb.ts)
+-   [`Weapon 📃`](/src/component/Weapon.ts)

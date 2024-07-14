@@ -62,7 +62,7 @@ export function getComponentList(object: Record<string, unknown>, prefix = "", p
          */
         if (icons.length && !(key in UTILS)) {
             line +=
-                (previousLetter === letter ? ", " : "\n- ") +
+                (previousLetter === letter ? ", " : "\n-   ") +
                 `[\`${(prefix + key + " " + (isNew ? "🎉" : "") + icons).trim()}\`](/src/component/${keyParent}.ts)`;
             previousLetter = letter;
         }

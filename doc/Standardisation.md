@@ -14,7 +14,7 @@ It's simpler for you to remove the capitalisation if you don't need it:
 
 ```ts Capitalisation Item
 const item = new Class.List().pick();
-console.log(item); // Warlock warlock
+console.log(item); // Wizard wizard
 console.log(item.toLowerCase());
 ```
 
@@ -23,8 +23,8 @@ Rather than add it if you do:
 ```ts Fake Capitalisation Item
 /* Fake example */
 const item = new Class.List().pick();
-console.log(item); // trickster
-console.log(item.substring(0, 1).toUpperCase() + item.substring(1)); // Trickster
+console.log(item); // druid
+console.log(item.substring(0, 1).toUpperCase() + item.substring(1)); // Druid
 ```
 
 If you want a list without any capitalisation, you can use `list.map()` to create a new list:
@@ -37,7 +37,7 @@ const list = new Class.List().map(item => {
     };
 });
 console.log(list.pick()); // trickster
-console.log(list.pick()); // pacifist
+console.log(list.pick()); // blood hunter
 ```
 
 ## Full Stops
@@ -48,9 +48,9 @@ It's simpler for you to add a full stop if you need it:
 
 ```ts Full Stop Item
 const item = new Class.List().pick();
-console.log(item); // Blood Hunter
-console.log(item + "."); // Blood Hunter.
-console.log(`${item}.`); // Blood Hunter.
+console.log(item); // Inquisitor
+console.log(item + "."); // Inquisitor.
+console.log(`${item}.`); // Inquisitor.
 ```
 
 Rather than remove it if you don't:
@@ -58,8 +58,8 @@ Rather than remove it if you don't:
 ```ts Fake Full Stop Item
 /* Fake example */
 const item = new Class.List().pick();
-console.log(item); // Wizard.
-console.log(item.substring(0, item.length - 1)); // Wizard
+console.log(item); // Warlock.
+console.log(item.substring(0, item.length - 1)); // Warlock
 ```
 
 If you want a list with full stops, you can use `list.map()` to create a new list:
@@ -72,5 +72,5 @@ const list = new Class.List().map(item => {
     };
 });
 console.log(list.pick()); // Barbarian.
-console.log(list.pick()); // Barbarian.
+console.log(list.pick()); // Cavalier.
 ```

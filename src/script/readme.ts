@@ -48,9 +48,10 @@ _Generators_ allow you to create/utilise random content which is comprised from 
 \`\`\`ts Readme Generator
 \`\`\`
 
-### Available Components
+## Components
 
-${getComponentList(Component).trim()}`
+${getComponentList(Component).trim()}
+`
     );
 
     console.log(
