@@ -29,7 +29,6 @@ export async function getExampleOutput(example: string) {
         }
         if (line.startsWith("console.log")) {
             consoleLogs.push(index - start);
-            console.table({ line, index: index - start });
         }
     });
     content = content.slice(start, content.length - 1);
@@ -54,9 +53,6 @@ export async function getExampleOutput(example: string) {
             if (typeof contentIndex === "undefined") return;
 
             data = data.toString().replace(/\n\s*/g, " ").trim().replace(/,\s*'/g, ", '");
-            // console.log(contentIndex);
-            // console.log(data);
-            // console.log("---");
             if (data.length > CONSOLE_LOG_LENGTH) {
                 data = data.substring(0, CONSOLE_LOG_LENGTH) + "...";
             }
