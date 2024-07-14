@@ -19,10 +19,10 @@ npm install dnd-generator
 _Lists_ are the core primitive, allowing you to group related concepts which can then be picked from, or further filtered.
 
 ```ts Readme List
-const nobilityList = new Nobility.List();
+const nobilityList = new Component.Nobility.List();
 
-console.log(nobilityList.pick()); // Servant
-console.log(nobilityList.pickItem()); // { value: 'Common', weight: 20500, importance: 0 }
+console.log(nobilityList.pick()); // Common
+console.log(nobilityList.pickItem()); // { value: 'Underclass', weight: 3145, importance: -2 }
 console.log(nobilityList.getItem("Scholar")); // { value: 'Scholar', maturity: [ 'Adult', 'Elder' ], weight: 3000, importance: 3 }
 console.log(nobilityList.getItems()); // [ { value: 'Royal', importance: 9 }, { value: 'Noble', weight: 5, importance: 8 }, { value: 'Esquire...
 console.log(nobilityList.getValues()); // [ 'Royal', 'Noble', 'Esquire', 'Knighted', 'Gentle', 'Yeoman', 'Scholar', 'Merchant', 'Servant', 'Co...
@@ -41,16 +41,16 @@ const uppercaseNobilityList = nobilityList.map(item => {
 _Sentences_ allow you to create text from pre-defined _Sentence Parts_ which provide the possible random permutations.
 
 ```ts Readme Sentence
-const hotel = new Sentence([
+const hotel = new Util.Sentence([
     "Hotel",
-    () => randomItem(["California", "Letztes Jahr", "Emerson"]) + ":",
+    () => Lib.randomItem(["California", "Letztes Jahr", "Emerson"]) + ":",
     "if you're looking for",
     store => store.item("ideal", () => new Component.Ideal.List().pickItem().category).toLowerCase(),
     "- you found it!",
     store => `(${store.item("ideal", () => "Ideal")})`
 ]);
-console.log(hotel.build()); // Hotel Emerson: if you're looking for freedom - you found it! (Freedom)
-console.log(hotel.build()); // Hotel Letztes Jahr: if you're looking for tradition - you found it! (Tradition)
+console.log(hotel.build()); // Hotel California: if you're looking for independence - you found it! (Independence)
+console.log(hotel.build()); // Hotel Letztes Jahr: if you're looking for respect - you found it! (Respect)
 ```
 
 ### 📦 Generator
@@ -58,11 +58,11 @@ console.log(hotel.build()); // Hotel Letztes Jahr: if you're looking for traditi
 _Generators_ allow you to create/utilise random content which is comprised from other _Lists_, _Sentences_, or _Generators_.
 
 ```ts Readme Generator
-const { property } = new NPC();
-console.log(`${property.name}, the ${property.race} ${property.class}.`); // Hornia Quiller, the Rock Gnome Druid.
+const { property } = new Component.NPC();
+console.log(`${property.name}, the ${property.race} ${property.class}.`); // Ragglur, the Centaur Cleric.
 
-const { name, patrons } = new Tavern();
-console.log(`${name} tavern has ${patrons.length} patrons.`); // The Beige Chicken tavern has 6 patrons.
+const { name, patrons } = new Component.Tavern();
+console.log(`${name} tavern has ${patrons.length} patrons.`); // The Ripped Mule tavern has 8 patrons.
 ```
 
 ## Components

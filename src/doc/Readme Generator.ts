@@ -1,10 +1,9 @@
-import { NPC } from "../component/NPC.js";
-import { Tavern } from "../component/Tavern.js";
+import { Component } from "../index.js";
 
 // Begin example
 
-const { property } = new NPC();
+const { property } = new Component.NPC();
 console.log(`${property.name}, the ${property.race} ${property.class}.`);
 
-const { name, patrons } = new Tavern();
+const { name, patrons } = new Component.Tavern();
 console.log(`${name} tavern has ${patrons.length} patrons.`);

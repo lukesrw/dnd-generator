@@ -13,8 +13,8 @@ List items were previously capitalised based on their invisioned usage (e.g. cla
 It's simpler for you to remove the capitalisation if you don't need it:
 
 ```ts Capitalisation Item
-const item = new Class.List().pick();
-console.log(item); // Wizard wizard
+const item = new Component.Class.List().pick();
+console.log(item); // Monk monk
 console.log(item.toLowerCase());
 ```
 
@@ -22,22 +22,22 @@ Rather than add it if you do:
 
 ```ts Fake Capitalisation Item
 /* Fake example */
-const item = new Class.List().pick();
-console.log(item); // druid
-console.log(item.substring(0, 1).toUpperCase() + item.substring(1)); // Druid
+const item = new Component.Class.List().pick();
+console.log(item); // blood hunter
+console.log(item.substring(0, 1).toUpperCase() + item.substring(1)); // Blood hunter
 ```
 
 If you want a list without any capitalisation, you can use `list.map()` to create a new list:
 
 ```ts Capitalisation List
-const list = new Class.List().map(item => {
+const list = new Component.Class.List().map(item => {
     return {
         ...item,
         value: item.value.toLowerCase()
     };
 });
-console.log(list.pick()); // trickster
-console.log(list.pick()); // blood hunter
+console.log(list.pick()); // inquisitor
+console.log(list.pick()); // wizard
 ```
 
 ## Full Stops
@@ -47,30 +47,30 @@ List items previously ended with a full stop if they were deemed to be sentence-
 It's simpler for you to add a full stop if you need it:
 
 ```ts Full Stop Item
-const item = new Class.List().pick();
-console.log(item); // Inquisitor
-console.log(item + "."); // Inquisitor.
-console.log(`${item}.`); // Inquisitor.
+const item = new Component.Class.List().pick();
+console.log(item); // Barbarian
+console.log(item + "."); // Barbarian. Barbarian.
+console.log(`${item}.`);
 ```
 
 Rather than remove it if you don't:
 
 ```ts Fake Full Stop Item
 /* Fake example */
-const item = new Class.List().pick();
-console.log(item); // Warlock.
-console.log(item.substring(0, item.length - 1)); // Warlock
+const item = new Component.Class.List().pick();
+console.log(item); // Druid.
+console.log(item.substring(0, item.length - 1)); // Druid
 ```
 
 If you want a list with full stops, you can use `list.map()` to create a new list:
 
 ```ts Full Stop List
-const list = new Class.List().map(item => {
+const list = new Component.Class.List().map(item => {
     return {
         ...item,
         value: `${item.value}.`
     };
 });
-console.log(list.pick()); // Barbarian.
+console.log(list.pick()); // Blood Hunter.
 console.log(list.pick()); // Cavalier.
 ```

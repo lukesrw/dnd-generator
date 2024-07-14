@@ -1,13 +1,12 @@
-import { NPC } from "../component/NPC.js";
-import { Race } from "../component/Race.js";
+import { Component } from "../index.js";
 
 // Begin example
 
 const dwarfCamp = {
-    race: new Race.List().filter(race => race.value.includes("Dwarf"))
+    race: new Component.Race.List().filter(race => race.value.includes("Dwarf"))
 };
 
-const dwarf = new NPC(
+const dwarf = new Component.NPC(
     {},
     {
         context: dwarfCamp

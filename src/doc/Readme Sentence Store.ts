@@ -1,7 +1,6 @@
-import { NPC } from "../component/NPC.js";
-import { Sentence } from "../util/Sentence.js";
-
 // Begin example
+
+import { Component, Util } from "../index.js";
 
 const config = {
     item: {
@@ -13,14 +12,14 @@ const config = {
     npc: {
         // Pre-defined NPCs
         store: {
-            predefinedRole: new NPC()
+            predefinedRole: new Component.NPC()
         },
         // NPC config
         config: {}
     }
 };
 
-const sentence1 = new Sentence(
+const sentence1 = new Util.Sentence(
     [
         "The",
         store => store.npc("predefinedRole").property.profession,
@@ -29,7 +28,7 @@ const sentence1 = new Sentence(
     ],
     config
 );
-const sentence2 = new Sentence(
+const sentence2 = new Util.Sentence(
     [
         "Once upon a time a",
         store => store.npc("predefinedRole").property.profession,

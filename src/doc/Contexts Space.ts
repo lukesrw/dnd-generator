@@ -1,10 +1,9 @@
-import { NPC } from "../component/NPC.js";
-import { List } from "../util/List.js";
+import { Component, Util } from "../index.js";
 
 // Begin example
 
 const space = {
-    race: new List([
+    race: new Util.List([
         {
             value: "Hearthian"
         },
@@ -17,7 +16,7 @@ const space = {
     ])
 };
 
-const alien = new NPC(
+const alien = new Component.NPC(
     {},
     {
         context: space

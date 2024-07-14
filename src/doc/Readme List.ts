@@ -1,8 +1,8 @@
-import { Nobility } from "../component/Nobility.js";
+import { Component } from "../index.js";
 
 // Begin example
 
-const nobilityList = new Nobility.List();
+const nobilityList = new Component.Nobility.List();
 
 console.log(nobilityList.pick());
 console.log(nobilityList.pickItem());

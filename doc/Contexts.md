@@ -6,24 +6,24 @@ For example, an [NPC](/src/lib/generator/NPC.ts) will be a random race, which is
 
 ```ts Contexts Dwarf Camp
 const dwarfCamp = {
-    race: new Race.List().filter(race => race.value.includes("Dwarf"))
+    race: new Component.Race.List().filter(race => race.value.includes("Dwarf"))
 };
 
-const dwarf = new NPC(
+const dwarf = new Component.NPC(
     {},
     {
         context: dwarfCamp
     }
 );
 
-console.log(`I'm a ${dwarf.property.race}`); // I'm a Hill Dwarf
+console.log(`I'm a ${dwarf.property.race}`); // I'm a Mountain Dwarf
 ```
 
 Generators will use the built-in lists if you don't provide one, but you can also easily make your own entirely custom lists:
 
 ```ts Contexts Space
 const space = {
-    race: new List([
+    race: new Util.List([
         {
             value: "Hearthian"
         },
@@ -36,12 +36,12 @@ const space = {
     ])
 };
 
-const alien = new NPC(
+const alien = new Component.NPC(
     {},
     {
         context: space
     }
 );
 
-console.log(`I'm a ${alien.property.race}`); // I'm a Owlk
+console.log(`I'm a ${alien.property.race}`); // I'm a Hearthian
 ```
