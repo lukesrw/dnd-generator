@@ -9,7 +9,7 @@ const hotel = new Sentence([
     () => randomItem(["California", "Letztes Jahr", "Emerson"]) + ":",
     "if you're looking for",
     store => store.item("ideal", () => new Component.Ideal.List().pickItem().category).toLowerCase(),
-    " - you found it!",
+    "- you found it!",
     store => `(${store.item("ideal", () => "Ideal")})`
 ]);
 console.log(hotel.build());
